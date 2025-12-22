@@ -12,9 +12,9 @@ export default function LoginForm() {
     password: ''
   })
   const [loading, setLoading] = useState(false)
-  const router = useRouter()
+  const _router = useRouter()
 
-  const login = async (email: string, password: string) => {
+  const login = (_email: string, _password: string) => {
     // Hardcoded for build fix
     setLoading(true)
     setTimeout(() => {

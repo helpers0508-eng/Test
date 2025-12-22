@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 const { body, validationResult } = require('express-validator');
 const nodemailer = require('nodemailer');
 const { authenticateToken } = require('../middleware/auth');
+import process from "node:process";
 
 const router = express.Router();
 
