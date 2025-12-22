@@ -179,15 +179,15 @@ class BookingManager {
         }
 
         try {
-            const booking = await this.createBookingAPI(this.bookingData);
+            await this.createBookingAPI(this.bookingData);
             UIManager.showToast('Booking confirmed!', 'success');
 
             // Redirect to confirmation page
             setTimeout(() => {
                 window.location.href = '/booking/confirm';
             }, 2000);
-        } catch (error) {
-            UIManager.showToast('Booking failed: ' + error.message, 'error');
+        } catch (_error) {
+            UIManager.showToast('Booking failed', 'error');
         }
     }
 
@@ -248,13 +248,13 @@ class BookingManager {
         }
     }
 
-    async createBookingAPI(bookingData) {
+    async createBookingAPI(_bookingData) {
         try {
             // In a real app, this would send to backend
             // For mock, simulate success
             await new Promise(resolve => setTimeout(resolve, 1000));
             return { success: true, bookingId: 'BK' + Date.now() };
-        } catch (error) {
+        } catch (_error) {
             return { success: false, message: 'Booking failed' };
         }
     }
@@ -263,6 +263,6 @@ class BookingManager {
 // Initialize booking manager when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.service-card') || document.querySelector('#booking-date')) {
-        window.bookingManager = new BookingManager();
+        globalThis.bookingManager = new BookingManager();
     }
 });
