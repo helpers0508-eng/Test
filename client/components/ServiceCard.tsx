@@ -10,13 +10,13 @@ interface ServiceCardProps {
   category?: string;
 }
 
-export default function ServiceCard({ 
-  id, 
-  name, 
-  description, 
-  image, 
+export default function ServiceCard({
+  id,
+  name,
+  description,
+  image,
   price,
-  category 
+  category: _category
 }: ServiceCardProps) {
   return (
     <Link 

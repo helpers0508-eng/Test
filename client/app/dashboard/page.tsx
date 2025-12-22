@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Calendar, Clock, Star, MapPin, User, Settings, LogOut } from 'lucide-react'
+import { Calendar, Clock, MapPin, User, Settings, LogOut } from 'lucide-react'
 
 interface Booking {
   id: number
