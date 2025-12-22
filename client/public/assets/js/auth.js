@@ -180,7 +180,7 @@ class AuthManager {
         }
     }
 
-    async signupAPI(userData) {
+    async signupAPI(_userData) {
         try {
             // In a real app, this would create a new user
             // For mock, just return success
@@ -212,7 +212,7 @@ class AuthManager {
                 };
             }
             return { success: false, message: 'Invalid OTP' };
-        } catch (error) {
+        } catch (_error) {
             return { success: false, message: 'OTP verification failed' };
         }
     }

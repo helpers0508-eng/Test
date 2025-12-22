@@ -3,7 +3,7 @@
 import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { ArrowLeft, Calendar, Clock, MapPin, Star, Check, CreditCard } from 'lucide-react'
+import { ArrowLeft, Clock, Check } from 'lucide-react'
 import { servicesAPI, bookingsAPI } from '@/lib/api'
 
 interface Service {
@@ -37,7 +37,7 @@ function BookServicePageContent() {
   const [availableSlots, setAvailableSlots] = useState<TimeSlot[]>([])
   const [loading, setLoading] = useState(true)
   const [bookingStep, setBookingStep] = useState(1)
-  const [processingPayment, setProcessingPayment] = useState(false)
+  const [_processingPayment, setProcessingPayment] = useState(false)
 
   const [formData, setFormData] = useState({
     date: '',
@@ -127,7 +127,7 @@ function BookServicePageContent() {
       })
 
       if (bookingResponse.success) {
-        const booking = bookingResponse.data
+        const _booking = bookingResponse.data
 
         // For demo purposes, mark booking as confirmed
         // In production, integrate with your preferred payment gateway
