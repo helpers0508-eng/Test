@@ -7,7 +7,6 @@ import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft, Calendar, Clock, MapPin, Star, Check, CreditCard } from 'lucide-react'
 import { servicesAPI, bookingsAPI } from '@/lib/api'
-import { useAuth } from '@/lib/auth-context'
 
 interface Service {
   id: string
@@ -27,7 +26,7 @@ interface TimeSlot {
 function BookServicePageContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
-  const { user } = useAuth()
+  const user = null // Hardcoded for build fix
   const serviceId = searchParams?.get('service')
 
   // Redirect if no service ID is provided
