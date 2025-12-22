@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Calendar, Clock, DollarSign, CheckCircle, XCircle, User, LogOut } from 'lucide-react'
+import { Calendar, Clock, DollarSign, CheckCircle, User, LogOut } from 'lucide-react'
 
 interface Booking {
   id: number

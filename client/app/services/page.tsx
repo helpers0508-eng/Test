@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useEffect, useCallback, useMemo } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Search, Filter, Star, Clock, MapPin } from 'lucide-react'
+import { Search, Filter, Clock } from 'lucide-react'
 import { servicesAPI } from '@/lib/api'
 
 interface Service {
