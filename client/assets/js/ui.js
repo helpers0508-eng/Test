@@ -83,8 +83,8 @@ class UIManager {
         // Navbar background on scroll
         const navbar = document.querySelector('header');
         if (navbar) {
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
+            globalThis.addEventListener('scroll', () => {
+                if (globalThis.scrollY > 50) {
                     navbar.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-sm');
                     navbar.classList.remove('bg-transparent');
                 } else {
@@ -238,7 +238,7 @@ class UIManager {
 
     // Utility method for responsive design
     isMobile() {
-        return window.innerWidth < 768;
+        return globalThis.innerWidth < 768;
     }
 
     // Debounce utility
@@ -256,7 +256,7 @@ class UIManager {
 }
 
 // Global UIManager instance
-window.UIManager = new UIManager();
+globalThis.UIManager = new UIManager();
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {

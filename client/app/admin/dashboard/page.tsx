@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Users, Calendar, DollarSign, TrendingUp, BarChart3, Settings, LogOut } from 'lucide-react'
+import { Users, Calendar, DollarSign, BarChart3, Settings, LogOut } from 'lucide-react'
 
 interface Stats {
   total_users: number
