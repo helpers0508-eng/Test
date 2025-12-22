@@ -44,12 +44,12 @@ class ErrorHandler {
   /**
    * Handle API errors
    */
-  handleApiError(error: any, defaultMessage: string = 'An error occurred'): string {
-    if (error?.response?.data?.message) {
-      return error.response.data.message;
+  handleApiError(error: unknown, defaultMessage: string = 'An error occurred'): string {
+    if ((error as any)?.response?.data?.message) {
+      return (error as any).response.data.message;
     }
-    if (error?.message) {
-      return error.message;
+    if ((error as any)?.message) {
+      return (error as any).message;
     }
     return defaultMessage;
   }
