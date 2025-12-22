@@ -8,5 +8,6 @@ Deno.test("Server health check", () => {
 
 Deno.test("Server 404 handler", () => {
   // Basic test to ensure the test runner finds this file
-  assertEquals("API endpoint not found".length, 21);
+  const message = "API endpoint not found";
+  assertEquals(message.length, 22);
 });
