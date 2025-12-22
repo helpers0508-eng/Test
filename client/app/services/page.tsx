@@ -49,7 +49,7 @@ export default function ServicesPage() {
         // Get categories
         const categoriesResponse = await servicesAPI.getCategories()
         if (categoriesResponse.success) {
-          setCategories(categoriesResponse.data.map((cat: any) => cat.name))
+          setCategories(categoriesResponse.data.map((cat: { name: string }) => cat.name))
         }
       }
     } catch (error) {
