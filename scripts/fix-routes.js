@@ -54,13 +54,13 @@ const routeMapping = {
 };
 
 // Function to get route from HTML file path
-function getRouteFromHtml(htmlPath) {
+function _getRouteFromHtml(htmlPath) {
   const filename = path.basename(htmlPath);
   return routeMapping[filename] || null;
 }
 
 // Function to update links in HTML content
-function updateLinks(content, currentFile) {
+function updateLinks(content, _currentFile) {
   let updated = content;
   
   // Update /pages/*.html links to clean routes

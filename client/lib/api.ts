@@ -1,3 +1,5 @@
+import process from "node:process";
+
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
 
 // Helper function to get auth token from localStorage
@@ -112,7 +114,7 @@ export const servicesAPI = {
 // Bookings APIs
 export const bookingsAPI = {
   getAll: (params?: { status?: string; page?: number; limit?: number }) => {
-    const query = params ? new URLSearchParams(params as any).toString() : '';
+    const query = params ? new URLSearchParams(params as Record<string, string>).toString() : '';
     return apiRequest(`/api/bookings${query ? `?${query}` : ''}`);
   },
 
@@ -226,7 +228,7 @@ export const adminAPI = {
     apiRequest('/api/admin/stats'),
 
   getUsers: (params?: { page?: number; limit?: number; search?: string }) => {
-    const query = params ? new URLSearchParams(params as any).toString() : '';
+    const query = params ? new URLSearchParams(params as Record<string, string>).toString() : '';
     return apiRequest(`/api/admin/users${query ? `?${query}` : ''}`);
   },
 
@@ -237,7 +239,7 @@ export const adminAPI = {
     }),
 
   getBookings: (params?: { status?: string; page?: number; limit?: number }) => {
-    const query = params ? new URLSearchParams(params as any).toString() : '';
+    const query = params ? new URLSearchParams(params as Record<string, string>).toString() : '';
     return apiRequest(`/api/admin/bookings${query ? `?${query}` : ''}`);
   },
 
@@ -248,7 +250,7 @@ export const adminAPI = {
     }),
 
   getRevenueReport: (params?: { startDate?: string; endDate?: string }) => {
-    const query = params ? new URLSearchParams(params as any).toString() : '';
+    const query = params ? new URLSearchParams(params as Record<string, string>).toString() : '';
     return apiRequest(`/api/admin/reports/revenue${query ? `?${query}` : ''}`);
   },
 

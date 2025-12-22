@@ -15,7 +15,7 @@ router.get('/helper/:helperId', async (req, res) => {
       SELECT * FROM availability_slots
       WHERE helper_id = $1
     `;
-    let params = [helperId];
+    const params = [helperId];
 
     if (date) {
       query += ' AND date = $2';

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import _Image from 'next/image';
 import { ROUTES } from '@/lib/constants';
 
 interface HeaderProps {
@@ -7,7 +7,7 @@ interface HeaderProps {
   currentPath?: string;
 }
 
-export default function Header({ showAuthButtons = true, currentPath }: HeaderProps) {
+export default function Header({ showAuthButtons = true, currentPath: _currentPath }: HeaderProps) {
   return (
     <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e0cfff] dark:border-b-primary-dark/30 px-4 sm:px-10 py-3">
       <div className="flex items-center gap-4 text-[#111418] dark:text-white">

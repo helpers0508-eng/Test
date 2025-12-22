@@ -1,4 +1,5 @@
 import * as Sentry from "@sentry/react";
+import process from "node:process";
 
 Sentry.init({
   dsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.SENTRY_DSN,

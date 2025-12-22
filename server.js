@@ -7,6 +7,7 @@ const dotenv = require('dotenv');
 const fs = require('fs').promises;
 const path = require('path');
 const { Pool } = require('pg');
+import process from "node:process";
 
 // Load environment variables
 dotenv.config();
@@ -37,7 +38,7 @@ const bookingRoutes = require('./routes/bookings');
 const adminRoutes = require('./routes/admin');
 
 // Import middleware
-const { authenticateToken, requireRole, requireOwnershipOrAdmin } = require('./middleware/auth');
+const { _authenticateToken, _requireRole, _requireOwnershipOrAdmin } = require('./middleware/auth');
 
 // Initialize Express app
 const app = express();
@@ -238,7 +239,7 @@ app.use('/api/', (req, res, next) => {
 // Body parsing with size limits
 app.use(express.json({
   limit: isProduction ? '1mb' : '10mb',
-  verify: (req, res, buf) => {
+  verify: (req, _res, buf) => {
     // Log large payloads in production
     if (isProduction && buf.length > 1000000) {
       auditLogger.log('LARGE_PAYLOAD', req.user?.id || 'anonymous', {
@@ -257,7 +258,7 @@ app.use(express.urlencoded({
 app.set('pool', pool);
 
 // Routes with enhanced error handling
-app.use('/api/auth', (req, res, next) => {
+app.use('/api/auth', (req, _res, next) => {
   auditLogger.log('AUTH_ENDPOINT_ACCESS', req.user?.id || 'anonymous', {
     endpoint: req.path,
     method: req.method
@@ -270,7 +271,7 @@ app.use('/api/services', serviceRoutes);
 app.use('/api/bookings', bookingRoutes);
 
 // Admin routes with enhanced logging
-app.use('/api/admin', (req, res, next) => {
+app.use('/api/admin', (req, _res, next) => {
   auditLogger.log('ADMIN_ENDPOINT_ACCESS', req.user?.id || 'anonymous', {
     endpoint: req.path,
     method: req.method,
@@ -280,7 +281,7 @@ app.use('/api/admin', (req, res, next) => {
 }, adminRoutes);
 
 // Enhanced health check
-app.get('/api/health', (req, res) => {
+app.get('/api/health', (_req, res) => {
   const health = {
     status: 'OK',
     timestamp: new Date().toISOString(),
@@ -300,7 +301,7 @@ app.get('/api/health', (req, res) => {
 });
 
 // Comprehensive error handling
-app.use((err, req, res, next) => {
+app.use((err, req, res, _next) => {
   const errorId = Date.now().toString(36) + Math.random().toString(36).substr(2);
 
   // Log error details

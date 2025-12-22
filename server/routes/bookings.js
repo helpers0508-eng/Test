@@ -1,6 +1,6 @@
 const express = require('express');
 const { body, validationResult } = require('express-validator');
-const { authenticateToken, requireRole, requireOwnershipOrAdmin } = require('../middleware/auth');
+const { authenticateToken, _requireRole, _requireOwnershipOrAdmin } = require('../middleware/auth');
 
 const router = express.Router();
 
@@ -271,8 +271,8 @@ router.put('/:id', authenticateToken, async (req, res) => {
     }
 
     // Only allow status updates by admin/helpers
-    let updateFields = [];
-    let params = [id];
+    const updateFields = [];
+    const params = [id];
     let paramCount = 2;
 
     if (date) {

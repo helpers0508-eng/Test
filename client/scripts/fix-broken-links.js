@@ -23,7 +23,7 @@ function fixBrokenLinks(filePath) {
     const originalContent = content;
 
     // Fix href="#" with text content
-    content = content.replace(/href="#([^"]*)">([^<]+)<\/a>/g, (match, href, text) => {
+    content = content.replace(/href="#([^"]*)">([^<]+)<\/a>/g, (match, _href, text) => {
       const trimmed = text.trim();
       if (routeMapping[trimmed]) {
         return `href="${routeMapping[trimmed]}">${text}</a>`;

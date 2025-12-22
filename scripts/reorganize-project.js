@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+import process from "node:process";
 
 console.log('🔄 Reorganizing project into client/ and server/ folders...\n');
 

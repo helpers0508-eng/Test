@@ -3,7 +3,8 @@ const { parse } = require('url');
 const next = require('next');
 const { readFile, stat } = require('fs').promises;
 const { join, extname } = require('path');
-const { promisify } = require('util');
+const { _promisify } = require('util');
+import process from "node:process";
 
 const dev = process.env.NODE_ENV !== 'production';
 const hostname = 'localhost';
@@ -31,7 +32,7 @@ const mimeTypes = {
 };
 
 // Function to serve static files
-async function serveStaticFile(filePath, res) {
+async function _serveStaticFile(filePath, res) {
   try {
     const stats = await stat(filePath);
     if (!stats.isFile()) {
@@ -47,7 +48,7 @@ async function serveStaticFile(filePath, res) {
     res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
     res.end(content);
     return true;
-  } catch (error) {
+  } catch (_error) {
     return false;
   }
 }

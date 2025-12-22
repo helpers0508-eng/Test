@@ -1,5 +1,6 @@
 const fs = require('fs').promises;
 const path = require('path');
+import process from "node:process";
 
 class ErrorMonitor {
   constructor() {

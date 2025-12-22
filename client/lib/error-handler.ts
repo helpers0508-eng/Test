@@ -1,10 +1,12 @@
 // Error handling utility
 // Replaces console.error with proper error handling
 
+import process from "node:process";
+
 interface ErrorLog {
   message: string;
   stack?: string;
-  context?: Record<string, any>;
+  context?: Record<string, unknown>;
   timestamp: string;
 }
 
@@ -14,7 +16,7 @@ class ErrorHandler {
   /**
    * Log error (only in development)
    */
-  logError(error: Error | string, context?: Record<string, any>) {
+  logError(error: Error | string, context?: Record<string, unknown>) {
     if (!this.isDevelopment) {
       // In production, send to error tracking service
       this.sendToErrorTracking(error, context);
@@ -34,7 +36,7 @@ class ErrorHandler {
   /**
    * Send error to tracking service (e.g., Sentry, LogRocket)
    */
-  private sendToErrorTracking(error: Error | string, context?: Record<string, any>) {
+  private sendToErrorTracking(_error: Error | string, _context?: Record<string, unknown>) {
     // TODO: Integrate with error tracking service
     // Example: Sentry.captureException(error, { extra: context });
   }

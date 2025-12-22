@@ -1,3 +1,5 @@
+import process from "node:process";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
@@ -7,7 +9,7 @@ const nextConfig = {
     domains: ['lh3.googleusercontent.com'],
     unoptimized: process.env.NODE_ENV === 'production' ? false : false,
   },
-  async rewrites() {
+  rewrites() {
     const apiUrl = process.env.API_URL || process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
     const rewrites = [
       {

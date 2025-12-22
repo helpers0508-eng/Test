@@ -19,7 +19,7 @@ function removeConsoleLogs(filePath) {
     // For console.error, wrap in development check
     content = content.replace(
       /console\.error\(([^)]*)\);?/g,
-      (match, args) => {
+      (_match, args) => {
         return `if (process.env.NODE_ENV === 'development') { console.error(${args}); }`;
       }
     );

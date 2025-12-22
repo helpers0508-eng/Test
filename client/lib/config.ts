@@ -2,6 +2,8 @@
 // Only safe, public configuration values should be here
 // Never include secrets, API keys, or sensitive data
 
+import process from "node:process";
+
 // API Configuration
 export const API_CONFIG = {
   // API URL - should be set via NEXT_PUBLIC_API_URL environment variable

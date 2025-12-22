@@ -1,6 +1,7 @@
 // Utility functions
 
 import { ROLES, ROUTES, type UserRole } from './constants';
+import process from "node:process";
 
 /**
  * Get dashboard route based on user role
@@ -73,7 +74,7 @@ export function isValidPhone(phone: string): boolean {
 /**
  * Debounce function
  */
-export function debounce<T extends (...args: any[]) => any>(
+export function debounce<T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {

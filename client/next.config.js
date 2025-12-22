@@ -1,3 +1,5 @@
+import process from "node:process";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
@@ -10,7 +12,7 @@ const nextConfig = {
   },
   // Disable static export since we have dynamic features (authentication, API calls)
   output: 'standalone',
-  async rewrites() {
+  rewrites() {
     // Use NEXT_PUBLIC_API_URL for client-side API proxying
     const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
     const rewrites = [

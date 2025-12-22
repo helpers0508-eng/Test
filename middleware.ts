@@ -3,7 +3,7 @@ import type { NextRequest } from 'next/server';
 
 // Route mapping - redirects to HTML files via rewrites
 // Actual serving is handled by Next.js rewrites in next.config.js
-export function middleware(request: NextRequest) {
+export function middleware(_request: NextRequest) {
   // This middleware just passes through
   // HTML files are served via rewrites in next.config.js
   return NextResponse.next();

@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 const fs = require('fs').promises;
 const path = require('path');
+import process from "node:process";
 
 // Audit logging for auth events
 class AuthAuditLogger {
@@ -92,7 +93,7 @@ const authenticateToken = (req, res, next) => {
     }
 
     // Check if user role is valid
-    if (!ROLE_HIERARCHY.hasOwnProperty(user.role)) {
+    if (!(user.role in ROLE_HIERARCHY)) {
       authAuditLogger.log('AUTH_INVALID_ROLE', user.id, {
         role: user.role,
         url: req.url,
@@ -271,7 +272,7 @@ const requireOwnershipOrAdmin = (resourceType = 'user') => {
 
 // Middleware to log admin actions
 const logAdminAction = (action) => {
-  return (req, res, next) => {
+  return (req, _res, next) => {
     if (req.user && req.user.role === 'admin') {
       authAuditLogger.log('ADMIN_ACTION', req.user.id, {
         action,

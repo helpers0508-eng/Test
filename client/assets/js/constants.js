@@ -27,8 +27,8 @@ const STORAGE_KEYS = {
 };
 
 // Export for use in other scripts
-if (typeof window !== 'undefined') {
-  window.APP_CONSTANTS = {
+if (typeof globalThis !== 'undefined') {
+  globalThis.APP_CONSTANTS = {
     ROUTES,
     ROLES,
     STORAGE_KEYS,

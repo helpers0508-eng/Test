@@ -27,7 +27,7 @@ function updateLogoInFile(filePath) {
     const originalContent = content;
 
     // Replace different logo patterns
-    logoSvgPatterns.forEach((pattern, index) => {
+    logoSvgPatterns.forEach((pattern, _index) => {
       if (pattern.test(content)) {
         content = content.replace(pattern, (match) => {
           // Determine size based on class or default to h-8
