@@ -104,7 +104,7 @@ class BookingManager {
             // Simulate API call
             const services = await this.fetchServicesAPI();
             this.renderServices(services);
-        } catch (error) {
+        } catch (_error) {
             UIManager.showToast('Failed to load services', 'error');
         }
     }
@@ -115,7 +115,7 @@ class BookingManager {
         try {
             const slots = await this.fetchAvailableSlotsAPI(date, this.selectedService);
             this.renderTimeSlots(slots);
-        } catch (error) {
+        } catch (_error) {
             UIManager.showToast('Failed to load available slots', 'error');
         }
     }
@@ -233,7 +233,7 @@ class BookingManager {
         }
     }
 
-    async fetchAvailableSlotsAPI(date, serviceId) {
+    async fetchAvailableSlotsAPI(date, _serviceId) {
         try {
             const response = await fetch('/assets/mock/bookings.json');
             const data = await response.json();
