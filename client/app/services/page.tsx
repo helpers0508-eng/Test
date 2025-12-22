@@ -1,8 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback, useMemo } from 'react'
-
-export const dynamic = 'force-dynamic'
 import Link from 'next/link'
 import { Search, Filter, Star, Clock, MapPin } from 'lucide-react'
 import { servicesAPI } from '@/lib/api'
