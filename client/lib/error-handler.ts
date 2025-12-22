@@ -3,6 +3,15 @@
 
 import process from "node:process";
 
+interface ApiError {
+  response?: {
+    data?: {
+      message?: string;
+    };
+  };
+  message?: string;
+}
+
 interface ErrorLog {
   message: string;
   stack?: string;
@@ -42,14 +51,15 @@ class ErrorHandler {
   }
 
   /**
-   * Handle API errors
-   */
+    * Handle API errors
+    */
   handleApiError(error: unknown, defaultMessage: string = 'An error occurred'): string {
-    if ((error as any)?.response?.data?.message) {
-      return (error as any).response.data.message;
+    const apiError = error as ApiError;
+    if (apiError?.response?.data?.message) {
+      return apiError.response.data.message;
     }
-    if ((error as any)?.message) {
-      return (error as any).message;
+    if (apiError?.message) {
+      return apiError.message;
     }
     return defaultMessage;
   }
