@@ -170,7 +170,7 @@ class FormManager {
     serializeForm(form) {
         const data = {};
         const formData = new FormData(form);
-        for (let [key, value] of formData.entries()) {
+        for (const [key, value] of formData.entries()) {
             data[key] = value;
         }
         return data;

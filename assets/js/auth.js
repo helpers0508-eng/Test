@@ -180,13 +180,13 @@ class AuthManager {
         }
     }
 
-    async signupAPI(userData) {
+    async signupAPI(_userData) {
         try {
             // In a real app, this would create a new user
             // For mock, just return success
             await new Promise(resolve => setTimeout(resolve, 1000));
             return { success: true, message: 'Account created' };
-        } catch (error) {
+        } catch (_error) {
             return { success: false, message: 'Signup failed' };
         }
     }
@@ -212,7 +212,7 @@ class AuthManager {
                 };
             }
             return { success: false, message: 'Invalid OTP' };
-        } catch (error) {
+        } catch (_error) {
             return { success: false, message: 'OTP verification failed' };
         }
     }
@@ -220,5 +220,5 @@ class AuthManager {
 
 // Initialize auth manager when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    window.authManager = new AuthManager();
+    globalThis.authManager = new AuthManager();
 });
