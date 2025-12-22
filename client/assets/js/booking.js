@@ -104,7 +104,7 @@ class BookingManager {
             // Simulate API call
             const services = await this.fetchServicesAPI();
             this.renderServices(services);
-        } catch (error) {
+        } catch (_error) {
             UIManager.showToast('Failed to load services', 'error');
         }
     }
@@ -115,7 +115,7 @@ class BookingManager {
         try {
             const slots = await this.fetchAvailableSlotsAPI(date, this.selectedService);
             this.renderTimeSlots(slots);
-        } catch (error) {
+        } catch (_error) {
             UIManager.showToast('Failed to load available slots', 'error');
         }
     }
@@ -179,7 +179,7 @@ class BookingManager {
         }
 
         try {
-            const booking = await this.createBookingAPI(this.bookingData);
+            await this.createBookingAPI(this.bookingData);
             UIManager.showToast('Booking confirmed!', 'success');
 
             // Redirect to confirmation page
@@ -233,7 +233,7 @@ class BookingManager {
         }
     }
 
-    async fetchAvailableSlotsAPI(date, serviceId) {
+    async fetchAvailableSlotsAPI(date, _serviceId) {
         try {
             const response = await fetch('/assets/mock/bookings.json');
             const data = await response.json();
@@ -248,13 +248,13 @@ class BookingManager {
         }
     }
 
-    async createBookingAPI(bookingData) {
+    async createBookingAPI(_bookingData) {
         try {
             // In a real app, this would send to backend
             // For mock, simulate success
             await new Promise(resolve => setTimeout(resolve, 1000));
             return { success: true, bookingId: 'BK' + Date.now() };
-        } catch (error) {
+        } catch (_error) {
             return { success: false, message: 'Booking failed' };
         }
     }
@@ -263,6 +263,6 @@ class BookingManager {
 // Initialize booking manager when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.service-card') || document.querySelector('#booking-date')) {
-        window.bookingManager = new BookingManager();
+        globalThis.bookingManager = new BookingManager();
     }
 });
