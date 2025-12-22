@@ -93,13 +93,13 @@ export const servicesAPI = {
   getCategories: () =>
     apiRequest('/api/services/meta/categories'),
 
-  create: (data: any) =>
+  create: (data: Record<string, unknown>) =>
     apiRequest('/api/services', {
       method: 'POST',
       body: JSON.stringify(data),
     }),
 
-  update: (id: string, data: any) =>
+  update: (id: string, data: Record<string, unknown>) =>
     apiRequest(`/api/services/${id}`, {
       method: 'PUT',
       body: JSON.stringify(data),
@@ -133,7 +133,7 @@ export const bookingsAPI = {
       body: JSON.stringify(data),
     }),
 
-  update: (id: string, data: any) =>
+  update: (id: string, data: Record<string, unknown>) =>
     apiRequest(`/api/bookings/${id}`, {
       method: 'PUT',
       body: JSON.stringify(data),
@@ -209,7 +209,7 @@ export const usersAPI = {
   getProfile: (userId: string) =>
     apiRequest(`/api/users/${userId}`),
 
-  updateProfile: (userId: string, data: any) =>
+  updateProfile: (userId: string, data: Record<string, unknown>) =>
     apiRequest(`/api/users/${userId}`, {
       method: 'PUT',
       body: JSON.stringify(data),

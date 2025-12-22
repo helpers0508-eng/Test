@@ -27,17 +27,17 @@ class FormManager {
 
     setupErrorHandling() {
         // Global error handler for fetch requests
-        window.addEventListener('unhandledrejection', (event) => {
+        globalThis.addEventListener('unhandledrejection', (event) => {
             console.error('Unhandled promise rejection:', event.reason);
             UIManager.showToast('An unexpected error occurred', 'error');
         });
 
         // Handle network errors
-        window.addEventListener('offline', () => {
+        globalThis.addEventListener('offline', () => {
             UIManager.showToast('You are offline. Please check your connection.', 'warning');
         });
 
-        window.addEventListener('online', () => {
+        globalThis.addEventListener('online', () => {
             UIManager.showToast('You are back online.', 'success');
         });
     }
@@ -191,5 +191,5 @@ class FormManager {
 
 // Initialize form manager when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    window.formManager = new FormManager();
+    globalThis.formManager = new FormManager();
 });
