@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+</head>
+<body data-role="admin" class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-gray-100 font-display overflow-hidden">
+<div class="flex h-screen w-full">
+<!-- Side Navigation -->
+<aside class="flex w-64 flex-col bg-surface-light dark:bg-surface-dark border-r border-gray-200 dark:border-gray-800 h-full flex-shrink-0 transition-colors">
+<div class="p-6 flex items-center gap-3">
+<div class="bg-primary aspect-square rounded-lg size-8 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[20px] font-bold">handshake</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-[#111418] dark:text-white">Helpers</h2>
+</div>
+<div class="flex flex-col gap-1 px-3 py-2 flex-1 overflow-y-auto no-scrollbar">
+<!-- Dashboard -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#617589] dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group" href="/">
+<span class="material-symbols-outlined group-hover:text-[#111418] dark:group-hover:text-white">grid_view</span>
+<span class="text-sm font-medium leading-normal group-hover:text-[#111418] dark:group-hover:text-white">Dashboard</span>
+</a>
+<!-- Users (Active) -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary dark:bg-primary/20 dark:text-blue-400" href="/">
+<span class="material-symbols-outlined filled">group</span>
+<span class="text-sm font-medium leading-normal">Users</span>
+</a>
+<!-- Helpers -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#617589] dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group" href="/">
+<span class="material-symbols-outlined group-hover:text-[#111418] dark:group-hover:text-white">engineering</span>
+<span class="text-sm font-medium leading-normal group-hover:text-[#111418] dark:group-hover:text-white">Helpers</span>
+</a>
+<!-- Bookings -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#617589] dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group" href="/">
+<span class="material-symbols-outlined group-hover:text-[#111418] dark:group-hover:text-white">calendar_month</span>
+<span class="text-sm font-medium leading-normal group-hover:text-[#111418] dark:group-hover:text-white">Bookings</span>
+</a>
+<!-- Finance -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#617589] dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group" href="/">
+<span class="material-symbols-outlined group-hover:text-[#111418] dark:group-hover:text-white">payments</span>
+<span class="text-sm font-medium leading-normal group-hover:text-[#111418] dark:group-hover:text-white">Finance</span>
+</a>
+<!-- Settings -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#617589] dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group" href="/">
+<span class="material-symbols-outlined group-hover:text-[#111418] dark:group-hover:text-white">settings</span>
+<span class="text-sm font-medium leading-normal group-hover:text-[#111418] dark:group-hover:text-white">Settings</span>
+</a>
+</div>
+<!-- Admin Profile -->
+<div class="p-4 border-t border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-cover bg-center" data-alt="Portrait of admin user" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuANa-3VlWJqSjW17sa-6qPOPB7xkr8-ROUG-cAR4y-8IlM1v0T5GnLcRwS55nx5-YuYrWAJUASQH1GqZgX-6ECvpvM0y68GdLz_cZ-mn2ZIgPssGELIAvd7J1w25xU3HsIUijNaJQdp2hQvoHAxkgX-SEXmzfa8a_jYcuXh9mv6KjMr519fZFHzLh1tW_15V8T5KbLBQXYxAAi46MImuichR-m8zVXo1TQRicwid5nzftXaYKwkXGIqsH3BDSs3v9P8CtM_W7aCrmc");'></div>
+<div class="flex flex-col">
+<p class="text-sm font-medium text-[#111418] dark:text-white">Alex Morgan</p>
+<p class="text-xs text-[#617589] dark:text-gray-400">Super Admin</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col h-full overflow-hidden relative">
+<!-- Header Sticky -->
+<header class="flex-shrink-0 bg-surface-light dark:bg-surface-dark border-b border-gray-200 dark:border-gray-800 px-6 py-5">
+<div class="max-w-[1400px] mx-auto w-full">
+<div class="flex flex-wrap justify-between items-center gap-4">
+<div class="flex flex-col gap-1">
+<h1 class="text-2xl font-bold leading-tight tracking-[-0.033em] text-[#111418] dark:text-white">User Management</h1>
+<p class="text-[#617589] dark:text-gray-400 text-sm font-normal">Manage access, view details, and update status for all users</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-[#111418] dark:text-white text-sm font-bold shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>Export CSV</span>
+</button>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold shadow-md hover:bg-primary-hover transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Add New User</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto bg-background-light dark:bg-background-dark p-6">
+<div class="max-w-[1400px] mx-auto w-full flex flex-col gap-6">
+<!-- Search & Filters -->
+<div class="bg-surface-light dark:bg-surface-dark p-4 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm flex flex-col md:flex-row gap-4 items-center justify-between">
+<!-- Search Bar -->
+<div class="w-full md:w-96">
+<label class="flex w-full items-center h-10 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary overflow-hidden">
+<div class="pl-3 pr-2 text-[#617589] dark:text-gray-400 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full h-full bg-transparent border-none focus:ring-0 text-sm text-[#111418] dark:text-white placeholder:text-[#9ca3af]" placeholder="Search by name, email, or ID..." value=""/>
+</label>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-2 overflow-x-auto w-full md:w-auto no-scrollbar pb-1 md:pb-0">
+<button class="flex h-9 items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors whitespace-nowrap">
+<span class="text-sm font-medium text-[#111418] dark:text-white">Status: All</span>
+<span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+</button>
+<button class="flex h-9 items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors whitespace-nowrap">
+<span class="text-sm font-medium text-[#111418] dark:text-white">Role: Customer</span>
+<span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+</button>
+<button class="flex h-9 items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors whitespace-nowrap">
+<span class="text-sm font-medium text-[#111418] dark:text-white">Date: All Time</span>
+<span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+</button>
+<button class="flex h-9 items-center justify-center w-9 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-[20px] text-[#617589]">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Data Table -->
+<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-surface-light dark:bg-surface-dark shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead class="bg-gray-50 dark:bg-gray-900/50 border-b border-gray-200 dark:border-gray-800">
+<tr>
+<th class="px-6 py-4 text-xs font-semibold text-[#617589] dark:text-gray-400 uppercase tracking-wider w-[60px]">
+<input class="rounded border-gray-300 text-primary focus:ring-primary bg-white dark:bg-gray-800 dark:border-gray-700" type="checkbox"/>
+</th>
+<th class="px-6 py-4 text-xs font-semibold text-[#617589] dark:text-gray-400 uppercase tracking-wider">User</th>
+<th class="px-6 py-4 text-xs font-semibold text-[#617589] dark:text-gray-400 uppercase tracking-wider">Contact</th>
+<th class="px-6 py-4 text-xs font-semibold text-[#617589] dark:text-gray-400 uppercase tracking-wider">Status</th>
+<th class="px-6 py-4 text-xs font-semibold text-[#617589] dark:text-gray-400 uppercase tracking-wider">Role</th>
+<th class="px-6 py-4 text-xs font-semibold text-[#617589] dark:text-gray-400 uppercase tracking-wider">Joined</th>
+<th class="px-6 py-4 text-xs font-semibold text-[#617589] dark:text-gray-400 uppercase tracking-wider text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-100 dark:divide-gray-800">
+<!-- Row 1 -->
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
+<td class="px-6 py-4">
+<input class="rounded border-gray-300 text-primary focus:ring-primary bg-white dark:bg-gray-800 dark:border-gray-700" type="checkbox"/>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-cover bg-center flex-shrink-0 border border-gray-200 dark:border-gray-700" data-alt="Portrait of Sarah Jenkins" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC6-BoPzueF9yIpn6GkV1vATM5O2JwaZOfPrR8-lL45MLUAyepkGZqb2RvvyjH6_lff1Yp_Qiy3ym4q8Q3rWjjHyYQabga8zH5Zphnv73l7lYZ2_BQrn-RiSAoPIVavSq46gYDPucbQ_dotW1V1hIf1DL6lOjeuBi2Hm6_veCTax072LOFMmES0Z33A9XmCP9nS2-PYUPazXU5vVyGGQu3tRkRJxnEqul4SnsnIoyZ6C4TdSJoX_QnUTqOmHSpDuJohyvDTdo50fic");'></div>
+<div class="flex flex-col">
+<p class="text-sm font-semibold text-[#111418] dark:text-white">Sarah Jenkins</p>
+<p class="text-xs text-[#617589] dark:text-gray-500">ID: #USR-8821</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm text-[#111418] dark:text-gray-300">sarah.j@example.com</span>
+<span class="text-xs text-[#617589] dark:text-gray-500">+1 (555) 123-4567</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-emerald-50 dark:bg-emerald-500/10 px-2.5 py-0.5 text-xs font-medium text-emerald-700 dark:text-emerald-400 ring-1 ring-inset ring-emerald-600/20">
+                                                Active
+                                            </span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-gray-400">person</span>
+<span class="text-sm text-[#111418] dark:text-gray-300">Customer</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm text-[#617589] dark:text-gray-400">Oct 24, 2023</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-gray-400 hover:text-[#111418] dark:hover:text-white transition-colors p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
+<td class="px-6 py-4">
+<input class="rounded border-gray-300 text-primary focus:ring-primary bg-white dark:bg-gray-800 dark:border-gray-700" type="checkbox"/>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-cover bg-center flex-shrink-0 border border-gray-200 dark:border-gray-700" data-alt="Portrait of Mike Ross" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmI25LjHKNsTiCDLW9vU2aKzpuH08AHTiqHpi_Ua9sHXipyFFBXTe_g6v16U5vOPRRVRAyExyWtWV5pxCIw4YD13Gcz2Htzj1EfnmwYaD8hc8YRdNLL2wyFIUQKzAOcf6zR8HnqFPwzuSllcdgp30yUf143cyuEUPZvkv0Cr9rvun6vSCtSMjOF4Y3QFT_3kcSgt3FPb-Fv7xqPs38b0AP5aNBjAO9cjDZKuziPJyFYiuXvQduf_0fAv0PnWrdPbKSEpcVeaK60XI");'></div>
+<div class="flex flex-col">
+<p class="text-sm font-semibold text-[#111418] dark:text-white">Mike Ross</p>
+<p class="text-xs text-[#617589] dark:text-gray-500">ID: #USR-9942</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm text-[#111418] dark:text-gray-300">mike.r@example.com</span>
+<span class="text-xs text-[#617589] dark:text-gray-500">+1 (555) 987-6543</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-red-50 dark:bg-red-500/10 px-2.5 py-0.5 text-xs font-medium text-red-700 dark:text-red-400 ring-1 ring-inset ring-red-600/10">
+                                                Suspended
+                                            </span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-gray-400">person</span>
+<span class="text-sm text-[#111418] dark:text-gray-300">Customer</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm text-[#617589] dark:text-gray-400">Sep 12, 2023</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-gray-400 hover:text-[#111418] dark:hover:text-white transition-colors p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
+<td class="px-6 py-4">
+<input class="rounded border-gray-300 text-primary focus:ring-primary bg-white dark:bg-gray-800 dark:border-gray-700" type="checkbox"/>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-cover bg-center flex-shrink-0 border border-gray-200 dark:border-gray-700" data-alt="Portrait of Jessica Pearson" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDsS4AoBLmVgIXwFeKg57jJiQBfwBc6X9runnypMr5Ge9xhXZY05jyVZb3AF8pASZi2fTA2kyBQWbPI5_E58l1yN2txtfhR_zXnEXDtn4ANCG8th9Wm78RLu582Gkfakikoz4fcIslthtAYQX3ugZvHAb2n5_mNStM8m6PavuIz_srwvijJBc2jfFxLskcTRoR9PYVIq8JdORKIaEZEos5j-DWJZNfXGNQPH6SZRfxxkcF3gGQwKC86ovKjkainQYpQ55tcwg5qByQ");'></div>
+<div class="flex flex-col">
+<p class="text-sm font-semibold text-[#111418] dark:text-white">Jessica Pearson</p>
+<p class="text-xs text-[#617589] dark:text-gray-500">ID: #USR-1024</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm text-[#111418] dark:text-gray-300">j.pearson@law.com</span>
+<span class="text-xs text-[#617589] dark:text-gray-500">+1 (555) 777-8888</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-emerald-50 dark:bg-emerald-500/10 px-2.5 py-0.5 text-xs font-medium text-emerald-700 dark:text-emerald-400 ring-1 ring-inset ring-emerald-600/20">
+                                                Active
+                                            </span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-purple-500">verified_user</span>
+<span class="text-sm text-[#111418] dark:text-gray-300">VIP</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm text-[#617589] dark:text-gray-400">Aug 05, 2023</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-gray-400 hover:text-[#111418] dark:hover:text-white transition-colors p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
+<td class="px-6 py-4">
+<input class="rounded border-gray-300 text-primary focus:ring-primary bg-white dark:bg-gray-800 dark:border-gray-700" type="checkbox"/>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-cover bg-center flex-shrink-0 border border-gray-200 dark:border-gray-700" data-alt="Portrait of Harvey Specter" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAiYPosRDeJj9X0H6rKfganE4rFEqnLdmXW9KBHs6HTSaCUxK1tKWA0aRAXfbV_pahEezUQ96UpjTwuNtwzOwXZiFBIOGfNVs59n1o5WHCeTsND09kqnq6eulJ6E2gNazlEMlah_xcXonEY6hTJnxKHDz06DFloGpTDuyn5lEWUAcb_WajIOt01dAZtroDEV4T_jFx9tvEQ9O6u5FOzRiu5H_-fpk3_HKLIPbLEfKV-mm30royObCisRvoQW2FwoSwrjeHwzhn4xQk");'></div>
+<div class="flex flex-col">
+<p class="text-sm font-semibold text-[#111418] dark:text-white">Harvey Specter</p>
+<p class="text-xs text-[#617589] dark:text-gray-500">ID: #USR-3321</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm text-[#111418] dark:text-gray-300">harvey@specter.com</span>
+<span class="text-xs text-[#617589] dark:text-gray-500">+1 (555) 222-3333</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-emerald-50 dark:bg-emerald-500/10 px-2.5 py-0.5 text-xs font-medium text-emerald-700 dark:text-emerald-400 ring-1 ring-inset ring-emerald-600/20">
+                                                Active
+                                            </span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-gray-400">person</span>
+<span class="text-sm text-[#111418] dark:text-gray-300">Customer</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm text-[#617589] dark:text-gray-400">Jul 20, 2023</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-gray-400 hover:text-[#111418] dark:hover:text-white transition-colors p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
+<td class="px-6 py-4">
+<input class="rounded border-gray-300 text-primary focus:ring-primary bg-white dark:bg-gray-800 dark:border-gray-700" type="checkbox"/>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-cover bg-center flex-shrink-0 border border-gray-200 dark:border-gray-700" data-alt="Portrait of Louis Litt" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAxPbPi5sc_UqcasMOFr4UW56IAe_Ia0-W5YYrun6_UZ85EDm60VbFbYaoz3fHvNMRV_b2nQrslnbLJKbEmli1J2oLmXoyE7k8Xi0gYRuPw8xgTcXJwxKeCZA3PlcH3zIxQF0IIv3gkcGfwt4WpqpU8d_7oc-TfeH0YxJztjOPPTF9CA98kgYvBHGv2079ERPXqvKF4dMJM3wuNC_6M1RFy7Gl7YSPOEHYV4DDg-AzxRE3FcfNMrWR1NZpwvxujy5y0T4Y1DMxgqsk");'></div>
+<div class="flex flex-col">
+<p class="text-sm font-semibold text-[#111418] dark:text-white">Louis Litt</p>
+<p class="text-xs text-[#617589] dark:text-gray-500">ID: #USR-5591</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm text-[#111418] dark:text-gray-300">louis@litt.com</span>
+<span class="text-xs text-[#617589] dark:text-gray-500">+1 (555) 444-5555</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-700/50 px-2.5 py-0.5 text-xs font-medium text-gray-600 dark:text-gray-400 ring-1 ring-inset ring-gray-500/10">
+                                                Pending
+                                            </span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-gray-400">person</span>
+<span class="text-sm text-[#111418] dark:text-gray-300">Customer</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm text-[#617589] dark:text-gray-400">Oct 01, 2023</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-gray-400 hover:text-[#111418] dark:hover:text-white transition-colors p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-between border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 px-4 py-3 sm:px-6">
+<div class="flex flex-1 justify-between sm:hidden">
+<a class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50" href="/">Previous</a>
+<a class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50" href="/">Next</a>
+</div>
+<div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+<div>
+<p class="text-sm text-gray-700 dark:text-gray-400">
+                                        Showing
+                                        <span class="font-medium text-[#111418] dark:text-white">1</span>
+                                        to
+                                        <span class="font-medium text-[#111418] dark:text-white">10</span>
+                                        of
+                                        <span class="font-medium text-[#111418] dark:text-white">540</span>
+                                        results
+                                    </p>
+</div>
+<div>
+<nav aria-label="Pagination" class="isolate inline-flex -space-x-px rounded-md shadow-sm">
+<a class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 dark:ring-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 focus:z-20 focus:outline-offset-0" href="/">
+<span class="sr-only">Previous</span>
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</a>
+<a aria-current="page" class="relative z-10 inline-flex items-center bg-primary px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" href="/">1</a>
+<a class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 ring-1 ring-inset ring-gray-300 dark:ring-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 focus:z-20 focus:outline-offset-0" href="/">2</a>
+<a class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 ring-1 ring-inset ring-gray-300 dark:ring-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 focus:z-20 focus:outline-offset-0 md:inline-flex" href="/">3</a>
+<span class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 dark:text-gray-400 ring-1 ring-inset ring-gray-300 dark:ring-gray-700 focus:outline-offset-0">...</span>
+<a class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 dark:text-gray-300 ring-1 ring-inset ring-gray-300 dark:ring-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 focus:z-20 focus:outline-offset-0 md:inline-flex" href="/">54</a>
+<a class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 dark:ring-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 focus:z-20 focus:outline-offset-0" href="/">
+<span class="sr-only">Next</span>
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</a>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

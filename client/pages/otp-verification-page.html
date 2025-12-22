@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+<script src="/assets/js/auth.js"></script>
+<script src="/assets/js/forms.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white min-h-screen flex flex-col overflow-x-hidden transition-colors duration-200">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#f0f2f4] dark:border-gray-800 bg-white dark:bg-[#1a2632] px-6 py-4 md:px-10 sticky top-0 z-50">
+<div class="flex items-center gap-3 text-[#111418] dark:text-white cursor-pointer select-none">
+<!-- Logo Icon -->
+<img src="/logo.jpeg" alt="Helpers Logo" class="h-8 w-auto object-contain">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Helpers</h2>
+</div>
+<!-- Header Actions -->
+<div class="flex items-center gap-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-transparent hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-900 dark:text-white text-sm font-bold leading-normal transition-colors">
+<span class="truncate">Help Center</span>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<div class="flex flex-col flex-1 items-center justify-center px-4 py-8 md:py-12">
+<!-- Center Card -->
+<div class="w-full max-w-[500px] flex flex-col bg-white dark:bg-[#1a2632] rounded-2xl shadow-lg border border-slate-100 dark:border-slate-800 overflow-hidden">
+<div class="px-6 py-8 md:p-10 flex flex-col items-center">
+<!-- Icon Badge -->
+<div class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">lock_open</span>
+</div>
+<!-- Headline -->
+<h1 class="text-[#111418] dark:text-white tracking-tight text-[28px] md:text-[32px] font-bold leading-tight text-center mb-3">
+                    Enter Verification Code
+                </h1>
+<!-- Body Text -->
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-relaxed text-center max-w-[90%] mb-10">
+                    We've sent a 6-digit code to your registered email <span class="font-semibold text-[#111418] dark:text-white">user@example.com</span>.
+                </p>
+<!-- Confirmation Code Inputs -->
+<div class="w-full mb-10">
+<fieldset class="flex justify-center gap-2 sm:gap-3">
+<input class="flex h-14 w-12 sm:h-16 sm:w-14 rounded-lg text-center bg-background-light dark:bg-gray-800 border-2 border-transparent focus:border-primary focus:ring-0 focus:outline-none text-xl sm:text-2xl font-bold text-[#111418] dark:text-white transition-all placeholder-transparent" inputmode="numeric" maxlength="1" onkeydown="javascript:(event.key=='Backspace'&amp;&amp;this.value===''&amp;&amp;this.previousSibling&amp;&amp;((this.previousSibling.value=''),this.previousSibling.focus()))||(event.key==='ArrowLeft'&amp;&amp;this.previousSibling&amp;&amp;this.previousSibling.focus())||(event.key==='ArrowRight'&amp;&amp;this.nextSibling&amp;&amp;this.nextSibling.focus());" onkeyup="javascript:event.key.match(/^\d$/)&amp;&amp;((this.value.length&gt;1&amp;&amp;((this.nextSibling&amp;&amp;(this.nextSibling.value=this.value.slice(1))),(this.value=this.value[0]))),(this.nextSibling&amp;&amp;this.nextSibling.focus()));" type="text" value=""/>
+<input class="flex h-14 w-12 sm:h-16 sm:w-14 rounded-lg text-center bg-background-light dark:bg-gray-800 border-2 border-transparent focus:border-primary focus:ring-0 focus:outline-none text-xl sm:text-2xl font-bold text-[#111418] dark:text-white transition-all placeholder-transparent" inputmode="numeric" maxlength="1" onkeydown="javascript:(event.key=='Backspace'&amp;&amp;this.value===''&amp;&amp;this.previousSibling&amp;&amp;((this.previousSibling.value=''),this.previousSibling.focus()))||(event.key==='ArrowLeft'&amp;&amp;this.previousSibling&amp;&amp;this.previousSibling.focus())||(event.key==='ArrowRight'&amp;&amp;this.nextSibling&amp;&amp;this.nextSibling.focus());" onkeyup="javascript:event.key.match(/^\d$/)&amp;&amp;((this.value.length&gt;1&amp;&amp;((this.nextSibling&amp;&amp;(this.nextSibling.value=this.value.slice(1))),(this.value=this.value[0]))),(this.nextSibling&amp;&amp;this.nextSibling.focus()));" type="text" value=""/>
+<input class="flex h-14 w-12 sm:h-16 sm:w-14 rounded-lg text-center bg-background-light dark:bg-gray-800 border-2 border-transparent focus:border-primary focus:ring-0 focus:outline-none text-xl sm:text-2xl font-bold text-[#111418] dark:text-white transition-all placeholder-transparent" inputmode="numeric" maxlength="1" onkeydown="javascript:(event.key=='Backspace'&amp;&amp;this.value===''&amp;&amp;this.previousSibling&amp;&amp;((this.previousSibling.value=''),this.previousSibling.focus()))||(event.key==='ArrowLeft'&amp;&amp;this.previousSibling&amp;&amp;this.previousSibling.focus())||(event.key==='ArrowRight'&amp;&amp;this.nextSibling&amp;&amp;this.nextSibling.focus());" onkeyup="javascript:event.key.match(/^\d$/)&amp;&amp;((this.value.length&gt;1&amp;&amp;((this.nextSibling&amp;&amp;(this.nextSibling.value=this.value.slice(1))),(this.value=this.value[0]))),(this.nextSibling&amp;&amp;this.nextSibling.focus()));" type="text" value=""/>
+<input class="flex h-14 w-12 sm:h-16 sm:w-14 rounded-lg text-center bg-background-light dark:bg-gray-800 border-2 border-transparent focus:border-primary focus:ring-0 focus:outline-none text-xl sm:text-2xl font-bold text-[#111418] dark:text-white transition-all placeholder-transparent" inputmode="numeric" maxlength="1" onkeydown="javascript:(event.key=='Backspace'&amp;&amp;this.value===''&amp;&amp;this.previousSibling&amp;&amp;((this.previousSibling.value=''),this.previousSibling.focus()))||(event.key==='ArrowLeft'&amp;&amp;this.previousSibling&amp;&amp;this.previousSibling.focus())||(event.key==='ArrowRight'&amp;&amp;this.nextSibling&amp;&amp;this.nextSibling.focus());" onkeyup="javascript:event.key.match(/^\d$/)&amp;&amp;((this.value.length&gt;1&amp;&amp;((this.nextSibling&amp;&amp;(this.nextSibling.value=this.value.slice(1))),(this.value=this.value[0]))),(this.nextSibling&amp;&amp;this.nextSibling.focus()));" type="text" value=""/>
+<input class="flex h-14 w-12 sm:h-16 sm:w-14 rounded-lg text-center bg-background-light dark:bg-gray-800 border-2 border-transparent focus:border-primary focus:ring-0 focus:outline-none text-xl sm:text-2xl font-bold text-[#111418] dark:text-white transition-all placeholder-transparent" inputmode="numeric" maxlength="1" onkeydown="javascript:(event.key=='Backspace'&amp;&amp;this.value===''&amp;&amp;this.previousSibling&amp;&amp;((this.previousSibling.value=''),this.previousSibling.focus()))||(event.key==='ArrowLeft'&amp;&amp;this.previousSibling&amp;&amp;this.previousSibling.focus())||(event.key==='ArrowRight'&amp;&amp;this.nextSibling&amp;&amp;this.nextSibling.focus());" onkeyup="javascript:event.key.match(/^\d$/)&amp;&amp;((this.value.length&gt;1&amp;&amp;((this.nextSibling&amp;&amp;(this.nextSibling.value=this.value.slice(1))),(this.value=this.value[0]))),(this.nextSibling&amp;&amp;this.nextSibling.focus()));" type="text" value=""/>
+<input class="flex h-14 w-12 sm:h-16 sm:w-14 rounded-lg text-center bg-background-light dark:bg-gray-800 border-2 border-transparent focus:border-primary focus:ring-0 focus:outline-none text-xl sm:text-2xl font-bold text-[#111418] dark:text-white transition-all placeholder-transparent" inputmode="numeric" maxlength="1" onkeydown="javascript:(event.key=='Backspace'&amp;&amp;this.value===''&amp;&amp;this.previousSibling&amp;&amp;((this.previousSibling.value=''),this.previousSibling.focus()))||(event.key==='ArrowLeft'&amp;&amp;this.previousSibling&amp;&amp;this.previousSibling.focus())||(event.key==='ArrowRight'&amp;&amp;this.nextSibling&amp;&amp;this.nextSibling.focus());" onkeyup="javascript:event.key.match(/^\d$/)&amp;&amp;((this.value.length&gt;1&amp;&amp;((this.nextSibling&amp;&amp;(this.nextSibling.value=this.value.slice(1))),(this.value=this.value[0]))),(this.nextSibling&amp;&amp;this.nextSibling.focus()));" type="text" value=""/>
+</fieldset>
+</div>
+<!-- Timer / Resend -->
+<div class="flex items-center gap-2 mb-8 bg-background-light dark:bg-gray-800 py-2 px-4 rounded-full">
+<span class="material-symbols-outlined text-slate-400 text-lg">schedule</span>
+<p class="text-sm text-slate-500 dark:text-slate-400">
+                        Resend code in <span class="font-bold text-[#111418] dark:text-white font-mono">00:30</span>
+</p>
+</div>
+<!-- Primary Button -->
+<button class="w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-primary hover:bg-blue-600 text-white text-base font-bold leading-normal tracking-[0.015em] transition-all shadow-md hover:shadow-lg mb-6">
+<span class="truncate">Verify &amp; Proceed</span>
+</button>
+<!-- Back Action -->
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors" href="/">
+<span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
+                    Back to Login
+                </a>
+</div>
+<!-- Visual progress indicator -->
+<div class="w-full h-1.5 bg-background-light dark:bg-gray-800">
+<div class="h-full w-2/3 bg-primary rounded-r-full"></div>
+</div>
+</div>
+<!-- Footer Help -->
+<div class="mt-8 text-center max-w-sm px-4">
+<p class="text-sm text-slate-400 dark:text-slate-500 leading-normal">
+                Having trouble? Ensure you are checking the correct email address or <a class="text-primary hover:underline font-medium" href="/">contact support</a>.
+            </p>
+</div>
+</div>
+</body></html>

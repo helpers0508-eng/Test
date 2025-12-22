@@ -1,0 +1,150 @@
+{
+  "uiIssues": [],
+  "brokenLinks": [
+    {
+      "file": "community-guidelines-page.html",
+      "count": 5,
+      "links": [
+        "href=\"#intro\"",
+        "href=\"#respect\"",
+        "href=\"#safety\"",
+        "href=\"#prohibited\"",
+        "href=\"#enforcement\""
+      ]
+    },
+    {
+      "file": "cookie-policy.html",
+      "count": 6,
+      "links": [
+        "href=\"#intro\"",
+        "href=\"#strictly-necessary\"",
+        "href=\"#performance\"",
+        "href=\"#functional\"",
+        "href=\"#targeting\""
+      ]
+    },
+    {
+      "file": "privacy-policy-page.html",
+      "count": 6,
+      "links": [
+        "href=\"#section-1\"",
+        "href=\"#section-2\"",
+        "href=\"#section-3\"",
+        "href=\"#section-4\"",
+        "href=\"#section-5\""
+      ]
+    },
+    {
+      "file": "refund---cancellation-policy.html",
+      "count": 6,
+      "links": [
+        "href=\"#introduction\"",
+        "href=\"#cancellation-window\"",
+        "href=\"#refund-eligibility\"",
+        "href=\"#processing-timelines\"",
+        "href=\"#rescheduling\""
+      ]
+    },
+    {
+      "file": "terms-of-service-page.html",
+      "count": 8,
+      "links": [
+        "href=\"#intro\"",
+        "href=\"#definitions\"",
+        "href=\"#registration\"",
+        "href=\"#conduct\"",
+        "href=\"#payments\""
+      ]
+    }
+  ],
+  "consoleErrors": [
+    {
+      "file": "app\\admin\\dashboard\\page.tsx",
+      "count": 1,
+      "statements": [
+        "console.error"
+      ]
+    },
+    {
+      "file": "app\\book\\page.tsx",
+      "count": 3,
+      "statements": [
+        "console.error",
+        "console.error",
+        "console.error"
+      ]
+    },
+    {
+      "file": "app\\contact\\page.tsx",
+      "count": 2,
+      "statements": [
+        "console.log",
+        "console.error"
+      ]
+    },
+    {
+      "file": "app\\dashboard\\page.tsx",
+      "count": 1,
+      "statements": [
+        "console.error"
+      ]
+    },
+    {
+      "file": "app\\helper\\dashboard\\page.tsx",
+      "count": 2,
+      "statements": [
+        "console.error",
+        "console.error"
+      ]
+    },
+    {
+      "file": "app\\login\\page.tsx",
+      "count": 1,
+      "statements": [
+        "console.error"
+      ]
+    },
+    {
+      "file": "app\\profile\\page.tsx",
+      "count": 2,
+      "statements": [
+        "console.error",
+        "console.error"
+      ]
+    },
+    {
+      "file": "app\\services\\page.tsx",
+      "count": 1,
+      "statements": [
+        "console.error"
+      ]
+    },
+    {
+      "file": "assets\\js\\auth.js",
+      "count": 1,
+      "statements": [
+        "console.error"
+      ]
+    },
+    {
+      "file": "assets\\js\\booking.js",
+      "count": 2,
+      "statements": [
+        "console.error",
+        "console.error"
+      ]
+    },
+    {
+      "file": "assets\\js\\forms.js",
+      "count": 1,
+      "statements": [
+        "console.error"
+      ]
+    }
+  ],
+  "unusedFiles": [],
+  "missingComponents": [],
+  "envVarExposure": [],
+  "responsiveness": [],
+  "darkMode": []
+}

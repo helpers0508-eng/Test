@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-gray-100 flex flex-col min-h-screen overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] dark:border-gray-700 bg-white dark:bg-gray-800 px-10 py-3 shadow-sm">
+<div class="flex items-center gap-4 text-[#111418] dark:text-white">
+<div class="size-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">handshake</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Helpers</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="/">Find Services</a>
+<a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="/">Become a Helper</a>
+<a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="/">Log In</a>
+</div>
+<a class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-colors" href="/signup"><span>Sign Up</span></a>
+</div>
+<!-- Mobile Menu Icon (Placeholder) -->
+<div class="md:hidden text-[#111418] dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</header>
+<!-- Hero Section -->
+<div class="w-full bg-white dark:bg-gray-800 border-b border-[#f0f2f4] dark:border-gray-700">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-10 py-12 md:py-16">
+<div class="flex flex-col gap-6 items-center text-center max-w-3xl mx-auto">
+<div class="flex flex-col gap-4">
+<h1 class="text-[#111418] dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">
+                        Community Guidelines
+                    </h1>
+<h2 class="text-gray-600 dark:text-gray-300 text-lg font-normal leading-relaxed">
+                        We are committed to building a safe, respectful, and reliable community for everyone. Whether you are a User or a Helper, these guidelines ensure a positive experience.
+                    </h2>
+</div>
+<!-- Search Bar -->
+<label class="flex flex-col w-full max-w-[560px] h-14 mt-4">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full shadow-sm">
+<div class="text-[#617589] dark:text-gray-400 flex border-none bg-[#f0f2f4] dark:bg-gray-700 items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] dark:bg-gray-700 focus:border-none h-full placeholder:text-[#617589] dark:placeholder:text-gray-400 px-4 rounded-r-none border-r-0 pr-2 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search guidelines (e.g., 'cancellation', 'safety')..." value=""/>
+<div class="flex items-center justify-center rounded-r-lg border-l-0 border-none bg-[#f0f2f4] dark:bg-gray-700 pr-2">
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal hover:bg-blue-600 transition-colors">
+<span class="truncate">Search</span>
+</button>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- Main Content Layout -->
+<div class="layout-container flex grow flex-col max-w-[1280px] mx-auto w-full px-4 sm:px-10 py-10">
+<div class="flex flex-col lg:flex-row gap-10">
+<!-- Sidebar Navigation (Sticky) -->
+<aside class="hidden lg:flex w-64 flex-col gap-4 shrink-0">
+<div class="sticky top-24 flex flex-col gap-6">
+<div class="flex flex-col">
+<h1 class="text-[#111418] dark:text-white text-base font-bold leading-normal mb-1">Table of Contents</h1>
+<p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">Jump to section</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 group hover:bg-primary/20 transition-colors" href="#intro">
+<span class="material-symbols-outlined text-primary text-[20px]">info</span>
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal">Introduction</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" href="#respect">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-[20px]">favorite</span>
+<p class="text-[#111418] dark:text-gray-300 text-sm font-medium leading-normal">Respect &amp; Inclusion</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" href="#safety">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-[20px]">health_and_safety</span>
+<p class="text-[#111418] dark:text-gray-300 text-sm font-medium leading-normal">Safety &amp; Reliability</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" href="#prohibited">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-[20px]">block</span>
+<p class="text-[#111418] dark:text-gray-300 text-sm font-medium leading-normal">Prohibited Behaviors</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" href="#enforcement">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-[20px]">gavel</span>
+<p class="text-[#111418] dark:text-gray-300 text-sm font-medium leading-normal">Enforcement</p>
+</a>
+</nav>
+<!-- Sidebar CTA -->
+<div class="mt-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+<h3 class="font-bold text-sm mb-2 text-[#111418] dark:text-white">Need to report an issue?</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400 mb-3">If you see something that violates our policies, let us know.</p>
+<button class="w-full text-center text-xs font-bold bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg py-2 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors">
+                            Report Violation
+                        </button>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col gap-12 max-w-[800px]">
+<!-- Introduction -->
+<section class="scroll-mt-28" id="intro">
+<div class="relative w-full h-48 rounded-xl overflow-hidden mb-6">
+<div class="absolute inset-0 bg-gradient-to-r from-blue-900/40 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Diverse group of people working together around a table in a bright office" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8qIQibjI_9L7F0C43BuCBc2N_3nTXDpqMLAInq7HPBb9vgXVSSq1tRwmWDu1g_-DLK5unxy0t_26JNr1I-3Aao0Pp5AoEGKfu0hDO1V0ePck83elu9nnGVqp9WBXyJNwXO_F7SGYYf1VjLIkjtXZZeobY0Pkb54BiaOtB-HbYNifgsH5mic2Ww1Co_2oxSau2oBY0ZcZFWqBHRGUe4gIrl-xp255XA6ao_6SMIfK1AGYPSw6t1_O_LLVljR6z3dgJm3M8P6_EsWY');"></div>
+</div>
+<h2 class="text-[#111418] dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em] mb-4">Introduction</h2>
+<p class="text-[#111418] dark:text-gray-300 text-base font-normal leading-relaxed">
+                        Helpers is more than just a marketplace; it's a community built on trust. Millions of connections are made on our platform every year, and we strive to make each one a positive experience. This document outlines the behaviors we expect from both Helpers and Users to maintain a safe, fair, and welcoming environment for all.
+                    </p>
+</section>
+<hr class="border-gray-200 dark:border-gray-700"/>
+<!-- Respect & Inclusion -->
+<section class="scroll-mt-28" id="respect">
+<div class="flex items-center gap-3 mb-4">
+<div class="p-2 bg-blue-50 dark:bg-blue-900/30 rounded-lg text-primary">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em]">Respect &amp; Inclusion</h2>
+</div>
+<p class="text-[#111418] dark:text-gray-300 text-base font-normal leading-relaxed mb-4">
+                        At Helpers, we have zero tolerance for discrimination, harassment, or hate speech. We expect all interactions to be professional and courteous. Treat everyone with respect regardless of their race, religion, national origin, ethnicity, disability, sex, gender identity, sexual orientation, or age.
+                    </p>
+<ul class="list-disc list-outside ml-5 text-[#111418] dark:text-gray-300 text-base font-normal leading-relaxed space-y-2">
+<li><strong>Respect Boundaries:</strong> Keep communication professional and related to the service being provided.</li>
+<li><strong>No Harassment:</strong> Unwanted contact, aggressive language, or intimidation tactics are strictly prohibited.</li>
+<li><strong>Inclusion:</strong> Refusing service or declining a request based on a protected characteristic is a violation of our policy.</li>
+</ul>
+</section>
+<!-- Safety & Reliability -->
+<section class="scroll-mt-28" id="safety">
+<div class="flex items-center gap-3 mb-4">
+<div class="p-2 bg-green-50 dark:bg-green-900/30 rounded-lg text-green-600 dark:text-green-400">
+<span class="material-symbols-outlined">health_and_safety</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em]">Safety &amp; Reliability</h2>
+</div>
+<p class="text-[#111418] dark:text-gray-300 text-base font-normal leading-relaxed mb-6">
+                        Safety is paramount. Whether you are welcoming a Helper into your home or entering a client's workspace, everyone should feel secure. Reliability builds the trust that our platform depends on.
+                    </p>
+<div class="grid md:grid-cols-2 gap-4">
+<div class="bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
+<h3 class="font-bold text-lg mb-2 dark:text-white">For Helpers</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Arrive on time, bring the necessary tools, and perform the work to the quality standard expected. Ensure you pass all required background checks.</p>
+<span class="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">Professionalism</span>
+</div>
+<div class="bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
+<h3 class="font-bold text-lg mb-2 dark:text-white">For Users</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Provide a safe working environment. Secure pets, provide clear instructions, and be available to grant access at the scheduled time.</p>
+<span class="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">Cooperation</span>
+</div>
+</div>
+</section>
+<!-- Prohibited Behaviors -->
+<section class="scroll-mt-28" id="prohibited">
+<div class="flex items-center gap-3 mb-6">
+<div class="p-2 bg-red-50 dark:bg-red-900/30 rounded-lg text-red-600 dark:text-red-400">
+<span class="material-symbols-outlined">block</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em]">Prohibited Behaviors</h2>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Violation Card 1 -->
+<div class="flex flex-col sm:flex-row gap-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-800 border-l-4 border-l-red-500">
+<div class="shrink-0 text-red-500">
+<span class="material-symbols-outlined text-3xl">personal_injury</span>
+</div>
+<div>
+<h3 class="font-bold text-[#111418] dark:text-white text-lg">Violence &amp; Physical Harm</h3>
+<p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Any acts of violence, threats of physical harm, or carrying weapons while on a job are grounds for immediate permanent ban and legal action.</p>
+</div>
+</div>
+<!-- Violation Card 2 -->
+<div class="flex flex-col sm:flex-row gap-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-800 border-l-4 border-l-red-500">
+<div class="shrink-0 text-red-500">
+<span class="material-symbols-outlined text-3xl">money_off</span>
+</div>
+<div>
+<h3 class="font-bold text-[#111418] dark:text-white text-lg">Fraud &amp; Theft</h3>
+<p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Misrepresenting skills, falsifying hours, theft of property, or using stolen credit cards is strictly prohibited.</p>
+</div>
+</div>
+<!-- Violation Card 3 -->
+<div class="flex flex-col sm:flex-row gap-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-800 border-l-4 border-l-red-500">
+<div class="shrink-0 text-red-500">
+<span class="material-symbols-outlined text-3xl">storefront</span>
+</div>
+<div>
+<h3 class="font-bold text-[#111418] dark:text-white text-lg">Off-Platform Payments</h3>
+<p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Asking for or accepting payment outside of the Helpers platform undermines trust and safety protections. All payments must go through the app.</p>
+</div>
+</div>
+</div>
+</section>
+<hr class="border-gray-200 dark:border-gray-700"/>
+<!-- Enforcement -->
+<section class="scroll-mt-28" id="enforcement">
+<div class="flex items-center gap-3 mb-4">
+<div class="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-gray-700 dark:text-gray-300">
+<span class="material-symbols-outlined">gavel</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em]">Enforcement</h2>
+</div>
+<p class="text-[#111418] dark:text-gray-300 text-base font-normal leading-relaxed mb-4">
+                        We take violations seriously. Depending on the severity of the offense, consequences may include:
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="p-4 rounded-lg bg-orange-50 dark:bg-orange-900/20 text-center">
+<span class="block text-2xl mb-2">⚠️</span>
+<h4 class="font-bold text-orange-800 dark:text-orange-200">Warning</h4>
+<p class="text-xs text-orange-700 dark:text-orange-300 mt-1">For minor, first-time infractions.</p>
+</div>
+<div class="p-4 rounded-lg bg-red-50 dark:bg-red-900/20 text-center">
+<span class="block text-2xl mb-2">⛔</span>
+<h4 class="font-bold text-red-800 dark:text-red-200">Suspension</h4>
+<p class="text-xs text-red-700 dark:text-red-300 mt-1">Temporary account hold while we investigate.</p>
+</div>
+<div class="p-4 rounded-lg bg-gray-100 dark:bg-gray-700 text-center">
+<span class="block text-2xl mb-2">🚫</span>
+<h4 class="font-bold text-gray-800 dark:text-gray-200">Permanent Ban</h4>
+<p class="text-xs text-gray-600 dark:text-gray-400 mt-1">For severe safety violations or repeat offenses.</p>
+</div>
+</div>
+</section>
+<!-- Reporting Section -->
+<section class="mt-8 bg-primary/5 dark:bg-primary/10 rounded-2xl p-8 text-center border border-primary/10 dark:border-primary/20">
+<h2 class="text-[#111418] dark:text-white text-2xl font-bold mb-3">See something wrong?</h2>
+<p class="text-gray-600 dark:text-gray-300 max-w-lg mx-auto mb-6">
+                        If you experience or witness a violation of these guidelines, please report it immediately. Your report is confidential and helps keep our community safe.
+                    </p>
+<button class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">flag</span>
+                        Report a Violation
+                    </button>
+</section>
+</main>
+</div>
+</div>
+<!-- Simple Footer -->
+<footer class="bg-white dark:bg-gray-800 border-t border-[#f0f2f4] dark:border-gray-700 py-10 mt-auto">
+<div class="max-w-[1280px] mx-auto px-10 flex flex-col md:flex-row justify-between gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-[#111418] dark:text-white">
+<div class="size-6 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">handshake</span>
+</div>
+<span class="font-bold text-lg">Helpers</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 max-w-xs">
+                    Building a safer, more reliable service marketplace for everyone.
+                </p>
+</div>
+<div class="flex flex-wrap gap-8 md:gap-16">
+<div class="flex flex-col gap-3">
+<h4 class="font-bold text-sm text-[#111418] dark:text-white">Company</h4>
+<a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary" href="/about">About Us</a>
+<a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary" href="/careers">Careers</a>
+<a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary" href="/press">Press</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-bold text-sm text-[#111418] dark:text-white">Legal</h4>
+<a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary" href="/terms">Terms of Service</a>
+<a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary" href="/privacy">Privacy Policy</a>
+<a class="text-sm text-gray-900 dark:text-white font-medium" href="/">Community Guidelines</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-bold text-sm text-[#111418] dark:text-white">Support</h4>
+<a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary" href="/help">Help Center</a>
+<a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary" href="/">Safety</a>
+<a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary" href="/contact">Contact Us</a>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-10 mt-10 pt-6 border-t border-gray-100 dark:border-gray-700 text-center md:text-left">
+<p class="text-xs text-gray-400">© 2024 Helpers Inc. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

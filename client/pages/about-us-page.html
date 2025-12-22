@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display overflow-x-hidden">
+<div class="relative flex flex-col min-h-screen w-full">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-sm border-b border-[#f0f2f4] dark:border-gray-800">
+<div class="flex items-center justify-between px-4 py-3 md:px-10 max-w-[1280px] mx-auto w-full">
+<div class="flex items-center gap-4 text-[#111418] dark:text-white">
+<div class="flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">handyman</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Helpers</h2>
+</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<div class="flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="/">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="/services">Services</a>
+<a class="text-sm font-bold text-primary" href="/about">About Us</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="/careers">Careers</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="/">Blog</a>
+</div>
+<div class="flex gap-2">
+<a class="flex items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-primary/90 text-white text-sm font-bold transition-colors" href="/signup"><span>Sign Up</span></a>
+<a class="flex items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f0f2f4] hover:bg-[#e0e2e4] dark:bg-white/10 dark:hover:bg-white/20 text-[#111418] dark:text-white text-sm font-bold transition-colors" href="/login"><span>Log In</span></a>
+</div>
+</div>
+<!-- Mobile Menu Icon (Placeholder) -->
+<button class="md:hidden text-[#111418] dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col">
+<!-- Hero Section -->
+<section class="w-full px-4 py-10 md:px-10 lg:px-40 flex justify-center bg-white dark:bg-background-dark">
+<div class="max-w-[960px] w-full flex flex-col gap-10 @container">
+<div class="flex flex-col gap-6 md:flex-row md:items-center md:gap-12">
+<!-- Image -->
+<div class="w-full md:w-1/2 aspect-[4/3] bg-center bg-no-repeat bg-cover rounded-lg shadow-sm" data-alt="Close up of a friendly handshake between a homeowner and a repair professional" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDUAlFMk68W6Sbxp7Uy5OxQyrlp6K21Kut1s5KEEmEMqV7p3HlleCiAtXlT-x8HS1L0aqBGx5z50faY8lXGQDKHooDDytR5hFqoEXEKcMtxW6M6G1FLFy6lsfnOLoOURtSm6X1xZ-uaJZIRHCRf6w6a_lO5TtLsHR-jkxcZf_WfSh27XJy_cg2ElTvzAHmkyJt841bx-0-ThSFsHmuDIy1HckutTBi2IP9-xQajfOO3pXA7CcK0mt-JJii4yxzNnZ7Aqo7BpSfAOP0");'>
+</div>
+<!-- Content -->
+<div class="flex flex-col gap-6 md:w-1/2">
+<div class="flex flex-col gap-3">
+<h1 class="text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] text-[#111418] dark:text-white">
+                                    We are Helpers. We make home maintenance effortless.
+                                </h1>
+<p class="text-base md:text-lg text-[#617589] dark:text-gray-400 font-normal leading-relaxed">
+                                    Empowering Homes, Enabling Pros. We bridge the gap between skilled professionals and homeowners to build stronger, more reliable communities through service.
+                                </p>
+</div>
+<div class="flex gap-3">
+<button class="h-12 px-6 rounded-lg bg-primary hover:bg-primary/90 text-white text-base font-bold transition-colors">
+                                    View Services
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Stats Bar -->
+<section class="w-full bg-primary/5 dark:bg-white/5 py-12 border-y border-[#e5e7eb] dark:border-gray-800">
+<div class="max-w-[960px] mx-auto px-4 md:px-10 lg:px-40">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div class="flex flex-col gap-1">
+<h3 class="text-3xl md:text-4xl font-black text-primary tracking-tight">10k+</h3>
+<p class="text-sm md:text-base text-[#617589] dark:text-gray-400 font-medium">Jobs Completed</p>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-3xl md:text-4xl font-black text-primary tracking-tight">5k+</h3>
+<p class="text-sm md:text-base text-[#617589] dark:text-gray-400 font-medium">Happy Helpers</p>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-3xl md:text-4xl font-black text-primary tracking-tight">4.8</h3>
+<p class="text-sm md:text-base text-[#617589] dark:text-gray-400 font-medium">Average Rating</p>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-3xl md:text-4xl font-black text-primary tracking-tight">50+</h3>
+<p class="text-sm md:text-base text-[#617589] dark:text-gray-400 font-medium">Cities Covered</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Section (Core Values) -->
+<section class="w-full px-4 py-16 md:px-10 lg:px-40 flex justify-center bg-white dark:bg-background-dark">
+<div class="max-w-[960px] w-full flex flex-col gap-10">
+<div class="flex flex-col gap-4 text-center md:text-left">
+<h2 class="text-3xl font-bold tracking-tight text-[#111418] dark:text-white md:text-4xl">
+                            Our Core Values
+                        </h2>
+<p class="text-base text-[#617589] dark:text-gray-400 max-w-[720px]">
+                            Built on a foundation of trust, transparency, and mutual success.
+                        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Value 1 -->
+<div class="flex flex-col gap-4 p-6 rounded-lg border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-[#1a2632] shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[28px]">verified_user</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Reliability</h3>
+<p class="text-sm text-[#617589] dark:text-gray-400 leading-relaxed">
+                                    We verify every professional. You can trust that the person entering your home is skilled and vetted.
+                                </p>
+</div>
+</div>
+<!-- Value 2 -->
+<div class="flex flex-col gap-4 p-6 rounded-lg border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-[#1a2632] shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[28px]">payments</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Transparency</h3>
+<p class="text-sm text-[#617589] dark:text-gray-400 leading-relaxed">
+                                    Clear upfront pricing with absolutely no hidden fees. You know exactly what you're paying for.
+                                </p>
+</div>
+</div>
+<!-- Value 3 -->
+<div class="flex flex-col gap-4 p-6 rounded-lg border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-[#1a2632] shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[28px]">volunteer_activism</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-lg font-bold text-[#111418] dark:text-white">Empowerment</h3>
+<p class="text-sm text-[#617589] dark:text-gray-400 leading-relaxed">
+                                    We're not just an app; we're a partner helping skilled workers build sustainable, thriving businesses.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Timeline Section -->
+<section class="w-full px-4 py-16 md:px-10 lg:px-40 flex justify-center bg-[#f8f9fa] dark:bg-[#15202b]">
+<div class="max-w-[960px] w-full flex flex-col gap-10">
+<div class="flex flex-col gap-2">
+<h2 class="text-3xl font-bold tracking-tight text-[#111418] dark:text-white">Our Journey</h2>
+<p class="text-base text-[#617589] dark:text-gray-400">From a simple idea to a nationwide community.</p>
+</div>
+<div class="grid grid-cols-[40px_1fr] gap-x-4 md:gap-x-8">
+<!-- Item 1 -->
+<div class="flex flex-col items-center gap-1 pt-1">
+<div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white z-10">
+<span class="material-symbols-outlined text-xl">flag</span>
+</div>
+<div class="w-[2px] bg-[#dbe0e6] dark:bg-gray-700 h-full grow"></div>
+</div>
+<div class="flex flex-col pb-8 pt-2">
+<p class="text-sm font-bold text-primary mb-1">2018</p>
+<h3 class="text-xl font-bold text-[#111418] dark:text-white">Inception</h3>
+<p class="text-[#617589] dark:text-gray-400 mt-2">
+                                Helpers was born out of frustration. Finding a reliable plumber shouldn't take three days. We launched in a single neighborhood with 5 pros.
+                            </p>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-[2px] bg-[#dbe0e6] dark:bg-gray-700 h-4"></div>
+<div class="flex items-center justify-center w-10 h-10 rounded-full bg-white border-2 border-primary text-primary z-10">
+<span class="material-symbols-outlined text-xl">handshake</span>
+</div>
+<div class="w-[2px] bg-[#dbe0e6] dark:bg-gray-700 h-full grow"></div>
+</div>
+<div class="flex flex-col pb-8 pt-2">
+<p class="text-sm font-bold text-primary mb-1">2019</p>
+<h3 class="text-xl font-bold text-[#111418] dark:text-white">First 1,000 Jobs</h3>
+<p class="text-[#617589] dark:text-gray-400 mt-2">
+                                We hit our first major milestone. Trust started to build, and word of mouth spread. We expanded to cover the entire city.
+                            </p>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-[2px] bg-[#dbe0e6] dark:bg-gray-700 h-4"></div>
+<div class="flex items-center justify-center w-10 h-10 rounded-full bg-white border-2 border-primary text-primary z-10">
+<span class="material-symbols-outlined text-xl">public</span>
+</div>
+<div class="w-[2px] bg-[#dbe0e6] dark:bg-gray-700 h-full grow"></div>
+</div>
+<div class="flex flex-col pb-8 pt-2">
+<p class="text-sm font-bold text-primary mb-1">2021</p>
+<h3 class="text-xl font-bold text-[#111418] dark:text-white">Nationwide Expansion</h3>
+<p class="text-[#617589] dark:text-gray-400 mt-2">
+                                Following a Series A funding round, we took Helpers national, launching in 20 major metropolitan areas simultaneously.
+                            </p>
+</div>
+<!-- Item 4 -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-[2px] bg-[#dbe0e6] dark:bg-gray-700 h-4"></div>
+<div class="flex items-center justify-center w-10 h-10 rounded-full bg-white border-2 border-primary text-primary z-10">
+<span class="material-symbols-outlined text-xl">rocket_launch</span>
+</div>
+</div>
+<div class="flex flex-col pt-2">
+<p class="text-sm font-bold text-primary mb-1">2024</p>
+<h3 class="text-xl font-bold text-[#111418] dark:text-white">The Future of Helpers</h3>
+<p class="text-[#617589] dark:text-gray-400 mt-2">
+                                We are integrating smart home diagnostics and launching "Helpers Academy" to train the next generation of service professionals.
+                            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Carousel Section (Team) -->
+<section class="w-full px-4 py-16 md:px-10 lg:px-40 flex justify-center bg-white dark:bg-background-dark overflow-hidden">
+<div class="max-w-[960px] w-full flex flex-col gap-10">
+<div class="flex flex-col gap-2">
+<h2 class="text-3xl font-bold tracking-tight text-[#111418] dark:text-white">Meet the Leadership</h2>
+<p class="text-base text-[#617589] dark:text-gray-400">The people behind the platform.</p>
+</div>
+<div class="flex overflow-x-auto no-scrollbar pb-4 -mx-4 px-4 md:mx-0 md:px-0">
+<div class="flex items-stretch gap-6 min-w-full">
+<!-- Team Member 1 -->
+<div class="flex flex-col gap-4 w-60 shrink-0">
+<div class="w-full aspect-[3/4] bg-center bg-no-repeat bg-cover rounded-lg bg-gray-200" data-alt="Portrait of Sarah Jenkins, CEO" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBcZfLmsntY_9xXbA3PSRMTdeCAZUuKJLC_cdA3_9oHtVaC8wQrQTtZyh-IZjiHN_jvAQ5pgFn-wy0kKyjTdpVBf_C1j0TfDS2Mhh5iFQlDi5m9H8HdgEet14vsciKy9zmQoiwtQz-lZNbj65T18LVpPVoI8XONtfP3znJsTJIqd2xAcr8IQK-pybhgyDV1tVpOZyBf_aZUKTlXHftQihIKPlisIS3O98Vrss078Gr4HqyFYqRpcNpv_JBdK2-vHGQcp2y2TN2c-7w");'>
+</div>
+<div>
+<p class="text-[#111418] dark:text-white text-lg font-bold leading-normal">Sarah Jenkins</p>
+<p class="text-primary text-sm font-medium leading-normal">CEO &amp; Founder</p>
+<p class="text-[#617589] dark:text-gray-500 text-sm mt-1">Passionate about community building.</p>
+</div>
+</div>
+<!-- Team Member 2 -->
+<div class="flex flex-col gap-4 w-60 shrink-0">
+<div class="w-full aspect-[3/4] bg-center bg-no-repeat bg-cover rounded-lg bg-gray-200" data-alt="Portrait of David Lee, CTO" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnTe8KgvgNVQjePFDAiJE9DLpVC3T29OOLk6dSesocsTEhoC1bcfVI2MFqQAE-alHrQMLf7rDPC5ghTJl2zbv_oC0ugWhc8bAguH1L26L3u_VcZrqWtdul9snOSVmMI2wfkczf9OEbemxDR8smxOhtCTbXLv6i0uapYVR-geqwvRjBmUK6ncaiay_9Wbh62Zu1Zpab0lg4jP4rsKZaOtbrSDscCpRkumQ24BsO_T9VbLPMg1NTIKb6o6S4C_mahcTrZ0tZgAejP1s");'>
+</div>
+<div>
+<p class="text-[#111418] dark:text-white text-lg font-bold leading-normal">David Lee</p>
+<p class="text-primary text-sm font-medium leading-normal">CTO</p>
+<p class="text-[#617589] dark:text-gray-500 text-sm mt-1">Tech veteran with a love for DIY.</p>
+</div>
+</div>
+<!-- Team Member 3 -->
+<div class="flex flex-col gap-4 w-60 shrink-0">
+<div class="w-full aspect-[3/4] bg-center bg-no-repeat bg-cover rounded-lg bg-gray-200" data-alt="Portrait of Maria Garcia, Ops" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB86Dg2kEJDkGqI6wz0YO7-HYRVfYaDp9zHL-ASUyjxUtIKvo_BPaU2NyiM2EIQLbE4_wfrMR6D9nv8t_55OIRlqQqz4rh25cOo9z715msBchY1FDp-5m1j6VZod0CQfbPeYWnMQxOsbKlwA81psSRMKe2k4LGllYuhfe3NIrHJ1roQOMQIrGSgdxCoA9q_w6pBJVx361k1WqgT5qfiGREgcq1IS9RmjUqEqC-5T5N6Rsb4bGJuJ1swJJV5TMRcdxNiliArYUMLA9A");'>
+</div>
+<div>
+<p class="text-[#111418] dark:text-white text-lg font-bold leading-normal">Maria Garcia</p>
+<p class="text-primary text-sm font-medium leading-normal">Head of Operations</p>
+<p class="text-[#617589] dark:text-gray-500 text-sm mt-1">Ensuring quality every single day.</p>
+</div>
+</div>
+<!-- Team Member 4 -->
+<div class="flex flex-col gap-4 w-60 shrink-0">
+<div class="w-full aspect-[3/4] bg-center bg-no-repeat bg-cover rounded-lg bg-gray-200" data-alt="Portrait of James Chen, Community Manager" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAd_ePtGVJW8yq-l5ZsLO4YEpxARac3OjjJsRIChG-YY4avh1GXGtonMiDCccUHRHJwmqTxtvKCI5SCiFgdqhjsxycrkDA-eWAIDokDwy4KzMUs-fknFCoWJN8UKG8t9znHTu88eaPy-psZf6emN4UeWhRvxkdsy3xsRFzgs60uxxPCykULyZOU_FgCky3bQH8sJFbdgDacK9U0_y3SrGW9ew14co7h_CUpIW9i_c_XlqzI3SfpJQ4lTtT4UsuK7eA51z5ovpX8f7g");'>
+</div>
+<div>
+<p class="text-[#111418] dark:text-white text-lg font-bold leading-normal">James Chen</p>
+<p class="text-primary text-sm font-medium leading-normal">Community Manager</p>
+<p class="text-[#617589] dark:text-gray-500 text-sm mt-1">The voice of our Helpers.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Dual CTA Footer -->
+<section class="w-full px-4 py-20 md:px-10 lg:px-40 flex justify-center bg-[#f8f9fa] dark:bg-[#15202b]">
+<div class="max-w-[960px] w-full">
+<div class="grid md:grid-cols-2 gap-8">
+<!-- User Card -->
+<div class="flex flex-col items-center justify-center p-10 bg-white dark:bg-[#1a2632] rounded-lg text-center gap-6 shadow-sm border border-[#dbe0e6] dark:border-gray-700">
+<div class="w-16 h-16 bg-blue-50 dark:bg-blue-900/20 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">home</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-2xl font-bold text-[#111418] dark:text-white">For Homeowners</h3>
+<p class="text-[#617589] dark:text-gray-400">Need a helping hand? Find trusted professionals for all your home needs.</p>
+</div>
+<button class="w-full max-w-[240px] h-12 rounded-lg bg-primary hover:bg-primary/90 text-white font-bold transition-colors">
+                               Book a Service
+                           </button>
+</div>
+<!-- Pro Card -->
+<div class="flex flex-col items-center justify-center p-10 bg-[#111418] dark:bg-black rounded-lg text-center gap-6 shadow-lg text-white">
+<div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-3xl">engineering</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-2xl font-bold">For Professionals</h3>
+<p class="text-gray-400">Join our network of skilled helpers and grow your business today.</p>
+</div>
+<button class="w-full max-w-[240px] h-12 rounded-lg bg-white hover:bg-gray-100 text-[#111418] font-bold transition-colors">
+                               Join as a Pro
+                           </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-[#f0f2f4] dark:border-gray-800 bg-white dark:bg-background-dark py-10 px-4 md:px-40">
+<div class="max-w-[960px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2 text-[#111418] dark:text-white">
+<span class="material-symbols-outlined text-primary">handyman</span>
+<span class="font-bold text-lg">Helpers</span>
+</div>
+<div class="flex gap-8 flex-wrap justify-center">
+<a class="text-sm text-[#617589] dark:text-gray-400 hover:text-primary" href="/privacy">Privacy Policy</a>
+<a class="text-sm text-[#617589] dark:text-gray-400 hover:text-primary" href="/terms">Terms of Service</a>
+<a class="text-sm text-[#617589] dark:text-gray-400 hover:text-primary" href="/">Contact Support</a>
+<a class="text-sm text-[#617589] dark:text-gray-400 hover:text-primary" href="/">Instagram</a>
+<a class="text-sm text-[#617589] dark:text-gray-400 hover:text-primary" href="/">Twitter</a>
+</div>
+<p class="text-sm text-[#617589] dark:text-gray-500">© 2024 Helpers Inc.</p>
+</div>
+</footer>
+</div>
+</body></html>

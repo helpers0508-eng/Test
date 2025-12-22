@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+</head>
+<body data-role="user" class="bg-background-light dark:bg-background-dark text-[#111418] font-display antialiased overflow-hidden h-screen flex">
+<!-- Sidebar -->
+<aside class="hidden md:flex flex-col w-72 bg-white border-r border-[#f0f2f4] h-full shrink-0">
+<div class="flex h-full flex-col justify-between p-4">
+<div class="flex flex-col gap-4">
+<!-- User Profile Summary -->
+<div class="flex gap-3 items-center px-2 py-3 mb-2 border-b border-[#f0f2f4]">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 shadow-sm" data-alt="Profile picture of John Doe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCif34wrj1Kmn7_SE0XfMqBPfEVeHB8rfN3mZIae7ylif5Nw4DIRU59iO_awZ8Gp3PHOrx-k-Ot_TfbsTsZcsrH6iw7RdBoSq4Dx0C3EMLG0vsYm_mz2KFnrNgNVqhHx2JsfAJQT-RoUA6gbnGg_nSTTmEPYh-Eeb1V_ZBLqBqLi61S4YmYE25_CHnU2uhBoPRlmD0ot7OYCFHqol1_WWb5ZmgJOgl3_Nmzk8NqWSI-t0VKzRUr6Vwb6dMqmrWfh2XoEQg6l5_F5a4");'></div>
+<div class="flex flex-col overflow-hidden">
+<h1 class="text-[#111418] text-base font-bold leading-normal truncate">John Doe</h1>
+<p class="text-[#617589] text-xs font-medium leading-normal">Customer Account</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f0f2f4] transition-colors group" href="/">
+<span class="material-symbols-outlined text-[#617589] group-hover:text-[#111418]">dashboard</span>
+<p class="text-[#111418] text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f0f2f4] transition-colors group" href="/">
+<span class="material-symbols-outlined text-[#617589] group-hover:text-[#111418]">calendar_today</span>
+<p class="text-[#111418] text-sm font-medium leading-normal">Bookings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f0f2f4] transition-colors group" href="/">
+<span class="material-symbols-outlined text-[#617589] group-hover:text-[#111418]">chat_bubble</span>
+<p class="text-[#111418] text-sm font-medium leading-normal">Messages</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f0f2f4] transition-colors group" href="/">
+<span class="material-symbols-outlined text-[#617589] group-hover:text-[#111418]">account_balance_wallet</span>
+<p class="text-[#111418] text-sm font-medium leading-normal">Wallet</p>
+</a>
+<!-- Active State -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary transition-colors" href="/">
+<span class="material-symbols-outlined fill">notifications</span>
+<p class="text-primary text-sm font-bold leading-normal">Notifications</p>
+<span class="ml-auto bg-primary text-white text-xs font-bold px-2 py-0.5 rounded-full">3</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f0f2f4] transition-colors group" href="/">
+<span class="material-symbols-outlined text-[#617589] group-hover:text-[#111418]">settings</span>
+<p class="text-[#111418] text-sm font-medium leading-normal">Settings</p>
+</a>
+</nav>
+</div>
+<!-- Bottom Actions -->
+<div class="flex flex-col gap-2 border-t border-[#f0f2f4] pt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#f0f2f4] transition-colors text-[#617589] hover:text-[#111418]" href="/">
+<span class="material-symbols-outlined">help</span>
+<p class="text-sm font-medium leading-normal">Help Center</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#f0f2f4] transition-colors text-[#617589] hover:text-[#111418]" href="/">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-medium leading-normal">Log Out</p>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col min-w-0 bg-background-light dark:bg-background-dark">
+<!-- Mobile Header (Visible only on small screens) -->
+<header class="md:hidden flex items-center justify-between px-4 py-3 bg-white border-b border-[#f0f2f4]">
+<div class="flex items-center gap-3">
+<button class="text-[#111418]">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<span class="font-bold text-lg text-primary">Helpers</span>
+</div>
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNcq-hljdiYHvIpnsYGuqowr0Xrn6rZSIwy0i7tpbkHY-RaMtxDyceiwSEgBuUVU2VOC6SeQhW5IJYUXU5Vwz1zI6QQ83qfsh6vQzMO7CTsLvrFZzaAYqv4_gvoGmiazTMILCl9GYjpgTD6d5hKgR8nWYFAgZpfkMzA03p-mkKKyD0PablOEKgyduYzT9bmOGltrHib3VIn0ajxXZw0hfwRj0W2JxqrQPR4Cgjr_apydLE-bQch4q8QR7umLEfNiZB92rIbXOI3VE");'></div>
+</header>
+<!-- Main Scrollable Feed -->
+<div class="flex-1 overflow-y-auto overflow-x-hidden">
+<div class="max-w-[1000px] mx-auto w-full flex flex-col">
+<!-- Page Header Section -->
+<div class="bg-white border-b border-[#f0f2f4] px-6 py-6 md:pt-10 md:pb-0 sticky top-0 z-20">
+<div class="flex flex-wrap justify-between items-end gap-4 mb-6">
+<div class="flex flex-col gap-1">
+<h1 class="text-[#111418] text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">Notifications</h1>
+<p class="text-[#617589] text-base font-normal">Stay updated with your bookings and account activity.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white border border-[#dbe0e6] hover:bg-[#f0f2f4] text-[#111418] text-sm font-bold leading-normal transition-colors">
+<span class="material-symbols-outlined text-[20px] mr-2">settings</span>
+<span>Settings</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f0f2f4] hover:bg-[#e0e2e5] text-[#111418] text-sm font-bold leading-normal transition-colors">
+<span class="material-symbols-outlined text-[20px] mr-2">done_all</span>
+<span>Mark all as read</span>
+</button>
+</div>
+</div>
+<!-- Tabs -->
+<div class="flex gap-8 overflow-x-auto no-scrollbar">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-primary text-[#111418] pb-3 px-1 min-w-fit" href="/">
+<p class="text-[#111418] text-sm font-bold leading-normal">All</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent hover:border-[#dbe0e6] text-[#617589] pb-3 px-1 min-w-fit transition-colors" href="/">
+<div class="flex items-center gap-2">
+<p class="text-[#617589] text-sm font-bold leading-normal">Unread</p>
+<span class="bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">3</span>
+</div>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent hover:border-[#dbe0e6] text-[#617589] pb-3 px-1 min-w-fit transition-colors" href="/">
+<p class="text-[#617589] text-sm font-bold leading-normal">Important</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent hover:border-[#dbe0e6] text-[#617589] pb-3 px-1 min-w-fit transition-colors" href="/">
+<p class="text-[#617589] text-sm font-bold leading-normal">Archived</p>
+</a>
+</div>
+</div>
+<!-- Filters & Controls Bar -->
+<div class="px-6 py-4 flex flex-col md:flex-row gap-4 items-center justify-between">
+<!-- Search -->
+<div class="relative w-full md:max-w-md">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-[#617589]">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="block w-full p-2.5 pl-10 text-sm text-[#111418] border border-[#dbe0e6] rounded-lg bg-white focus:ring-primary focus:border-primary placeholder:text-[#9ca3af]" placeholder="Search notifications (e.g. 'Booking', 'Invoice')" type="text"/>
+</div>
+<!-- Sort -->
+<div class="flex items-center gap-2 w-full md:w-auto">
+<label class="text-sm font-medium text-[#617589] whitespace-nowrap">Sort by:</label>
+<select class="bg-transparent border-none text-sm font-bold text-[#111418] focus:ring-0 cursor-pointer pr-8 pl-0">
+<option>Newest first</option>
+<option>Oldest first</option>
+</select>
+</div>
+</div>
+<!-- Notification List -->
+<div class="flex flex-col px-4 md:px-6 pb-10 gap-3">
+<!-- Item 1: Unread, Booking Confirmed -->
+<div class="group relative flex flex-col sm:flex-row gap-4 p-4 rounded-xl bg-white border border-l-4 border-[#f0f2f4] border-l-primary shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<div class="flex-shrink-0 relative">
+<div class="size-12 rounded-full bg-blue-50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">event_available</span>
+</div>
+<!-- Unread Dot (Mobile/Compact view) -->
+<span class="absolute top-0 right-0 size-3 bg-primary rounded-full border-2 border-white sm:hidden"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-[#111418] text-base font-bold truncate pr-4">Booking Confirmed: House Cleaning</h3>
+<span class="text-[#617589] text-xs font-medium whitespace-nowrap">2h ago</span>
+</div>
+<p class="text-[#617589] text-sm leading-normal mb-3 line-clamp-2">Your booking with <span class="font-semibold text-[#111418]">Sarah Jenkins</span> for tomorrow at 10:00 AM has been confirmed. Tap to view details.</p>
+<div class="flex items-center gap-3">
+<button class="bg-primary hover:bg-blue-600 text-white text-xs font-bold py-2 px-4 rounded-lg transition-colors">View Booking</button>
+<button class="text-[#617589] hover:text-[#111418] text-xs font-medium py-2 px-2 rounded-lg transition-colors">Reschedule</button>
+</div>
+</div>
+<!-- Desktop Actions (Hover) -->
+<div class="absolute top-4 right-4 hidden group-hover:flex gap-1 bg-white pl-2 shadow-[-10px_0_10px_white]">
+<button class="size-8 flex items-center justify-center rounded-full hover:bg-[#f0f2f4] text-[#617589] hover:text-primary transition-colors" title="Mark as read">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded-full hover:bg-[#f0f2f4] text-[#617589] hover:text-[#111418] transition-colors" title="Archive">
+<span class="material-symbols-outlined text-[20px]">archive</span>
+</button>
+</div>
+</div>
+<!-- Item 2: Unread, Payment -->
+<div class="group relative flex flex-col sm:flex-row gap-4 p-4 rounded-xl bg-white border border-l-4 border-[#f0f2f4] border-l-primary shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<div class="flex-shrink-0">
+<div class="size-12 rounded-full bg-green-50 flex items-center justify-center text-green-600">
+<span class="material-symbols-outlined">payments</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-[#111418] text-base font-bold truncate pr-4">Payment Successful</h3>
+<span class="text-[#617589] text-xs font-medium whitespace-nowrap">5h ago</span>
+</div>
+<p class="text-[#617589] text-sm leading-normal line-clamp-2">We've received your payment of <span class="font-semibold text-[#111418]">$85.00</span> for Invoice #INV-2024-001. A receipt has been sent to your email.</p>
+</div>
+<div class="absolute top-4 right-4 hidden group-hover:flex gap-1 bg-white pl-2">
+<button class="size-8 flex items-center justify-center rounded-full hover:bg-[#f0f2f4] text-[#617589] hover:text-primary transition-colors" title="Mark as read">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded-full hover:bg-[#f0f2f4] text-[#617589] hover:text-[#111418] transition-colors" title="Archive">
+<span class="material-symbols-outlined text-[20px]">archive</span>
+</button>
+</div>
+</div>
+<!-- Item 3: Unread, Action Required -->
+<div class="group relative flex flex-col sm:flex-row gap-4 p-4 rounded-xl bg-white border border-l-4 border-[#f0f2f4] border-l-primary shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<div class="flex-shrink-0">
+<div class="size-12 rounded-full bg-orange-50 flex items-center justify-center text-orange-600">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-[#111418] text-base font-bold truncate pr-4">Action Required: Verify Email</h3>
+<span class="text-[#617589] text-xs font-medium whitespace-nowrap">Yesterday</span>
+</div>
+<p class="text-[#617589] text-sm leading-normal mb-3 line-clamp-2">Please verify your email address to enable all features of your Helpers account.</p>
+<button class="bg-white border border-[#dbe0e6] hover:bg-[#f0f2f4] text-[#111418] text-xs font-bold py-2 px-4 rounded-lg transition-colors">Resend Verification</button>
+</div>
+<div class="absolute top-4 right-4 hidden group-hover:flex gap-1 bg-white pl-2">
+<button class="size-8 flex items-center justify-center rounded-full hover:bg-[#f0f2f4] text-[#617589] hover:text-primary transition-colors" title="Mark as read">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded-full hover:bg-[#f0f2f4] text-[#617589] hover:text-[#111418] transition-colors" title="Archive">
+<span class="material-symbols-outlined text-[20px]">archive</span>
+</button>
+</div>
+</div>
+<!-- Divider for Read items -->
+<div class="flex items-center gap-4 my-2">
+<div class="h-px bg-[#dbe0e6] flex-1"></div>
+<span class="text-xs font-bold text-[#9ca3af] uppercase tracking-wider">Previous</span>
+<div class="h-px bg-[#dbe0e6] flex-1"></div>
+</div>
+<!-- Item 4: Read, System Message -->
+<div class="group relative flex flex-col sm:flex-row gap-4 p-4 rounded-xl bg-white border border-[#f0f2f4] hover:border-[#dbe0e6] shadow-sm hover:shadow-md transition-all cursor-pointer opacity-80 hover:opacity-100">
+<div class="flex-shrink-0">
+<div class="size-12 rounded-full bg-[#f0f2f4] flex items-center justify-center text-[#617589]">
+<span class="material-symbols-outlined">info</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-[#111418] text-base font-semibold truncate pr-4">Platform Maintenance</h3>
+<span class="text-[#617589] text-xs font-normal whitespace-nowrap">2 days ago</span>
+</div>
+<p class="text-[#617589] text-sm leading-normal line-clamp-2">Helpers will be undergoing scheduled maintenance on Sunday, Oct 25th from 2:00 AM to 4:00 AM UTC. Services might be temporarily unavailable.</p>
+</div>
+<div class="absolute top-4 right-4 hidden group-hover:flex gap-1 bg-white pl-2">
+<button class="size-8 flex items-center justify-center rounded-full hover:bg-[#f0f2f4] text-[#617589] hover:text-[#111418] transition-colors" title="Archive">
+<span class="material-symbols-outlined text-[20px]">archive</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded-full hover:bg-[#f0f2f4] text-[#617589] hover:text-red-600 transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Item 5: Read, Promo -->
+<div class="group relative flex flex-col sm:flex-row gap-4 p-4 rounded-xl bg-white border border-[#f0f2f4] hover:border-[#dbe0e6] shadow-sm hover:shadow-md transition-all cursor-pointer opacity-80 hover:opacity-100">
+<div class="flex-shrink-0">
+<div class="size-12 rounded-full bg-purple-50 flex items-center justify-center text-purple-600">
+<span class="material-symbols-outlined">percent</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-[#111418] text-base font-semibold truncate pr-4">20% Off Plumbing Services</h3>
+<span class="text-[#617589] text-xs font-normal whitespace-nowrap">3 days ago</span>
+</div>
+<p class="text-[#617589] text-sm leading-normal line-clamp-2">Winter is coming! Get 20% off all plumbing inspections booked before November 1st. Use code WINTER20.</p>
+</div>
+<div class="absolute top-4 right-4 hidden group-hover:flex gap-1 bg-white pl-2">
+<button class="size-8 flex items-center justify-center rounded-full hover:bg-[#f0f2f4] text-[#617589] hover:text-[#111418] transition-colors" title="Archive">
+<span class="material-symbols-outlined text-[20px]">archive</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded-full hover:bg-[#f0f2f4] text-[#617589] hover:text-red-600 transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Item 6: Read, Message -->
+<div class="group relative flex flex-col sm:flex-row gap-4 p-4 rounded-xl bg-white border border-[#f0f2f4] hover:border-[#dbe0e6] shadow-sm hover:shadow-md transition-all cursor-pointer opacity-80 hover:opacity-100">
+<div class="flex-shrink-0">
+<div class="size-12 rounded-full bg-[#f0f2f4] bg-cover bg-center border border-white shadow-sm" data-alt="Mike Ross Helper Profile" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD5OsA3TmcH3LF-riHM9jQcLlOTYJU5t97TIYKk6Takrp96NZY5HOPQLzKT-pNzrFBCptzbw8SmYV8RfiaYnAy8YQZpuSLcSfVJ6JouTIUapU5IRx9gZNWJTdt53Rnlr-CS6L40TRtctXa_ndrAOG2D6SchkIr89Yhtqcz6yb1DMSX_vL2YUejJXEsn62cUk3aZ8lThUyvALseUbx1aWpWvMLlxyZpeQG0p_Sesl9rbfkHRU6EeoFVgF0H0TlY78w3FG0ADHnNS1Mg");'></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h3 class="text-[#111418] text-base font-semibold truncate pr-4">New message from Mike Ross</h3>
+<span class="text-[#617589] text-xs font-normal whitespace-nowrap">4 days ago</span>
+</div>
+<p class="text-[#617589] text-sm leading-normal line-clamp-2">"Hi John, I'm just confirming that I have the right tools for the AC repair job on Tuesday. See you then!"</p>
+<button class="mt-2 text-primary text-xs font-bold hover:underline">Reply</button>
+</div>
+<div class="absolute top-4 right-4 hidden group-hover:flex gap-1 bg-white pl-2">
+<button class="size-8 flex items-center justify-center rounded-full hover:bg-[#f0f2f4] text-[#617589] hover:text-[#111418] transition-colors" title="Archive">
+<span class="material-symbols-outlined text-[20px]">archive</span>
+</button>
+<button class="size-8 flex items-center justify-center rounded-full hover:bg-[#f0f2f4] text-[#617589] hover:text-red-600 transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Load More / End of List -->
+<div class="flex justify-center pb-12">
+<button class="text-[#617589] text-sm font-medium hover:text-[#111418] px-4 py-2 rounded-lg hover:bg-[#f0f2f4] transition-colors flex items-center gap-2">
+                        Load older notifications
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

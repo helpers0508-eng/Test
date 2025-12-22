@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Blog &amp; Community</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] bg-white dark:bg-[#111418] dark:border-b-[#293038] px-10 py-3">
+<div class="flex items-center gap-4 text-[#111418] dark:text-white">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-[32px]">handshake</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Helpers</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-[#111418] dark:text-[#9ca3af] hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-[#111418] dark:text-[#9ca3af] hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#">Jobs</a>
+<a class="text-[#111418] dark:text-[#9ca3af] hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#">Earnings</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Community/Blog</a>
+<a class="text-[#111418] dark:text-[#9ca3af] hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#">Profile</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-blue-600 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Sign In</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex flex-1 flex-col items-center">
+<!-- Hero Section -->
+<div class="w-full bg-white dark:bg-[#111418] border-b border-[#f0f2f4] dark:border-[#293038]">
+<div class="max-w-[1200px] mx-auto px-4 md:px-10 py-10">
+<div class="@container">
+<div class="flex flex-col gap-6 md:gap-10 @[864px]:flex-row items-center">
+<div class="w-full @[864px]:w-1/2 aspect-video rounded-xl bg-gray-200 dark:bg-gray-800 bg-center bg-cover overflow-hidden relative shadow-md" data-alt="Two people discussing finances over a laptop" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBcL65XNqSXDWr6IU3nZNNAETTIB2bWKvg27hJRdqh4tuPbnbnXMMSwMIr5WDCc4p08VdtZeXJxpSfYisMJxJodIiQNtzdqqRbs1_CaYYUQg8szTw0W5q3UZvyMIynmPwpcCHAHd0H9mIiIAog_T3jWC9wu5Ms6BaXfIoU-Cl3jw66jGSTABu50uAMnXzZQC7R3DxKu6h33zKICWJRpXw7zZs6fs7mxiYZuOR3Q3yy6bh8hMPSteUjNq7OwTi9E7qiEeIG8nKHi3XI");'>
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-primary uppercase tracking-wide shadow-sm">
+                                    Featured
+                                 </div>
+</div>
+<div class="flex flex-col gap-4 w-full @[864px]:w-1/2 @[864px]:pl-6">
+<div class="flex items-center gap-2 text-sm text-[#617589] dark:text-gray-400">
+<span>Dec 12, 2023</span>
+<span class="size-1 rounded-full bg-[#617589]"></span>
+<span>5 min read</span>
+</div>
+<h1 class="text-[#111418] dark:text-white text-3xl md:text-4xl lg:text-5xl font-black leading-[1.15] tracking-tight">
+                                    How to Maximize Your Earnings During the Holiday Season
+                                </h1>
+<p class="text-[#617589] dark:text-gray-400 text-base md:text-lg leading-relaxed">
+                                    The holiday rush is here. Learn the best strategies to manage your schedule, optimize your rates, and increase your income during the peak season.
+                                </p>
+<div class="pt-2">
+<button class="flex items-center gap-2 text-primary font-bold hover:underline group">
+                                        Read Article
+                                        <span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Search and Filter Bar -->
+<div class="w-full max-w-[1200px] px-4 md:px-10 py-8">
+<div class="flex flex-col md:flex-row gap-6 justify-between items-start md:items-center">
+<!-- Chips -->
+<div class="flex gap-2 overflow-x-auto pb-2 md:pb-0 no-scrollbar max-w-full md:max-w-[60%]">
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-[#111418] text-white px-5 transition-transform active:scale-95">
+<span class="text-sm font-medium">All Posts</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-white dark:bg-[#1e2732] border border-[#e5e7eb] dark:border-[#293038] hover:bg-[#f3f4f6] dark:hover:bg-[#2c3540] px-5 transition-colors">
+<span class="text-[#111418] dark:text-gray-300 text-sm font-medium">Tips &amp; Tricks</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-white dark:bg-[#1e2732] border border-[#e5e7eb] dark:border-[#293038] hover:bg-[#f3f4f6] dark:hover:bg-[#2c3540] px-5 transition-colors">
+<span class="text-[#111418] dark:text-gray-300 text-sm font-medium">Success Stories</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-full bg-white dark:bg-[#1e2732] border border-[#e5e7eb] dark:border-[#293038] hover:bg-[#f3f4f6] dark:hover:bg-[#2c3540] px-5 transition-colors">
+<span class="text-[#111418] dark:text-gray-300 text-sm font-medium">Policy Updates</span>
+</button>
+</div>
+<!-- Search -->
+<div class="w-full md:w-auto md:min-w-[320px]">
+<label class="relative block w-full">
+<span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</span>
+<input class="block w-full rounded-lg border-0 bg-white dark:bg-[#1e2732] py-2.5 pl-10 pr-4 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" placeholder="Search for articles..." type="text"/>
+</label>
+</div>
+</div>
+</div>
+<!-- Content Grid Layout -->
+<div class="w-full max-w-[1200px] px-4 md:px-10 pb-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Main Feed (8 columns) -->
+<div class="lg:col-span-8 flex flex-col gap-10">
+<div class="flex items-center justify-between">
+<h2 class="text-[#111418] dark:text-white text-2xl font-bold">Latest Articles</h2>
+</div>
+<!-- Article Card 1 -->
+<article class="group flex flex-col sm:flex-row gap-6 bg-white dark:bg-[#1e2732] p-5 rounded-2xl border border-gray-100 dark:border-[#293038] shadow-sm hover:shadow-md transition-shadow">
+<div class="w-full sm:w-48 h-48 sm:h-auto shrink-0 rounded-xl bg-gray-200 overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Group of diverse people working together in office" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA65xSkdz6QvOKU9eOinSvIq2BLkDziMgKrsFDETa4FxUqfN2stApbc9Ss9f9H-kDG5ipzmziVSO8oDctSIA4zf4foebu7u3-hzRt5P5shZt_Xy0gOAPLalb3rZIXcNWW8g_qM1-drRn8cVGl6ht4A0rsMDpL9nEhmVFEjssd29h_uZcf_xXAsAqms_4esrS3pyIuOOwsvQHIhurXaDdL8imAbuz9sLo8iVrLDwP-iVpAZU1njohGTpKkbYwcJFncI8ot-lxg2sTlA");'></div>
+</div>
+<div class="flex flex-col flex-1 justify-center">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-blue-50 dark:bg-blue-900/30 text-primary text-xs font-bold px-2.5 py-1 rounded-md">Tips &amp; Tricks</span>
+<span class="text-gray-400 text-xs">• Nov 28, 2023</span>
+</div>
+<h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2 group-hover:text-primary transition-colors">
+                                    5 Tips for Handling Difficult Customers with Grace
+                                </h3>
+<p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed line-clamp-2 mb-4">
+                                    Not every job goes smoothly. Here are professional strategies to de-escalate situations and maintain your high rating even when things get tough.
+                                </p>
+<div class="flex items-center gap-3 mt-auto">
+<img alt="Author" class="size-6 rounded-full" data-alt="Portrait of Sarah Jenkins" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD00quxNHlxbRI3bmpykxnhttNjq3w_L2tegl0ynTsUnLEoWNJJKkK5btWfF9R5uzncBbrDO2_X-xN9_pTMO4dm207uHX0wVRP-sNFHtOZZ4QVMAjzmrOt58XgnVG0FldOnSSXpeWAcIlSb1WKdCJto5Qig20EJWpbWvqWClRGahOWkgMEQevCdKlRodIiloIuf-IzLY1HAXF7Dr31M9iOHJnVAryvRdCUYJdyj8MluNZQ7Xiki1zmuHRhPhpd0ZHEoWxEeYdjHjB0"/>
+<span class="text-xs font-medium text-[#111418] dark:text-gray-300">Sarah Jenkins</span>
+<span class="text-xs text-gray-400">4 min read</span>
+</div>
+</div>
+</article>
+<!-- Article Card 2 -->
+<article class="group flex flex-col sm:flex-row gap-6 bg-white dark:bg-[#1e2732] p-5 rounded-2xl border border-gray-100 dark:border-[#293038] shadow-sm hover:shadow-md transition-shadow">
+<div class="w-full sm:w-48 h-48 sm:h-auto shrink-0 rounded-xl bg-gray-200 overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Close up of digital tablet showing financial charts" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGCuVVCeB9TGbII3NHa9dbFlm-N7b7lWS3JrD8wbHURMgOhgCvu-0dulrhh4BtxLcOOg4iZCW7_NibaN0dhRO4bu-hBdVyvUiG8U4XEUaIu8r7nKiUMXRvHuSrp4EJzPZBj_UmHXPAZzUtvjwZbjT8y7kw_XR0agG2OCVFdlmmy4wF4oyaa3MQitsEd2CGmeQID7tVR69IeTm9Bf0M7cKpJ10oF1-v0OVfn_vA4f8b-rSfmQXqA05hJhbbwPQa0W5-hKC-Ia-g7zA");'></div>
+</div>
+<div class="flex flex-col flex-1 justify-center">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-bold px-2.5 py-1 rounded-md">Product Update</span>
+<span class="text-gray-400 text-xs">• Nov 15, 2023</span>
+</div>
+<h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2 group-hover:text-primary transition-colors">
+                                    New Feature Alert: Instant Payouts Now Available
+                                </h3>
+<p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed line-clamp-2 mb-4">
+                                    We've heard your feedback! You can now cash out your earnings instantly to your debit card for a small fee. Learn how to set it up.
+                                </p>
+<div class="flex items-center gap-3 mt-auto">
+<img alt="Author" class="size-6 rounded-full" data-alt="Portrait of Mike Ross" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPnRwJwwBnLCAftUa_3INKBmmJNnHV_GTnkXauSC4pwjumtuapsY7KveHL4NVfY___n6tOrxiFYc-8hmApDXfRBcReLDAAjbQuampGwT-bdPXpYWxySd6uVWrkmFlHU7yXIch_me7SWFDpNw5LqnZKkoY2I6hphkZwXM_-KAgKgiFemcbg4umGe6NkFQAuKMKOHjPH4sBpJqlpen3FEEICVOM6zoLnvxo3-nPoZD1KCxIRuV2dfjy-Ruo1s6wFodYBhK0Wlm_o_k4"/>
+<span class="text-xs font-medium text-[#111418] dark:text-gray-300">Mike Ross</span>
+<span class="text-xs text-gray-400">2 min read</span>
+</div>
+</div>
+</article>
+<!-- Article Card 3 -->
+<article class="group flex flex-col sm:flex-row gap-6 bg-white dark:bg-[#1e2732] p-5 rounded-2xl border border-gray-100 dark:border-[#293038] shadow-sm hover:shadow-md transition-shadow">
+<div class="w-full sm:w-48 h-48 sm:h-auto shrink-0 rounded-xl bg-gray-200 overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Woman smiling while holding cleaning supplies" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCmX0qJUiS_U4hKYCb68TisvBWiCDbdwolK_a4KUC-A9w2T_9x2f2I6O5Xiv3ba-XU912MT8VFIWbJTJaZHQ_S9MDogGLHttBRUBSkCGpLXO-iU5zIPj9hYnUqN79hlgIAGG6zdYiYJ0MmEQrglE5fzddvx0xnYRL8t46aCyUnEan0QIeKd7EwMX91Po5um-eyVFFPeXCGhomAgtywgQsbQhvAKi-RgzBO4Lk2tLBljmSJQud0eLifUJjMqBBq3cKjcsQh_GJJGcLQ");'></div>
+</div>
+<div class="flex flex-col flex-1 justify-center">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 text-xs font-bold px-2.5 py-1 rounded-md">Community</span>
+<span class="text-gray-400 text-xs">• Oct 30, 2023</span>
+</div>
+<h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2 group-hover:text-primary transition-colors">
+                                    Meet Elena: From Part-Time Cleaner to Business Owner
+                                </h3>
+<p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed line-clamp-2 mb-4">
+                                    Elena started taking jobs on Helpers to pay for college. Three years later, she's managing her own team. Read her inspiring story.
+                                </p>
+<div class="flex items-center gap-3 mt-auto">
+<img alt="Author" class="size-6 rounded-full" data-alt="Portrait of Jessica Pearson" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc4VOKmeExd51RohtNA7jxJRAKbJlmtQG3IHKSQcZet5OnwMspSa37QsUok6CYqhznsA97cuKVALhWLjsc04LQMQW0-MAV2z6-xbqsMZsRasLcJIjmWbm7FEkdpb-gUtGpN1GXqwFcGwSF5uL3PiXTC76jQ3jC-fJB5F71Vi3EYEd2L55llyfte4KL2vnTAs54yHqHjm7MNUGQa9m178NwlaArIpyctKmx595MMA6eTUU4_KthNoEYRJB8It7pZaBGzDoYU--20DQ"/>
+<span class="text-xs font-medium text-[#111418] dark:text-gray-300">Jessica Pearson</span>
+<span class="text-xs text-gray-400">7 min read</span>
+</div>
+</div>
+</article>
+<!-- Pagination -->
+<div class="flex justify-center pt-8">
+<button class="px-6 py-2.5 rounded-lg border border-[#e5e7eb] dark:border-[#293038] bg-white dark:bg-[#1e2732] text-sm font-semibold text-[#111418] dark:text-white hover:bg-gray-50 dark:hover:bg-[#2c3540] transition-colors">
+                                Load More Articles
+                            </button>
+</div>
+</div>
+<!-- Sidebar (4 columns) -->
+<div class="lg:col-span-4 flex flex-col gap-8">
+<!-- Subscribe Box -->
+<div class="bg-[#137fec] rounded-2xl p-6 text-white relative overflow-hidden">
+<div class="relative z-10 flex flex-col gap-4">
+<div class="size-10 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h3 class="text-lg font-bold">Helper Weekly</h3>
+<p class="text-blue-100 text-sm mt-1">Get the latest tips and job opportunities delivered to your inbox.</p>
+</div>
+<div class="flex flex-col gap-2">
+<input class="w-full h-10 rounded-lg px-3 text-[#111418] text-sm border-none focus:ring-2 focus:ring-white/50" placeholder="Your email address" type="email"/>
+<button class="w-full h-10 rounded-lg bg-[#101922] text-white text-sm font-bold hover:bg-[#1e2732] transition-colors">
+                                        Subscribe
+                                    </button>
+</div>
+<p class="text-xs text-blue-200">No spam, unsubscribe anytime.</p>
+</div>
+<!-- Decor -->
+<div class="absolute -top-10 -right-10 size-40 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+</div>
+<!-- Popular Posts -->
+<div class="flex flex-col gap-4">
+<h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider">Popular Now</h3>
+<a class="group flex gap-3 items-start" href="#">
+<span class="text-2xl font-black text-gray-200 dark:text-gray-700 leading-none group-hover:text-primary transition-colors">01</span>
+<div>
+<h4 class="text-sm font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors leading-snug">Tax Season Guide for Independent Contractors</h4>
+<span class="text-xs text-gray-400 mt-1 block">Accounting • 6 min read</span>
+</div>
+</a>
+<hr class="border-gray-100 dark:border-[#293038]"/>
+<a class="group flex gap-3 items-start" href="#">
+<span class="text-2xl font-black text-gray-200 dark:text-gray-700 leading-none group-hover:text-primary transition-colors">02</span>
+<div>
+<h4 class="text-sm font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors leading-snug">Top 10 Tools Every Handyman Needs in 2024</h4>
+<span class="text-xs text-gray-400 mt-1 block">Gear • 4 min read</span>
+</div>
+</a>
+<hr class="border-gray-100 dark:border-[#293038]"/>
+<a class="group flex gap-3 items-start" href="#">
+<span class="text-2xl font-black text-gray-200 dark:text-gray-700 leading-none group-hover:text-primary transition-colors">03</span>
+<div>
+<h4 class="text-sm font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors leading-snug">Understanding the New Ratings Algorithm</h4>
+<span class="text-xs text-gray-400 mt-1 block">Platform • 3 min read</span>
+</div>
+</a>
+</div>
+<!-- Quick Categories -->
+<div class="bg-white dark:bg-[#1e2732] rounded-xl border border-gray-100 dark:border-[#293038] p-5">
+<h3 class="text-sm font-bold text-[#111418] dark:text-white mb-4">Explore Topics</h3>
+<div class="flex flex-wrap gap-2">
+<a class="px-3 py-1.5 rounded-md bg-gray-100 dark:bg-gray-800 text-xs font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" href="#">Financial Advice</a>
+<a class="px-3 py-1.5 rounded-md bg-gray-100 dark:bg-gray-800 text-xs font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" href="#">Customer Service</a>
+<a class="px-3 py-1.5 rounded-md bg-gray-100 dark:bg-gray-800 text-xs font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" href="#">Safety</a>
+<a class="px-3 py-1.5 rounded-md bg-gray-100 dark:bg-gray-800 text-xs font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" href="#">Events</a>
+<a class="px-3 py-1.5 rounded-md bg-gray-100 dark:bg-gray-800 text-xs font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" href="#">Marketing Yourself</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-[#111418] border-t border-[#f0f2f4] dark:border-[#293038] py-12 px-10">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between gap-10">
+<div class="flex flex-col gap-4 max-w-xs">
+<div class="flex items-center gap-2 text-[#111418] dark:text-white">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined">handshake</span>
+</div>
+<span class="text-lg font-bold">Helpers</span>
+</div>
+<p class="text-sm text-gray-500">
+                        Empowering service professionals to build their careers and connect with customers effortlessly.
+                    </p>
+<div class="flex gap-4 mt-2">
+<a class="text-gray-400 hover:text-primary" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a>
+<a class="text-gray-400 hover:text-primary" href="#"><span class="material-symbols-outlined text-[20px]">chat_bubble</span></a>
+<a class="text-gray-400 hover:text-primary" href="#"><span class="material-symbols-outlined text-[20px]">share</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-10">
+<div class="flex flex-col gap-3">
+<h4 class="text-sm font-bold text-[#111418] dark:text-white">Platform</h4>
+<a class="text-sm text-gray-500 hover:text-primary" href="#">About Us</a>
+<a class="text-sm text-gray-500 hover:text-primary" href="#">Careers</a>
+<a class="text-sm text-gray-500 hover:text-primary" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-sm font-bold text-[#111418] dark:text-white">Resources</h4>
+<a class="text-sm text-gray-500 hover:text-primary" href="#">Help Center</a>
+<a class="text-sm text-gray-500 hover:text-primary" href="#">Safety Guidelines</a>
+<a class="text-sm text-gray-500 hover:text-primary" href="#">Community Guidelines</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-sm font-bold text-[#111418] dark:text-white">Contact</h4>
+<a class="text-sm text-gray-500 hover:text-primary" href="#">Support</a>
+<a class="text-sm text-gray-500 hover:text-primary" href="#">Press</a>
+<a class="text-sm text-gray-500 hover:text-primary" href="#">Partnerships</a>
+</div>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-gray-100 dark:border-[#293038] text-center md:text-left">
+<p class="text-xs text-gray-400">© 2023 Helpers Inc. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</body></html>

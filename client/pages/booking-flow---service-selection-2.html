@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+<script src="/assets/js/booking.js"></script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-20 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center justify-between whitespace-nowrap px-4 sm:px-6 lg:px-10 py-3 max-w-7xl mx-auto">
+<div class="flex items-center gap-4 text-gray-900 dark:text-white">
+<img src="/logo.jpeg" alt="Helpers Logo" class="h-6 w-auto object-contain">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] dark:text-white">Helpers</h2>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4">
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="/">Home</a>
+<a class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="/services">Services</a>
+<a class="text-sm font-medium leading-normal text-gray-800 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="/help">Help</a>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar placeholder image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAo6K7GjuSdyCS0liWCuh1ox6aZvIDqBqVZ77jTo0S-VBlg_I7lnSt61ku7CiAYBnnZu9sXo6JZvhuc6ZdiwO6MMuLR9YyddjDPUhdiMM3ZFlN2tTvc39LH1w8eK7DH2PKs74bPdGTVFor_aT5oB3HNO307zqnUdL1zuoAE75Y69uUJI4c2TTrjGQ6gNroioFwI0rwxb98IbNFDCs_wi-qet6rblt7b9Kdk2Jq6zT5sy4mXfJijzlWP49XXOhc7_ttHklLwr6VBlCc");'></div>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+<div class="flex flex-col gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex flex-wrap gap-2">
+<a class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal hover:text-primary" href="/">Booking</a>
+<span class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal">/</span>
+<span class="text-gray-900 dark:text-white text-sm font-medium leading-normal">Plumbing Service</span>
+</div>
+<div class="flex flex-wrap justify-between items-baseline gap-3">
+<h1 class="text-gray-900 dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Schedule Your Plumbing Service</h1>
+</div>
+<div class="flex gap-2 flex-wrap">
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 pl-4 pr-4">
+<p class="text-primary text-sm font-bold leading-normal">1. Service Details</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-gray-200 dark:bg-gray-700 pl-4 pr-4">
+<p class="text-gray-600 dark:text-gray-300 text-sm font-medium leading-normal">2. Address</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-gray-200 dark:bg-gray-700 pl-4 pr-4">
+<p class="text-gray-600 dark:text-gray-300 text-sm font-medium leading-normal">3. Payment</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+<div class="lg:col-span-2 flex flex-col gap-8">
+<div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6">
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-5">Select a Date &amp; Time</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-4 bg-background-light dark:bg-background-dark rounded-lg">
+<div class="flex items-center justify-between mb-4">
+<button class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"><span class="material-symbols-outlined">chevron_left</span></button>
+<p class="font-bold text-gray-800 dark:text-gray-200">October 2024</p>
+<button class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center text-sm text-gray-500 dark:text-gray-400">
+<div class="font-medium">Su</div><div class="font-medium">Mo</div><div class="font-medium">Tu</div><div class="font-medium">We</div><div class="font-medium">Th</div><div class="font-medium">Fr</div><div class="font-medium">Sa</div>
+<div class="text-gray-400 dark:text-gray-600">29</div><div class="text-gray-400 dark:text-gray-600">30</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">1</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">2</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">3</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">4</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">5</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">6</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">7</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">8</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">9</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">10</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">11</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">12</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">13</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">14</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">15</div>
+<div class="cursor-pointer py-2 rounded-lg bg-primary text-white font-semibold">16</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">17</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">18</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">19</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">20</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">21</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">22</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">23</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">24</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">25</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">26</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">27</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">28</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">29</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">30</div>
+<div class="cursor-pointer py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">31</div>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<button class="w-full text-left p-4 border rounded-lg hover:border-primary dark:border-gray-700 dark:hover:border-primary dark:text-gray-200">
+<p class="font-semibold">Morning</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">8am - 12pm</p>
+</button>
+<button class="w-full text-left p-4 border-2 border-primary rounded-lg bg-primary/10 dark:bg-primary/20 dark:border-primary text-primary font-semibold">
+<p>Afternoon</p>
+<p class="text-sm">12pm - 4pm</p>
+</button>
+<button class="w-full text-left p-4 border rounded-lg hover:border-primary dark:border-gray-700 dark:hover:border-primary dark:text-gray-200">
+<p class="font-semibold">Evening</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">4pm - 8pm</p>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6">
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3">Any Specific Instructions?</h2>
+<label class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2" for="instructions">Provide any details that will help your Helper prepare (e.g., 'Large dog in the house', 'Parking available on the street').</label>
+<div class="relative">
+<textarea class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 focus:ring-primary focus:border-primary" id="instructions" name="instructions" placeholder="Type your message here..." rows="4"></textarea>
+<p class="text-xs text-gray-500 dark:text-gray-400 absolute bottom-2 right-3">0/250</p>
+</div>
+</div>
+</div>
+<aside class="lg:col-span-1">
+<div class="sticky top-24 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6 flex flex-col gap-6">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-800 pb-4">Booking Summary</h3>
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<span class="text-gray-600 dark:text-gray-400">Service</span>
+<span class="font-semibold text-gray-800 dark:text-gray-200">Plumbing Service</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-600 dark:text-gray-400">Date</span>
+<span class="font-semibold text-gray-800 dark:text-gray-200">October 16, 2024</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-600 dark:text-gray-400">Time</span>
+<span class="font-semibold text-gray-800 dark:text-gray-200">Afternoon</span>
+</div>
+</div>
+<div class="border-t border-gray-200 dark:border-gray-800 pt-4 flex justify-between items-baseline">
+<span class="text-lg font-bold text-gray-900 dark:text-white">Estimated Price</span>
+<span class="text-2xl font-black text-gray-900 dark:text-white">$125.00</span>
+</div>
+<div class="flex flex-col gap-3 pt-2">
+<button class="flex w-full min-w-[84px] max-w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark">
+<span class="truncate">Continue</span>
+</button>
+<a class="text-center text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="/">Back to Services</a>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+<script src="/assets/js/booking.js"></script>
+</head>
+<body data-role="user" class="font-display bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex w-full items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-700 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm px-4 sm:px-6 lg:px-10 py-3">
+<div class="flex items-center gap-4 text-gray-900 dark:text-gray-100">
+<img src="/logo.jpeg" alt="Helpers Logo" class="h-6 w-auto object-contain">
+<h2 class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em]">Helpers</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<nav class="hidden items-center gap-9 md:flex">
+<a class="text-gray-900 dark:text-gray-100 text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="/">Home</a>
+<a class="text-primary text-sm font-medium leading-normal" href="/services">Services</a>
+</nav>
+<div class="flex items-center gap-2">
+<a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]" href="/login"><span>Log In</span></a>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined text-gray-900 dark:text-gray-100">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Filter Sidebar -->
+<aside class="w-full lg:w-1/4 xl:w-1/5">
+<div class="sticky top-24 space-y-6">
+<h2 class="text-xl font-bold text-gray-900 dark:text-gray-100">Filters</h2>
+<!-- Categories -->
+<div class="space-y-4 border-t border-gray-200 dark:border-gray-700 pt-4">
+<h3 class="text-base font-semibold text-gray-900 dark:text-gray-100">Category</h3>
+<div class="space-y-2">
+<label class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+<input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>Home Cleaning
+                            </label>
+<label class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+<input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>Beauty &amp; Wellness
+                            </label>
+<label class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+<input checked="" class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>Appliance Repair
+                            </label>
+<label class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+<input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>Plumbing
+                            </label>
+<label class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+<input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>Electrical
+                            </label>
+</div>
+</div>
+<!-- Price Range -->
+<div class="space-y-4 border-t border-gray-200 dark:border-gray-700 pt-4">
+<h3 class="text-base font-semibold text-gray-900 dark:text-gray-100">Price Range</h3>
+<div class="relative pt-1">
+<input class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer" max="500" min="0" type="range" value="250"/>
+<div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-2">
+<span>$0</span>
+<span>$500+</span>
+</div>
+</div>
+</div>
+<!-- Rating -->
+<div class="space-y-4 border-t border-gray-200 dark:border-gray-700 pt-4">
+<h3 class="text-base font-semibold text-gray-900 dark:text-gray-100">Rating</h3>
+<div class="space-y-2">
+<label class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+<input checked="" class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="flex items-center text-yellow-500">
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base text-gray-300 dark:text-gray-600">star</span>
+</span>
+<span class="text-gray-600 dark:text-gray-400">4 &amp; up</span>
+</label>
+<label class="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+<input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="flex items-center text-yellow-500">
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base text-gray-300 dark:text-gray-600">star</span>
+<span class="material-symbols-outlined !text-base text-gray-300 dark:text-gray-600">star</span>
+</span>
+<span class="text-gray-600 dark:text-gray-400">3 &amp; up</span>
+</label>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-2 border-t border-gray-200 dark:border-gray-700 pt-4">
+<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">Apply Filters</button>
+<button class="w-full flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-sm font-bold leading-normal tracking-[0.015em]">Clear All</button>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<div class="w-full lg:w-3/4 xl:w-4/5">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-3 mb-4">
+<p class="text-gray-900 dark:text-gray-100 text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Explore Our Services</p>
+</div>
+<!-- Search and Sort -->
+<div class="flex flex-col sm:flex-row gap-4 mb-6">
+<!-- SearchBar -->
+<div class="flex-grow">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-gray-500 dark:text-gray-400 flex border-none bg-white dark:bg-gray-800 items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-gray-100 focus:outline-0 focus:ring-0 border-none bg-white dark:bg-gray-800 focus:border-none h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search for a service..." value=""/>
+</div>
+</label>
+</div>
+<!-- Chips (Sort) -->
+<div class="flex items-center gap-3 flex-wrap">
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-gray-800 pl-4 pr-2">
+<p class="text-gray-900 dark:text-gray-100 text-sm font-medium leading-normal">Popularity</p>
+<span class="material-symbols-outlined text-gray-900 dark:text-gray-100">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Card Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-sm bg-white dark:bg-gray-800">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Professional cleaner wiping a kitchen counter" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDKckSpKMtb-iPgbqTt0kzNSoMU0nMgaepPw1mL9ivQyYBOu4sjaOH9C1lm2P42RPREPp0WXNB2cnc6DiVcIfxwlg_iDJKHhfJoinIbfJ4Wj4-LcMvSy-M6NXf20ALfNs6LWdzG4lRcUENcHCggg8S2TPk6fCns8ztgT37oiudBX-CtMh1OYmt64tzIcFgs67HQokO8Bo61TJ-h90UJ7849DUScIzqZ5dSUb2tJHubL-fAkvvFOJq1NpWbts7DhIhm16A_NC8N5y18");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-1 p-4">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">★ 4.8 <span class="text-gray-400 dark:text-gray-500">(1.2k)</span></p>
+<p class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em]">Deep Home Cleaning</p>
+<div class="flex items-end gap-3 justify-between mt-2">
+<div class="flex flex-col gap-1">
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">Cleaning</p>
+<p class="text-gray-900 dark:text-gray-100 text-base font-bold leading-normal">From $99</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary text-white text-sm font-medium leading-normal">
+<span class="truncate">View Details</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-sm bg-white dark:bg-gray-800">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Technician repairing an air conditioner unit" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDfUxshH-w8oUI8wB1RRNPDGG6ucyF9DiuZxPGVn9koSjzCUWqOdoLmcCAfInVMR_qZmX1avia1hf1mbmNE08nsRebDmJAeGOjJTcgcOIVRrloGGXUrRtJkP2if0BbWSdt2re1aHXbH2cQjRuxRT0ripYRqrKrXmg8zqY7YrcV6c8k8G3K1AbDoBdEIZeaEc5khGiYJ9eOYvVsgP-QJPsWcpLD7CgTVeeosgKMhtJ9FBadhCM57V6mijQ2Atb7Ccf3KDBjjr_vDHqs");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-1 p-4">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">★ 4.9 <span class="text-gray-400 dark:text-gray-500">(890)</span></p>
+<p class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em]">AC Repair &amp; Service</p>
+<div class="flex items-end gap-3 justify-between mt-2">
+<div class="flex flex-col gap-1">
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">Appliance Repair</p>
+<p class="text-gray-900 dark:text-gray-100 text-base font-bold leading-normal">From $49</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary text-white text-sm font-medium leading-normal">
+<span class="truncate">View Details</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-sm bg-white dark:bg-gray-800">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Plumber fixing a sink pipe with a wrench" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQoF1KNLN4oxY9ZeWqpb8O0ZQs0jHTGD1SomjOXrbiHb6wAym4JnhYP8QT8Irkgp5gHO21nzcIaZeFeZZUD1I4xrxRObCdm-o0Qfuwx_bgQQV7PM4lHAjH_atBlLFCGUrUtnPeAC6r1xGiL_d6r_cSEPC4qg7d_zuBlqZJIEB27daY0fqp-bZhl7C3W9l-JvLczJb0tZl28a3kTBs716XTbSZKa_NEhrjwMZTuYe5seTq4VldkhMDrmmJb5x8SsURkWR1-njH-pa8");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-1 p-4">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">★ 4.7 <span class="text-gray-400 dark:text-gray-500">(642)</span></p>
+<p class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em]">Plumbing Services</p>
+<div class="flex items-end gap-3 justify-between mt-2">
+<div class="flex flex-col gap-1">
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">Plumbing</p>
+<p class="text-gray-900 dark:text-gray-100 text-base font-bold leading-normal">From $75</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary text-white text-sm font-medium leading-normal">
+<span class="truncate">View Details</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-sm bg-white dark:bg-gray-800">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Woman receiving a facial treatment at a spa" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA2zejWg-LtrTU0hFDz1gbDFedNa9Kx7ebfWL0DJCKhsOtZqGFzQwCqXM9OGWu-Loaa2oDmdc8iXJJOnKyOYLCmkFHBw57hRohNlh8QEpng8VMRu0H2Zq9kORfHik73-gC0YzzXPyIpeASE5tjVQki6XqvKj3L2ha6oTOvPmgrSmUfQUJOB3uC6aTvTP1lipbREfi7nJicdNxVBSKB6cojsixI1J19MvTSIRXkSCagcCDiBoHeuitvDcncQIjZo1wapSSZqVq4ZwEI");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-1 p-4">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">★ 5.0 <span class="text-gray-400 dark:text-gray-500">(450)</span></p>
+<p class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em]">Salon at Home</p>
+<div class="flex items-end gap-3 justify-between mt-2">
+<div class="flex flex-col gap-1">
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">Beauty &amp; Wellness</p>
+<p class="text-gray-900 dark:text-gray-100 text-base font-bold leading-normal">From $35</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary text-white text-sm font-medium leading-normal">
+<span class="truncate">View Details</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-sm bg-white dark:bg-gray-800">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Electrician working on a circuit breaker box" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDBRI68v_f4EI7io-5U14ZSA3huz96R5U5A6TDcDMB2tJqBze6MnYRBo-Ay6TUHv0YgLU-gcnxQw2WH7ppNxdE8B64u0EMo1hlOD_l0BOqA9QfAi8K3QMJums72Yu04NHYFPjA5EQUbp_VzICOLu2rkz0mquyfJK3RbJxkRyjczJXb_e6orISqG6ev0NetehPg97TpyK-WTYj2ONsrJ4hEY_m1J4DNANvw6fb07D7xVZ8QLG5xsILCWH5929vymUq9cIfEz1U2YM-I");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-1 p-4">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">★ 4.8 <span class="text-gray-400 dark:text-gray-500">(718)</span></p>
+<p class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em]">Electrical Work</p>
+<div class="flex items-end gap-3 justify-between mt-2">
+<div class="flex flex-col gap-1">
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">Electrical</p>
+<p class="text-gray-900 dark:text-gray-100 text-base font-bold leading-normal">From $80</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary text-white text-sm font-medium leading-normal">
+<span class="truncate">View Details</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="@container">
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-sm bg-white dark:bg-gray-800">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Person getting a relaxing massage therapy" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDaBbTwDkFCT883E8kxnL-A6OCeBOMsnD4UnO6h5frR37Ac2qUsnPAgoUk-az_Ej7Lo7U09_6x3T07lfIqqGQYN-OUe3G-Cy0lODrEVMyaKkzpvBgSIUowFZ2NIpEo7tGEcvHhTUO0ISgeMvMhvbwo6M8D5yQMbZG5IOdlzJK1g84vEfvoVN8-wcuDR62SA8NlecjFqUiMmYLm0hdT1BAq_GUOjgfwKLNZIWYpRcmUXzozxS3apaqVgJ16rjH1lfFm-blx-Qn7Rj5E");'></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-1 p-4">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">★ 4.9 <span class="text-gray-400 dark:text-gray-500">(555)</span></p>
+<p class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight tracking-[-0.015em]">Massage Therapy</p>
+<div class="flex items-end gap-3 justify-between mt-2">
+<div class="flex flex-col gap-1">
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">Beauty &amp; Wellness</p>
+<p class="text-gray-900 dark:text-gray-100 text-base font-bold leading-normal">From $60</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary text-white text-sm font-medium leading-normal">
+<span class="truncate">View Details</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<nav aria-label="Pagination" class="flex items-center justify-center mt-10">
+<a class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 dark:ring-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 focus:z-20 focus:outline-offset-0" href="/">
+<span class="sr-only">Previous</span>
+<span class="material-symbols-outlined text-base">chevron_left</span>
+</a>
+<a aria-current="page" class="relative z-10 inline-flex items-center bg-primary px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" href="/">1</a>
+<a class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 dark:text-gray-100 ring-1 ring-inset ring-gray-300 dark:ring-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 focus:z-20 focus:outline-offset-0" href="/">2</a>
+<a class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 dark:text-gray-100 ring-1 ring-inset ring-gray-300 dark:ring-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 focus:z-20 focus:outline-offset-0 md:inline-flex" href="/">3</a>
+<span class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 dark:text-gray-300 ring-1 ring-inset ring-gray-300 dark:ring-gray-700 focus:outline-offset-0">...</span>
+<a class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 dark:text-gray-100 ring-1 ring-inset ring-gray-300 dark:ring-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 focus:z-20 focus:outline-offset-0 md:inline-flex" href="/">8</a>
+<a class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 dark:ring-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 focus:z-20 focus:outline-offset-0" href="/">
+<span class="sr-only">Next</span>
+<span class="material-symbols-outlined text-base">chevron_right</span>
+</a>
+</nav>
+</div>
+</div>
+</main>
+</div>
+</body></html>

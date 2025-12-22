@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased overflow-x-hidden">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md px-10 py-3">
+<div class="flex items-center gap-4">
+<div class="size-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">volunteer_activism</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Helpers</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="/">Home</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="/">About</a>
+<a class="text-primary text-sm font-bold leading-normal" href="/careers">Careers</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-colors">
+<span class="truncate">Login</span>
+</button>
+</div>
+</header>
+<!-- Hero Section -->
+<div class="layout-container flex flex-col items-center">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5 w-full">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="@container">
+<div class="flex flex-col gap-6 px-4 py-10 @[480px]:gap-8 @[864px]:flex-row items-center">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl shadow-lg @[480px]:h-auto @[480px]:min-w-[400px] @[864px]:w-1/2" data-alt="Diverse team of young professionals collaborating in a modern bright office space with glass walls" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuArL1fRDgVOfuGSbxzWFKq94zwY1BEulr0uZajNFv-XdPEodNf7KMBOUF_GOm8zSdrkeodpdilMSaf0kaeDyuANmYIAN2TQ3HBVIVdjx0iPNHjd1Bae5f8S3OfwV8TFCOLGc2v8CEqe3-APJeqvTfWfYcCRt6xAX6P1D2P6oqFOSyCW27QAJyfMDX0pLp_JhYfMHZJ3y-qhB1jY-J1aFBT8BJ_9MJlFAc8vQcuSr2qQY59kE4Tn4G4By3p-1NQHZ6rF2mrLhkRX41A");'>
+</div>
+<div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:w-1/2 @[864px]:justify-center">
+<div class="flex flex-col gap-4 text-left">
+<h1 class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl">
+                                    Build the Future of Service
+                                </h1>
+<h2 class="text-slate-600 dark:text-slate-300 text-base font-normal leading-relaxed">
+                                    Join the Helpers Team. We are connecting the world through service. Be part of a diverse team that values impact, community, and innovation.
+                                </h2>
+</div>
+<button class="flex w-fit cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-colors shadow-md">
+<span class="truncate">View Openings</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Benefits Section -->
+<div class="w-full bg-white dark:bg-slate-900 py-16">
+<div class="layout-container flex flex-col items-center">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="flex flex-col gap-10 px-4">
+<div class="flex flex-col gap-4 text-center md:text-left">
+<h1 class="text-slate-900 dark:text-white tracking-tight text-[32px] font-bold leading-tight">
+                                Why Join Us
+                            </h1>
+<p class="text-slate-600 dark:text-slate-300 text-lg font-normal leading-normal max-w-[720px]">
+                                We believe in taking care of our people so they can take care of others.
+                            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="flex flex-1 gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-background-light dark:bg-slate-800 p-6 flex-col hover:border-primary/50 transition-colors cursor-default group">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">paid</span>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Competitive Salary</h2>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-relaxed">
+                                        We pay top of market to attract the best talent. Equity options available for all full-time roles.
+                                    </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-1 gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-background-light dark:bg-slate-800 p-6 flex-col hover:border-primary/50 transition-colors cursor-default group">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">ecg_heart</span>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Health &amp; Wellness</h2>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-relaxed">
+                                        Comprehensive medical, dental, and vision coverage for you and your dependents.
+                                    </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-1 gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-background-light dark:bg-slate-800 p-6 flex-col hover:border-primary/50 transition-colors cursor-default group">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">schedule</span>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Flexible Hours</h2>
+<p class="text-slate-600 dark:text-slate-400 text-sm font-normal leading-relaxed">
+                                        Remote-first culture with flexible working hours. Work where you feel most productive.
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Jobs Section -->
+<div class="layout-container flex flex-col items-center py-10">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center w-full">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<!-- Section Header -->
+<h2 class="text-slate-900 dark:text-white text-[28px] font-bold leading-tight tracking-tight px-4 pb-6 pt-5">Open Positions</h2>
+<!-- Filters / Chips -->
+<div class="flex gap-3 p-4 flex-wrap pb-8">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-5 shadow-sm transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+<p class="text-sm font-bold leading-normal">All Departments</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 px-5 transition-colors">
+<span class="material-symbols-outlined text-[20px] text-slate-500">terminal</span>
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Engineering</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 px-5 transition-colors">
+<span class="material-symbols-outlined text-[20px] text-slate-500">business_center</span>
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Operations</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 px-5 transition-colors">
+<span class="material-symbols-outlined text-[20px] text-slate-500">support_agent</span>
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Customer Success</p>
+</button>
+</div>
+<!-- Job List -->
+<div class="flex flex-col gap-4 px-4">
+<!-- Job Item 1 -->
+<div class="group flex flex-col md:flex-row items-start md:items-center justify-between p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary hover:shadow-md transition-all cursor-pointer">
+<div class="flex flex-col gap-1">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Senior Backend Engineer</h3>
+<div class="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">terminal</span> Engineering</span>
+<span class="size-1 rounded-full bg-slate-300"></span>
+<span>Remote (US/EU)</span>
+<span class="size-1 rounded-full bg-slate-300"></span>
+<span>Full-time</span>
+</div>
+</div>
+<div class="mt-4 md:mt-0 flex items-center gap-2 text-primary font-bold text-sm">
+                            Apply Now <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Job Item 2 -->
+<div class="group flex flex-col md:flex-row items-start md:items-center justify-between p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary hover:shadow-md transition-all cursor-pointer">
+<div class="flex flex-col gap-1">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Lead UI/UX Designer</h3>
+<div class="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">palette</span> Design</span>
+<span class="size-1 rounded-full bg-slate-300"></span>
+<span>New York, NY</span>
+<span class="size-1 rounded-full bg-slate-300"></span>
+<span>Full-time</span>
+</div>
+</div>
+<div class="mt-4 md:mt-0 flex items-center gap-2 text-primary font-bold text-sm">
+                            Apply Now <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Job Item 3 -->
+<div class="group flex flex-col md:flex-row items-start md:items-center justify-between p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary hover:shadow-md transition-all cursor-pointer">
+<div class="flex flex-col gap-1">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">City Manager</h3>
+<div class="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">business_center</span> Operations</span>
+<span class="size-1 rounded-full bg-slate-300"></span>
+<span>Chicago, IL</span>
+<span class="size-1 rounded-full bg-slate-300"></span>
+<span>Full-time</span>
+</div>
+</div>
+<div class="mt-4 md:mt-0 flex items-center gap-2 text-primary font-bold text-sm">
+                            Apply Now <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Job Item 4 -->
+<div class="group flex flex-col md:flex-row items-start md:items-center justify-between p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary hover:shadow-md transition-all cursor-pointer">
+<div class="flex flex-col gap-1">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Customer Success Specialist</h3>
+<div class="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">support_agent</span> Support</span>
+<span class="size-1 rounded-full bg-slate-300"></span>
+<span>Remote</span>
+<span class="size-1 rounded-full bg-slate-300"></span>
+<span>Contract</span>
+</div>
+</div>
+<div class="mt-4 md:mt-0 flex items-center gap-2 text-primary font-bold text-sm">
+                            Apply Now <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Culture / Gallery Section -->
+<div class="w-full bg-white dark:bg-slate-900 py-16 mt-8">
+<div class="layout-container flex flex-col items-center">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center w-full">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="flex flex-col gap-6 px-4">
+<h2 class="text-slate-900 dark:text-white text-[28px] font-bold leading-tight">Life at Helpers</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 h-[400px]">
+<div class="h-full rounded-xl bg-cover bg-center" data-alt="Group of colleagues laughing together during a coffee break in a casual office setting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcoaOyysTW816ReZTjdxwZYaS2Uc1wy6pUu7BQTflTpPJIOzEHTYxTbk8vq4ZnHuYFKGrINfzQtKWOlNtmxt_ZUthOTS-nYg6OhIDj0v6aW1b3vXnEGY-ANfeICmbMEOmE5pMtjHFXnPwmt4P_RGNsGnZ9am-OxL8puzNbvWjXH3D-rP8-ICClgVF8Ru4k94gwYhngQNe_Lc_rNvUkf4Rrlx_AtdOHKQSIBPyxkho44TSS1MTI2awFxNQ5DbUg0ecX0j40Z3Tazug');">
+</div>
+<div class="grid grid-rows-2 gap-4 h-full">
+<div class="rounded-xl bg-cover bg-center h-full" data-alt="Close up of hands working together on a laptop showing code and charts" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCTiw5t9JsRSBR__2ru-SfF2AODi0fIRR92dnl0ZbHojdXKQJ-CE33K0W8Jrj8V491nozI7DF_HGkFUS5iHrb0p1zixRGTVAvqA68t9MjJ1D5mRtNqVehluJv3EvpZxoX3P8SL8RDPYfqrdADRT_Viv4noVm-AZQOSTUEfJZes1uteVN1RLxWUmpzlzMSRjXJBdpY6kcy99gpXBBtU-Qg5N8LXqj8w1yUVdIK4Cq02dHRB0kDYBAbxLK2G4hHw7NczjL3VLstmrMK4');">
+</div>
+<div class="rounded-xl bg-primary/10 flex flex-col justify-center p-8">
+<p class="text-slate-700 dark:text-slate-300 italic text-lg leading-relaxed">"Working at Helpers has been the most rewarding experience of my career. The culture is incredibly supportive, and the mission drives everything we do."</p>
+<div class="mt-4 flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-300 bg-cover bg-center" data-alt="Portrait of Sarah Jenkins" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDO5okl7AlqLsDIzoxPcKJD0HZETK5K5ISVPOQGe1P21e-vOFuczWo-LphfgrGPpIDNuIT0YQpt0h8vqPDG8-uzYD921ZfIlokPNJ46hUkTko_CWR-vW9I5vIljEpOrM2_S4VATrPFfa-6vjeCqQMqmOHSUOV7tWBy5JpK8F9LGPxDYajbPSpbL9uH0RRA-MW-wrvySLPlDUaUBzMQYHFzi6JC8BSxjUhtOjT2D-V9MRAy4ZgaGUD9m8homQ8yEKPggUASKRY0ACb4')"></div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Sarah Jenkins</p>
+<p class="text-xs text-slate-500">Product Manager</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Footer -->
+<div class="layout-container flex flex-col items-center py-20">
+<div class="px-4 flex flex-1 justify-center w-full">
+<div class="layout-content-container flex flex-col items-center text-center max-w-[600px] gap-6">
+<div class="size-16 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 mb-2">
+<span class="material-symbols-outlined text-4xl">mail</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-3xl font-bold leading-tight">Don't see your role?</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg">
+                    We are always looking for talented individuals to join our mission. Join our talent network to be notified about future opportunities.
+                </p>
+<div class="flex gap-4 pt-2">
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+                        Join Talent Network
+                    </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Simple Footer -->
+<footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-10">
+<div class="px-10 lg:px-40 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-500 text-sm">© 2023 Helpers Inc. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-slate-500 hover:text-primary transition-colors" href="/"><span class="material-symbols-outlined">public</span></a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="/"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="/"><span class="material-symbols-outlined">rss_feed</span></a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

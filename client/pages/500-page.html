@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white min-h-screen flex flex-col overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="w-full bg-white dark:bg-[#1a2632] border-b border-[#f0f2f4] dark:border-[#2a3845]">
+<div class="max-w-[960px] mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img src="/logo.jpeg" alt="Helpers Logo" class="h-8 w-auto object-contain">
+<h2 class="text-[#111418] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Helpers</h2>
+</div>
+<!-- Optional simple nav for admin/status if needed, kept hidden for focus -->
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col justify-center py-10 px-6">
+<div class="layout-content-container flex flex-col items-center max-w-[960px] w-full mx-auto">
+<!-- Error Content Container -->
+<div class="flex flex-col items-center gap-8 max-w-[600px] w-full bg-white dark:bg-[#1a2632] p-8 rounded-xl shadow-sm border border-[#f0f2f4] dark:border-[#2a3845]">
+<!-- Illustration -->
+<div class="w-full max-w-[320px] aspect-[4/3] bg-center bg-no-repeat bg-cover rounded-lg overflow-hidden" data-alt="Illustration of tools and gears representing a technical fix in progress" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBKTsz712t8rSR0QIqgRXDFmqV8if90hk9Qnmd88U3E-ELrxYekWLnjvc8L43rzJ8CKL6W8vcAC2WHu50ujEjAncHOV33HeF3U7xR_ewyv35mgL_UV0lTS1WmI17DTILwo_84VihcP0tmRu-1CwrmSv0MgThti9fDyjj9Ur3038SLokLqd3HJK0Q44Xjgg_a6sh4z0SKKqcOZPeS7wChuncF6K9QTtS6gezslxIlkJsn_7jUXF-lD-6p9vLCQ9QqOQjXQosrM_HNBw");'>
+</div>
+<!-- Text Group -->
+<div class="flex flex-col items-center gap-3 text-center">
+<div class="bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase mb-1">
+                        500 Error
+                    </div>
+<h1 class="text-[#111418] dark:text-white text-3xl sm:text-4xl font-bold leading-tight tracking-[-0.015em]">
+                        Oops! Our servers are having a moment.
+                    </h1>
+<p class="text-[#617589] dark:text-[#9ba8b8] text-base font-normal leading-relaxed max-w-[480px]">
+                        Don't worry, it's not you—it's us. Our team of experts has been notified and is already working on a fix. Please try refreshing the page in a few minutes.
+                    </p>
+</div>
+<!-- Actions Group -->
+<div class="flex flex-col sm:flex-row gap-3 w-full max-w-[480px]">
+<!-- Primary Action -->
+<button class="flex-1 flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary hover:bg-[#116cd6] transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em] shadow-sm">
+<span class="material-symbols-outlined mr-2 text-[20px]">refresh</span>
+<span class="truncate">Refresh Page</span>
+</button>
+<!-- Secondary Action -->
+<button class="flex-1 flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-transparent hover:bg-[#f0f2f4] dark:hover:bg-[#2a3845] border border-[#dce0e5] dark:border-[#3e4a56] transition-colors text-[#111418] dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="material-symbols-outlined mr-2 text-[20px]">home</span>
+<span class="truncate">Return to Homepage</span>
+</button>
+</div>
+</div>
+<!-- Footer Meta Text -->
+<div class="mt-8">
+<p class="text-[#617589] dark:text-[#9ba8b8] text-sm font-normal leading-normal text-center">
+                    Need urgent help? <a class="underline hover:text-primary transition-colors" href="/">Contact Support</a>
+</p>
+</div>
+</div>
+</main>
+</body></html>

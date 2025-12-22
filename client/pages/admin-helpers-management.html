@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+</head>
+<body data-role="admin" class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased">
+<div class="flex h-screen w-full overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-64 hidden md:flex flex-col border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+<div class="flex items-center gap-3 px-6 py-6">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10" data-alt="Helpers admin logo abstract gradient" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCJxAXqQpxH0J64khZ939pXpq6QiY1jLK5GDjWtwtFIz8O0Z0dgwtOoBf18GlFKOljBBVo7kjclGyq4J6gr48IarwwVUx8nrELDTxG9isQvftEfqbdEltswjTWAwgrtAnHRgZaW6wAkcu0mBRxh4N3aX762DdvIELqjcz7MY4yq47gJSK2QGJp1322x7m6vw7oTxSyOBsaVOiYO4AqSqnRiJUyGS_81E_xoI0FqFUgZTnBJGpEMTzWD61ArfU6jNvGApctdRoyar18");'></div>
+<div class="flex flex-col">
+<h1 class="text-slate-900 dark:text-white text-base font-bold leading-normal">Helpers Admin</h1>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal leading-normal">Management Portal</p>
+</div>
+</div>
+<nav class="flex-1 overflow-y-auto px-4 py-2 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group" href="/">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-slate-900 dark:group-hover:text-white">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary dark:text-blue-400" href="/">
+<span class="material-symbols-outlined fill-1">group</span>
+<span class="text-sm font-medium">Helpers</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group" href="/">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-slate-900 dark:group-hover:text-white">account_circle</span>
+<span class="text-sm font-medium">Users</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group" href="/">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-slate-900 dark:group-hover:text-white">calendar_month</span>
+<span class="text-sm font-medium">Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group" href="/">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-slate-900 dark:group-hover:text-white">analytics</span>
+<span class="text-sm font-medium">Analytics</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group" href="/">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-slate-900 dark:group-hover:text-white">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group" href="/">
+<span class="material-symbols-outlined text-slate-500 group-hover:text-slate-900 dark:group-hover:text-white">logout</span>
+<span class="text-sm font-medium">Log Out</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Wrapper -->
+<main class="flex-1 flex flex-col h-full min-w-0 overflow-hidden relative">
+<!-- Top Navigation Bar -->
+<header class="h-16 flex items-center justify-between px-6 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shrink-0">
+<!-- Mobile Menu Button -->
+<button class="md:hidden p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Global Search -->
+<div class="hidden md:flex max-w-md w-full ml-4">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+<span class="material-symbols-outlined text-slate-400 text-[20px]">search</span>
+</div>
+<input class="block w-full rounded-lg border-none bg-slate-100 dark:bg-slate-800 py-2 pl-10 pr-3 text-sm text-slate-900 dark:text-white focus:ring-2 focus:ring-primary placeholder:text-slate-400" placeholder="Search pages, users, or settings..." type="text"/>
+</div>
+</div>
+<!-- Right Actions -->
+<div class="flex items-center gap-4">
+<button class="relative p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+</button>
+<div class="flex items-center gap-3 pl-4 border-l border-slate-200 dark:border-slate-800">
+<div class="text-right hidden sm:block">
+<p class="text-sm font-medium text-slate-900 dark:text-white">Admin User</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Super Admin</p>
+</div>
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-9 cursor-pointer ring-2 ring-transparent hover:ring-slate-200 dark:hover:ring-slate-700 transition-all" data-alt="Admin user profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC6TOGat9wgxqL3g9GIe2-mtYPkMQI-lY1IiHILJh13gclx6H56NOvUHgAvrusJsAKkWGu-xhg1z9R3uHQUxVYZ2ymvOiMVqiKdOm5fo1ay-9XVm6BBHYtq688_OEKyJRBkkk3XRt6eR_cJqDbHQ77k5rwodlx7SAJ5o0594be6DmnLkUXfjoO7bPC8QGifRgAdu5mC-WEyi5ThbNbsr4SjBDhqfcGvSAJ60S1oFag43DWCj2oYEVAF7RWHR8__iQrk5cT0tMlnzS4");'></div>
+</div>
+</div>
+</header>
+<!-- Scrollable Content Area -->
+<div class="flex-1 overflow-y-auto bg-background-light dark:bg-background-dark p-6 md:p-10">
+<div class="max-w-6xl mx-auto space-y-8">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex">
+<ol class="inline-flex items-center space-x-1 md:space-x-3">
+<li class="inline-flex items-center">
+<a class="inline-flex items-center text-sm font-medium text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-white" href="/dashboard">
+                                    Dashboard
+                                </a>
+</li>
+<li>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-slate-400 text-sm">chevron_right</span>
+<a class="ml-1 text-sm font-medium text-slate-900 hover:text-primary dark:text-white md:ml-2" href="/">Helpers</a>
+</div>
+</li>
+</ol>
+</nav>
+<!-- Page Heading -->
+<div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+<div class="flex flex-col gap-1">
+<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Helper Management</h2>
+<p class="text-slate-500 dark:text-slate-400">Manage helper accounts, approvals, service specializations, and availability.</p>
+</div>
+<div class="flex gap-3">
+<button class="inline-flex items-center justify-center rounded-lg bg-white dark:bg-slate-800 px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-white shadow-sm ring-1 ring-inset ring-slate-300 dark:ring-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-[20px] mr-2">download</span>
+                                Export
+                            </button>
+<button class="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+<span class="material-symbols-outlined text-[20px] mr-2">add</span>
+                                Add New Helper
+                            </button>
+</div>
+</div>
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+<div class="overflow-hidden rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="rounded-lg bg-blue-50 dark:bg-blue-900/20 p-3">
+<span class="material-symbols-outlined text-primary text-2xl">group</span>
+</div>
+<div>
+<p class="truncate text-sm font-medium text-slate-500 dark:text-slate-400">Total Helpers</p>
+<dd class="mt-1 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">1,240</dd>
+</div>
+</div>
+</div>
+<div class="overflow-hidden rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="rounded-lg bg-yellow-50 dark:bg-yellow-900/20 p-3">
+<span class="material-symbols-outlined text-yellow-600 dark:text-yellow-400 text-2xl">pending_actions</span>
+</div>
+<div>
+<p class="truncate text-sm font-medium text-slate-500 dark:text-slate-400">Pending Approvals</p>
+<dd class="mt-1 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">12</dd>
+</div>
+</div>
+</div>
+<div class="overflow-hidden rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="rounded-lg bg-green-50 dark:bg-green-900/20 p-3">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400 text-2xl">check_circle</span>
+</div>
+<div>
+<p class="truncate text-sm font-medium text-slate-500 dark:text-slate-400">Active Today</p>
+<dd class="mt-1 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">850</dd>
+</div>
+</div>
+</div>
+<div class="overflow-hidden rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="rounded-lg bg-purple-50 dark:bg-purple-900/20 p-3">
+<span class="material-symbols-outlined text-purple-600 dark:text-purple-400 text-2xl">star</span>
+</div>
+<div>
+<p class="truncate text-sm font-medium text-slate-500 dark:text-slate-400">Avg. Rating</p>
+<dd class="mt-1 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">4.8</dd>
+</div>
+</div>
+</div>
+</div>
+<!-- Filter & Search Toolbar -->
+<div class="flex flex-col sm:flex-row gap-4 justify-between items-center bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex w-full sm:w-auto flex-1 gap-4">
+<div class="relative flex-1 sm:max-w-xs">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+<span class="material-symbols-outlined text-slate-400 text-[20px]">search</span>
+</div>
+<input class="block w-full rounded-lg border-0 bg-slate-50 dark:bg-slate-800 py-2.5 pl-10 pr-3 text-sm text-slate-900 dark:text-white ring-1 ring-inset ring-slate-200 dark:ring-slate-700 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary" placeholder="Search by name, ID or email" type="text"/>
+</div>
+<div class="w-40 hidden sm:block">
+<div class="relative">
+<select class="block w-full rounded-lg border-0 bg-slate-50 dark:bg-slate-800 py-2.5 pl-3 pr-10 text-sm text-slate-900 dark:text-white ring-1 ring-inset ring-slate-200 dark:ring-slate-700 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6">
+<option>All Statuses</option>
+<option>Active</option>
+<option>Pending</option>
+<option>Suspended</option>
+</select>
+</div>
+</div>
+<div class="w-40 hidden lg:block">
+<div class="relative">
+<select class="block w-full rounded-lg border-0 bg-slate-50 dark:bg-slate-800 py-2.5 pl-3 pr-10 text-sm text-slate-900 dark:text-white ring-1 ring-inset ring-slate-200 dark:ring-slate-700 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6">
+<option>All Services</option>
+<option>Cleaning</option>
+<option>Plumbing</option>
+<option>Electrical</option>
+<option>Gardening</option>
+</select>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+<button class="sm:hidden p-2.5 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<span class="text-sm text-slate-500 dark:text-slate-400 hidden sm:inline-block">Sorted by:</span>
+<select class="bg-transparent text-sm font-medium text-slate-900 dark:text-white border-none focus:ring-0 cursor-pointer pr-8 py-0">
+<option>Newest First</option>
+<option>Rating: High to Low</option>
+<option>Name: A-Z</option>
+</select>
+</div>
+</div>
+<!-- Helpers Data Table -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="min-w-full text-left text-sm whitespace-nowrap">
+<thead class="bg-slate-50 dark:bg-slate-800/50 text-slate-900 dark:text-white font-semibold">
+<tr>
+<th class="px-6 py-4" scope="col">Helper</th>
+<th class="px-6 py-4" scope="col">Specialization</th>
+<th class="px-6 py-4" scope="col">Rating</th>
+<th class="px-6 py-4" scope="col">Status</th>
+<th class="px-6 py-4" scope="col">Last Active</th>
+<th class="px-6 py-4 text-right" scope="col">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-slate-800">
+<!-- Row 1: Active -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10" data-alt="Portrait of Sarah Jenkins helper" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB64zPZgxS14JcxvbcR97sgEhb_jnUQByUHkimDa8v_vJPvudxInnzFk8JS6B2adUslmX0VCJps9UgUsVP1sBSkSj773PrGwqD4DLgRRosJuzuQXngEcQdtKlxkRQP1ZFm-mHZd_AXQdtJsGAhSMWNCm_G9MHX_Vj-LIg3nYmPaX-CDVugd40TNX-_1x1DtXTpCdkzUEZ2tfzXJa0WgqiBWOjzcXP3P289mht9D8VDOOlp2i0oehaXtl41dY-oAngMfFfGmPOFSRys");'></div>
+<div class="flex flex-col">
+<span class="text-slate-900 dark:text-white font-medium">Sarah Jenkins</span>
+<span class="text-slate-500 dark:text-slate-400 text-xs">sarah.j@example.com</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-md bg-blue-50 dark:bg-blue-900/30 px-2 py-1 text-xs font-medium text-blue-700 dark:text-blue-300 ring-1 ring-inset ring-blue-700/10 dark:ring-blue-400/20">Cleaning</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-yellow-400 text-[18px] mr-1 fill-1">star</span>
+<span class="font-medium">4.9</span>
+<span class="text-slate-400 text-xs ml-1">(124)</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/30 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:text-green-400">
+<span class="w-1.5 h-1.5 bg-green-500 rounded-full mr-1.5"></span>
+                                                Active
+                                            </span>
+</td>
+<td class="px-6 py-4 text-slate-500 dark:text-slate-400">
+                                            2 mins ago
+                                        </td>
+<td class="px-6 py-4 text-right">
+<button class="text-slate-400 hover:text-primary dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Pending -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors bg-yellow-50/30 dark:bg-yellow-900/10">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10" data-alt="Portrait of Michael Chen helper" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB8fEjpF5VuPb7lAnqcLewCUGD-LXK6eqlaI9DZtverEU0Ft0hbPv9QF1CCr6fdgfvh-iEkaevs52gIDDp0Cn8LjMvVoZBeMR-MtdMr35RDudHKGIX8VsGxZ0-S7g5GT5CxTGuY_07R5gaL2zD67655UdrE6gAMm4S8Nuexm4Cq1_OSr7wNEa16Kw4TcQqT3kBdVaFXZu4zCWr75QLUPTPRUqpvBsFryzfLbEpIG-YjYKHSZnM5pPWWhxPfc6vcAbFOquGku9afjrk");'></div>
+<div class="flex flex-col">
+<span class="text-slate-900 dark:text-white font-medium">Michael Chen</span>
+<span class="text-slate-500 dark:text-slate-400 text-xs">+1 (555) 123-4567</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-md bg-purple-50 dark:bg-purple-900/30 px-2 py-1 text-xs font-medium text-purple-700 dark:text-purple-300 ring-1 ring-inset ring-purple-700/10 dark:ring-purple-400/20">Plumbing</span>
+</td>
+<td class="px-6 py-4">
+<span class="text-slate-400 text-sm italic">New</span>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-yellow-100 dark:bg-yellow-900/30 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:text-yellow-400">
+                                                Pending Approval
+                                            </span>
+</td>
+<td class="px-6 py-4 text-slate-500 dark:text-slate-400">
+                                            Applied 1h ago
+                                        </td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="flex items-center justify-center size-8 rounded-full bg-green-100 text-green-700 hover:bg-green-200 dark:bg-green-900/50 dark:text-green-400 transition-colors" title="Approve">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<button class="flex items-center justify-center size-8 rounded-full bg-red-100 text-red-700 hover:bg-red-200 dark:bg-red-900/50 dark:text-red-400 transition-colors" title="Reject">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<button class="text-slate-400 hover:text-primary dark:hover:text-white ml-1">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Active -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10" data-alt="Portrait of David Kim helper" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCvEafS0QESXvGV3CdykvWwa9L0EqewJiqMX7Z8PN2wAUHBBXj4bz3CfC7VqwEqKLEY1D87P2gE5o4vQpYlx9sE2imEozbFmxoNhMxnm4pEZWV6wyjx7Sm4Lq_8-QxCUdTIg4Sd58ZG6XrgK7bD9IqAfSgFT6JM12j2jsOqE86M7OWHFNg_zHlEM2gqVkvtcapckvScbOhUcuvVT2fQoY4E6Kwk75Vc20_Nxb-zVvZLgASAuZYz9vpjwaQsGZGTzDr0jqyyDDgpjp0");'></div>
+<div class="flex flex-col">
+<span class="text-slate-900 dark:text-white font-medium">David Kim</span>
+<span class="text-slate-500 dark:text-slate-400 text-xs">david.kim@example.com</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-md bg-orange-50 dark:bg-orange-900/30 px-2 py-1 text-xs font-medium text-orange-700 dark:text-orange-300 ring-1 ring-inset ring-orange-700/10 dark:ring-orange-400/20">Electrician</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-yellow-400 text-[18px] mr-1 fill-1">star</span>
+<span class="font-medium">4.6</span>
+<span class="text-slate-400 text-xs ml-1">(42)</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/30 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:text-green-400">
+<span class="w-1.5 h-1.5 bg-green-500 rounded-full mr-1.5"></span>
+                                                Active
+                                            </span>
+</td>
+<td class="px-6 py-4 text-slate-500 dark:text-slate-400">
+                                            5 hours ago
+                                        </td>
+<td class="px-6 py-4 text-right">
+<button class="text-slate-400 hover:text-primary dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Suspended -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors opacity-75">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 grayscale" data-alt="Portrait of Emily Stone helper" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuARblDL0DE3jRJCn0-3z0ZsSTQsUx1YKXm3kqmZrcGBWWUFWsPiYXB6RP7Uy15UEPhCyFvnNhSnyCrBIurB8nheJ84ET4Lc46xMSe2ZG2yLKKKlyBWNuaL9bbzgCBxfPVTjuWZ8mgMpvSGPlc9_5vcAtM94GEt2TYylztLtWX64PSfe93Y5fS7gw9Kp3MGPQmS3sa03BLAvjWa0_mWkY0FGftHPN3B1uBnCNC-bGieU2zweBOgeSFpg1iwMKZWW_YxYqv6mDpw13vA");'></div>
+<div class="flex flex-col">
+<span class="text-slate-900 dark:text-white font-medium">Emily Stone</span>
+<span class="text-slate-500 dark:text-slate-400 text-xs">emily.s@example.com</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-md bg-blue-50 dark:bg-blue-900/30 px-2 py-1 text-xs font-medium text-blue-700 dark:text-blue-300 ring-1 ring-inset ring-blue-700/10 dark:ring-blue-400/20">Cleaning</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-yellow-400 text-[18px] mr-1 fill-1">star</span>
+<span class="font-medium">2.4</span>
+<span class="text-slate-400 text-xs ml-1">(15)</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-red-100 dark:bg-red-900/30 px-2.5 py-0.5 text-xs font-medium text-red-800 dark:text-red-400">
+                                                Suspended
+                                            </span>
+</td>
+<td class="px-6 py-4 text-slate-500 dark:text-slate-400">
+                                            2 days ago
+                                        </td>
+<td class="px-6 py-4 text-right">
+<button class="text-slate-400 hover:text-primary dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: Active -->
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10" data-alt="Portrait of Lisa Ray helper" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAh9DJ2Q2oB1pAUzJ1qwUqbFImwE3k9JOs0H0KUNBqcDqA0aRYjM3SaAGuGII1GLje0qrv1I9inmd53kZdrbSXZK_TgeX394v_SsI_caUhIcnWQZFYQmLFX62Y5ORkaOLPownzkifLqrYzCwwjgoVfeyE1p5yAlohwA3Qu6kLgfLF58It0g7yvC-4iVLaPMiR4rx8GUPGv0rP0fHHQ_HxXJfXbVoFPwJRN8s5pVefHejdp2FPBjSIhD5xC97gW3xGlspSgP8-IeZGg");'></div>
+<div class="flex flex-col">
+<span class="text-slate-900 dark:text-white font-medium">Lisa Ray</span>
+<span class="text-slate-500 dark:text-slate-400 text-xs">lisa.ray@example.com</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-md bg-green-50 dark:bg-green-900/30 px-2 py-1 text-xs font-medium text-green-700 dark:text-green-300 ring-1 ring-inset ring-green-700/10 dark:ring-green-400/20">Gardening</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-yellow-400 text-[18px] mr-1 fill-1">star</span>
+<span class="font-medium">4.9</span>
+<span class="text-slate-400 text-xs ml-1">(89)</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/30 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:text-green-400">
+<span class="w-1.5 h-1.5 bg-green-500 rounded-full mr-1.5"></span>
+                                                Active
+                                            </span>
+</td>
+<td class="px-6 py-4 text-slate-500 dark:text-slate-400">
+                                            1 day ago
+                                        </td>
+<td class="px-6 py-4 text-right">
+<button class="text-slate-400 hover:text-primary dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-between border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-4">
+<div class="flex flex-1 justify-between sm:hidden">
+<a class="relative inline-flex items-center rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50" href="/">Previous</a>
+<a class="relative ml-3 inline-flex items-center rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50" href="/">Next</a>
+</div>
+<div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+<div>
+<p class="text-sm text-slate-700 dark:text-slate-400">
+                                        Showing
+                                        <span class="font-medium">1</span>
+                                        to
+                                        <span class="font-medium">10</span>
+                                        of
+                                        <span class="font-medium">1240</span>
+                                        results
+                                    </p>
+</div>
+<div>
+<nav aria-label="Pagination" class="isolate inline-flex -space-x-px rounded-md shadow-sm">
+<a class="relative inline-flex items-center rounded-l-md px-2 py-2 text-slate-400 ring-1 ring-inset ring-slate-300 dark:ring-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 focus:z-20 focus:outline-offset-0" href="/">
+<span class="sr-only">Previous</span>
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</a>
+<a aria-current="page" class="relative z-10 inline-flex items-center bg-primary px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" href="/">1</a>
+<a class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-slate-900 dark:text-white ring-1 ring-inset ring-slate-300 dark:ring-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 focus:z-20 focus:outline-offset-0" href="/">2</a>
+<a class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-slate-900 dark:text-white ring-1 ring-inset ring-slate-300 dark:ring-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 focus:z-20 focus:outline-offset-0" href="/">3</a>
+<span class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-400 ring-1 ring-inset ring-slate-300 dark:ring-slate-700 focus:outline-offset-0">...</span>
+<a class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-slate-900 dark:text-white ring-1 ring-inset ring-slate-300 dark:ring-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 focus:z-20 focus:outline-offset-0" href="/">124</a>
+<a class="relative inline-flex items-center rounded-r-md px-2 py-2 text-slate-400 ring-1 ring-inset ring-slate-300 dark:ring-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 focus:z-20 focus:outline-offset-0" href="/">
+<span class="sr-only">Next</span>
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</a>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

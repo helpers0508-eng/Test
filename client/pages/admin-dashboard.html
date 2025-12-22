@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+<script src="/assets/js/auth.js"></script>
+</head>
+<body data-role="admin" class="bg-background-light dark:bg-background-dark font-display text-text-main dark:text-white overflow-hidden h-screen flex">
+<!-- Side Navigation -->
+<aside class="w-64 flex-shrink-0 bg-surface-light dark:bg-surface-dark border-r border-border-light dark:border-border-dark flex flex-col h-full hidden lg:flex">
+<div class="p-5 flex items-center gap-3">
+<div class="bg-primary/10 rounded-lg p-2 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-size: 28px;">handyman</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-text-main dark:text-white text-lg font-bold leading-none">Helpers</h1>
+<p class="text-text-muted dark:text-slate-400 text-xs font-medium mt-1">Admin Workspace</p>
+</div>
+</div>
+<nav class="flex-1 overflow-y-auto px-3 py-2 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary" href="/">
+<span class="material-symbols-outlined icon-fill">dashboard</span>
+<span class="text-sm font-semibold">Dashboard</span>
+</a>
+<div class="mt-4 mb-2 px-3 text-xs font-bold text-text-muted uppercase tracking-wider">Management</div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-main dark:text-slate-300 hover:bg-border-light dark:hover:bg-border-dark transition-colors" href="/">
+<span class="material-symbols-outlined">group</span>
+<span class="text-sm font-medium">User Management</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-main dark:text-slate-300 hover:bg-border-light dark:hover:bg-border-dark transition-colors" href="/">
+<span class="material-symbols-outlined">engineering</span>
+<span class="text-sm font-medium">Helper Management</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-main dark:text-slate-300 hover:bg-border-light dark:hover:bg-border-dark transition-colors" href="/">
+<span class="material-symbols-outlined">category</span>
+<span class="text-sm font-medium">Service Catalog</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-main dark:text-slate-300 hover:bg-border-light dark:hover:bg-border-dark transition-colors" href="/">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-sm font-medium">Bookings</span>
+</a>
+<div class="mt-4 mb-2 px-3 text-xs font-bold text-text-muted uppercase tracking-wider">Finance &amp; Ops</div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-main dark:text-slate-300 hover:bg-border-light dark:hover:bg-border-dark transition-colors" href="/">
+<span class="material-symbols-outlined">attach_money</span>
+<span class="text-sm font-medium">Financials</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-main dark:text-slate-300 hover:bg-border-light dark:hover:bg-border-dark transition-colors" href="/">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-medium">Reports</span>
+</a>
+</nav>
+<div class="p-3 border-t border-border-light dark:border-border-dark">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-main dark:text-slate-300 hover:bg-border-light dark:hover:bg-border-dark transition-colors" href="/">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+<div class="flex items-center gap-3 px-3 py-3 mt-2 rounded-lg bg-background-light dark:bg-background-dark/50">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-8 w-8" data-alt="Admin profile picture showing a professional headshot" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCC8xWe4-8tuYocP7tJu3JsZqpGGWCt3laS-wKLXqzcZ-UwZsdvwPkO7GyCBMvCRWK8LiB6hKvT3pj_UdRy5VHxSIxb4bHXqT67jaBlWINMtxYcBdD4MYbQgmR4GfvIXXRCaLzM0FTTt1aDFUU8IGF9JP_LODAdB_0ssbmZ2Ho_ttwIUOIV1Ojv8-trxQbS0BDgfWmeo9_iyruwbLPcKbhvh2Y7AvPkh0xa4fOUVxVWtOXjoZCUcDYXgd0xJZ2pjK4HYUiu0wg6Kco");'></div>
+<div class="flex flex-col overflow-hidden">
+<p class="text-sm font-semibold truncate text-text-main dark:text-white">Admin User</p>
+<p class="text-xs text-text-muted truncate">admin@helpers.com</p>
+</div>
+<button class="ml-auto text-text-muted hover:text-text-main">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col min-w-0 bg-background-light dark:bg-background-dark overflow-hidden">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between px-6 py-4 bg-surface-light dark:bg-surface-dark border-b border-border-light dark:border-border-dark z-10">
+<div class="flex items-center gap-4 lg:hidden">
+<button class="text-text-main dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="text-primary" data-alt="Helpers Logo">
+<span class="material-symbols-outlined text-primary">handyman</span>
+</div>
+</div>
+<!-- Search -->
+<div class="hidden lg:flex flex-1 max-w-lg">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-text-muted">search</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2 border-none rounded-lg leading-5 bg-background-light dark:bg-background-dark text-text-main dark:text-white placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-primary sm:text-sm" placeholder="Search for users, helpers, bookings..." type="text"/>
+</div>
+</div>
+<!-- Right Actions -->
+<div class="flex items-center gap-4 ml-auto">
+<button class="relative p-2 rounded-full hover:bg-background-light dark:hover:bg-border-dark text-text-main dark:text-white transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 block h-2 w-2 rounded-full bg-red-500 ring-2 ring-white dark:ring-surface-dark"></span>
+</button>
+<button class="p-2 rounded-full hover:bg-background-light dark:hover:bg-border-dark text-text-main dark:text-white transition-colors">
+<span class="material-symbols-outlined">help</span>
+</button>
+<div class="h-8 w-px bg-border-light dark:bg-border-dark mx-1"></div>
+<div class="flex items-center gap-2">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-9 lg:hidden" data-alt="Admin profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC54QEJ7kpB0os3HS2mIHhKYi44pMqK72ej4pGjZMzZmv7Kq8d_Rclfxo9D8m4pKzWMeTAvIg6nm0OqAiI_MUywBigMb54UY8tyaAEihicZG6v6cbeHGbhWyrU8yBiet1s6AvK2FhcG1QeOLKJ7WEvLthTdBz46BgoSyHbK-mr99Mr_FEWFA0atvGfvtDpJKNnnedfGG2kQdxRb_QxYMKzWaefAxP6LvTR1rQdkQ4JktnpGHK0RDMLTjqScXWwEHKGqpAH7lmRI5Zk");'></div>
+</div>
+</div>
+</header>
+<!-- Scrollable Dashboard Content -->
+<div class="flex-1 overflow-y-auto p-4 lg:p-8">
+<div class="max-w-7xl mx-auto space-y-8">
+<!-- Page Heading -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h2 class="text-2xl md:text-3xl font-black text-text-main dark:text-white tracking-tight">Welcome back, Admin</h2>
+<p class="text-text-muted dark:text-slate-400 mt-1">Here is your daily overview of system health and performance.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-lg text-sm font-semibold text-text-main dark:text-white hover:bg-background-light dark:hover:bg-border-dark transition-colors">
+<span class="material-symbols-outlined text-[20px]">download</span>
+                            Export Report
+                        </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold shadow-md hover:bg-blue-600 transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                            Create Promotion
+                        </button>
+</div>
+</div>
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Stat 1 -->
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-border-light dark:border-border-dark shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<p class="text-text-muted dark:text-slate-400 text-sm font-medium">Total Users</p>
+<span class="material-symbols-outlined text-primary bg-primary/10 p-1.5 rounded-lg">group</span>
+</div>
+<p class="text-3xl font-bold text-text-main dark:text-white">12,450</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-[#078838] text-sm">trending_up</span>
+<p class="text-[#078838] text-sm font-medium">+12%</p>
+<p class="text-text-muted text-sm ml-1">vs last month</p>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-border-light dark:border-border-dark shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<p class="text-text-muted dark:text-slate-400 text-sm font-medium">Active Helpers</p>
+<span class="material-symbols-outlined text-primary bg-primary/10 p-1.5 rounded-lg">engineering</span>
+</div>
+<p class="text-3xl font-bold text-text-main dark:text-white">850</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-[#078838] text-sm">trending_up</span>
+<p class="text-[#078838] text-sm font-medium">+2%</p>
+<p class="text-text-muted text-sm ml-1">vs last month</p>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-border-light dark:border-border-dark shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<p class="text-text-muted dark:text-slate-400 text-sm font-medium">Pending Bookings</p>
+<span class="material-symbols-outlined text-orange-500 bg-orange-100 dark:bg-orange-900/30 p-1.5 rounded-lg">pending_actions</span>
+</div>
+<p class="text-3xl font-bold text-text-main dark:text-white">45</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-[#e73908] text-sm">trending_down</span>
+<p class="text-[#e73908] text-sm font-medium">-5%</p>
+<p class="text-text-muted text-sm ml-1">vs last week</p>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-border-light dark:border-border-dark shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<p class="text-text-muted dark:text-slate-400 text-sm font-medium">System Health</p>
+<span class="material-symbols-outlined text-green-600 bg-green-100 dark:bg-green-900/30 p-1.5 rounded-lg">check_circle</span>
+</div>
+<p class="text-3xl font-bold text-text-main dark:text-white">99.9%</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-text-muted text-sm">remove</span>
+<p class="text-text-muted text-sm font-medium">Stable</p>
+</div>
+</div>
+</div>
+<!-- Main Chart Section -->
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-border-light dark:border-border-dark shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+<div>
+<h3 class="text-lg font-bold text-text-main dark:text-white">Revenue &amp; Booking Volume</h3>
+<p class="text-text-muted text-sm">Performance over the last 30 days</p>
+</div>
+<div class="text-right">
+<p class="text-3xl font-bold text-text-main dark:text-white tracking-tight">$45,200</p>
+<div class="flex items-center justify-end gap-1">
+<span class="material-symbols-outlined text-[#078838] text-sm">arrow_upward</span>
+<span class="text-[#078838] text-sm font-bold">+8.5%</span>
+</div>
+</div>
+</div>
+<div class="w-full h-64 relative">
+<!-- Simulated Chart -->
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 800 200">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#137fec" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#137fec" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid lines -->
+<line class="dark:stroke-slate-700" stroke="#f0f2f4" stroke-width="1" x1="0" x2="800" y1="0" y2="0"></line>
+<line class="dark:stroke-slate-700" stroke="#f0f2f4" stroke-width="1" x1="0" x2="800" y1="50" y2="50"></line>
+<line class="dark:stroke-slate-700" stroke="#f0f2f4" stroke-width="1" x1="0" x2="800" y1="100" y2="100"></line>
+<line class="dark:stroke-slate-700" stroke="#f0f2f4" stroke-width="1" x1="0" x2="800" y1="150" y2="150"></line>
+<line class="dark:stroke-slate-700" stroke="#f0f2f4" stroke-width="1" x1="0" x2="800" y1="200" y2="200"></line>
+<!-- Path -->
+<path d="M0,150 C50,140 100,160 150,120 C200,80 250,100 300,70 C350,40 400,60 450,50 C500,40 550,20 600,40 C650,60 700,30 750,20 L800,10 L800,200 L0,200 Z" fill="url(#chartGradient)"></path>
+<path d="M0,150 C50,140 100,160 150,120 C200,80 250,100 300,70 C350,40 400,60 450,50 C500,40 550,20 600,40 C650,60 700,30 750,20 L800,10" fill="none" stroke="#137fec" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+</svg>
+<div class="flex justify-between mt-2 text-xs text-text-muted font-medium px-2">
+<span>Week 1</span>
+<span>Week 2</span>
+<span>Week 3</span>
+<span>Week 4</span>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Recent Helpers & Quick Actions -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Recent Signups Table -->
+<div class="lg:col-span-2 bg-surface-light dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark shadow-sm flex flex-col">
+<div class="p-6 border-b border-border-light dark:border-border-dark flex items-center justify-between">
+<h3 class="text-lg font-bold text-text-main dark:text-white">Pending Helper Approvals</h3>
+<a class="text-sm font-semibold text-primary hover:text-blue-600" href="/">View All</a>
+</div>
+<div class="flex-1 overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-background-light dark:bg-background-dark/50">
+<th class="px-6 py-3 text-xs font-semibold text-text-muted uppercase tracking-wider">Helper</th>
+<th class="px-6 py-3 text-xs font-semibold text-text-muted uppercase tracking-wider">Service</th>
+<th class="px-6 py-3 text-xs font-semibold text-text-muted uppercase tracking-wider">Date</th>
+<th class="px-6 py-3 text-xs font-semibold text-text-muted uppercase tracking-wider text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-light dark:divide-border-dark">
+<tr>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-9 w-9" data-alt="Portrait of Sarah Jenkins" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIcE1V5UlZZMLShmsfSPlXKcn8mHxpVcVrFlNtH_LHtkeODcGehoNLyeAAug0nZ6q-viguXUtDGDTXoBJE-83aU1HCkV3i6iyh2d9CCdBuvCP-6MbicIRXuC6Ot-pHGRmC4_Ujg0qtcMz7GMIYZoMS-C1Nihvix9fJti_7A-bFAiOeb8Z4T1xwt7yjntmyjdXjkZVqI9EGKEKD0pH1gYxeLfJPx4aEzOAHEA3rHpuRKVWf3cObLvluDs1Dghza7wDM9bccOehLhYM");'></div>
+<div>
+<p class="text-sm font-medium text-text-main dark:text-white">Sarah Jenkins</p>
+<p class="text-xs text-text-muted">ID: #HP-4092</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">
+                                                Cleaning
+                                            </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted">
+                                            Today, 10:23 AM
+                                        </td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<button class="text-primary hover:text-blue-700 text-sm font-medium mr-3">Review</button>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-9 w-9" data-alt="Portrait of Michael Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAhwlzPVUhcCvd6Mj90gQkWZzJNS4hS6L6j0SrN9i0f17NnCuAwNCgFZCCqN5caJGEfYrepcKeWcQLn2Hnbi47mkAWi4ZD1Q3ER3sHm1EKNOTDYcQJTvMKmjICaER9_9XpK2vUTogvZX5LBLdczy8aDZviJVhtwI7wylHhCeh2i8mhKVE0mdvuFRiWwigv49zwikzpi43fkKlkayhPn1SHAMm2ahsvG5hDz8IFCMxLQFUx3F0JY3MYQpCSmNJq50vM5duIexOCzCE");'></div>
+<div>
+<p class="text-sm font-medium text-text-main dark:text-white">Michael Chen</p>
+<p class="text-xs text-text-muted">ID: #HP-4093</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
+                                                Plumbing
+                                            </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted">
+                                            Yesterday, 4:15 PM
+                                        </td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<button class="text-primary hover:text-blue-700 text-sm font-medium mr-3">Review</button>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat bg-cover rounded-full h-9 w-9" data-alt="Portrait of Jessica Lee" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZBsZ4A9S89qpfFZLG1OgRa3Si4XsUxWvp6YUT3d6iTg-NpA6dMAjWGlJdB7EWQYF4cyg2-2XqO7w8nogv1ut_IIkKltXbUst35sZD5Ov-z1UAAdgSbkZCakdIxyKCKgV8uoacVgH6FgpIp0fyVL67g1IUKC18TjybnKHcB9IFiQhpYgTE1pKQWWtb7ZpM8WwilgAkHrHhrmhopzBNYajCnIR20GKHsyYZQVcVDzknzGZ9HCD-BY67a21vHE1miI7lO4KxpnSCaTo");'></div>
+<div>
+<p class="text-sm font-medium text-text-main dark:text-white">Jessica Lee</p>
+<p class="text-xs text-text-muted">ID: #HP-4094</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300">
+                                                Electrician
+                                            </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-text-muted">
+                                            Oct 24, 09:30 AM
+                                        </td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<button class="text-primary hover:text-blue-700 text-sm font-medium mr-3">Review</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Quick Actions Panel -->
+<div class="flex flex-col gap-4">
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark shadow-sm p-6">
+<h3 class="text-lg font-bold text-text-main dark:text-white mb-4">Quick Actions</h3>
+<div class="space-y-3">
+<button class="w-full flex items-center justify-between p-3 rounded-lg bg-background-light dark:bg-background-dark hover:bg-border-light dark:hover:bg-border-dark border border-border-light dark:border-border-dark transition-colors group">
+<div class="flex items-center gap-3">
+<div class="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+</div>
+<span class="text-sm font-medium text-text-main dark:text-white">Invite New Admin</span>
+</div>
+<span class="material-symbols-outlined text-text-muted group-hover:text-primary text-[20px]">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-3 rounded-lg bg-background-light dark:bg-background-dark hover:bg-border-light dark:hover:bg-border-dark border border-border-light dark:border-border-dark transition-colors group">
+<div class="flex items-center gap-3">
+<div class="bg-amber-100 dark:bg-amber-900/30 p-2 rounded-lg text-amber-600">
+<span class="material-symbols-outlined text-[20px]">campaign</span>
+</div>
+<span class="text-sm font-medium text-text-main dark:text-white">Create Announcement</span>
+</div>
+<span class="material-symbols-outlined text-text-muted group-hover:text-amber-600 text-[20px]">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-3 rounded-lg bg-background-light dark:bg-background-dark hover:bg-border-light dark:hover:bg-border-dark border border-border-light dark:border-border-dark transition-colors group">
+<div class="flex items-center gap-3">
+<div class="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg text-green-600">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+</div>
+<span class="text-sm font-medium text-text-main dark:text-white">Generate Payroll</span>
+</div>
+<span class="material-symbols-outlined text-text-muted group-hover:text-green-600 text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="bg-primary/5 rounded-xl border border-primary/10 p-6 flex items-center gap-4">
+<div class="bg-primary/10 p-3 rounded-full text-primary">
+<span class="material-symbols-outlined">headset_mic</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-text-main dark:text-white">Admin Support</h4>
+<p class="text-xs text-text-muted mt-1">Need help? Contact the Super Admin team.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e5e7eb] dark:border-[#2d3748] px-10 py-4 bg-white dark:bg-[#1a202c]">
+<div class="flex items-center gap-4 cursor-pointer">
+<img src="/logo.jpeg" alt="Helpers Logo" class="h-8 w-auto object-contain">
+<h2 class="text-[#111418] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Helpers</h2>
+</div>
+<div class="hidden sm:flex items-center gap-4 text-sm font-medium text-[#637588] dark:text-[#a0aec0]">
+<a class="hover:text-primary transition-colors" href="/help">Help Center</a>
+<a class="hover:text-primary transition-colors" href="/">Login</a>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col items-center justify-center px-4 py-12 sm:px-6 lg:px-8 relative z-10">
+<div class="w-full max-w-[600px] flex flex-col items-center text-center space-y-8 animate-fade-in-up">
+<!-- Central Visual -->
+<div class="w-full max-w-[400px] aspect-[16/10] relative rounded-xl overflow-hidden shadow-sm dark:shadow-none bg-white dark:bg-[#1a202c] p-2">
+<div class="w-full h-full bg-center bg-contain bg-no-repeat rounded-lg" data-alt="Illustration of a friendly robot or character looking confused with a 404 sign" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCOMg5iD3p9M6RaJU_dyZva792ov0we3eFO1bmXfsMfOnAoLCUBxD64Q-k54jtoFptIeslGdVenWGlJUFK0T46FrM6KoCDurEDVRfRWpd4XCHwvXuN8VDtX3RxJY6NHAYQUwph0iFzBqtgQobnnO2UoIuY9uIkRFECl1he2SrGQtWNWbCJ0W7f6SAsEKDNsU6dbFGq3Zt8rZr-O8vJplBZdQtBrl46V9V676Sg88WtK_GyWoBUl3IURzpoyKX34FB6gutpwOValmN4');"></div>
+</div>
+<!-- Text Content -->
+<div class="space-y-4">
+<h1 class="text-[#111418] dark:text-white text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">
+                        Oops! We can't find that page.
+                    </h1>
+<p class="text-[#637588] dark:text-[#a0aec0] text-base sm:text-lg font-normal leading-relaxed max-w-[480px] mx-auto">
+                        The page you are looking for might have been removed, had its name changed, or is temporarily unavailable. Let's get you back on track.
+                    </p>
+</div>
+<!-- Search Bar -->
+<div class="w-full max-w-md">
+<label class="relative block w-full">
+<span class="sr-only">Search</span>
+<div class="absolute inset-y-0 left-0 flex items-center pl-4 text-[#637588] dark:text-[#a0aec0]">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</div>
+<input class="block w-full rounded-lg border-0 bg-white dark:bg-[#1a202c] py-4 pl-12 pr-4 text-[#111418] dark:text-white placeholder:text-[#637588] dark:placeholder:text-[#637588] focus:ring-2 focus:ring-primary shadow-sm sm:text-sm sm:leading-6" name="search" placeholder="Search for services (e.g. Cleaning, Plumbing)" type="text"/>
+</label>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center pt-2">
+<button class="bg-primary hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 min-w-[180px]">
+<span class="material-symbols-outlined text-[20px]">home</span>
+                        Go to Homepage
+                    </button>
+<button class="bg-white dark:bg-[#1a202c] hover:bg-gray-50 dark:hover:bg-[#2d3748] text-[#111418] dark:text-white border border-[#e5e7eb] dark:border-[#4a5568] font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 min-w-[180px]">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+                        Contact Support
+                    </button>
+</div>
+</div>
+</main>
+<!-- Quick Links Footer -->
+<div class="w-full border-t border-[#e5e7eb] dark:border-[#2d3748] bg-white/50 dark:bg-[#1a202c]/50 backdrop-blur-sm mt-auto">
+<div class="max-w-[960px] mx-auto px-6 py-8">
+<p class="text-sm font-semibold text-[#637588] dark:text-[#a0aec0] text-center mb-4 uppercase tracking-wider">Helpful Links</p>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-3">
+<a class="text-sm text-[#111418] dark:text-white hover:text-primary dark:hover:text-primary transition-colors flex items-center gap-1 group" href="/">
+<span class="w-1 h-1 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        Find a Helper
+                    </a>
+<a class="text-sm text-[#111418] dark:text-white hover:text-primary dark:hover:text-primary transition-colors flex items-center gap-1 group" href="/">
+<span class="w-1 h-1 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        My Bookings
+                    </a>
+<a class="text-sm text-[#111418] dark:text-white hover:text-primary dark:hover:text-primary transition-colors flex items-center gap-1 group" href="/">
+<span class="w-1 h-1 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        Admin Dashboard
+                    </a>
+<a class="text-sm text-[#111418] dark:text-white hover:text-primary dark:hover:text-primary transition-colors flex items-center gap-1 group" href="/">
+<span class="w-1 h-1 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                        Services Directory
+                    </a>
+</div>
+<div class="text-center mt-8 text-xs text-[#9ca3af] dark:text-[#718096]">
+                    © 2024 Helpers Inc. All rights reserved.
+                </div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Bookings Management - Helpers</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-dark": "#1c2630",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #475569; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white min-h-screen flex overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-64 bg-white dark:bg-surface-dark border-r border-[#dbe0e6] dark:border-gray-700 flex flex-col shrink-0 transition-colors duration-200 h-screen fixed left-0 top-0 z-20">
+<div class="p-4 border-b border-[#dbe0e6] dark:border-gray-700">
+<div class="flex gap-3 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 shadow-sm" data-alt="Helpers brand logo abstract gradient" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwyU5Gsnl8gizfIPEtjy0gaWwe71I-sn3OuBVCjr9Wiy9PzbdDUeLE-PH7xNeSVX4Z6dMzljPJu_UKKJRMNUE5ygmBmGc4PErZrVxgbm21tX9rtrq4jgUfdsZNrSBxwhElGsgQ9ysKQxfWNSySs_mP4EUcSATYba7pAlRXLrzTyjNpGYbXD3jHUbbjkL5exbjQ3EexG2_A1UuuMc9aDW-BSdAibrW_IcKIt0CM-fMKAX47SkkR6p6tYfjU82L9zCQnXu9Lgi-FWA0");'></div>
+<div class="flex flex-col">
+<h1 class="text-[#111418] dark:text-white text-base font-bold leading-normal">Helpers Admin</h1>
+<p class="text-[#617589] dark:text-gray-400 text-xs font-medium leading-normal">Management Console</p>
+</div>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto py-4 px-2 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#111418] dark:text-gray-200 hover:bg-[#f0f2f4] dark:hover:bg-gray-800 transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#617589] dark:text-gray-400 group-hover:text-primary">dashboard</span>
+<span class="text-sm font-medium leading-normal">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#111418] dark:text-gray-200 hover:bg-[#f0f2f4] dark:hover:bg-gray-800 transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#617589] dark:text-gray-400 group-hover:text-primary">group</span>
+<span class="text-sm font-medium leading-normal">Users</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#111418] dark:text-gray-200 hover:bg-[#f0f2f4] dark:hover:bg-gray-800 transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#617589] dark:text-gray-400 group-hover:text-primary">engineering</span>
+<span class="text-sm font-medium leading-normal">Helpers</span>
+</a>
+<!-- Active State -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary dark:text-blue-400" href="#">
+<span class="material-symbols-outlined fill">calendar_month</span>
+<span class="text-sm font-bold leading-normal">Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#111418] dark:text-gray-200 hover:bg-[#f0f2f4] dark:hover:bg-gray-800 transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#617589] dark:text-gray-400 group-hover:text-primary">payments</span>
+<span class="text-sm font-medium leading-normal">Finances</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#111418] dark:text-gray-200 hover:bg-[#f0f2f4] dark:hover:bg-gray-800 transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#617589] dark:text-gray-400 group-hover:text-primary">settings</span>
+<span class="text-sm font-medium leading-normal">Settings</span>
+</a>
+</div>
+<div class="p-4 border-t border-[#dbe0e6] dark:border-gray-700">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#111418] dark:text-gray-200 hover:bg-red-50 dark:hover:bg-red-900/20 group transition-colors" href="#">
+<span class="material-symbols-outlined text-[#617589] dark:text-gray-400 group-hover:text-red-500">logout</span>
+<span class="text-sm font-medium leading-normal group-hover:text-red-600 dark:group-hover:text-red-400">Sign Out</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 ml-64 flex flex-col min-h-screen">
+<!-- Header Section -->
+<header class="bg-white dark:bg-surface-dark border-b border-[#dbe0e6] dark:border-gray-700 sticky top-0 z-10">
+<div class="px-6 py-4 flex flex-col gap-1">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 items-center text-sm">
+<a class="text-[#617589] dark:text-gray-400 font-medium hover:text-primary transition-colors" href="#">Home</a>
+<span class="text-[#617589] dark:text-gray-500 font-medium">/</span>
+<a class="text-[#617589] dark:text-gray-400 font-medium hover:text-primary transition-colors" href="#">Admin</a>
+<span class="text-[#617589] dark:text-gray-500 font-medium">/</span>
+<span class="text-[#111418] dark:text-white font-medium">Bookings</span>
+</div>
+<!-- Page Heading & Actions -->
+<div class="flex flex-wrap justify-between items-end gap-4 mt-2">
+<div class="flex flex-col gap-1">
+<h2 class="text-[#111418] dark:text-white text-2xl font-bold leading-tight tracking-tight">Bookings Management</h2>
+<p class="text-[#617589] dark:text-gray-400 text-sm font-normal">View and manage all service bookings across the platform.</p>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center gap-2 bg-white dark:bg-gray-800 border border-[#dbe0e6] dark:border-gray-600 text-[#111418] dark:text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px]">download</span>
+                            Export CSV
+                        </button>
+<button class="flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-600 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                            Create Booking
+                        </button>
+</div>
+</div>
+</div>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-auto p-6 bg-background-light dark:bg-background-dark">
+<div class="max-w-[1400px] mx-auto flex flex-col gap-6">
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="bg-white dark:bg-surface-dark rounded-xl p-5 border border-[#dbe0e6] dark:border-gray-700 shadow-sm flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<p class="text-[#617589] dark:text-gray-400 text-sm font-medium">Total Bookings</p>
+<span class="material-symbols-outlined text-primary bg-primary/10 p-1.5 rounded-lg text-[20px]">inventory_2</span>
+</div>
+<div class="flex items-end gap-2">
+<p class="text-[#111418] dark:text-white text-2xl font-bold leading-none">1,240</p>
+<p class="text-[#078838] text-xs font-medium mb-1 flex items-center">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +5%
+                            </p>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-xl p-5 border border-[#dbe0e6] dark:border-gray-700 shadow-sm flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<p class="text-[#617589] dark:text-gray-400 text-sm font-medium">Pending Review</p>
+<span class="material-symbols-outlined text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 p-1.5 rounded-lg text-[20px]">pending_actions</span>
+</div>
+<div class="flex items-end gap-2">
+<p class="text-[#111418] dark:text-white text-2xl font-bold leading-none">15</p>
+<p class="text-[#078838] text-xs font-medium mb-1 flex items-center">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +2%
+                            </p>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-xl p-5 border border-[#dbe0e6] dark:border-gray-700 shadow-sm flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<p class="text-[#617589] dark:text-gray-400 text-sm font-medium">Today's Revenue</p>
+<span class="material-symbols-outlined text-green-600 bg-green-100 dark:bg-green-900/30 p-1.5 rounded-lg text-[20px]">attach_money</span>
+</div>
+<div class="flex items-end gap-2">
+<p class="text-[#111418] dark:text-white text-2xl font-bold leading-none">$12.4k</p>
+<p class="text-[#078838] text-xs font-medium mb-1 flex items-center">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +12%
+                            </p>
+</div>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-xl p-5 border border-[#dbe0e6] dark:border-gray-700 shadow-sm flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<p class="text-[#617589] dark:text-gray-400 text-sm font-medium">Cancelled</p>
+<span class="material-symbols-outlined text-red-600 bg-red-100 dark:bg-red-900/30 p-1.5 rounded-lg text-[20px]">cancel</span>
+</div>
+<div class="flex items-end gap-2">
+<p class="text-[#111418] dark:text-white text-2xl font-bold leading-none">8</p>
+<p class="text-red-600 text-xs font-medium mb-1 flex items-center">
+<span class="material-symbols-outlined text-[16px]">trending_down</span> -1%
+                           </p>
+</div>
+</div>
+</div>
+<!-- Filters & Search Toolbar -->
+<div class="bg-white dark:bg-surface-dark rounded-t-xl border border-[#dbe0e6] dark:border-gray-700 p-4 flex flex-col lg:flex-row gap-4 justify-between items-center shadow-sm">
+<!-- Search -->
+<div class="relative w-full lg:max-w-md">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-[#617589] dark:text-gray-400">search</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2.5 border border-[#dbe0e6] dark:border-gray-600 rounded-lg leading-5 bg-white dark:bg-gray-800 text-[#111418] dark:text-white placeholder-[#617589] dark:placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm transition duration-150 ease-in-out" placeholder="Search by Booking ID, User, or Helper Name" type="text"/>
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap items-center gap-3 w-full lg:w-auto">
+<div class="relative">
+<select class="appearance-none bg-white dark:bg-gray-800 border border-[#dbe0e6] dark:border-gray-600 text-[#111418] dark:text-white py-2.5 pl-3 pr-10 rounded-lg text-sm font-medium focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary cursor-pointer">
+<option>All Statuses</option>
+<option>Pending</option>
+<option>Confirmed</option>
+<option>Completed</option>
+<option>Cancelled</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-[#617589]">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="relative">
+<select class="appearance-none bg-white dark:bg-gray-800 border border-[#dbe0e6] dark:border-gray-600 text-[#111418] dark:text-white py-2.5 pl-3 pr-10 rounded-lg text-sm font-medium focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary cursor-pointer">
+<option>All Services</option>
+<option>Home Cleaning</option>
+<option>Plumbing</option>
+<option>Electrician</option>
+<option>Moving</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-[#617589]">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+<button class="flex items-center gap-2 px-3 py-2.5 text-sm font-medium text-[#617589] dark:text-gray-300 bg-gray-50 dark:bg-gray-800 border border-[#dbe0e6] dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+                            More Filters
+                        </button>
+</div>
+</div>
+<!-- Data Table -->
+<div class="bg-white dark:bg-surface-dark border-x border-b border-[#dbe0e6] dark:border-gray-700 rounded-b-xl overflow-hidden shadow-sm -mt-6">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-gray-50 dark:bg-gray-800/50 border-b border-[#dbe0e6] dark:border-gray-700">
+<th class="p-4 text-xs font-semibold tracking-wide text-[#617589] dark:text-gray-400 uppercase">Booking ID</th>
+<th class="p-4 text-xs font-semibold tracking-wide text-[#617589] dark:text-gray-400 uppercase">Service</th>
+<th class="p-4 text-xs font-semibold tracking-wide text-[#617589] dark:text-gray-400 uppercase">Customer</th>
+<th class="p-4 text-xs font-semibold tracking-wide text-[#617589] dark:text-gray-400 uppercase">Helper</th>
+<th class="p-4 text-xs font-semibold tracking-wide text-[#617589] dark:text-gray-400 uppercase">Date &amp; Time</th>
+<th class="p-4 text-xs font-semibold tracking-wide text-[#617589] dark:text-gray-400 uppercase text-right">Amount</th>
+<th class="p-4 text-xs font-semibold tracking-wide text-[#617589] dark:text-gray-400 uppercase text-center">Status</th>
+<th class="p-4 text-xs font-semibold tracking-wide text-[#617589] dark:text-gray-400 uppercase text-center">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#dbe0e6] dark:divide-gray-700">
+<!-- Row 1 -->
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
+<td class="p-4">
+<a class="text-primary font-semibold hover:underline" href="#">#BK-2938</a>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">cleaning_services</span>
+</div>
+<span class="text-sm text-[#111418] dark:text-gray-200 font-medium">Deep Clean</span>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-cover bg-center" data-alt="Portrait of customer Alice" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBqX7MgNPvNrMU1uGQMYaBf9OYJ8e5FMaTvVDM0xf8McePt8RCAPObGJq9qIIZu4fzX2xJ2K04tLOarDduRdrZLG8pp9HkdvQIeieYqbEI20ukDWWir9JbuzipN4zg-K-jIptrr8IZ0ke6LwI7A29Lixo9ayFkWPYzQoi9IxFmOpRB3N5Vq_m27Eqgv9g9H6WbxMPnkzRFZIUc9sK17EL_ncr4osCHUYHOBfqPCSPev2OYtgePhJycgiYydcWM7ogEJe_Eh3EVxNt8")'></div>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-[#111418] dark:text-gray-200">Alice Freeman</span>
+<span class="text-xs text-[#617589] dark:text-gray-500">New User</span>
+</div>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-cover bg-center" data-alt="Portrait of helper John" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAynEm-1hTmvMhidaJD5Wb9yfrXnv9M0h1IFtr9fSgA3E4KlCQYq1ZFgkQ8gdZCMzObg9CvFKFQtXRhls8KZbc2tyWMtybPp6ICQIVRcmRjGdNRhJ1g17eLwFRZhAxqoU4QqwaPkxKwQNcRg-lV0Ssmdy9DFxChjWzlQgv_eG7lY0y3v7L2zzVAa5rBp4HnVbFX7TdMtqw_58YTUNva6KGFCg69oCxuu5WwrtiExKqDplDXa5xfdszzZrupyFCvX6pM-qqqdzSbE-U")'></div>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-[#111418] dark:text-gray-200">John Doe</span>
+<span class="text-xs text-green-600 flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> Verified
+                                                </span>
+</div>
+</div>
+</td>
+<td class="p-4 text-sm text-[#111418] dark:text-gray-300">
+<div class="font-medium">Oct 24, 2023</div>
+<div class="text-[#617589] dark:text-gray-500 text-xs">10:00 AM - 2:00 PM</div>
+</td>
+<td class="p-4 text-right text-sm font-semibold text-[#111418] dark:text-white">
+                                        $120.00
+                                    </td>
+<td class="p-4 text-center">
+<span class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full text-xs font-medium bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 border border-green-200 dark:border-green-800">
+<span class="w-1.5 h-1.5 rounded-full bg-current"></span>
+                                            Confirmed
+                                        </span>
+</td>
+<td class="p-4 text-center">
+<button class="text-[#617589] hover:text-[#111418] dark:text-gray-400 dark:hover:text-white p-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
+<td class="p-4">
+<a class="text-primary font-semibold hover:underline" href="#">#BK-2939</a>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-600">
+<span class="material-symbols-outlined text-[18px]">plumbing</span>
+</div>
+<span class="text-sm text-[#111418] dark:text-gray-200 font-medium">Pipe Repair</span>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-xs">RJ</div>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-[#111418] dark:text-gray-200">Robert Jones</span>
+<span class="text-xs text-[#617589] dark:text-gray-500">Premium</span>
+</div>
+</div>
+</td>
+<td class="p-4">
+<span class="text-sm text-[#617589] dark:text-gray-400 italic">-- Unassigned --</span>
+</td>
+<td class="p-4 text-sm text-[#111418] dark:text-gray-300">
+<div class="font-medium">Oct 24, 2023</div>
+<div class="text-[#617589] dark:text-gray-500 text-xs">02:30 PM</div>
+</td>
+<td class="p-4 text-right text-sm font-semibold text-[#111418] dark:text-white">
+                                        $85.00
+                                    </td>
+<td class="p-4 text-center">
+<span class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400 border border-yellow-200 dark:border-yellow-800">
+<span class="w-1.5 h-1.5 rounded-full bg-current"></span>
+                                            Pending
+                                        </span>
+</td>
+<td class="p-4 text-center">
+<button class="text-[#617589] hover:text-[#111418] dark:text-gray-400 dark:hover:text-white p-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
+<td class="p-4">
+<a class="text-primary font-semibold hover:underline" href="#">#BK-2930</a>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</div>
+<span class="text-sm text-[#111418] dark:text-gray-200 font-medium">Moving Help</span>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-cover bg-center" data-alt="Portrait of customer Sarah" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC7orw35ZrprBo_8e4dHA1LVDpX2dDuspEYZDGSexEjq5QTFNDMMn4sG3EjI2yq0UwSqH4z8guAD1zsoyI7wfLb6kLMYFNm-H0UhfkR5M-J6JZ87OoSr7KhEXEw3710-bOl4vv8zzWCxwFGYYc4h8HutYroGNO2PcvAIi09JLkuEmynXCQ4BM6QssLi-5E8MumsHi9_WzBwLMQXbpPZV1pVDNB0wDAbfuCg2R0BZ19LzSANXIwArOfGVOq9oXCoYzoFm2HANfJjWw0")'></div>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-[#111418] dark:text-gray-200">Sarah Miller</span>
+</div>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-cover bg-center" data-alt="Portrait of helper Mike" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDotyq_Agpzmj_GFMkE9AZqfpXJuQTiw5ILPCHT_VNUs-TZd5Xh9JtmBUfgJrBMyDEVTFW6FWAhciJDOi6uRd_vfeJqm75u0OScgrwOtbtLqHsKXSSQhHuhKyagcLH31cTQ8mWpALdMZJjGmWIygKhLzWdQZHb8Idud5Jw8ZRVxDyiE1vTROB5JC8MrtETqpSU27mtKwbVDNVpyc2mRwrQQkcG_lulw8FrmIx5VXjxTtH2WEXXp4teGjRKNRA--pEb0SiW-FZ6j89I")'></div>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-[#111418] dark:text-gray-200">Mike Ross</span>
+<span class="text-xs text-green-600 flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> Verified
+                                                </span>
+</div>
+</div>
+</td>
+<td class="p-4 text-sm text-[#111418] dark:text-gray-300">
+<div class="font-medium">Oct 23, 2023</div>
+<div class="text-[#617589] dark:text-gray-500 text-xs">09:00 AM</div>
+</td>
+<td class="p-4 text-right text-sm font-semibold text-[#111418] dark:text-white">
+                                        $320.00
+                                    </td>
+<td class="p-4 text-center">
+<span class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full text-xs font-medium bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600">
+<span class="w-1.5 h-1.5 rounded-full bg-current"></span>
+                                            Completed
+                                        </span>
+</td>
+<td class="p-4 text-center">
+<button class="text-[#617589] hover:text-[#111418] dark:text-gray-400 dark:hover:text-white p-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
+<td class="p-4">
+<a class="text-primary font-semibold hover:underline" href="#">#BK-2928</a>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">cleaning_services</span>
+</div>
+<span class="text-sm text-[#111418] dark:text-gray-200 font-medium">Standard Clean</span>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-pink-100 text-pink-600 flex items-center justify-center font-bold text-xs">EK</div>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-[#111418] dark:text-gray-200">Emily K.</span>
+</div>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-cover bg-center" data-alt="Portrait of helper Jane" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSlguP0ULZoFyP18M7WwMD7Gjz9xgOsAvdMybS5CtLDCpG_Bc08NEnmWw1GHMz-Q_YTKzt2NFMrHIpOGsbv3BrXfZi5EKItrE3xciO_50ZyKumRmw09mhhNL16uGcSeIt199cZXH2J5VRMKbRuCKgtU12Qy_EVYPObZQ1FGMBKYHJRbB50hfLgw_rrZA-w_g-F7ZdhWWeT-XyrUY_iGWKHFmTG3zMNp2RapnWKKEkM7bagDOZ2_Hri78RTsEcELcQArk2pvl2uKlU")'></div>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-[#111418] dark:text-gray-200">Jane Smith</span>
+</div>
+</div>
+</td>
+<td class="p-4 text-sm text-[#111418] dark:text-gray-300">
+<div class="font-medium">Oct 22, 2023</div>
+<div class="text-[#617589] dark:text-gray-500 text-xs">04:00 PM</div>
+</td>
+<td class="p-4 text-right text-sm font-semibold text-[#111418] dark:text-white">
+                                        $95.00
+                                    </td>
+<td class="p-4 text-center">
+<span class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full text-xs font-medium bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 border border-red-200 dark:border-red-800">
+<span class="w-1.5 h-1.5 rounded-full bg-current"></span>
+                                            Cancelled
+                                        </span>
+</td>
+<td class="p-4 text-center">
+<button class="text-[#617589] hover:text-[#111418] dark:text-gray-400 dark:hover:text-white p-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-between p-4 border-t border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-surface-dark">
+<div class="flex items-center gap-2">
+<span class="text-sm text-[#617589] dark:text-gray-400">Rows per page:</span>
+<select class="bg-white dark:bg-gray-800 border border-[#dbe0e6] dark:border-gray-600 text-sm text-[#111418] dark:text-white rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-primary">
+<option>10</option>
+<option>20</option>
+<option>50</option>
+</select>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-sm text-[#617589] dark:text-gray-400">1-4 of 1,240</span>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 disabled:opacity-50">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button class="p-1 rounded text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

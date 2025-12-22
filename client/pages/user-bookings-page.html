@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+</head>
+<body data-role="user" class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] dark:border-gray-800 bg-white dark:bg-gray-900 px-4 md:px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4 md:gap-8">
+<div class="flex items-center gap-4 text-[#111418] dark:text-white">
+<img src="/logo.jpeg" alt="Helpers Logo" class="h-8 w-auto object-contain">
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Helpers</h2>
+</div>
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#617589] dark:text-gray-400 flex border-none bg-[#f0f2f4] dark:bg-gray-800 items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined" style="font-size: 24px;">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] dark:bg-gray-800 focus:border-none h-full placeholder:text-[#617589] dark:placeholder:text-gray-400 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search services..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-[#111418] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="/">Home</a>
+<a class="text-[#111418] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="/services">Services</a>
+<a class="text-primary text-sm font-bold leading-normal" href="/bookings">Bookings</a>
+<a class="text-[#111418] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="/profile">Profile</a>
+</div>
+<div class="flex gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-[#111418] dark:text-white" style="font-size: 20px;">notifications</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-[#111418] dark:text-white" style="font-size: 20px;">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5 md:py-10">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<!-- Page Heading -->
+<div class="flex flex-col md:flex-row justify-between gap-4 p-4 mb-2">
+<div class="flex min-w-72 flex-col gap-2">
+<h1 class="text-[#111418] dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">My Bookings</h1>
+<p class="text-[#617589] dark:text-gray-400 text-base font-normal leading-normal">Manage your upcoming appointments and history.</p>
+</div>
+<div class="flex items-center">
+<button class="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-lg font-bold text-sm hover:bg-blue-600 transition-colors shadow-sm">
+<span class="material-symbols-outlined" style="font-size: 20px;">add</span>
+                                Book New Service
+                            </button>
+</div>
+</div>
+<!-- Tabs & Filters -->
+<div class="sticky top-16 z-40 bg-background-light dark:bg-background-dark pb-4">
+<div class="flex flex-col md:flex-row md:items-center justify-between border-b border-[#dbe0e6] dark:border-gray-800 px-4">
+<div class="flex gap-8 overflow-x-auto no-scrollbar">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-[#111418] dark:text-white pb-[13px] pt-4 min-w-fit" href="/">
+<p class="text-[#111418] dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">Upcoming</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#617589] dark:text-gray-400 hover:text-primary dark:hover:text-primary pb-[13px] pt-4 min-w-fit transition-colors" href="/">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Completed</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#617589] dark:text-gray-400 hover:text-primary dark:hover:text-primary pb-[13px] pt-4 min-w-fit transition-colors" href="/">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Cancelled</p>
+</a>
+</div>
+<div class="flex gap-2 py-3 md:py-0 self-end md:self-auto">
+<button class="p-2 text-[#617589] dark:text-gray-400 hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all" title="Filter">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<button class="p-2 text-[#617589] dark:text-gray-400 hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all" title="Sort">
+<span class="material-symbols-outlined">sort</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Booking List -->
+<div class="flex flex-col gap-4 p-4">
+<!-- Booking Card 1: Upcoming & Confirmed -->
+<div class="group flex flex-col md:flex-row items-stretch justify-between gap-4 rounded-lg bg-white dark:bg-gray-900 p-5 shadow-[0_1px_3px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)] transition-all border border-transparent hover:border-primary/20">
+<!-- Image -->
+<div class="w-full md:w-48 bg-center bg-no-repeat bg-cover rounded-lg aspect-video md:aspect-square shrink-0" data-alt="clean living room with sunlight" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAKbqFYaCLbMUwA0xYOLmAaM_c9hJDGu0yav9-EUogSsi17DubQk_IOwKIsf4c6Sg9Rfx63TAN98DJGPeP24HzY5cSU4M4g5xxQ4UXuODxgfahCgwUpBzy5Y1cB2SfMphX9CkwJ9UE1AmOlLZEJJL76SaRqo6rQnTSHngKmI7b7vsgRkOOIa-kfvVintjhJKTxTUfo4LoB44gmHvx8k8gFf--k_DfCXDhXJ8v5RMafTpnT1ns0xC9G6Y0q5UfiZlWFeIm_LX5EHr2w");'></div>
+<!-- Content -->
+<div class="flex flex-1 flex-col gap-3 justify-between">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<span class="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">Confirmed</span>
+<span class="text-[#617589] dark:text-gray-500 text-xs font-medium">#BK-8392</span>
+</div>
+<button class="text-[#617589] dark:text-gray-400 hover:text-red-500 transition-colors md:hidden">
+<span class="material-symbols-outlined text-lg">cancel</span>
+</button>
+</div>
+<h3 class="text-[#111418] dark:text-white text-lg font-bold leading-tight mt-1">Deep Home Cleaning</h3>
+<div class="flex flex-col gap-1.5 mt-1">
+<div class="flex items-center gap-2 text-[#617589] dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<p>Tomorrow, 10:00 AM - 01:00 PM</p>
+</div>
+<div class="flex items-center gap-2 text-[#617589] dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<p>123 Maple Street, Apt 4B</p>
+</div>
+</div>
+</div>
+<!-- Helper Info (Mobile Only hidden on desktop usually but keeping consistent for this layout) -->
+<div class="flex items-center gap-3 pt-2 border-t border-[#f0f2f4] dark:border-gray-800 mt-2">
+<div class="size-8 rounded-full bg-gray-200 overflow-hidden">
+<img alt="Helper" class="w-full h-full object-cover" data-alt="Portrait of smiling male helper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUy3LywXcwszPoaM0bvIhPkp0-3iPH3D4t3-9MeBv0d6G5E3SJlleLBXJlDqylrjtFhmi3pXc_vuerbfAPcQjTQ536bJjPdpR3hc-Xp8ab_ugwPOggpsryBNzWavGuRoO3V4WliC3It36iB53xKGeRhM_W4A3WshPF7QDUc9nmOjV5VW-VbqjeClXkV6fhkUi7ujcJ533sHT-4XNlrL_67_baKxZU_Iq36GAmMspCFlkSKX0PK8CZ0YhfpLCjYrBiTyEcPWRgQOrQ"/>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-semibold text-[#111418] dark:text-white">Alex Johnson</p>
+<p class="text-xs text-[#617589] dark:text-gray-500">Top Rated Helper (4.9 ★)</p>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-row md:flex-col gap-3 justify-end md:justify-center md:items-end border-t md:border-t-0 md:border-l border-[#f0f2f4] dark:border-gray-800 pt-4 md:pt-0 md:pl-4 mt-2 md:mt-0 min-w-[140px]">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 bg-primary text-white text-sm font-medium h-9 px-4 rounded-lg hover:bg-blue-600 transition-colors whitespace-nowrap">
+                                    Track Helper
+                                </button>
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 text-sm font-medium h-9 px-4 rounded-lg transition-colors whitespace-nowrap">
+                                    View Details
+                                </button>
+<button class="hidden md:flex items-center justify-center gap-1 text-[#617589] dark:text-gray-500 hover:text-red-500 text-xs font-medium mt-2 transition-colors">
+                                    Cancel Booking
+                                </button>
+</div>
+</div>
+<!-- Booking Card 2: Upcoming & Pending -->
+<div class="group flex flex-col md:flex-row items-stretch justify-between gap-4 rounded-lg bg-white dark:bg-gray-900 p-5 shadow-[0_1px_3px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)] transition-all border border-transparent hover:border-primary/20">
+<!-- Image -->
+<div class="w-full md:w-48 bg-center bg-no-repeat bg-cover rounded-lg aspect-video md:aspect-square shrink-0" data-alt="electrician fixing wires" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuByKEWlCflu_UoqayzPoawfLYNNFo26oYK9D8cLCL0HmhHQ1cWQW7TGtX02ftH_2cklBzz9x7Q_LX9wzMifDJb5jffigOwRV5xtf8HOxiY14TqE9LkqxyCP44PtuEfOPMSmWV7nUMzekDtvek-IWFhRc0FTPtdidJfk23uY5RUarcjs9Rjn4vp-K60MRw3iFNt9DW7bE5hJ8Q93EmjpnPHAeZGe-PSMNX-2IuUCd9YC6pYP92Q8txeEy0f2TntwPgaIHupjRpc6dN0");'></div>
+<!-- Content -->
+<div class="flex flex-1 flex-col gap-3 justify-between">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<span class="bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">Pending Approval</span>
+<span class="text-[#617589] dark:text-gray-500 text-xs font-medium">#BK-9120</span>
+</div>
+</div>
+<h3 class="text-[#111418] dark:text-white text-lg font-bold leading-tight mt-1">Electrical Repair</h3>
+<div class="flex flex-col gap-1.5 mt-1">
+<div class="flex items-center gap-2 text-[#617589] dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<p>Fri, Oct 24 • 02:00 PM</p>
+</div>
+<div class="flex items-center gap-2 text-[#617589] dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<p>123 Maple Street, Apt 4B</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2 mt-2">
+<p class="text-xs text-[#617589] dark:text-gray-500 italic">Assigning a helper...</p>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-row md:flex-col gap-3 justify-end md:justify-center md:items-end border-t md:border-t-0 md:border-l border-[#f0f2f4] dark:border-gray-800 pt-4 md:pt-0 md:pl-4 mt-2 md:mt-0 min-w-[140px]">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 text-sm font-medium h-9 px-4 rounded-lg transition-colors whitespace-nowrap">
+                                    Modify
+                                </button>
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 hover:bg-red-100 dark:hover:bg-red-900/40 text-sm font-medium h-9 px-4 rounded-lg transition-colors whitespace-nowrap">
+                                    Cancel
+                                </button>
+</div>
+</div>
+<!-- Booking Card 3: Today & In Progress -->
+<div class="group flex flex-col md:flex-row items-stretch justify-between gap-4 rounded-lg bg-white dark:bg-gray-900 p-5 shadow-[0_1px_3px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)] transition-all border-l-4 border-l-green-500 border-y border-r border-transparent">
+<!-- Image -->
+<div class="w-full md:w-48 bg-center bg-no-repeat bg-cover rounded-lg aspect-video md:aspect-square shrink-0" data-alt="plumber fixing sink" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGjS8slHTJU6vmL9DVpm9uHoHRyF_kCs6ETjSzGyCStD7Jq-cePscMpDdhN0spxQqG81ShqXbXgdLjOaUXPefizZuWxBoKdYD5eRSabr4H-B9zy2IPNZkmHFQ2RFCR7EjdrqPdih5hJ96_KMjhiBj0jx6shlbpy9I8L5iPjNsHsTmnmwqq_SSZ8-m6Aesn9lqMg_mHe1hbhd4LbkVsX9jmdn1qML_jx5NTqT52HB0JrOWxKiDsm_2olruLRy1MqSyWgRr14S2Pkiw");'></div>
+<!-- Content -->
+<div class="flex flex-1 flex-col gap-3 justify-between">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<span class="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wide flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                                                In Progress
+                                            </span>
+<span class="text-[#617589] dark:text-gray-500 text-xs font-medium">#BK-8841</span>
+</div>
+</div>
+<h3 class="text-[#111418] dark:text-white text-lg font-bold leading-tight mt-1">Plumbing Service</h3>
+<div class="flex flex-col gap-1.5 mt-1">
+<div class="flex items-center gap-2 text-[#617589] dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<p>Started at 09:30 AM (Today)</p>
+</div>
+<div class="flex items-center gap-2 text-[#617589] dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<p>123 Maple Street, Apt 4B</p>
+</div>
+</div>
+</div>
+<!-- Helper Info -->
+<div class="flex items-center gap-3 pt-2 border-t border-[#f0f2f4] dark:border-gray-800 mt-2">
+<div class="size-8 rounded-full bg-gray-200 overflow-hidden relative">
+<img alt="Helper" class="w-full h-full object-cover" data-alt="Portrait of male helper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD8B49uotyvekRpuUET56rbvl25lYerUgCourKKBm6pbS8H3SiLTbHBSd4WSIhodH9aUDoeu8TosOJ7OjcioAxq2ag04_DADq5Mw5qUaBgZ1O2CEnhUvkRgNxbMZLnOeYba_KlXHDMISNg25NJJ1DuQdV8LIvqk_KkYe95REYVdg8LrhmbrXvDpC2zUokKQdeFqBGe2iKFVCizyGUHqr0Q2E_YBd3BUSmysRQVg43Xj8wiEXtFrNcEA7tKzi0G27zplL1wPO24Tbs"/>
+<div class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-white dark:border-gray-900 rounded-full"></div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<p class="text-sm font-semibold text-[#111418] dark:text-white">Mike Ross</p>
+<a class="text-primary text-xs hover:underline flex items-center" href="/">
+<span class="material-symbols-outlined text-[14px] mr-0.5">chat</span>
+                                                Chat
+                                            </a>
+</div>
+<p class="text-xs text-[#617589] dark:text-gray-500">Arrived 15 mins ago</p>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-row md:flex-col gap-3 justify-end md:justify-center md:items-end border-t md:border-t-0 md:border-l border-[#f0f2f4] dark:border-gray-800 pt-4 md:pt-0 md:pl-4 mt-2 md:mt-0 min-w-[140px]">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 bg-primary text-white text-sm font-medium h-9 px-4 rounded-lg hover:bg-blue-600 transition-colors whitespace-nowrap">
+                                    Contact Helper
+                                </button>
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 text-sm font-medium h-9 px-4 rounded-lg transition-colors whitespace-nowrap">
+                                    Support
+                                </button>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="flex justify-center p-4 mt-4">
+<button class="flex items-center gap-2 text-[#617589] dark:text-gray-400 hover:text-primary dark:hover:text-primary font-medium transition-colors">
+<span>Show more bookings</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+<!-- Empty State (Hidden by default, just for structure completeness) -->
+<!-- 
+                    <div class="flex flex-col items-center justify-center py-20 px-4 text-center">
+                        <div class="w-32 h-32 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-gray-400 text-6xl">calendar_today</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2">No upcoming bookings</h3>
+                        <p class="text-[#617589] dark:text-gray-400 max-w-md mb-8">You don't have any scheduled services at the moment. Need a hand with something?</p>
+                        <button class="bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-600 transition-colors">
+                            Book a Service
+                        </button>
+                    </div> 
+                    -->
+</div>
+</div>
+</div>
+</div>
+</body></html>

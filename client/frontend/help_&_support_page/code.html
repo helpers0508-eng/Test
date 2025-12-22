@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Help &amp; Support - Helpers</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white overflow-x-hidden">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] dark:border-b-gray-800 bg-white dark:bg-background-dark px-4 lg:px-10 py-3 shadow-sm">
+<div class="flex items-center gap-4 text-[#111418] dark:text-white">
+<div class="size-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">handshake</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Helpers</h2>
+</div>
+<div class="hidden lg:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Bookings</a>
+<a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Become a Helper</a>
+<a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Login</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-colors">
+<span class="truncate">Sign Up</span>
+</button>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="lg:hidden text-[#111418] dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</header>
+<main class="flex-1">
+<!-- Breadcrumbs -->
+<div class="w-full bg-white dark:bg-background-dark border-b border-[#f0f2f4] dark:border-gray-800">
+<div class="layout-container flex justify-center">
+<div class="px-4 lg:px-40 flex flex-1 justify-center py-4">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="flex flex-wrap gap-2 items-center">
+<a class="text-[#617589] dark:text-gray-400 text-sm font-medium leading-normal hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined text-[#617589] dark:text-gray-400 text-base leading-normal">chevron_right</span>
+<span class="text-[#111418] dark:text-white text-sm font-medium leading-normal">Help Center</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Hero Section -->
+<div class="layout-container flex justify-center bg-white dark:bg-background-dark pb-8">
+<div class="px-4 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="@container">
+<div class="@[480px]:p-0">
+<div class="flex min-h-[360px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-6 relative overflow-hidden" data-alt="Abstract blue gradient background suggesting calm and support" style='background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCNyr7H__6Ame8B8PHTMxpNMzIlGQpvCzWpnyKw6-2YsY9H7XwkG2Def6xGWEVaNZ5SFu10dBWsBmqffLUlrMNG-b6sm14H2BUN4ccdnd3kS6mXRfD4py5SeS9Dtl6tGvHjJSFKUxHRJ4VsJiwN4wZaExPulglWV8FX1we9eiScbiCj8hKL9xIezJnTFG01za2sdUSej8JiV8eAAqbD8yWky1cO1Mq0qLhbmTfO4_w-pHilVIEa4G3TszgCUTL_U4R4e98DnyuXKZI");'>
+<div class="flex flex-col gap-3 text-center z-10 max-w-[600px]">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl">
+                                            Hello, how can we help?
+                                        </h1>
+<h2 class="text-white/90 text-lg font-normal leading-normal">
+                                            Find answers, manage your account, and get support.
+                                        </h2>
+</div>
+<label class="flex flex-col min-w-40 h-14 w-full max-w-[560px] z-10 shadow-lg mt-4">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-white dark:bg-gray-800 overflow-hidden">
+<div class="text-[#617589] flex items-center justify-center pl-4 bg-transparent">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="flex w-full min-w-0 flex-1 resize-none overflow-hidden text-[#111418] dark:text-white focus:outline-0 bg-transparent h-full placeholder:text-[#617589] px-4 text-base font-normal leading-normal border-none focus:ring-0" placeholder="Search for articles, topics, or keywords..." value=""/>
+<div class="flex items-center justify-center pr-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-5 bg-primary hover:bg-blue-600 text-white text-sm font-bold leading-normal transition-colors">
+<span class="truncate">Search</span>
+</button>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Categories Section -->
+<div class="layout-container flex justify-center bg-background-light dark:bg-background-dark">
+<div class="px-4 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="flex flex-col gap-6 py-6">
+<div class="flex flex-col gap-2">
+<h2 class="text-[#111418] dark:text-white text-[28px] font-bold leading-tight">Browse by Category</h2>
+<p class="text-[#617589] dark:text-gray-400 text-base">Navigate through our most popular support topics.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Card 1 -->
+<a class="group flex flex-col gap-4 rounded-xl border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 p-6 hover:shadow-md hover:border-primary/50 transition-all cursor-pointer" href="#">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">account_circle</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-[#111418] dark:text-white text-lg font-bold leading-tight">Getting Started</h3>
+<p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">Creating an account, Verifying identity</p>
+</div>
+</a>
+<!-- Card 2 -->
+<a class="group flex flex-col gap-4 rounded-xl border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 p-6 hover:shadow-md hover:border-primary/50 transition-all cursor-pointer" href="#">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">calendar_month</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-[#111418] dark:text-white text-lg font-bold leading-tight">Bookings</h3>
+<p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">Rescheduling, Cancellations, Finding a helper</p>
+</div>
+</a>
+<!-- Card 3 -->
+<a class="group flex flex-col gap-4 rounded-xl border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 p-6 hover:shadow-md hover:border-primary/50 transition-all cursor-pointer" href="#">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">credit_card</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-[#111418] dark:text-white text-lg font-bold leading-tight">Payments</h3>
+<p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">Refunds, Invoices, Payment methods</p>
+</div>
+</a>
+<!-- Card 4 -->
+<a class="group flex flex-col gap-4 rounded-xl border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 p-6 hover:shadow-md hover:border-primary/50 transition-all cursor-pointer" href="#">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-[#111418] dark:text-white text-lg font-bold leading-tight">Trust &amp; Safety</h3>
+<p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">Reporting an issue, Insurance queries</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- FAQ Section -->
+<div class="layout-container flex justify-center bg-white dark:bg-background-dark">
+<div class="px-4 lg:px-40 flex flex-1 justify-center py-10">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="lg:w-1/3 flex flex-col gap-4">
+<h2 class="text-[#111418] dark:text-white text-[28px] font-bold leading-tight">Frequently Asked Questions</h2>
+<p class="text-[#617589] dark:text-gray-400 text-base">Here are some of the most common questions our users ask. If you can't find what you're looking for, feel free to contact us.</p>
+<a class="text-primary font-bold hover:underline inline-flex items-center gap-1 mt-2" href="#">
+                                    View all FAQs
+                                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="lg:w-2/3 flex flex-col gap-4">
+<!-- FAQ Item 1 -->
+<details class="group bg-background-light dark:bg-gray-900 rounded-lg p-5 [&amp;_summary::-webkit-details-marker]:hidden open:bg-white dark:open:bg-gray-800 open:shadow-sm open:ring-1 open:ring-black/5 dark:open:ring-white/10 transition-all duration-300">
+<summary class="flex cursor-pointer items-center justify-between gap-4 font-bold text-[#111418] dark:text-white select-none">
+<span>How do I cancel a booking?</span>
+<span class="material-symbols-outlined text-gray-400 transition group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 text-[#617589] dark:text-gray-300 text-sm leading-relaxed">
+                                        To cancel a booking, go to your "Bookings" page, select the active booking you wish to cancel, and click "Cancel Booking". Please note that cancellation fees may apply if canceled within 24 hours of the scheduled time.
+                                    </div>
+</details>
+<!-- FAQ Item 2 -->
+<details class="group bg-background-light dark:bg-gray-900 rounded-lg p-5 [&amp;_summary::-webkit-details-marker]:hidden open:bg-white dark:open:bg-gray-800 open:shadow-sm open:ring-1 open:ring-black/5 dark:open:ring-white/10 transition-all duration-300">
+<summary class="flex cursor-pointer items-center justify-between gap-4 font-bold text-[#111418] dark:text-white select-none">
+<span>How do refunds work?</span>
+<span class="material-symbols-outlined text-gray-400 transition group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 text-[#617589] dark:text-gray-300 text-sm leading-relaxed">
+                                        Refunds are processed to your original payment method. Depending on your bank, it may take 5-10 business days for the funds to appear in your account after we've processed the refund.
+                                    </div>
+</details>
+<!-- FAQ Item 3 -->
+<details class="group bg-background-light dark:bg-gray-900 rounded-lg p-5 [&amp;_summary::-webkit-details-marker]:hidden open:bg-white dark:open:bg-gray-800 open:shadow-sm open:ring-1 open:ring-black/5 dark:open:ring-white/10 transition-all duration-300">
+<summary class="flex cursor-pointer items-center justify-between gap-4 font-bold text-[#111418] dark:text-white select-none">
+<span>Is my payment information secure?</span>
+<span class="material-symbols-outlined text-gray-400 transition group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 text-[#617589] dark:text-gray-300 text-sm leading-relaxed">
+                                        Yes, absolutely. We use industry-standard encryption and partner with certified payment processors to ensure your data is always safe and secure. We do not store your full card details on our servers.
+                                    </div>
+</details>
+<!-- FAQ Item 4 -->
+<details class="group bg-background-light dark:bg-gray-900 rounded-lg p-5 [&amp;_summary::-webkit-details-marker]:hidden open:bg-white dark:open:bg-gray-800 open:shadow-sm open:ring-1 open:ring-black/5 dark:open:ring-white/10 transition-all duration-300">
+<summary class="flex cursor-pointer items-center justify-between gap-4 font-bold text-[#111418] dark:text-white select-none">
+<span>How do I become a Helper?</span>
+<span class="material-symbols-outlined text-gray-400 transition group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 text-[#617589] dark:text-gray-300 text-sm leading-relaxed">
+                                        Click on the "Become a Helper" link in the top navigation bar. You'll need to fill out an application, provide identification, and pass a background check before you can start accepting jobs.
+                                    </div>
+</details>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Support Section -->
+<div class="layout-container flex justify-center bg-background-light dark:bg-background-dark py-12">
+<div class="px-4 lg:px-40 flex flex-1 justify-center">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="bg-primary/5 dark:bg-gray-800 border border-primary/10 dark:border-gray-700 rounded-2xl p-8 lg:p-12 text-center">
+<h2 class="text-[#111418] dark:text-white text-[28px] font-bold leading-tight mb-3">Still need help?</h2>
+<p class="text-[#617589] dark:text-gray-400 text-base mb-8 max-w-xl mx-auto">We understand that some issues need a human touch. Our dedicated support team is available 24/7 to assist you with any inquiries.</p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<!-- Chat Option -->
+<div class="flex-1 max-w-sm bg-white dark:bg-gray-900 p-6 rounded-xl border border-[#dbe0e6] dark:border-gray-700 shadow-sm flex flex-col items-center gap-4 mx-auto w-full">
+<div class="size-12 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 flex items-center justify-center">
+<span class="material-symbols-outlined">chat</span>
+</div>
+<div class="text-center">
+<h3 class="font-bold text-lg dark:text-white">Live Chat</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Chat with a support agent instantly</p>
+</div>
+<button class="w-full mt-2 bg-primary hover:bg-blue-600 text-white font-bold py-2.5 px-4 rounded-lg transition-colors">
+                                        Start Chat
+                                    </button>
+</div>
+<!-- Email Option -->
+<div class="flex-1 max-w-sm bg-white dark:bg-gray-900 p-6 rounded-xl border border-[#dbe0e6] dark:border-gray-700 shadow-sm flex flex-col items-center gap-4 mx-auto w-full">
+<div class="size-12 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex items-center justify-center">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div class="text-center">
+<h3 class="font-bold text-lg dark:text-white">Email Support</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Get a response within 24 hours</p>
+</div>
+<button class="w-full mt-2 bg-white dark:bg-gray-800 border border-[#dbe0e6] dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 text-[#111418] dark:text-white font-bold py-2.5 px-4 rounded-lg transition-colors">
+                                        Send Email
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-[#f0f2f4] dark:border-gray-800 py-10 px-4">
+<div class="layout-container flex justify-center">
+<div class="max-w-[960px] w-full flex flex-col md:flex-row justify-between gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-[#111418] dark:text-white">
+<span class="material-symbols-outlined text-primary text-2xl">handshake</span>
+<span class="text-lg font-bold">Helpers</span>
+</div>
+<p class="text-[#617589] dark:text-gray-400 text-sm max-w-xs">
+                            The trusted marketplace for finding reliable help for your daily needs. Secure, fast, and guaranteed.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-12">
+<div class="flex flex-col gap-3">
+<h4 class="font-bold text-[#111418] dark:text-white text-sm">Company</h4>
+<a class="text-[#617589] dark:text-gray-400 text-sm hover:text-primary" href="#">About Us</a>
+<a class="text-[#617589] dark:text-gray-400 text-sm hover:text-primary" href="#">Careers</a>
+<a class="text-[#617589] dark:text-gray-400 text-sm hover:text-primary" href="#">Blog</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-bold text-[#111418] dark:text-white text-sm">Support</h4>
+<a class="text-[#617589] dark:text-gray-400 text-sm hover:text-primary" href="#">Help Center</a>
+<a class="text-[#617589] dark:text-gray-400 text-sm hover:text-primary" href="#">Safety</a>
+<a class="text-[#617589] dark:text-gray-400 text-sm hover:text-primary" href="#">Cancellation Options</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-bold text-[#111418] dark:text-white text-sm">Legal</h4>
+<a class="text-[#617589] dark:text-gray-400 text-sm hover:text-primary" href="#">Terms</a>
+<a class="text-[#617589] dark:text-gray-400 text-sm hover:text-primary" href="#">Privacy</a>
+<a class="text-[#617589] dark:text-gray-400 text-sm hover:text-primary" href="#">Sitemap</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-10 pt-6 border-t border-[#f0f2f4] dark:border-gray-800 text-center text-[#617589] dark:text-gray-500 text-xs">
+                © 2024 Helpers Inc. All rights reserved.
+            </div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,41 @@
+{
+  "name": "helpers-platform",
+  "version": "1.0.0",
+  "description": "Helpers service platform - Full stack application",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "dev:all": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build || echo 'Server build skipped'",
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start:client": "cd client && npm start",
+    "start:server": "cd server && npm start",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "migrate": "cd server && npm run migrate",
+    "seed": "cd server && npm run seed",
+    "lint": "cd client && npm run lint",
+    "test": "cd server && npm test"
+  },
+  "keywords": [
+    "helpers",
+    "service",
+    "booking",
+    "platform"
+  ],
+  "author": "Helpers Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

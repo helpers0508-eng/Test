@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cookie Policy - Helpers</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "primary-dark": "#0b5ec2",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Hide scrollbar for cleaner sidebar */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="relative flex flex-col min-h-screen w-full overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 lg:px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="size-10 flex items-center justify-center bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined text-3xl">handshake</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">Helpers</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Find Help</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Become a Helper</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Log In</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-primary-dark text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors shadow-sm">
+<span class="truncate">Sign Up</span>
+</button>
+</div>
+</header>
+<!-- Main Layout Container -->
+<div class="flex-1 flex justify-center py-10 px-4 md:px-10">
+<div class="max-w-[1200px] w-full flex flex-col lg:flex-row gap-12">
+<!-- Sidebar / Table of Contents (Desktop Sticky) -->
+<aside class="hidden lg:flex flex-col w-64 shrink-0 sticky top-24 h-fit gap-6">
+<div class="flex flex-col gap-4">
+<div class="flex flex-col pb-2 border-b border-slate-200 dark:border-slate-800">
+<h3 class="text-slate-900 dark:text-white text-base font-bold leading-normal">Contents</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal">Jump to section</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary font-medium text-sm transition-colors border-l-4 border-primary" href="#intro">
+                                Introduction
+                            </a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200 text-sm font-medium transition-colors border-l-4 border-transparent" href="#strictly-necessary">
+                                Strictly Necessary
+                            </a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200 text-sm font-medium transition-colors border-l-4 border-transparent" href="#performance">
+                                Performance &amp; Analytics
+                            </a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200 text-sm font-medium transition-colors border-l-4 border-transparent" href="#functional">
+                                Functional Cookies
+                            </a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200 text-sm font-medium transition-colors border-l-4 border-transparent" href="#targeting">
+                                Targeting &amp; Advertising
+                            </a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200 text-sm font-medium transition-colors border-l-4 border-transparent" href="#preferences">
+                                Manage Preferences
+                            </a>
+</nav>
+</div>
+<!-- Sidebar Support Block -->
+<div class="bg-slate-100 dark:bg-slate-800/50 rounded-xl p-4 flex flex-col gap-3 border border-slate-200 dark:border-slate-800">
+<div class="size-8 rounded-full bg-white dark:bg-slate-700 flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-sm">mail</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-slate-900 dark:text-white">Have questions?</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Our privacy team is here to help with any concerns.</p>
+</div>
+<a class="text-xs font-bold text-primary hover:underline" href="#">Contact Privacy Team</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col gap-10 min-w-0">
+<!-- Page Title -->
+<div class="flex flex-col gap-4 border-b border-slate-200 dark:border-slate-800 pb-8">
+<div class="flex items-center gap-2 text-primary font-medium text-sm">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+<a class="hover:underline" href="#">Back to Legal Center</a>
+</div>
+<h1 class="text-slate-900 dark:text-white text-4xl lg:text-5xl font-black leading-tight tracking-[-0.033em]">Cookie Policy</h1>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal">Last Updated: October 24, 2023</p>
+</div>
+<!-- Intro Section -->
+<section class="flex flex-col gap-4 scroll-mt-32" id="intro">
+<h2 class="text-slate-900 dark:text-white tracking-tight text-2xl font-bold leading-tight">1. What are Cookies?</h2>
+<div class="prose prose-slate dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 leading-relaxed">
+<p>
+                                Cookies are small text files that are placed on your computer or mobile device by websites that you visit. They are widely used in order to make websites work, or work more efficiently, as well as to provide information to the owners of the site. At Helpers, we use cookies to improve your experience, ensuring you can find the right help when you need it.
+                            </p>
+</div>
+</section>
+<!-- Strictly Necessary Section -->
+<section class="flex flex-col gap-4 scroll-mt-32" id="strictly-necessary">
+<div class="flex items-start justify-between gap-4">
+<div>
+<h2 class="text-slate-900 dark:text-white tracking-tight text-2xl font-bold leading-tight flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+                                    2. Strictly Necessary Cookies
+                                </h2>
+</div>
+<span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-bold uppercase rounded-full border border-green-200 dark:border-green-800">Required</span>
+</div>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                            These cookies are essential for you to browse the website and use its features, such as accessing secure areas of the site. Cookies that allow web shops to hold your items in your cart while you are shopping online are an example of strictly necessary cookies. These cookies will generally be first-party session cookies.
+                        </p>
+<!-- Cookie Details Card -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden mt-2">
+<div class="px-4 py-3 bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center">
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Common Examples</span>
+</div>
+<div class="divide-y divide-slate-100 dark:divide-slate-800">
+<div class="px-4 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">AuthToken</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Used to keep you logged in securely.</p>
+</div>
+<span class="text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-500 px-2 py-1 rounded">Session</span>
+</div>
+<div class="px-4 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">CSRF-Token</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Protects against Cross-Site Request Forgery attacks.</p>
+</div>
+<span class="text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-500 px-2 py-1 rounded">Session</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Performance Section -->
+<section class="flex flex-col gap-4 scroll-mt-32" id="performance">
+<div class="flex items-start justify-between gap-4">
+<div>
+<h2 class="text-slate-900 dark:text-white tracking-tight text-2xl font-bold leading-tight flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-500">analytics</span>
+                                    3. Performance &amp; Analytics
+                                </h2>
+</div>
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-bold uppercase rounded-full border border-slate-200 dark:border-slate-700">Optional</span>
+</div>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                            These cookies collect information about how you use our website, like which pages you visited and which links you clicked on. None of this information can be used to identify you. It is all aggregated and, therefore, anonymized. Their sole purpose is to improve website functions.
+                        </p>
+</section>
+<!-- Functional Section -->
+<section class="flex flex-col gap-4 scroll-mt-32" id="functional">
+<div class="flex items-start justify-between gap-4">
+<div>
+<h2 class="text-slate-900 dark:text-white tracking-tight text-2xl font-bold leading-tight flex items-center gap-3">
+<span class="material-symbols-outlined text-purple-500">settings_suggest</span>
+                                    4. Functional Cookies
+                                </h2>
+</div>
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-bold uppercase rounded-full border border-slate-200 dark:border-slate-700">Optional</span>
+</div>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                            These cookies allow our website to remember choices you have made in the past, like what language you prefer, what region you would like weather reports for, or what your user name and password are so you can automatically log in.
+                        </p>
+</section>
+<!-- Targeting Section -->
+<section class="flex flex-col gap-4 scroll-mt-32" id="targeting">
+<div class="flex items-start justify-between gap-4">
+<div>
+<h2 class="text-slate-900 dark:text-white tracking-tight text-2xl font-bold leading-tight flex items-center gap-3">
+<span class="material-symbols-outlined text-orange-500">ads_click</span>
+                                    5. Targeting &amp; Advertising
+                                </h2>
+</div>
+<span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-bold uppercase rounded-full border border-slate-200 dark:border-slate-700">Optional</span>
+</div>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                            These cookies track your online activity to help advertisers deliver more relevant advertising or to limit how many times you see an ad. These cookies can share that information with other organizations or advertisers.
+                        </p>
+</section>
+<!-- Manage Preferences Section -->
+<section class="scroll-mt-32 pt-8 border-t border-slate-200 dark:border-slate-800" id="preferences">
+<div class="bg-white dark:bg-slate-900 rounded-2xl p-6 md:p-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="mb-6">
+<h2 class="text-slate-900 dark:text-white tracking-tight text-2xl font-bold leading-tight mb-2">Manage Your Preferences</h2>
+<p class="text-slate-600 dark:text-slate-400 text-sm">You can change your preferences at any time. Changes will take effect immediately.</p>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Strict Item -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 opacity-70 cursor-not-allowed">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">lock</span>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Strictly Necessary</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Required for the site to work.</p>
+</div>
+</div>
+<div class="relative inline-flex h-6 w-11 items-center rounded-full bg-slate-400 dark:bg-slate-600">
+<span class="translate-x-6 inline-block h-4 w-4 transform rounded-full bg-white transition"></span>
+</div>
+</div>
+<!-- Analytics Item -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-500">analytics</span>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Performance &amp; Analytics</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Help us improve our platform.</p>
+</div>
+</div>
+<!-- Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary/20 dark:peer-focus:ring-primary/40 rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Marketing Item -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-orange-500">ads_click</span>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Targeting &amp; Advertising</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Personalized recommendations.</p>
+</div>
+</div>
+<!-- Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary/20 dark:peer-focus:ring-primary/40 rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<div class="mt-8 flex justify-end gap-4">
+<button class="px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors">Cancel</button>
+<button class="px-6 py-2 bg-primary hover:bg-primary-dark text-white rounded-lg text-sm font-bold shadow-md hover:shadow-lg transition-all">Save Preferences</button>
+</div>
+</div>
+</section>
+</main>
+</div>
+</div>
+<!-- Footer (Simple) -->
+<footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-10">
+<div class="max-w-[1200px] mx-auto px-6 lg:px-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-500 dark:text-slate-400 text-sm">© 2023 Helpers Marketplace Inc. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm font-medium" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm font-medium" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm font-medium" href="#">Cookie Policy</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

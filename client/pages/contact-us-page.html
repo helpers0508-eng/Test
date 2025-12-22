@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-[#101922] px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4 text-[#111418] dark:text-white">
+<div class="size-8 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">handyman</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Helpers</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 hidden md:flex">
+<div class="flex items-center gap-9">
+<a class="text-[#111418] dark:text-slate-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="/">Find Services</a>
+<a class="text-[#111418] dark:text-slate-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="/">Become a Helper</a>
+<a class="text-[#111418] dark:text-slate-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="/">Login</a>
+<button class="bg-primary text-white text-sm font-medium leading-normal px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">Sign Up</button>
+</div>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="md:hidden text-[#111418] dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center py-10 px-4 md:px-10 lg:px-20">
+<div class="w-full max-w-[1200px] flex flex-col gap-10">
+<!-- Page Heading -->
+<div class="flex flex-col items-center text-center gap-4 py-4">
+<h1 class="text-[#111418] dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">Contact Our Support Team</h1>
+<p class="text-[#617589] dark:text-slate-400 text-lg font-normal leading-normal max-w-[720px]">
+                        Have a question about a booking, need to report an issue, or just want to say hello? We're here to help you get the best experience.
+                    </p>
+</div>
+<!-- Main Content Area: Split Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Contact Form -->
+<div class="lg:col-span-7 bg-white dark:bg-[#1C2632] rounded-xl border border-slate-200 dark:border-slate-800 p-6 md:p-8 shadow-sm">
+<div class="mb-6">
+<h2 class="text-[#111418] dark:text-white text-2xl font-bold mb-2">Send us a message</h2>
+<p class="text-[#617589] dark:text-slate-400 text-sm">We typically respond within 24 hours.</p>
+</div>
+<form class="flex flex-col gap-6" onsubmit="event.preventDefault();">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="flex flex-col gap-2">
+<span class="text-[#111418] dark:text-slate-200 text-sm font-semibold">Full Name</span>
+<input class="form-input w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-background-light dark:bg-[#101922] text-[#111418] dark:text-white h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-slate-400" placeholder="Jane Doe" type="text"/>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-[#111418] dark:text-slate-200 text-sm font-semibold">Email Address</span>
+<input class="form-input w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-background-light dark:bg-[#101922] text-[#111418] dark:text-white h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-slate-400" placeholder="jane@example.com" type="email"/>
+</label>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="flex flex-col gap-2">
+<span class="text-[#111418] dark:text-slate-200 text-sm font-semibold">I am a...</span>
+<div class="relative">
+<select class="form-select w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-background-light dark:bg-[#101922] text-[#111418] dark:text-white h-12 px-4 pr-10 focus:ring-2 focus:ring-primary focus:border-transparent transition-all appearance-none">
+<option disabled="" selected="" value="">Select user type</option>
+<option value="customer">Customer seeking services</option>
+<option value="helper">Helper / Service Provider</option>
+<option value="other">Other Inquiry</option>
+</select>
+<!-- Custom Arrow Icon using Material Symbols -->
+<div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-slate-500">
+<span class="material-symbols-outlined text-xl">expand_more</span>
+</div>
+</div>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-[#111418] dark:text-slate-200 text-sm font-semibold">Subject</span>
+<input class="form-input w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-background-light dark:bg-[#101922] text-[#111418] dark:text-white h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-slate-400" placeholder="Brief summary of issue" type="text"/>
+</label>
+</div>
+<label class="flex flex-col gap-2">
+<span class="text-[#111418] dark:text-slate-200 text-sm font-semibold">Message</span>
+<textarea class="form-textarea w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-background-light dark:bg-[#101922] text-[#111418] dark:text-white min-h-[160px] p-4 focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-y placeholder:text-slate-400" placeholder="How can we help you today?"></textarea>
+</label>
+<button class="bg-primary hover:bg-blue-600 text-white font-bold h-12 rounded-lg mt-2 transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2">
+<span>Send Message</span>
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</form>
+</div>
+<!-- Right Column: Contact Info & Map -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- Info Cards -->
+<div class="grid grid-cols-1 gap-4">
+<div class="flex items-start gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1C2632] p-5 shadow-sm hover:shadow-md transition-shadow">
+<div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-full text-primary shrink-0 flex items-center justify-center size-12">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h3 class="text-[#111418] dark:text-white font-bold text-lg">Email Support</h3>
+<p class="text-[#617589] dark:text-slate-400 text-sm mb-2">For general inquiries and booking issues.</p>
+<a class="text-primary font-medium hover:underline" href="mailto:support@helpers.com">support@helpers.com</a>
+</div>
+</div>
+<div class="flex items-start gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1C2632] p-5 shadow-sm hover:shadow-md transition-shadow">
+<div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-full text-primary shrink-0 flex items-center justify-center size-12">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h3 class="text-[#111418] dark:text-white font-bold text-lg">Phone Support</h3>
+<p class="text-[#617589] dark:text-slate-400 text-sm mb-2">Speak directly with a support agent.</p>
+<a class="text-primary font-medium hover:underline" href="tel:+15551234567">+1 (555) 123-4567</a>
+</div>
+</div>
+<div class="flex items-start gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1C2632] p-5 shadow-sm hover:shadow-md transition-shadow">
+<div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-full text-primary shrink-0 flex items-center justify-center size-12">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<h3 class="text-[#111418] dark:text-white font-bold text-lg">Business Hours</h3>
+<p class="text-[#617589] dark:text-slate-400 text-sm mb-1">Mon-Fri: 9am - 6pm EST</p>
+<p class="text-[#617589] dark:text-slate-400 text-sm">Sat-Sun: Closed</p>
+</div>
+</div>
+</div>
+<!-- FAQ Teaser -->
+<div class="rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 dark:from-[#1C2632] dark:to-[#101922] p-6 border border-slate-200 dark:border-slate-800 text-center">
+<div class="mx-auto bg-white dark:bg-[#101922] rounded-full size-12 flex items-center justify-center mb-4 shadow-sm text-primary">
+<span class="material-symbols-outlined text-3xl">help</span>
+</div>
+<h3 class="text-[#111418] dark:text-white font-bold text-lg mb-2">Looking for quick answers?</h3>
+<p class="text-[#617589] dark:text-slate-400 text-sm mb-4">Check out our Help Center for frequently asked questions about bookings, payments, and account management.</p>
+<a class="inline-flex items-center justify-center text-sm font-bold text-primary hover:text-blue-600 transition-colors" href="/">
+                                Visit Help Center <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1C2632] py-12 px-10">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-[#111418] dark:text-white">
+<span class="material-symbols-outlined text-primary text-2xl">handyman</span>
+<h2 class="text-lg font-bold">Helpers</h2>
+</div>
+<p class="text-[#617589] dark:text-slate-400 text-sm">Connecting you with trusted local helpers for all your daily needs.</p>
+<div class="flex gap-4 mt-2">
+<a class="text-slate-400 hover:text-primary transition-colors" href="/"><span class="material-symbols-outlined">public</span></a> <!-- placeholder for social icon -->
+<a class="text-slate-400 hover:text-primary transition-colors" href="/"><span class="material-symbols-outlined">thumb_up</span></a> <!-- placeholder for social icon -->
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-[#111418] dark:text-white font-bold mb-1">Company</h3>
+<a class="text-[#617589] dark:text-slate-400 text-sm hover:text-primary" href="/about">About Us</a>
+<a class="text-[#617589] dark:text-slate-400 text-sm hover:text-primary" href="/careers">Careers</a>
+<a class="text-[#617589] dark:text-slate-400 text-sm hover:text-primary" href="/">Blog</a>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-[#111418] dark:text-white font-bold mb-1">For Customers</h3>
+<a class="text-[#617589] dark:text-slate-400 text-sm hover:text-primary" href="/">Find a Service</a>
+<a class="text-[#617589] dark:text-slate-400 text-sm hover:text-primary" href="/">How it Works</a>
+<a class="text-[#617589] dark:text-slate-400 text-sm hover:text-primary" href="/">Safety</a>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-[#111418] dark:text-white font-bold mb-1">For Helpers</h3>
+<a class="text-[#617589] dark:text-slate-400 text-sm hover:text-primary" href="/">Become a Helper</a>
+<a class="text-[#617589] dark:text-slate-400 text-sm hover:text-primary" href="/">Success Stories</a>
+<a class="text-[#617589] dark:text-slate-400 text-sm hover:text-primary" href="/">Helper Support</a>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-slate-100 dark:border-slate-700 flex flex-col md:flex-row justify-between items-center text-sm text-[#617589] dark:text-slate-500">
+<p>© 2023 Helpers Marketplace Inc. All rights reserved.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-primary" href="/privacy">Privacy Policy</a>
+<a class="hover:text-primary" href="/terms">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

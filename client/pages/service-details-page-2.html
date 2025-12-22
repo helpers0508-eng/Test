@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+<script src="/assets/js/booking.js"></script>
+</head>
+<body data-role="user" class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-border-purple dark:border-b-background-dark px-4 sm:px-6 lg:px-10 py-3 bg-white dark:bg-gray-900/50 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-gray-800 dark:text-white">
+<span class="material-symbols-outlined text-primary text-3xl">task_alt</span>
+<h2 class="text-gray-800 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Helpers</h2>
+</div>
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full border border-border-purple dark:border-gray-700 bg-input-bg/30 focus-within:ring-2 focus-within:ring-primary focus-within:border-primary transition-all">
+<div class="text-gray-500 dark:text-gray-400 flex border-none bg-transparent items-center justify-center pl-3 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-800 dark:text-white focus:outline-0 focus:ring-0 border-none bg-transparent focus:border-none h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search services..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex items-center justify-end gap-4 md:gap-8">
+<div class="hidden md:flex items-center gap-6">
+<a class="text-gray-600 dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="/">Categories</a>
+<a class="text-gray-600 dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="/">Become a Helper</a>
+</div>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-input-bg dark:bg-gray-800 text-primary dark:text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 hover:bg-border-purple dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</header>
+<main class="flex-1 px-4 sm:px-6 lg:px-8 xl:px-20 2xl:px-40 py-8">
+<div class="mx-auto max-w-7xl">
+<div class="flex flex-wrap gap-2 mb-6">
+<a class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal hover:text-primary transition-colors" href="/">Home</a>
+<span class="text-gray-400 dark:text-gray-500 text-sm font-medium leading-normal">/</span>
+<a class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal hover:text-primary transition-colors" href="/">Cleaning</a>
+<span class="text-gray-400 dark:text-gray-500 text-sm font-medium leading-normal">/</span>
+<span class="text-primary dark:text-secondary text-sm font-semibold leading-normal">Deep Home Cleaning</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+<div class="lg:col-span-2 space-y-8">
+<div class="@container shadow-lg shadow-primary/5 rounded-xl">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-white rounded-xl min-h-[400px]" data-alt="professional cleaner wiping a modern kitchen counter" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB6ATwHpxuxCL5eolojwM_42dFX5Xz6uyV-ahEq5DjNhXOkOI5V43zeaMsLn5bNy1U3-j_oJXmk82gWeEUVjpZZIR8rA9EITsipAq1NpMHdj-GLg_sGHWS_QZ8Djk1npadFqdf695AXV8nHdGck0THKgnmIsKFvD-xxrpXDez12JEsFO_pOTDXGu7ItQ2oFlyo1dm4qR6nkmWDCUfaQS-5D1g8a781Bqa49dorS4ho-iPEzaHwFwZJ3RUXAgdyeHEge3tgOCBdFeXY");'></div>
+</div>
+<div>
+<h1 class="text-gray-900 dark:text-white tracking-tight text-3xl md:text-4xl font-extrabold leading-tight text-left mb-2">Deep Home Cleaning</h1>
+<div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined text-base">schedule</span>
+<span>Duration varies by size</span>
+<span class="mx-2">•</span>
+<span class="material-symbols-outlined text-base">verified</span>
+<span>Verified Professionals</span>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-900/50 rounded-xl p-2 sm:p-6 shadow-sm border border-border-purple/50 dark:border-gray-800">
+<div class="border-b border-gray-200 dark:border-gray-700">
+<nav aria-label="Tabs" class="-mb-px flex space-x-6">
+<a class="border-primary text-primary whitespace-nowrap py-4 px-1 border-b-2 font-semibold text-sm" href="/">Description</a>
+<a class="border-transparent text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-secondary hover:border-border-purple dark:hover:border-gray-600 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors" href="/">What's Included</a>
+<a class="border-transparent text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-secondary hover:border-border-purple dark:hover:border-gray-600 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors" href="/">Reviews</a>
+</nav>
+</div>
+<div class="py-6 text-gray-600 dark:text-gray-300 text-base leading-relaxed space-y-4">
+<p>Our Deep Home Cleaning service provides a thorough, top-to-bottom clean for your entire home. Perfect for spring cleaning, moving in or out, or just when your space needs a serious refresh. Our professional and verified helpers use eco-friendly products to tackle grime and dirt in every corner, leaving your home spotless and revitalized.</p>
+<p>We focus on areas that are often missed during regular cleaning, including inside appliances, behind furniture, and detailed work on baseboards and fixtures. Experience the peace of mind that comes with a truly clean and healthy living environment.</p>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Eco-friendly products</li>
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Background verified staff</li>
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Equipment included</li>
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> 100% Satisfaction Guarantee</li>
+</ul>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-900/50 rounded-xl p-6 shadow-sm border border-border-purple/50 dark:border-gray-800">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Reviews &amp; Ratings</h2>
+<div class="flex flex-wrap gap-x-12 gap-y-6">
+<div class="flex flex-col gap-2 justify-center">
+<p class="text-gray-900 dark:text-white text-6xl font-black leading-tight tracking-[-0.033em]">4.8</p>
+<div class="flex gap-0.5 text-yellow-400 justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium text-center">1,234 reviews</p>
+</div>
+<div class="grid min-w-[200px] max-w-[400px] flex-1 grid-cols-[20px_1fr_40px] items-center gap-y-3">
+<p class="text-gray-800 dark:text-gray-200 text-sm font-medium">5</p>
+<div class="flex h-2 flex-1 overflow-hidden rounded-full bg-input-bg dark:bg-gray-700"><div class="rounded-full bg-primary" style="width: 85%;"></div></div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium text-right">85%</p>
+<p class="text-gray-800 dark:text-gray-200 text-sm font-medium">4</p>
+<div class="flex h-2 flex-1 overflow-hidden rounded-full bg-input-bg dark:bg-gray-700"><div class="rounded-full bg-primary/80" style="width: 10%;"></div></div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium text-right">10%</p>
+<p class="text-gray-800 dark:text-gray-200 text-sm font-medium">3</p>
+<div class="flex h-2 flex-1 overflow-hidden rounded-full bg-input-bg dark:bg-gray-700"><div class="rounded-full bg-primary/60" style="width: 3%;"></div></div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium text-right">3%</p>
+<p class="text-gray-800 dark:text-gray-200 text-sm font-medium">2</p>
+<div class="flex h-2 flex-1 overflow-hidden rounded-full bg-input-bg dark:bg-gray-700"><div class="rounded-full bg-primary/40" style="width: 1%;"></div></div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium text-right">1%</p>
+<p class="text-gray-800 dark:text-gray-200 text-sm font-medium">1</p>
+<div class="flex h-2 flex-1 overflow-hidden rounded-full bg-input-bg dark:bg-gray-700"><div class="rounded-full bg-primary/20" style="width: 1%;"></div></div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium text-right">1%</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1">
+<div class="sticky top-24 space-y-6">
+<div class="bg-white dark:bg-gray-900/50 rounded-xl border border-border-purple dark:border-gray-700 shadow-xl shadow-shadow-plum/5 p-6 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-purple"></div>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Select Package</h3>
+<div class="space-y-3">
+<div class="flex justify-between items-center p-4 rounded-lg border-2 border-primary bg-input-bg/40 cursor-pointer transition-all hover:bg-input-bg/60">
+<label class="flex-grow cursor-pointer" for="bhk1">
+<span class="font-bold text-gray-900 dark:text-white block">1 BHK</span>
+<span class="text-xs font-medium text-primary mt-0.5 block">Recommended</span>
+<span class="text-sm text-gray-600 dark:text-gray-300 block mt-1">Approx. 2-3 hours</span>
+</label>
+<div class="text-right">
+<span class="font-bold text-lg text-primary dark:text-secondary">$99</span>
+</div>
+<input checked="" class="ml-4 h-5 w-5 text-primary focus:ring-primary border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800" id="bhk1" name="package" type="radio"/>
+</div>
+<div class="flex justify-between items-center p-4 rounded-lg border border-border-purple dark:border-gray-600 hover:border-primary/50 bg-white dark:bg-gray-800 cursor-pointer transition-all">
+<label class="flex-grow cursor-pointer" for="bhk2">
+<span class="font-bold text-gray-900 dark:text-white">2 BHK</span>
+<span class="text-sm text-gray-600 dark:text-gray-300 block mt-1">Approx. 3-4 hours</span>
+</label>
+<div class="text-right">
+<span class="font-bold text-lg text-gray-900 dark:text-white">$149</span>
+</div>
+<input class="ml-4 h-5 w-5 text-primary focus:ring-primary border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800" id="bhk2" name="package" type="radio"/>
+</div>
+<div class="flex justify-between items-center p-4 rounded-lg border border-border-purple dark:border-gray-600 hover:border-primary/50 bg-white dark:bg-gray-800 cursor-pointer transition-all">
+<label class="flex-grow cursor-pointer" for="bhk3">
+<span class="font-bold text-gray-900 dark:text-white">3 BHK</span>
+<span class="text-sm text-gray-600 dark:text-gray-300 block mt-1">Approx. 4-5 hours</span>
+</label>
+<div class="text-right">
+<span class="font-bold text-lg text-gray-900 dark:text-white">$199</span>
+</div>
+<input class="ml-4 h-5 w-5 text-primary focus:ring-primary border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800" id="bhk3" name="package" type="radio"/>
+</div>
+</div>
+<button class="w-full mt-6 flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-gradient-purple text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] hover:shadow-lg hover:shadow-primary/30 transition-all transform hover:-translate-y-0.5">
+                                    Book Now
+                                </button>
+<p class="text-xs text-center text-gray-500 mt-3">Free cancellation up to 2 hours before</p>
+</div>
+<div class="bg-white dark:bg-gray-900/50 rounded-xl border border-border-purple dark:border-gray-700 p-6 shadow-sm">
+<h4 class="text-xs font-bold text-primary dark:text-secondary uppercase tracking-wider mb-4">Top Rated Helper Nearby</h4>
+<div class="flex items-start space-x-4">
+<div class="relative">
+<img class="h-14 w-14 rounded-full object-cover ring-2 ring-border-purple dark:ring-primary-dark" data-alt="professional helper Jane Doe smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Rm9ja_XW8WBO3pMQbgTC0xOyKkdYmOfrYd7IzrnEoM-fNHd7OHmV7VSU8ZIgq-q8OlHJtt9nCH5EmZapgBLbdcDfhUj9NQ4QTjynwPcCiPhBiFILGeCiBVqEAn9bm_FshHH32Pq2A37KAC6MP68XOXVfW46LXoQp3pzQi8qDzRji65RNhArft4XzXypQQ1gSgSLq1Sd-osnqkHqmLoX05jcmuLetabANOw-FmQN54_A2gkNmmlo1Qf43QnkVMXVwuiBWmoJfD2E"/>
+<div class="absolute -bottom-1 -right-1 bg-green-500 rounded-full p-0.5 border-2 border-white dark:border-gray-900">
+<span class="material-symbols-outlined text-white text-[10px] block">check</span>
+</div>
+</div>
+<div>
+<p class="font-bold text-lg text-gray-900 dark:text-white">Jane Doe</p>
+<p class="text-sm text-gray-500 mb-1">Cleaning Specialist</p>
+<div class="flex items-center text-sm text-gray-600 dark:text-gray-300 bg-yellow-50 dark:bg-yellow-900/20 px-2 py-0.5 rounded-full w-fit">
+<span class="material-symbols-outlined text-yellow-500 text-sm mr-1" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="font-bold text-yellow-700 dark:text-yellow-500">4.9</span>
+<span class="text-xs ml-1 opacity-80">(256 jobs)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-input-bg/30 dark:bg-gray-800/30 rounded-xl border border-border-purple/50 dark:border-gray-700 p-5 space-y-4">
+<div class="flex items-start">
+<div class="bg-white dark:bg-gray-700 p-1.5 rounded-full shadow-sm mr-3">
+<span class="material-symbols-outlined text-primary text-xl">verified_user</span>
+</div>
+<div>
+<p class="font-semibold text-gray-900 dark:text-white text-sm">Background Checked</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs mt-0.5">All helpers are verified.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="bg-white dark:bg-gray-700 p-1.5 rounded-full shadow-sm mr-3">
+<span class="material-symbols-outlined text-primary text-xl">health_and_safety</span>
+</div>
+<div>
+<p class="font-semibold text-gray-900 dark:text-white text-sm">Insured Work</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs mt-0.5">Covered against damages.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="bg-white dark:bg-gray-700 p-1.5 rounded-full shadow-sm mr-3">
+<span class="material-symbols-outlined text-primary text-xl">sentiment_satisfied</span>
+</div>
+<div>
+<p class="font-semibold text-gray-900 dark:text-white text-sm">Satisfaction Guaranteed</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs mt-0.5">Or we'll make it right.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-white dark:bg-gray-900/50 mt-12 border-t border-border-purple dark:border-gray-800">
+<div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+<div class="xl:grid xl:grid-cols-3 xl:gap-8">
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-gray-800 dark:text-white">
+<span class="material-symbols-outlined text-primary text-3xl">task_alt</span>
+<h2 class="text-gray-800 dark:text-white text-xl font-bold">Helpers</h2>
+</div>
+<p class="text-sm leading-6 text-gray-600 dark:text-gray-300 max-w-sm">Quality services at your fingertips. Connecting you with trusted professionals for every home need.</p>
+<div class="flex gap-4 mt-4">
+<a class="text-gray-400 hover:text-primary transition-colors" href="/"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="/"><span class="material-symbols-outlined">water_drop</span></a> 
+<a class="text-gray-400 hover:text-primary transition-colors" href="/"><span class="material-symbols-outlined">smart_display</span></a>
+</div>
+</div>
+<div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm font-bold leading-6 text-primary dark:text-secondary uppercase tracking-wider">Services</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li><a class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="/">Cleaning</a></li>
+<li><a class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="/">Plumbing</a></li>
+<li><a class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="/">Electrical</a></li>
+<li><a class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="/">Painting</a></li>
+</ul>
+</div>
+<div class="mt-10 md:mt-0">
+<h3 class="text-sm font-bold leading-6 text-primary dark:text-secondary uppercase tracking-wider">About</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li><a class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="/">Our Story</a></li>
+<li><a class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="/careers">Careers</a></li>
+<li><a class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="/press">Press</a></li>
+</ul>
+</div>
+</div>
+<div class="md:grid md:grid-cols-2 md:gap-8">
+<div>
+<h3 class="text-sm font-bold leading-6 text-primary dark:text-secondary uppercase tracking-wider">Support</h3>
+<ul class="mt-6 space-y-4" role="list">
+<li><a class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="/">Contact</a></li>
+<li><a class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="/faq">FAQ</a></li>
+<li><a class="text-sm leading-6 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors" href="/terms">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 border-t border-gray-200 dark:border-gray-800 pt-8 sm:mt-20 lg:mt-24">
+<p class="text-xs leading-5 text-gray-500 dark:text-gray-400">© 2024 Helpers, Inc. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,65 @@
+Project Summary: Helper Website
+
+Overview:
+This is a static website for a helper service platform called "Helpers". It provides a marketplace for users to book local professionals for various services like home cleaning, plumbing, beauty, electrical work, handyman services, and tutoring.
+
+Current Structure:
+- index.html: Main homepage with hero section, service listings, how it works, and footer
+- pages/: Directory containing all other HTML pages (e.g., login.html, signup.html, about-us-page.html, etc.)
+- assets/: Shared assets including:
+  - config.js: Tailwind CSS configuration
+  - styles.css: Common CSS styles
+  - api-config.js: Google API keys and configurations
+
+Key Features:
+- Responsive design using Tailwind CSS
+- Dark mode support
+- Multiple user roles: Users, Helpers, Admins
+- Comprehensive page coverage including dashboards, booking flows, profiles, and support pages
+
+Pages Available:
+- Authentication: login.html, signup.html, forgot-password-page.html, reset-password-page.html, otp-verification-page.html, email-verification-page.html
+- User Pages: user-dashboard-2.html, user-bookings-page.html, user-profile-page.html, search-results-page-2.html, service-details-page-2.html, services-listing-page-2.html
+- Helper Pages: helper-dashboard.html, helper-bookings-page.html, helper-profile-page.html, helper-earnings-page.html, helper-availability-page.html, helper-registration-2.html
+- Admin Pages: admin-dashboard.html, admin-users-management.html, admin-helpers-management.html, admin-bookings-management.html, admin-services-management.html, admin-payments-management.html, admin-reviews-moderation.html, admin-login-page.html
+- Static Pages: about-us-page.html, contact-us-page.html, faq-page.html, careers-page.html, blog-page.html, help---support-page.html, privacy-policy-page.html, terms-of-service-page.html, cookie-policy.html, refund---cancellation-policy.html, community-guidelines-page.html, sitemap-page.html, press---media-page.html
+- Error Pages: 404-page.html, 500-page.html
+- Other: booking-confirmation-page-2.html, booking-flow---service-selection-2.html, notifications-page.html, settings-page.html
+
+Technologies Used:
+- **Frontend**: HTML5, Tailwind CSS, Google Fonts, Material Symbols
+- **Backend**: Node.js, Express.js, PostgreSQL
+- **Security**: JWT, bcrypt, CORS, Helmet, rate limiting
+- **APIs**: Google Maps, AdSense, OAuth (configured securely)
+- **Email**: Nodemailer with Gmail SMTP
+
+Backend Architecture:
+- **Database**: PostgreSQL with connection pooling
+- **Authentication**: JWT tokens with session management
+- **Routes**: Modular API endpoints (auth, users, services, bookings, admin)
+- **Middleware**: Role-based access control, input validation
+- **Migration**: Automated database schema setup
+- **Seeding**: Initial data population script
+
+Development Status:
+- ✅ Frontend reorganized and properly structured
+- ✅ Routing fully implemented with absolute paths
+- ✅ JavaScript modules for auth, forms, booking, and UI
+- ✅ Mock data system for development
+- ✅ Backend API with Node.js/Express/PostgreSQL
+- ✅ Database schema and migrations
+- ✅ Authentication & authorization
+- ✅ API key security (removed from frontend)
+- ✅ Local development servers running (Frontend: 8000, Backend: 3001)
+
+Next Steps:
+- Set up PostgreSQL database and run migrations
+- Configure environment variables (.env file)
+- Test API endpoints with Postman/Insomnia
+- Update frontend JavaScript to call real APIs instead of mock data
+- Implement real-time features (notifications, chat)
+- Add payment processing with Stripe
+- Deploy to production environment
+- Set up monitoring and logging
+
+Note: This is a static site prototype. For production, consider converting to a dynamic framework like React, Vue, or Next.js, and implement proper security measures for API keys.

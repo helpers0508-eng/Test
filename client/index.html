@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e0cfff] dark:border-b-primary-dark/30 px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4 text-[#111418] dark:text-white">
+<img src="/logo.jpeg" alt="Helpers Logo" class="h-6 w-auto object-contain">
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Helpers</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-[#111418] dark:text-white/80 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="/services">Browse Services</a>
+<a class="text-[#111418] dark:text-white/80 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="/helper/dashboard">For Helpers</a>
+</div>
+<div class="flex gap-2">
+<a href="/login" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-background-light dark:bg-background-dark/50 text-[#111418] dark:text-white text-sm font-bold leading-normal tracking-[0.015em] border border-input-border dark:border-primary-dark/50 hover:bg-input-bg dark:hover:bg-primary-dark/20 transition-colors"><span class="truncate">Log In</span></a>
+<a href="/signup" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-primary-dark text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors shadow-sm"><span class="truncate">Sign Up</span></a>
+</div>
+</div>
+</header>
+<main>
+<div class="@container py-10">
+<div class="flex flex-col gap-6 px-4 py-10 @[480px]:gap-8 @[864px]:flex-row-reverse">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl @[480px]:h-auto @[480px]:min-w-[300px] @[864px]:w-full shadow-lg" data-alt="Professional plumber fixing a sink in a modern kitchen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDpSrTK8d0gcU_YtQaOjqEqOB_PU1Va1OGvS1ifWr1SnlDWHj5rrv_wxy7tsnjUypQN9yTkVPC08RadQqYZvJdmg_1ABLKCC1ThhBfjFNGgZ-Aapap6uElU2KJC2IfqE9JDScnSYu3VlNKAYTHwQ5W57Z1WogRSN12lpBSFOciBxHZNJS5u-a-vtdgp5V-q5s6mwFRvzl-DirkiPXhbqDCUUwM4B80p0MHoMjgAzBTbRXd7PO-4Rg1wdvVyDX0oMmXXwx85SpMsOc0");'></div>
+<div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
+<div class="flex flex-col gap-2 text-left">
+<h1 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">Find Trusted Local Professionals for Any Job.</h1>
+<h2 class="text-[#617589] dark:text-white/70 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">Book vetted experts for everything from home cleaning to beauty services, right at your doorstep.</h2>
+</div>
+<label class="flex flex-col min-w-40 h-14 w-full max-w-[480px] @[480px]:h-16 shadow-md rounded-xl">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full border border-input-border dark:border-primary-dark/30">
+<div class="text-[#617589] flex bg-white dark:bg-background-dark/50 items-center justify-center pl-4 rounded-l-xl border-r-0">
+<span class="material-symbols-outlined text-primary">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-none text-[#111418] dark:text-white focus:outline-0 focus:ring-0 border-none bg-white dark:bg-background-dark/50 h-full placeholder:text-[#617589] px-4 pr-2 pl-2 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal" placeholder="What service do you need today?" value=""/>
+<div class="flex items-center justify-center rounded-r-xl border-l-0 border-none bg-white dark:bg-background-dark/50 pr-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-gradient-purple hover:opacity-90 transition-opacity text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+<span class="truncate">Search</span>
+</button>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+<h2 class="text-[#111418] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Explore Our Services</h2>
+<div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-sm transition-transform hover:scale-[1.02]" data-alt="A clean and tidy modern living room" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDuLxhN_UB7HoYAM2rfWBLkjuyIViKVFndDf7MAYEPMPFgoQd22l8yIXkt17W8X8n-i5RkRZFK9JKBjxZkWF9tvbpQ2LXlghGaBA3d_OORyKwC0pNWtricjb5I8dg6ehHRDQMDPaXxaPiWUchIfy-i7H60gOHXRH5fdNTkfzNbgQxRqXIpB0Gr4pc1xNoCaP0Rn46x9IbDVM4Nkj7voZOm0VvLJUTQLKmXUCP9R_ntyXV6ETC25GUUshQjGJ-vFLHajteRaMhj9F3A");'></div>
+<div>
+<p class="text-[#111418] dark:text-white text-base font-medium leading-normal">Home Cleaning</p>
+<p class="text-[#617589] dark:text-white/70 text-sm font-normal leading-normal">Keep your home sparkling clean.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-sm transition-transform hover:scale-[1.02]" data-alt="A plumber's tools laid out on a blueprint" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwrvkF5XgZZRDam280cbJSBJJNV_34NrF4P2q32S_pNVG4J2XsycCjdgP-v1Zk0KKLZmChtXedJMqg3fbYzDUMAnoFndIcUskB_ikugXhn-ZUL3ieK6e2fRypxFopnSirY2fVJNeVpZG2tYTpU-pT1GpylEo5rKGIuj3JazgUPrbbuwu3pNl9R6SztD7DMUWrNFhBdx5HF579JUACh_2mYtqEULNef3eDTD8vDxMcR7Mj6Y8-J_nUwM-_nQVxf0UyZ1mq15nsQTq4");'></div>
+<div>
+<p class="text-[#111418] dark:text-white text-base font-medium leading-normal">Plumbing</p>
+<p class="text-[#617589] dark:text-white/70 text-sm font-normal leading-normal">Fix leaks and install fixtures.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-sm transition-transform hover:scale-[1.02]" data-alt="Makeup brushes and cosmetics on a table" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCuPMMzyJraKLUwTAA6D-gDlCNiowYxfRF8A8whfj5EdES4EA1RVt9tklQyvxiLhv9bilQE_wnCvF6puUJIgx3GCfs59wwr9KlkyH99gppXKyJqFpf4IZ7DsCrlCKRZMjoHTvIAk6JGf2z0LO0U1mRj7gLZUq9WGMBIQ_z17bRu-yeq37uE5hOFb4lcMP0RZk703Rva179dnuv80n4BZFskDVcFgvNa2CAmqbfppmm2txkzSYlSnT0fuXXf4ol-GfikopE1M0lksO8");'></div>
+<div>
+<p class="text-[#111418] dark:text-white text-base font-medium leading-normal">Beauty</p>
+<p class="text-[#617589] dark:text-white/70 text-sm font-normal leading-normal">Salon services at your home.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-sm transition-transform hover:scale-[1.02]" data-alt="An electrician working on a circuit breaker" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABLcJx7T6lbuf_YTgRFX6UqZ8FjRkd8EkEsMpd2-GQPfytJUVrpoeFCWKr0koDsTF-F1A7bvRJqxHJBubSuXF64J4QyCHUr6CdhBIUh-bkpF8W2-Ofr9wHjVbzpcmqNguIfK7YcOgaM5XXXp6272c837XLVIVAcHdz1u7TF5423m7-9D7KfwdOSinX7hszuR0CTsFRg9VcrmwNT0Gpwd66pyTuy-F8f4ATUh3opdrOZO6Lyzg_K4gFhhDDDvRRn20AGeqYHqC27u0");'></div>
+<div>
+<p class="text-[#111418] dark:text-white text-base font-medium leading-normal">Electrical</p>
+<p class="text-[#617589] dark:text-white/70 text-sm font-normal leading-normal">Safe and reliable electrical work.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-sm transition-transform hover:scale-[1.02]" data-alt="A person assembling flat-pack furniture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuADwYPFjV1T82bTIFAPfqcHy3fohXSCAL1idFd7wZmuOJE-j9pXxQ8V6zwaDI337IKgrgeSv7Bx5_x4dAeYhyj6vf7gtjftDfaPAYErHdVyZQASnIFPsFZ4cRrXspBmO7K9iMbi34xkl061sCB4MpR5YLa_pLbrSfF8614wSBsh7nDhJLEO3jNg6oGOq3t_LmtWN-rgsK0clLbSMk1PtpkvKi5f84jb1JtWzaL8S40vFoCqX9KQZGuVcV8dte3HNHHbG5F6r32NzPg");'></div>
+<div>
+<p class="text-[#111418] dark:text-white text-base font-medium leading-normal">Handyman</p>
+<p class="text-[#617589] dark:text-white/70 text-sm font-normal leading-normal">For all your repair needs.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl shadow-sm transition-transform hover:scale-[1.02]" data-alt="A student and tutor working together at a desk" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDur8NjCScs7kDBa4ZyLNh_EgAA8EVbDzJQFEaf8sA2pwDcMri_DllKE-5PHBhhdG5b4zI7ucdAz90Eh0M6DIBCLfgtJpRhUzPtVxIqJjmVl5YXPTvZhILWRK8MMcJbszvfwD0MukB1dABBfdnu9FBfDUlvaM4dI8dIOK-Vc9_1ytF7PBdk-ksNgi0H-tNEprj_FYJ4n15NDgk1eNgYxw8if3Iv-5Mj5sNLP-xWij1PhCBVY6UjMuSTx0xT4wmdqxBE1OhsN78z72w");'></div>
+<div>
+<p class="text-[#111418] dark:text-white text-base font-medium leading-normal">Tutoring</p>
+<p class="text-[#617589] dark:text-white/70 text-sm font-normal leading-normal">Expert academic support.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-10 px-4 py-10 @container">
+<div class="flex flex-col gap-4">
+<h1 class="text-[#111418] dark:text-white tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">How It Works</h1>
+<p class="text-[#617589] dark:text-white/70 text-base font-normal leading-normal max-w-[720px]">Get any job done in just a few simple steps.</p>
+</div>
+<div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-3 p-0">
+<div class="flex flex-1 gap-4 rounded-xl border border-input-border dark:border-background-dark/30 bg-white dark:bg-background-dark/50 p-6 flex-col hover:shadow-md transition-shadow">
+<div class="text-primary p-2 bg-input-bg dark:bg-primary-dark/20 rounded-lg w-fit">
+<span class="material-symbols-outlined text-3xl">search</span>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="text-[#111418] dark:text-white text-base font-bold leading-tight">1. Search</h2>
+<p class="text-[#617589] dark:text-white/70 text-sm font-normal leading-normal">Find the perfect professional for your needs.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-xl border border-input-border dark:border-background-dark/30 bg-white dark:bg-background-dark/50 p-6 flex-col hover:shadow-md transition-shadow">
+<div class="text-primary p-2 bg-input-bg dark:bg-primary-dark/20 rounded-lg w-fit">
+<span class="material-symbols-outlined text-3xl">calendar_month</span>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="text-[#111418] dark:text-white text-base font-bold leading-tight">2. Book</h2>
+<p class="text-[#617589] dark:text-white/70 text-sm font-normal leading-normal">Schedule a time that works for you, instantly.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-xl border border-input-border dark:border-background-dark/30 bg-white dark:bg-background-dark/50 p-6 flex-col hover:shadow-md transition-shadow">
+<div class="text-primary p-2 bg-input-bg dark:bg-primary-dark/20 rounded-lg w-fit">
+<span class="material-symbols-outlined text-3xl">relax</span>
+</div>
+<div class="flex flex-col gap-1">
+<h2 class="text-[#111418] dark:text-white text-base font-bold leading-tight">3. Relax</h2>
+<p class="text-[#617589] dark:text-white/70 text-sm font-normal leading-normal">Your vetted helper arrives and gets the job done.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-gradient-purple rounded-xl my-10 mx-4 p-8 md:p-12 shadow-lg">
+<div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+<div>
+<h2 class="text-2xl font-bold text-white">Are you a professional?</h2>
+<p class="text-base text-white/90 mt-1">Grow your business with Helpers.</p>
+</div>
+<button class="flex-shrink-0 min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-white hover:bg-gray-100 text-primary-dark text-base font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate">Register Now</span>
+</button>
+</div>
+</div>
+</main>
+<footer class="text-sm text-[#617589] dark:text-white/60 border-t border-solid border-t-[#e0cfff] dark:border-t-primary-dark/30 mt-10 px-4 py-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div>
+<h3 class="font-bold text-[#111418] dark:text-white mb-3">Company</h3>
+<ul>
+<li class="mb-2"><a class="hover:text-primary" href="pages/about.html">About Us</a></li>
+<li class="mb-2"><a class="hover:text-primary" href="pages/careers.html">Careers</a></li>
+<li><a class="hover:text-primary" href="pages/press-media.html">Press</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-[#111418] dark:text-white mb-3">Help & Support</h3>
+<ul>
+<li class="mb-2"><a class="hover:text-primary" href="pages/faq.html">FAQ</a></li>
+<li class="mb-2"><a class="hover:text-primary" href="pages/contact.html">Contact Us</a></li>
+<li><a class="hover:text-primary" href="pages/help-support.html">Help Center</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-[#111418] dark:text-white mb-3">Legal</h3>
+<ul>
+<li class="mb-2"><a class="hover:text-primary" href="pages/terms.html">Terms of Service</a></li>
+<li><a class="hover:text-primary" href="pages/privacy.html">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-[#111418] dark:text-white mb-3">Follow Us</h3>
+<div class="flex space-x-4">
+<a class="hover:text-primary" href="#">
+<svg class="feather feather-facebook" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+</a>
+<a class="hover:text-primary" href="#">
+<svg class="feather feather-twitter" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+</a>
+<a class="hover:text-primary" href="#">
+<svg class="feather feather-instagram" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+</a>
+</div>
+</div>
+</div>
+<div class="text-center mt-8 pt-8 border-t border-solid border-t-[#e0cfff] dark:border-t-primary-dark/30">
+<p>© 2024 Helpers. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

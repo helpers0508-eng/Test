@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+</head>
+<body data-role="helper" class="bg-background-light dark:bg-background-dark font-display text-[#111418] antialiased">
+<!-- Top Navigation -->
+<header class="bg-white border-b border-[#f0f2f4] sticky top-0 z-50">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<!-- Logo & Branding -->
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 text-primary">
+<div class="size-8 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl">handyman</span>
+</div>
+<h1 class="text-[#111418] text-xl font-bold tracking-tight">Helpers</h1>
+</div>
+<div class="hidden md:flex items-center text-sm font-medium text-[#617589] border-l border-[#f0f2f4] pl-4 ml-2">
+                        Helper Workspace
+                    </div>
+</div>
+<!-- Right Actions -->
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<button class="flex size-10 items-center justify-center rounded-lg hover:bg-[#f0f2f4] text-[#111418] transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex size-10 items-center justify-center rounded-lg hover:bg-[#f0f2f4] text-[#111418] transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-9 border border-[#f0f2f4]" data-alt="User profile thumbnail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBPMh6-a0zaTtV9kZAHfMkFm1d4nMm7S6I6UPD9CMdawQE8LkVR048d58pVmXv8zeuKtpO2OFW7S-O5e4DR8FrlDrR_oaIz4y2ZSlbNfpIzRfK9unyzIt3kpTifR1lwNaiMXR4Ik-Y7XCSsMGBItB37HsGKPYZLQFF1Hd8qNXgVuhPqwUMIpHFlX1mv6faEFxPF8m3TuyazZMW1ONbxu4JhqQAgivSo8KOJbNFttE1CIypzMcunXGaq-t3gxa6XilvajvL84UK073Q");'></div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- Page Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+<div>
+<h2 class="text-[#111418] text-3xl font-black leading-tight tracking-[-0.033em]">My Profile</h2>
+<p class="text-[#617589] text-base mt-1">Manage your personal information and service details</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 h-10 rounded-lg bg-white border border-[#dbe0e6] text-[#111418] text-sm font-bold hover:bg-gray-50 transition-colors">
+<span class="material-symbols-outlined text-lg">visibility</span>
+                    Preview Public Profile
+                </button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Identity & Stats (Sticky on Desktop) -->
+<div class="lg:col-span-4 space-y-6">
+<!-- Identity Card -->
+<div class="bg-white rounded-xl border border-[#dbe0e6] overflow-hidden shadow-sm">
+<div class="relative h-32 bg-primary/10">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/5 opacity-50"></div>
+</div>
+<div class="px-6 pb-6 text-center -mt-16 relative">
+<div class="relative inline-block">
+<div class="size-32 rounded-full border-4 border-white bg-white shadow-sm bg-center bg-cover bg-no-repeat" data-alt="Portrait of John Doe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDq4zeKRE3C3tKTLuI4CwhmjNXmOeQsJ3L-LdIcJw1FaHNd2TK-M4frtprXBocMDLbHxIBFgJgWwhP6XQyz9Wsg0mIiJkAebtoMR6H_SO-3qErAHeEkCGRugES3xctBCdPIokL5LJ5wvt_fj9KmwuTzCbtWYZtLC-JXg2zspj8ORmf2lfmfxzJ-ockfLwhtpOvakniiJerTMrEw_usW3aeMKC7hVLCKGpf1qrycx6ONF3gkaV8qaluz2maFIbeSYNne2Xd-8jkTRn4");'></div>
+<button class="absolute bottom-1 right-1 bg-white border border-[#dbe0e6] p-1.5 rounded-full shadow-sm text-primary hover:bg-gray-50 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+<div class="mt-4">
+<div class="flex items-center justify-center gap-2">
+<h3 class="text-xl font-bold text-[#111418]">John Doe</h3>
+<span class="material-symbols-outlined text-primary text-xl" title="Verified Helper">verified</span>
+</div>
+<p class="text-[#617589] text-sm mt-1">Home Maintenance Specialist</p>
+</div>
+<!-- Availability Toggle -->
+<div class="mt-6 flex items-center justify-between bg-background-light p-3 rounded-lg">
+<span class="text-sm font-medium text-[#111418]">Availability Status</span>
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-green-600 uppercase tracking-wider">Online</span>
+<div class="relative inline-flex h-6 w-11 items-center rounded-full bg-green-500 cursor-pointer">
+<span class="translate-x-6 inline-block h-4 w-4 transform rounded-full bg-white transition"></span>
+</div>
+</div>
+</div>
+<!-- Quick Stats -->
+<div class="grid grid-cols-2 gap-4 mt-6 border-t border-[#f0f2f4] pt-6">
+<div class="text-center">
+<div class="flex items-center justify-center gap-1 text-[#111418]">
+<span class="text-2xl font-bold">4.9</span>
+<span class="material-symbols-outlined text-yellow-500 text-sm fill-current">star</span>
+</div>
+<p class="text-xs text-[#617589] uppercase tracking-wide mt-1">Rating</p>
+</div>
+<div class="text-center border-l border-[#f0f2f4]">
+<div class="text-2xl font-bold text-[#111418]">320</div>
+<p class="text-xs text-[#617589] uppercase tracking-wide mt-1">Jobs Done</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Profile Completeness -->
+<div class="bg-white rounded-xl border border-[#dbe0e6] p-6 shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<h4 class="text-sm font-bold text-[#111418]">Profile Completeness</h4>
+<span class="text-sm font-bold text-primary">85%</span>
+</div>
+<div class="h-2 w-full bg-[#f0f2f4] rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 85%"></div>
+</div>
+<div class="mt-4 flex gap-3 items-start">
+<span class="material-symbols-outlined text-[#617589] text-xl shrink-0">info</span>
+<p class="text-sm text-[#617589] leading-snug">Add your insurance documents to reach 100% and unlock premium jobs.</p>
+</div>
+<button class="mt-4 w-full py-2 px-4 bg-background-light hover:bg-[#e8ebed] text-primary text-sm font-bold rounded-lg transition-colors">
+                        Complete Profile
+                    </button>
+</div>
+</div>
+<!-- Right Column: Details Forms -->
+<div class="lg:col-span-8">
+<!-- Navigation Tabs -->
+<div class="border-b border-[#dbe0e6] mb-6 overflow-x-auto">
+<nav class="flex gap-6 min-w-max">
+<a class="pb-3 border-b-2 border-primary text-primary font-semibold text-sm" href="/">Personal Details</a>
+<a class="pb-3 border-b-2 border-transparent text-[#617589] hover:text-[#111418] font-medium text-sm transition-colors" href="/">Specializations</a>
+<a class="pb-3 border-b-2 border-transparent text-[#617589] hover:text-[#111418] font-medium text-sm transition-colors" href="/">Experience</a>
+<a class="pb-3 border-b-2 border-transparent text-[#617589] hover:text-[#111418] font-medium text-sm transition-colors" href="/">Service Areas</a>
+<a class="pb-3 border-b-2 border-transparent text-[#617589] hover:text-[#111418] font-medium text-sm transition-colors" href="/">Documents</a>
+</nav>
+</div>
+<!-- Personal Information Section -->
+<div class="bg-white rounded-xl border border-[#dbe0e6] shadow-sm mb-6">
+<div class="flex items-center justify-between p-6 border-b border-[#f0f2f4]">
+<h3 class="text-lg font-bold text-[#111418]">Personal Information</h3>
+<button class="text-primary hover:text-blue-700 text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">edit</span> Edit
+                        </button>
+</div>
+<div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
+<div class="space-y-1">
+<p class="text-xs font-medium uppercase tracking-wide text-[#617589]">Full Name</p>
+<p class="text-[#111418] text-base font-medium">Johnathan Doe</p>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-medium uppercase tracking-wide text-[#617589]">Email Address</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400 text-sm">mail</span>
+<p class="text-[#111418] text-base font-medium">john.doe@example.com</p>
+</div>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-medium uppercase tracking-wide text-[#617589]">Phone Number</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400 text-sm">call</span>
+<p class="text-[#111418] text-base font-medium">+1 (555) 123-4567</p>
+</div>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-medium uppercase tracking-wide text-[#617589]">Location</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400 text-sm">location_on</span>
+<p class="text-[#111418] text-base font-medium">San Francisco, CA</p>
+</div>
+</div>
+<div class="md:col-span-2 space-y-1">
+<p class="text-xs font-medium uppercase tracking-wide text-[#617589]">Bio</p>
+<p class="text-[#111418] text-base leading-relaxed">
+                                Professional handyman with over 10 years of experience in residential repairs. Specialized in plumbing, electrical troubleshooting, and furniture assembly. Committed to providing high-quality service and customer satisfaction. Always clean up after the job is done.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Specializations Section -->
+<div class="bg-white rounded-xl border border-[#dbe0e6] shadow-sm mb-6">
+<div class="flex items-center justify-between p-6 border-b border-[#f0f2f4]">
+<h3 class="text-lg font-bold text-[#111418]">Service Specializations</h3>
+<button class="text-primary hover:text-blue-700 text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">add</span> Add Skill
+                        </button>
+</div>
+<div class="p-6">
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20">
+                                Plumbing Repair
+                            </span>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20">
+                                Pipe Installation
+                            </span>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20">
+                                Leak Detection
+                            </span>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20">
+                                Water Heater Maintenance
+                            </span>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-background-light text-[#617589] border border-[#dbe0e6] border-dashed cursor-pointer hover:border-primary hover:text-primary transition-colors">
+                                + Add more
+                            </span>
+</div>
+</div>
+</div>
+<!-- Experience Section -->
+<div class="bg-white rounded-xl border border-[#dbe0e6] shadow-sm mb-6">
+<div class="flex items-center justify-between p-6 border-b border-[#f0f2f4]">
+<h3 class="text-lg font-bold text-[#111418]">Work Experience</h3>
+<button class="text-primary hover:text-blue-700 text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">add</span> Add Role
+                        </button>
+</div>
+<div class="p-6 space-y-8">
+<!-- Role 1 -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="size-3 rounded-full bg-primary mt-1.5"></div>
+<div class="w-0.5 bg-[#f0f2f4] h-full my-1"></div>
+</div>
+<div class="flex-1 pb-6 border-b border-[#f0f2f4] last:border-0 last:pb-0">
+<div class="flex flex-wrap justify-between items-start gap-2">
+<div>
+<h4 class="text-base font-bold text-[#111418]">Senior Plumber</h4>
+<p class="text-sm text-[#617589]">FixIt Corp • Full-time</p>
+</div>
+<span class="text-xs font-medium text-[#617589] bg-[#f0f2f4] px-2 py-1 rounded">2018 - Present</span>
+</div>
+<p class="text-sm text-[#111418] mt-2 text-opacity-80 leading-relaxed">
+                                    Leading a team of 5 plumbers for commercial and residential projects. Managed inventory and trained new apprentices.
+                                </p>
+</div>
+</div>
+<!-- Role 2 -->
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="size-3 rounded-full bg-[#dbe0e6] mt-1.5"></div>
+</div>
+<div class="flex-1">
+<div class="flex flex-wrap justify-between items-start gap-2">
+<div>
+<h4 class="text-base font-bold text-[#111418]">Apprentice Plumber</h4>
+<p class="text-sm text-[#617589]">City Water Works • Apprenticeship</p>
+</div>
+<span class="text-xs font-medium text-[#617589] bg-[#f0f2f4] px-2 py-1 rounded">2015 - 2018</span>
+</div>
+<p class="text-sm text-[#111418] mt-2 text-opacity-80 leading-relaxed">
+                                    Assisted senior technicians in daily repair tasks, system installations, and emergency call-outs.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Service Area Section -->
+<div class="bg-white rounded-xl border border-[#dbe0e6] shadow-sm">
+<div class="flex items-center justify-between p-6 border-b border-[#f0f2f4]">
+<h3 class="text-lg font-bold text-[#111418]">Service Area</h3>
+<button class="text-primary hover:text-blue-700 text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">edit</span> Adjust Area
+                        </button>
+</div>
+<div class="p-6">
+<div class="w-full h-48 bg-gray-100 rounded-lg overflow-hidden relative mb-4">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Map showing service radius in San Francisco" data-location="San Francisco" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBHThwIkbGve6rcookAjL9rKj4xHpWOYcVgaLGQPE-DeNVf9hO6xULpxdBFH9OItjValvctUiF48SDnlm-WB8ibCx7WhpKtn-VKCQ9krpUSlNmgT-8h7pxJIsrnPtpq39dh6iNf-XNM1eIGXivJ-MzBgLyj7O-x8iihFE_jAY7EEFJtrM7ynN2yWj52o3a6Gl0FuWENeyxypM2ia1PDG3Oy1AJLfqTR32B0pr0iCMsuDqXc82odw0wbxeU8Lzp9-1tddszlOUggmNU");'>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">my_location</span>
+<span class="text-xs font-bold text-[#111418]">15 mile radius</span>
+</div>
+</div>
+<p class="text-sm text-[#617589]">
+                            You are currently accepting jobs within a <span class="font-bold text-[#111418]">15 mile radius</span> of <span class="font-bold text-[#111418]">Downtown San Francisco (94103)</span>.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

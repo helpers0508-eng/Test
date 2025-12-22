@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111a22] px-10 py-3 shadow-sm">
+<div class="flex items-center gap-4 text-[#111418] dark:text-white">
+<div class="size-8 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">handshake</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Helpers</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<nav class="flex items-center gap-9">
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="/">Home</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="/">Find Helpers</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="/">Become a Helper</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="/">Login</a>
+</nav>
+<a class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-blue-600 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]" href="/signup"><span>Sign Up</span></a>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="md:hidden flex items-center text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</header>
+<!-- Main Layout -->
+<main class="layout-container flex h-full grow flex-col">
+<div class="px-5 md:px-10 lg:px-40 flex flex-1 justify-center py-10">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+<!-- Page Heading & Actions -->
+<div class="flex flex-wrap justify-between items-end gap-6 pb-6 border-b border-slate-200 dark:border-slate-800">
+<div class="flex min-w-72 flex-col gap-3">
+<h1 class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Terms of Service</h1>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal">Last Updated: October 24, 2023</p>
+</div>
+<div class="flex gap-3">
+<button class="flex cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-900 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="material-symbols-outlined text-[20px]">print</span>
+<span class="truncate">Print</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span class="truncate">Download PDF</span>
+</button>
+</div>
+</div>
+<!-- Navigation Tabs -->
+<div class="pt-6 pb-8">
+<div class="flex border-b border-slate-200 dark:border-slate-800 gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-primary pb-[13px] px-2 transition-colors" href="/">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Terms for Users</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 pb-[13px] px-2 transition-colors" href="/">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Terms for Helpers</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 pb-[13px] px-2 transition-colors" href="/">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Privacy Policy</p>
+</a>
+</div>
+</div>
+<!-- Content Area with Sidebar -->
+<div class="flex flex-col lg:flex-row gap-12">
+<!-- Sticky Sidebar (Table of Contents) -->
+<aside class="hidden lg:block w-72 shrink-0">
+<div class="sticky-sidebar flex flex-col gap-6 rounded-xl bg-white dark:bg-[#1a2632] p-5 shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex flex-col border-b border-slate-100 dark:border-slate-700 pb-4">
+<h3 class="text-slate-900 dark:text-white text-base font-bold leading-normal">Table of Contents</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Quick navigation</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary transition-colors" href="#intro">
+<span class="material-symbols-outlined text-[20px] filled">info</span>
+<span class="text-sm font-medium leading-normal">1. Introduction</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" href="#definitions">
+<span class="material-symbols-outlined text-[20px]">book</span>
+<span class="text-sm font-medium leading-normal">2. Definitions</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" href="#registration">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span class="text-sm font-medium leading-normal">3. Account Registration</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" href="#conduct">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+<span class="text-sm font-medium leading-normal">4. User &amp; Helper Conduct</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" href="#payments">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+<span class="text-sm font-medium leading-normal">5. Payments &amp; Cancellations</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" href="#dispute">
+<span class="material-symbols-outlined text-[20px]">gavel</span>
+<span class="text-sm font-medium leading-normal">6. Dispute Resolution</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" href="#liability">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+<span class="text-sm font-medium leading-normal">7. Liability &amp; Disclaimers</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors" href="#termination">
+<span class="material-symbols-outlined text-[20px]">cancel</span>
+<span class="text-sm font-medium leading-normal">8. Termination</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700">
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2">Need help understanding?</p>
+<a class="text-sm font-semibold text-primary hover:underline" href="/">Contact Legal Support</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Text -->
+<div class="flex-1 bg-white dark:bg-[#1a2632] p-8 md:p-12 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
+<!-- Section 1 -->
+<section class="mb-12 scroll-mt-28" id="intro">
+<div class="flex items-center gap-3 mb-4">
+<span class="flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary font-bold text-sm">1</span>
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight">Introduction</h2>
+</div>
+<div class="prose prose-slate dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 leading-relaxed">
+<p class="mb-4">
+                                        Welcome to Helpers ("we," "our," or "us"). By accessing or using our website, mobile application, and services (collectively, the "Platform"), you agree to be bound by these Terms of Service ("Terms"). These Terms constitute a legally binding agreement between you and Helpers regarding your use of the Platform.
+                                    </p>
+<p>
+                                        Please read these Terms carefully before using our services. If you do not agree to these Terms, you may not use the Platform. We may update these Terms from time to time, and your continued use of the Platform constitutes acceptance of those changes.
+                                    </p>
+</div>
+</section>
+<!-- Section 2 -->
+<section class="mb-12 scroll-mt-28" id="definitions">
+<div class="flex items-center gap-3 mb-4">
+<span class="flex items-center justify-center size-8 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-sm">2</span>
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight">Definitions</h2>
+</div>
+<div class="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
+<div class="bg-slate-50 dark:bg-[#202d3a] p-4 rounded-lg border border-slate-100 dark:border-slate-700">
+<p class="font-semibold text-slate-900 dark:text-white mb-1">"User"</p>
+<p>Refers to any individual or entity who requests services through the Platform.</p>
+</div>
+<div class="bg-slate-50 dark:bg-[#202d3a] p-4 rounded-lg border border-slate-100 dark:border-slate-700">
+<p class="font-semibold text-slate-900 dark:text-white mb-1">"Helper"</p>
+<p>Refers to independent contractors or service providers who offer their services to Users via the Platform.</p>
+</div>
+<div class="bg-slate-50 dark:bg-[#202d3a] p-4 rounded-lg border border-slate-100 dark:border-slate-700">
+<p class="font-semibold text-slate-900 dark:text-white mb-1">"Service"</p>
+<p>Refers to the specific task, job, or project agreed upon between a User and a Helper.</p>
+</div>
+</div>
+</section>
+<!-- Section 3 -->
+<section class="mb-12 scroll-mt-28" id="registration">
+<div class="flex items-center gap-3 mb-4">
+<span class="flex items-center justify-center size-8 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-sm">3</span>
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight">Account Registration</h2>
+</div>
+<div class="text-slate-600 dark:text-slate-300 leading-relaxed">
+<p class="mb-4">
+                                        To access certain features of the Platform, you must register for an account. You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete.
+                                    </p>
+<ul class="list-disc pl-5 space-y-2 mb-4">
+<li>You must be at least 18 years old to create an account.</li>
+<li>You are responsible for safeguarding your password.</li>
+<li>You agree not to disclose your password to any third party.</li>
+<li>You must take sole responsibility for any activities or actions under your account, whether or not you have authorized such activities or actions.</li>
+</ul>
+</div>
+</section>
+<!-- Section 4 -->
+<section class="mb-12 scroll-mt-28" id="conduct">
+<div class="flex items-center gap-3 mb-4">
+<span class="flex items-center justify-center size-8 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-sm">4</span>
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight">User &amp; Helper Conduct</h2>
+</div>
+<div class="text-slate-600 dark:text-slate-300 leading-relaxed">
+<p class="mb-4">
+                                        Users and Helpers are expected to interact with each other and with the Platform in a respectful and professional manner. Prohibited conduct includes, but is not limited to:
+                                    </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+<div class="flex gap-3 p-3 bg-red-50 dark:bg-red-900/10 rounded border border-red-100 dark:border-red-900/30">
+<span class="material-symbols-outlined text-red-500 shrink-0">block</span>
+<span class="text-sm">Harassment, discrimination, or hate speech.</span>
+</div>
+<div class="flex gap-3 p-3 bg-red-50 dark:bg-red-900/10 rounded border border-red-100 dark:border-red-900/30">
+<span class="material-symbols-outlined text-red-500 shrink-0">block</span>
+<span class="text-sm">Fraudulent activities or misrepresentation.</span>
+</div>
+<div class="flex gap-3 p-3 bg-red-50 dark:bg-red-900/10 rounded border border-red-100 dark:border-red-900/30">
+<span class="material-symbols-outlined text-red-500 shrink-0">block</span>
+<span class="text-sm">Soliciting payment outside the Platform.</span>
+</div>
+<div class="flex gap-3 p-3 bg-red-50 dark:bg-red-900/10 rounded border border-red-100 dark:border-red-900/30">
+<span class="material-symbols-outlined text-red-500 shrink-0">block</span>
+<span class="text-sm">Creating multiple accounts to abuse promotions.</span>
+</div>
+</div>
+<p>Violating these guidelines may result in immediate suspension or termination of your account.</p>
+</div>
+</section>
+<!-- Section 5 -->
+<section class="mb-12 scroll-mt-28" id="payments">
+<div class="flex items-center gap-3 mb-4">
+<span class="flex items-center justify-center size-8 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-sm">5</span>
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight">Payments &amp; Cancellations</h2>
+</div>
+<div class="text-slate-600 dark:text-slate-300 leading-relaxed">
+<p class="mb-4">
+                                        Users agree to pay for Services ordered through the Platform. Helpers agree to perform the Services for the agreed-upon price.
+                                    </p>
+<h3 class="text-slate-900 dark:text-white font-bold text-lg mt-6 mb-2">Service Fees</h3>
+<p class="mb-4">Helpers charges a service fee for facilitating the transaction. This fee is clearly displayed before booking confirmation.</p>
+<h3 class="text-slate-900 dark:text-white font-bold text-lg mt-6 mb-2">Cancellation Policy</h3>
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left border rounded-lg overflow-hidden">
+<thead class="bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white font-bold">
+<tr>
+<th class="px-4 py-3 border-b border-slate-200 dark:border-slate-700">Time of Cancellation</th>
+<th class="px-4 py-3 border-b border-slate-200 dark:border-slate-700">Refund Amount</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-700">
+<tr>
+<td class="px-4 py-3">&gt; 24 hours before service</td>
+<td class="px-4 py-3 text-green-600 font-medium">100% Refund</td>
+</tr>
+<tr>
+<td class="px-4 py-3">12-24 hours before service</td>
+<td class="px-4 py-3 text-yellow-600 font-medium">50% Refund</td>
+</tr>
+<tr>
+<td class="px-4 py-3">&lt; 12 hours before service</td>
+<td class="px-4 py-3 text-red-600 font-medium">No Refund</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Section 6 -->
+<section class="mb-12 scroll-mt-28" id="dispute">
+<div class="flex items-center gap-3 mb-4">
+<span class="flex items-center justify-center size-8 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-sm">6</span>
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight">Dispute Resolution</h2>
+</div>
+<div class="bg-blue-50 dark:bg-blue-900/10 p-5 rounded-lg border border-blue-100 dark:border-blue-900/30 text-slate-700 dark:text-slate-300">
+<p class="mb-4">
+                                        We encourage Users and Helpers to resolve disputes amicably. However, if a resolution cannot be reached, Helpers provides a Mediation Center.
+                                    </p>
+<p class="mb-4">
+                                        By using the Platform, you agree to submit any disputes arising from the use of Services to binding arbitration, rather than to a court of law, unless otherwise required by applicable law.
+                                    </p>
+<a class="text-primary font-bold hover:underline inline-flex items-center gap-1" href="/">
+                                        Read full Dispute Policy <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Section 7 -->
+<section class="mb-12 scroll-mt-28" id="liability">
+<div class="flex items-center gap-3 mb-4">
+<span class="flex items-center justify-center size-8 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-sm">7</span>
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight">Liability &amp; Disclaimers</h2>
+</div>
+<div class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm">
+<p class="mb-4 uppercase font-bold text-slate-400 text-xs tracking-wider">Disclaimer of Warranties</p>
+<p class="mb-6">
+                                        THE PLATFORM AND SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE." WE DISCLAIM ALL REPRESENTATIONS AND WARRANTIES, EXPRESS, IMPLIED, OR STATUTORY, NOT EXPRESSLY SET OUT IN THESE TERMS.
+                                    </p>
+<p class="mb-4 uppercase font-bold text-slate-400 text-xs tracking-wider">Limitation of Liability</p>
+<p>
+                                        HELPERS SHALL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, PUNITIVE, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, LOST DATA, PERSONAL INJURY, OR PROPERTY DAMAGE RELATED TO, IN CONNECTION WITH, OR OTHERWISE RESULTING FROM ANY USE OF THE SERVICES.
+                                    </p>
+</div>
+</section>
+<!-- Section 8 -->
+<section class="mb-8 scroll-mt-28" id="termination">
+<div class="flex items-center gap-3 mb-4">
+<span class="flex items-center justify-center size-8 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-sm">8</span>
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight">Termination</h2>
+</div>
+<div class="text-slate-600 dark:text-slate-300 leading-relaxed">
+<p>
+                                        You may terminate these Terms at any time by closing your account and discontinuing your use of the Platform. Helpers may immediately terminate these Terms or any Services with respect to you, or generally cease offering or deny access to the Services or any portion thereof, at any time for any reason.
+                                    </p>
+</div>
+</section>
+<!-- Bottom Action -->
+<div class="mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
+<div>
+<p class="text-slate-900 dark:text-white font-bold text-lg">Still have questions?</p>
+<p class="text-slate-500 dark:text-slate-400">Our legal team is here to help clarify any uncertainties.</p>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-slate-900 dark:bg-slate-700 hover:bg-slate-800 dark:hover:bg-slate-600 text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate">Contact Legal Support</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-[#111a22] border-t border-slate-200 dark:border-slate-800 py-12 px-10">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-[#111418] dark:text-white">
+<div class="size-6 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">handshake</span>
+</div>
+<h2 class="text-lg font-bold">Helpers</h2>
+</div>
+<p class="text-slate-500 text-sm">Connecting you with trusted local helpers for every task imaginable.</p>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white mb-4">Company</h3>
+<ul class="flex flex-col gap-2 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary" href="/about">About Us</a></li>
+<li><a class="hover:text-primary" href="/careers">Careers</a></li>
+<li><a class="hover:text-primary" href="/">Blog</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white mb-4">Support</h3>
+<ul class="flex flex-col gap-2 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary" href="/help">Help Center</a></li>
+<li><a class="hover:text-primary" href="/">Safety</a></li>
+<li><a class="hover:text-primary" href="/terms">Terms of Service</a></li>
+<li><a class="hover:text-primary" href="/privacy">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white mb-4">Work with us</h3>
+<ul class="flex flex-col gap-2 text-sm text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary" href="/">Become a Helper</a></li>
+<li><a class="hover:text-primary" href="/">Affiliate Program</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400">
+<p>© 2023 Helpers Inc. All rights reserved.</p>
+<div class="flex gap-4 mt-4 md:mt-0">
+<a class="hover:text-slate-600 dark:hover:text-slate-200" href="/">Twitter</a>
+<a class="hover:text-slate-600 dark:hover:text-slate-200" href="/">Instagram</a>
+<a class="hover:text-slate-600 dark:hover:text-slate-200" href="/">LinkedIn</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

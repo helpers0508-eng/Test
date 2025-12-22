@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helper Availability - Helpers</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2632",
+                        "border-light": "#e5e7eb",
+                        "border-dark": "#2d3a46",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark px-6 py-3 z-20">
+<div class="flex items-center gap-4 text-[#111418] dark:text-white">
+<div class="size-8 flex items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">handyman</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight">Helpers Workspace</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<button class="flex items-center gap-2 rounded-full border border-border-light dark:border-border-dark px-3 py-1.5 text-sm font-medium hover:bg-background-light dark:hover:bg-background-dark">
+<span class="material-symbols-outlined text-lg">help</span>
+<span class="hidden sm:inline">Support</span>
+</button>
+<button class="relative rounded-full p-2 hover:bg-background-light dark:hover:bg-background-dark text-[#111418] dark:text-white">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 rounded-full bg-red-500 border-2 border-surface-light dark:border-surface-dark"></span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-9 border border-border-light dark:border-border-dark cursor-pointer" data-alt="User profile picture showing a smiling professional" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCBdxtS6LeM77UuBOvOjA0ZoAuogYdbBIdLe4gT5Pe_bQzTP6DveS9J5cT64voWULQmqCO1o9cOk-xPn6pXFz8fNpVK5OekqUVQIzuZKz1zb-RU08cKa66r7Nxadtp0SGJJk_sQ17UwGr0AEzhzHrvv25tMe14ntnmMtiHg_ovmU_cNzkvhPYOGHsSwAqreYQtrfQXYQ8Ko9Exm0W1X_nNGiTHz3Es6VS7DvKIqT47vhqTQGFeBRwYD-FsopnBCKO1jPIvSlr_GQo");'>
+</div>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- Side Navigation -->
+<aside class="hidden w-64 flex-col border-r border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark lg:flex z-10">
+<div class="flex flex-col gap-4 p-4">
+<div class="flex flex-col gap-1 px-2">
+<h1 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Main Menu</h1>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#617589] dark:text-gray-400 hover:bg-background-light dark:hover:bg-background-dark hover:text-[#111418] dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#617589] dark:text-gray-400 hover:bg-background-light dark:hover:bg-background-dark hover:text-[#111418] dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="text-sm font-medium">Jobs</span>
+<span class="ml-auto rounded-full bg-primary/10 px-2 py-0.5 text-xs font-bold text-primary">3</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined fill-current">calendar_month</span>
+<span class="text-sm font-bold">Availability</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#617589] dark:text-gray-400 hover:bg-background-light dark:hover:bg-background-dark hover:text-[#111418] dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="text-sm font-medium">Earnings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#617589] dark:text-gray-400 hover:bg-background-light dark:hover:bg-background-dark hover:text-[#111418] dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">reviews</span>
+<span class="text-sm font-medium">Reviews</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-4 border-t border-border-light dark:border-border-dark">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#617589] dark:text-gray-400 hover:bg-background-light dark:hover:bg-background-dark hover:text-[#111418] dark:hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex flex-1 flex-col overflow-y-auto bg-background-light dark:bg-background-dark">
+<!-- Page Header & Actions -->
+<div class="sticky top-0 z-10 border-b border-border-light dark:border-border-dark bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm px-6 py-5">
+<div class="mx-auto flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
+<div>
+<h1 class="text-2xl font-bold tracking-tight text-[#111418] dark:text-white">Manage Availability</h1>
+<p class="text-sm text-gray-500 dark:text-gray-400">Set your recurring schedule and block out dates for time off.</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 rounded-lg border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark px-4 py-2 shadow-sm">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+</span>
+<span class="text-sm font-medium">Accepting Jobs</span>
+<label class="relative ml-2 inline-flex cursor-pointer items-center">
+<input checked="" class="peer sr-only" type="checkbox"/>
+<div class="h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none dark:bg-gray-700 dark:border-gray-600"></div>
+</label>
+</div>
+<button class="hidden md:flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white shadow-sm hover:bg-blue-600 transition-colors">
+<span class="material-symbols-outlined text-[18px]">save</span>
+                                Save Changes
+                            </button>
+</div>
+</div>
+</div>
+<!-- Main Grid Layout -->
+<div class="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-6 p-6 lg:flex-row">
+<!-- Left: Calendar Visual -->
+<div class="flex flex-1 flex-col gap-4 rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark p-0 shadow-sm overflow-hidden">
+<!-- Calendar Toolbar -->
+<div class="flex items-center justify-between border-b border-border-light dark:border-border-dark px-5 py-4">
+<div class="flex items-center gap-2">
+<button class="rounded-full p-1.5 hover:bg-background-light dark:hover:bg-background-dark text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<span class="text-lg font-bold text-[#111418] dark:text-white">Oct 22 — 28, 2023</span>
+<button class="rounded-full p-1.5 hover:bg-background-light dark:hover:bg-background-dark text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="flex gap-2 text-sm">
+<button class="rounded-md bg-background-light dark:bg-background-dark px-3 py-1.5 font-medium text-[#111418] dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700">Week</button>
+<button class="rounded-md px-3 py-1.5 font-medium text-gray-500 dark:text-gray-400 hover:text-[#111418] dark:hover:text-white">Month</button>
+</div>
+</div>
+<!-- Weekly Grid -->
+<div class="flex flex-col overflow-x-auto">
+<!-- Header Row (Days) -->
+<div class="grid grid-cols-8 border-b border-border-light dark:border-border-dark bg-background-light/30 dark:bg-background-dark/30 min-w-[700px]">
+<div class="border-r border-border-light dark:border-border-dark p-3 text-center text-xs font-medium text-gray-500">GMT-4</div>
+<div class="p-3 text-center"><p class="text-xs font-bold text-gray-500 uppercase">Mon</p><p class="text-sm font-bold">22</p></div>
+<div class="p-3 text-center"><p class="text-xs font-bold text-gray-500 uppercase">Tue</p><p class="text-sm font-bold">23</p></div>
+<div class="p-3 text-center"><p class="text-xs font-bold text-gray-500 uppercase">Wed</p><p class="text-sm font-bold bg-primary text-white rounded-full w-7 h-7 flex items-center justify-center mx-auto mt-1">24</p></div>
+<div class="p-3 text-center"><p class="text-xs font-bold text-gray-500 uppercase">Thu</p><p class="text-sm font-bold">25</p></div>
+<div class="p-3 text-center"><p class="text-xs font-bold text-gray-500 uppercase">Fri</p><p class="text-sm font-bold">26</p></div>
+<div class="p-3 text-center"><p class="text-xs font-bold text-gray-500 uppercase">Sat</p><p class="text-sm font-bold">27</p></div>
+<div class="p-3 text-center"><p class="text-xs font-bold text-gray-500 uppercase">Sun</p><p class="text-sm font-bold">28</p></div>
+</div>
+<!-- Time Grid Body -->
+<div class="relative grid grid-cols-8 overflow-y-auto h-[600px] min-w-[700px]">
+<!-- Background Grid Lines -->
+<div class="col-span-8 grid grid-rows-[repeat(11,minmax(60px,1fr))]">
+<!-- 8 AM -->
+<div class="grid grid-cols-8 border-b border-border-light/50 dark:border-border-dark/50">
+<div class="border-r border-border-light dark:border-border-dark px-2 py-1 text-right text-xs text-gray-400">8 AM</div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div> <!-- Mon -->
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div> <!-- Tue -->
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div> <!-- Wed -->
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div> <!-- Thu -->
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div> <!-- Fri -->
+<div class="border-r border-border-light/50 dark:border-border-dark/50 bg-gray-50/50 dark:bg-gray-800/20"></div> <!-- Sat -->
+<div class="bg-gray-50/50 dark:bg-gray-800/20"></div> <!-- Sun -->
+</div>
+<!-- 9 AM -->
+<div class="grid grid-cols-8 border-b border-border-light/50 dark:border-border-dark/50">
+<div class="border-r border-border-light dark:border-border-dark px-2 py-1 text-right text-xs text-gray-400">9 AM</div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50 bg-gray-50/50 dark:bg-gray-800/20"></div>
+<div class="bg-gray-50/50 dark:bg-gray-800/20"></div>
+</div>
+<!-- 10 AM -->
+<div class="grid grid-cols-8 border-b border-border-light/50 dark:border-border-dark/50">
+<div class="border-r border-border-light dark:border-border-dark px-2 py-1 text-right text-xs text-gray-400">10 AM</div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50 bg-gray-50/50 dark:bg-gray-800/20"></div>
+<div class="bg-gray-50/50 dark:bg-gray-800/20"></div>
+</div>
+<!-- 11 AM -->
+<div class="grid grid-cols-8 border-b border-border-light/50 dark:border-border-dark/50">
+<div class="border-r border-border-light dark:border-border-dark px-2 py-1 text-right text-xs text-gray-400">11 AM</div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50 bg-gray-50/50 dark:bg-gray-800/20"></div>
+<div class="bg-gray-50/50 dark:bg-gray-800/20"></div>
+</div>
+<!-- 12 PM -->
+<div class="grid grid-cols-8 border-b border-border-light/50 dark:border-border-dark/50">
+<div class="border-r border-border-light dark:border-border-dark px-2 py-1 text-right text-xs text-gray-400">12 PM</div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50 bg-gray-50/50 dark:bg-gray-800/20"></div>
+<div class="bg-gray-50/50 dark:bg-gray-800/20"></div>
+</div>
+<!-- 1 PM -->
+<div class="grid grid-cols-8 border-b border-border-light/50 dark:border-border-dark/50">
+<div class="border-r border-border-light dark:border-border-dark px-2 py-1 text-right text-xs text-gray-400">1 PM</div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50 bg-gray-50/50 dark:bg-gray-800/20"></div>
+<div class="bg-gray-50/50 dark:bg-gray-800/20"></div>
+</div>
+<!-- 2 PM -->
+<div class="grid grid-cols-8 border-b border-border-light/50 dark:border-border-dark/50">
+<div class="border-r border-border-light dark:border-border-dark px-2 py-1 text-right text-xs text-gray-400">2 PM</div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50 bg-gray-50/50 dark:bg-gray-800/20"></div>
+<div class="bg-gray-50/50 dark:bg-gray-800/20"></div>
+</div>
+<!-- 3 PM -->
+<div class="grid grid-cols-8 border-b border-border-light/50 dark:border-border-dark/50">
+<div class="border-r border-border-light dark:border-border-dark px-2 py-1 text-right text-xs text-gray-400">3 PM</div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50 bg-gray-50/50 dark:bg-gray-800/20"></div>
+<div class="bg-gray-50/50 dark:bg-gray-800/20"></div>
+</div>
+<!-- 4 PM -->
+<div class="grid grid-cols-8 border-b border-border-light/50 dark:border-border-dark/50">
+<div class="border-r border-border-light dark:border-border-dark px-2 py-1 text-right text-xs text-gray-400">4 PM</div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50 bg-gray-50/50 dark:bg-gray-800/20"></div>
+<div class="bg-gray-50/50 dark:bg-gray-800/20"></div>
+</div>
+<!-- 5 PM -->
+<div class="grid grid-cols-8 border-b border-border-light/50 dark:border-border-dark/50">
+<div class="border-r border-border-light dark:border-border-dark px-2 py-1 text-right text-xs text-gray-400">5 PM</div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50"></div>
+<div class="border-r border-border-light/50 dark:border-border-dark/50 bg-gray-50/50 dark:bg-gray-800/20"></div>
+<div class="bg-gray-50/50 dark:bg-gray-800/20"></div>
+</div>
+</div>
+<!-- Events Overlay -->
+<div class="absolute inset-0 grid grid-cols-8 pointer-events-none mt-[1px]">
+<div class="col-start-1"></div> <!-- Spacer for time labels -->
+<!-- Monday: Available 9am - 12pm -->
+<div class="relative col-start-2 h-full">
+<div class="absolute top-[60px] h-[180px] w-[95%] left-[2.5%] rounded bg-primary/20 border-l-4 border-primary p-2 pointer-events-auto hover:bg-primary/30 transition-colors cursor-pointer">
+<p class="text-xs font-bold text-primary">Available</p>
+<p class="text-[10px] text-primary/80">9:00 AM - 12:00 PM</p>
+</div>
+</div>
+<!-- Tuesday: Booked Job 10am - 1pm -->
+<div class="relative col-start-3 h-full">
+<div class="absolute top-[120px] h-[180px] w-[95%] left-[2.5%] rounded bg-gray-200 dark:bg-gray-700 border-l-4 border-gray-500 dark:border-gray-400 p-2 pointer-events-auto cursor-pointer shadow-sm z-10">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-[14px] text-gray-700 dark:text-gray-300">lock</span>
+<p class="text-xs font-bold text-gray-700 dark:text-gray-200">Booked</p>
+</div>
+<p class="text-[10px] text-gray-600 dark:text-gray-400">House Cleaning</p>
+<p class="text-[10px] text-gray-600 dark:text-gray-400 mt-1">10:00 AM - 1:00 PM</p>
+</div>
+</div>
+<!-- Wednesday: Available Full Day (9-5) -->
+<div class="relative col-start-4 h-full">
+<div class="absolute top-[60px] h-[480px] w-[95%] left-[2.5%] rounded bg-primary/90 border-l-4 border-blue-800 p-2 pointer-events-auto shadow-md cursor-pointer group">
+<div class="flex justify-between items-start">
+<p class="text-xs font-bold text-white">Available</p>
+<span class="material-symbols-outlined text-white text-[14px] opacity-0 group-hover:opacity-100">edit</span>
+</div>
+<p class="text-[10px] text-white/90">9:00 AM - 5:00 PM</p>
+</div>
+</div>
+<!-- Thursday: Available Split -->
+<div class="relative col-start-5 h-full">
+<div class="absolute top-[60px] h-[120px] w-[95%] left-[2.5%] rounded bg-primary/20 border-l-4 border-primary p-2 pointer-events-auto hover:bg-primary/30 cursor-pointer">
+<p class="text-xs font-bold text-primary">Available</p>
+<p class="text-[10px] text-primary/80">9:00 - 11:00</p>
+</div>
+<div class="absolute top-[240px] h-[240px] w-[95%] left-[2.5%] rounded bg-primary/20 border-l-4 border-primary p-2 pointer-events-auto hover:bg-primary/30 cursor-pointer">
+<p class="text-xs font-bold text-primary">Available</p>
+<p class="text-[10px] text-primary/80">1:00 - 5:00</p>
+</div>
+</div>
+<!-- Friday: Time Off -->
+<div class="relative col-start-6 h-full">
+<div class="absolute top-[0px] bottom-0 w-[95%] left-[2.5%] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMTBMMTAgMVYwTDAgMTBaIiBmaWxsPSIjZmVjYWNhIiBmaWxsLW9wYWNpdHk9IjAuNCIvPjwvc3ZnPg==')] border border-red-200 dark:border-red-900/30">
+<div class="absolute top-10 left-0 w-full text-center">
+<span class="inline-flex items-center gap-1 rounded bg-red-100 px-2 py-1 text-xs font-medium text-red-700 dark:bg-red-900/50 dark:text-red-300">
+<span class="material-symbols-outlined text-[14px]">block</span>
+                                                    Time Off
+                                                </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Calendar Footer -->
+<div class="flex items-center gap-6 border-t border-border-light dark:border-border-dark p-4 text-sm">
+<div class="flex items-center gap-2">
+<div class="h-3 w-3 rounded bg-primary"></div>
+<span class="text-gray-600 dark:text-gray-300">Available</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="h-3 w-3 rounded bg-gray-400"></div>
+<span class="text-gray-600 dark:text-gray-300">Booked</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="h-3 w-3 rounded border border-red-300 bg-red-50 dark:bg-red-900/20"></div>
+<span class="text-gray-600 dark:text-gray-300">Blocked</span>
+</div>
+</div>
+</div>
+<!-- Right: Settings Sidebar -->
+<div class="flex w-full flex-col gap-6 lg:w-80">
+<!-- Quick Add -->
+<div class="rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark p-5 shadow-sm">
+<h3 class="mb-4 text-base font-bold text-[#111418] dark:text-white">Standard Hours</h3>
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<label class="text-sm font-medium text-gray-700 dark:text-gray-300">Repeat Weekly</label>
+<label class="relative inline-flex cursor-pointer items-center">
+<input checked="" class="peer sr-only" type="checkbox"/>
+<div class="h-5 w-9 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-4 after:w-4 after:rounded-full after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary peer-checked:after:translate-x-full peer-focus:outline-none dark:bg-gray-700"></div>
+</label>
+</div>
+<div class="space-y-3">
+<div class="rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark p-3">
+<div class="flex items-center justify-between mb-2">
+<span class="text-sm font-medium">Mon - Fri</span>
+<button class="text-xs text-primary font-medium hover:underline">Edit</button>
+</div>
+<div class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+<span class="bg-white dark:bg-surface-dark px-2 py-1 rounded border border-border-light dark:border-border-dark">09:00 AM</span>
+<span>-</span>
+<span class="bg-white dark:bg-surface-dark px-2 py-1 rounded border border-border-light dark:border-border-dark">05:00 PM</span>
+</div>
+</div>
+<div class="rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark p-3 opacity-60">
+<div class="flex items-center justify-between mb-2">
+<span class="text-sm font-medium">Sat - Sun</span>
+<button class="text-xs text-primary font-medium hover:underline">Edit</button>
+</div>
+<div class="text-sm text-gray-500 italic">No availability set</div>
+</div>
+</div>
+<button class="mt-2 w-full rounded-lg border border-dashed border-gray-300 dark:border-gray-600 p-2 text-sm font-medium text-gray-500 hover:border-primary hover:text-primary transition-colors">
+                                    + Add New Rule
+                                </button>
+</div>
+</div>
+<!-- Exceptions / Time Off -->
+<div class="rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark p-5 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-base font-bold text-[#111418] dark:text-white">Upcoming Time Off</h3>
+<button class="rounded-full hover:bg-background-light dark:hover:bg-background-dark p-1 text-primary">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex items-start gap-3 rounded-lg bg-red-50 dark:bg-red-900/10 p-3">
+<div class="mt-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-white dark:bg-red-900/30 text-red-600 dark:text-red-400 shadow-sm">
+<span class="text-xs font-bold flex flex-col items-center leading-none">
+<span class="text-[9px] uppercase">Oct</span>
+<span>26</span>
+</span>
+</div>
+<div>
+<p class="text-sm font-medium text-gray-900 dark:text-white">Doctor's Appointment</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">All day</p>
+</div>
+<button class="ml-auto text-gray-400 hover:text-red-500">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex items-start gap-3 rounded-lg border border-border-light dark:border-border-dark p-3">
+<div class="mt-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-background-light dark:bg-background-dark text-gray-600 dark:text-gray-300">
+<span class="text-xs font-bold flex flex-col items-center leading-none">
+<span class="text-[9px] uppercase">Nov</span>
+<span>02</span>
+</span>
+</div>
+<div>
+<p class="text-sm font-medium text-gray-900 dark:text-white">Family Vacation</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Nov 2 - Nov 5</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Calendar Picker Small -->
+<div class="rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark p-4 shadow-sm">
+<div class="mb-2 flex items-center justify-between">
+<span class="font-bold text-sm">October 2023</span>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-gray-400 text-sm cursor-pointer hover:text-primary">chevron_left</span>
+<span class="material-symbols-outlined text-gray-400 text-sm cursor-pointer hover:text-primary">chevron_right</span>
+</div>
+</div>
+<div class="grid grid-cols-7 text-center text-xs gap-y-2">
+<span class="text-gray-400">S</span>
+<span class="text-gray-400">M</span>
+<span class="text-gray-400">T</span>
+<span class="text-gray-400">W</span>
+<span class="text-gray-400">T</span>
+<span class="text-gray-400">F</span>
+<span class="text-gray-400">S</span>
+<span class="text-gray-300">29</span>
+<span class="text-gray-300">30</span>
+<span>1</span>
+<span>2</span>
+<span>3</span>
+<span>4</span>
+<span>5</span>
+<span>6</span>
+<span>7</span>
+<span>8</span>
+<span>9</span>
+<span>10</span>
+<span>11</span>
+<span>12</span>
+<span>13</span>
+<span>14</span>
+<span>15</span>
+<span>16</span>
+<span>17</span>
+<span>18</span>
+<span>19</span>
+<span>20</span>
+<span>21</span>
+<span class="rounded-full bg-primary/10 text-primary font-bold">22</span>
+<span class="rounded-full bg-primary/10 text-primary font-bold">23</span>
+<span class="rounded-full bg-primary text-white font-bold">24</span>
+<span class="rounded-full bg-primary/10 text-primary font-bold">25</span>
+<span class="rounded-full bg-primary/10 text-primary font-bold">26</span>
+<span class="rounded-full bg-primary/10 text-primary font-bold">27</span>
+<span class="rounded-full bg-primary/10 text-primary font-bold">28</span>
+<span>29</span>
+<span>30</span>
+<span>31</span>
+<span class="text-gray-300">1</span>
+<span class="text-gray-300">2</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Mobile Save Button (Fixed Footer) -->
+<div class="md:hidden sticky bottom-0 z-20 border-t border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark p-4">
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-3 text-sm font-bold text-white shadow-sm">
+<span class="material-symbols-outlined text-[18px]">save</span>
+                        Save Changes
+                    </button>
+</div>
+</main>
+</div>
+</div>
+</body></html>

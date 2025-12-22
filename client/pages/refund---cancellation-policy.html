@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main-light dark:text-text-main-dark transition-colors duration-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex w-full flex-col border-b border-slate-200 dark:border-slate-800 bg-surface-light dark:bg-surface-dark">
+<div class="flex items-center justify-between whitespace-nowrap px-10 py-3 max-md:px-4">
+<div class="flex items-center gap-4 text-text-main-light dark:text-text-main-dark">
+<img src="/logo.jpeg" alt="Helpers Logo" class="h-8 w-auto object-contain">
+<h2 class="text-text-main-light dark:text-text-main-dark text-lg font-bold leading-tight tracking-[-0.015em]">Helpers</h2>
+</div>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-text-main-light dark:text-text-main-dark text-sm font-medium leading-normal hover:text-primary transition-colors" href="/">Find Services</a>
+<a class="text-text-main-light dark:text-text-main-dark text-sm font-medium leading-normal hover:text-primary transition-colors" href="/">Become a Helper</a>
+<a class="text-text-main-light dark:text-text-main-dark text-sm font-medium leading-normal hover:text-primary transition-colors" href="/">Login</a>
+<a class="text-text-main-light dark:text-text-main-dark text-sm font-medium leading-normal hover:text-primary transition-colors" href="/">Sign Up</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Get Started</span>
+</button>
+</div>
+<!-- Mobile Menu Button -->
+<button class="md:hidden flex items-center justify-center text-text-main-light dark:text-text-main-dark">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Layout -->
+<div class="flex flex-1 justify-center py-8 md:py-12 px-4 md:px-6 lg:px-8">
+<div class="flex flex-col lg:flex-row w-full max-w-7xl gap-8 lg:gap-16">
+<!-- Sidebar Navigation (Sticky) -->
+<aside class="w-full lg:w-72 shrink-0">
+<div class="lg:sticky lg:top-24 flex flex-col gap-6">
+<!-- Mobile/Desktop Title for Sidebar -->
+<div class="flex items-center gap-3 px-4 lg:px-0">
+<span class="material-symbols-outlined text-primary">policy</span>
+<h3 class="font-bold text-lg text-text-main-light dark:text-text-main-dark">On this page</h3>
+</div>
+<nav class="flex flex-col gap-1 bg-surface-light dark:bg-surface-dark rounded-xl p-2 lg:bg-transparent lg:dark:bg-transparent lg:p-0 shadow-sm lg:shadow-none border border-slate-100 dark:border-slate-800 lg:border-none">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/10 text-primary font-medium transition-colors" href="#introduction">
+<span class="material-symbols-outlined text-xl">info</span>
+<span class="text-sm">Introduction</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-secondary-light dark:text-text-secondary-dark hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-text-main-light dark:hover:text-text-main-dark transition-colors" href="#cancellation-window">
+<span class="material-symbols-outlined text-xl">schedule</span>
+<span class="text-sm">Cancellation Window</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-secondary-light dark:text-text-secondary-dark hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-text-main-light dark:hover:text-text-main-dark transition-colors" href="#refund-eligibility">
+<span class="material-symbols-outlined text-xl">currency_exchange</span>
+<span class="text-sm">Refund Eligibility</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-secondary-light dark:text-text-secondary-dark hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-text-main-light dark:hover:text-text-main-dark transition-colors" href="#processing-timelines">
+<span class="material-symbols-outlined text-xl">pending_actions</span>
+<span class="text-sm">Processing Timelines</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-secondary-light dark:text-text-secondary-dark hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-text-main-light dark:hover:text-text-main-dark transition-colors" href="#rescheduling">
+<span class="material-symbols-outlined text-xl">edit_calendar</span>
+<span class="text-sm">Rescheduling</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-secondary-light dark:text-text-secondary-dark hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-text-main-light dark:hover:text-text-main-dark transition-colors" href="#disputes">
+<span class="material-symbols-outlined text-xl">gavel</span>
+<span class="text-sm">Dispute Resolution</span>
+</a>
+</nav>
+<!-- Helper Card in Sidebar -->
+<div class="hidden lg:flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-6 border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="size-10 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<div>
+<h4 class="font-bold text-text-main-light dark:text-text-main-dark">Need clarification?</h4>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1">Our support team is available 24/7 to help with any policy questions.</p>
+</div>
+<button class="w-full rounded-lg py-2.5 text-sm font-semibold text-primary border border-primary/20 hover:bg-primary/5 transition-colors">
+                                Contact Support
+                            </button>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col gap-10 min-w-0">
+<!-- Page Heading -->
+<div class="flex flex-col gap-4 border-b border-slate-200 dark:border-slate-800 pb-8">
+<h1 class="text-text-main-light dark:text-text-main-dark text-4xl lg:text-5xl font-black leading-tight tracking-[-0.033em]">
+                            Refund &amp; Cancellation Policy
+                        </h1>
+<div class="flex items-center gap-2 text-text-secondary-light dark:text-text-secondary-dark text-base">
+<span class="material-symbols-outlined text-lg">update</span>
+<p>Last Updated: October 24, 2023</p>
+</div>
+</div>
+<!-- Introduction -->
+<section class="flex flex-col gap-4" id="introduction">
+<h2 class="text-2xl font-bold text-text-main-light dark:text-text-main-dark">Introduction</h2>
+<p class="text-text-secondary-light dark:text-text-secondary-dark leading-relaxed text-lg">
+                            At Helpers, we strive to ensure fair and transparent interactions for all our users. This policy outlines the terms regarding cancellations, refunds, and rescheduling for services booked through our platform. By using Helpers, you agree to these terms to ensure a reliable experience for both customers and service providers.
+                        </p>
+</section>
+<!-- Cancellation Window -->
+<section class="flex flex-col gap-6" id="cancellation-window">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-lg bg-background-light dark:bg-slate-800">
+<span class="material-symbols-outlined text-primary">schedule</span>
+</div>
+<h2 class="text-2xl font-bold text-text-main-light dark:text-text-main-dark">Cancellation Window &amp; Fees</h2>
+</div>
+<div class="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-primary p-6 rounded-r-lg">
+<p class="text-blue-900 dark:text-blue-100 font-medium">
+<span class="font-bold">Free Cancellation:</span> You can cancel any booking for free up to 2 hours before the scheduled service time.
+                            </p>
+</div>
+<div class="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700">
+<table class="w-full text-left text-sm">
+<thead class="bg-background-light dark:bg-slate-800 text-text-main-light dark:text-text-main-dark font-bold border-b border-slate-200 dark:border-slate-700">
+<tr>
+<th class="px-6 py-4">Time of Cancellation</th>
+<th class="px-6 py-4">Fee Incurred</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-slate-700 bg-surface-light dark:bg-surface-dark">
+<tr>
+<td class="px-6 py-4 font-medium">&gt; 2 hours before</td>
+<td class="px-6 py-4 text-green-600 dark:text-green-400 font-semibold">No Fee</td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-medium">1-2 hours before</td>
+<td class="px-6 py-4 text-text-secondary-light dark:text-text-secondary-dark">15% of booking value</td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-medium">&lt; 1 hour before</td>
+<td class="px-6 py-4 text-text-secondary-light dark:text-text-secondary-dark">50% of booking value</td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-medium">During service / No-show</td>
+<td class="px-6 py-4 text-red-600 dark:text-red-400 font-semibold">100% of booking value</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Refund Eligibility -->
+<section class="flex flex-col gap-6 pt-6 border-t border-slate-200 dark:border-slate-800" id="refund-eligibility">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-lg bg-background-light dark:bg-slate-800">
+<span class="material-symbols-outlined text-primary">currency_exchange</span>
+</div>
+<h2 class="text-2xl font-bold text-text-main-light dark:text-text-main-dark">Refund Eligibility</h2>
+</div>
+<p class="text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">
+                            We are committed to quality. If you are unsatisfied with the service provided, you may be eligible for a full or partial refund under the following conditions:
+                        </p>
+<div class="grid md:grid-cols-2 gap-4">
+<div class="p-5 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col gap-3">
+<div class="size-8 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400">
+<span class="material-symbols-outlined text-lg">person_off</span>
+</div>
+<h3 class="font-bold text-text-main-light dark:text-text-main-dark">Helper No-Show</h3>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">If the assigned helper does not arrive within 30 minutes of the scheduled time, you are eligible for a 100% refund.</p>
+</div>
+<div class="p-5 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col gap-3">
+<div class="size-8 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-600 dark:text-orange-400">
+<span class="material-symbols-outlined text-lg">thumb_down</span>
+</div>
+<h3 class="font-bold text-text-main-light dark:text-text-main-dark">Quality Issues</h3>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">If the service delivered was significantly different from the description or of poor quality. Validated by photo evidence.</p>
+</div>
+<div class="p-5 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col gap-3">
+<div class="size-8 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400">
+<span class="material-symbols-outlined text-lg">cancel</span>
+</div>
+<h3 class="font-bold text-text-main-light dark:text-text-main-dark">Helper Cancellation</h3>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">If a helper cancels on you less than 24 hours before the service, you receive a full refund plus a 10% credit.</p>
+</div>
+<div class="p-5 rounded-xl bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col gap-3">
+<div class="size-8 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400">
+<span class="material-symbols-outlined text-lg">verified_user</span>
+</div>
+<h3 class="font-bold text-text-main-light dark:text-text-main-dark">Safety Concerns</h3>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">Immediate refund if the service could not be completed due to legitimate safety concerns reported at the start.</p>
+</div>
+</div>
+</section>
+<!-- Processing Timelines -->
+<section class="flex flex-col gap-6 pt-6 border-t border-slate-200 dark:border-slate-800" id="processing-timelines">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-lg bg-background-light dark:bg-slate-800">
+<span class="material-symbols-outlined text-primary">pending_actions</span>
+</div>
+<h2 class="text-2xl font-bold text-text-main-light dark:text-text-main-dark">Processing Timelines</h2>
+</div>
+<ul class="flex flex-col gap-4 list-disc pl-5 text-text-secondary-light dark:text-text-secondary-dark marker:text-primary">
+<li><strong class="text-text-main-light dark:text-text-main-dark">Wallet Refunds:</strong> Processed instantly after approval. Can be used immediately for other bookings.</li>
+<li><strong class="text-text-main-light dark:text-text-main-dark">Original Payment Method:</strong> Typically takes 5-7 business days depending on your bank's processing times.</li>
+<li><strong class="text-text-main-light dark:text-text-main-dark">Dispute Review:</strong> If a refund claim requires manual review, our team will respond within 48 hours.</li>
+</ul>
+</section>
+<!-- Rescheduling -->
+<section class="flex flex-col gap-6 pt-6 border-t border-slate-200 dark:border-slate-800" id="rescheduling">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-lg bg-background-light dark:bg-slate-800">
+<span class="material-symbols-outlined text-primary">edit_calendar</span>
+</div>
+<h2 class="text-2xl font-bold text-text-main-light dark:text-text-main-dark">Rescheduling</h2>
+</div>
+<p class="text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">
+                            Plans change! You can reschedule a booking without penalty up to <span class="font-bold text-text-main-light dark:text-text-main-dark">1 hour before</span> the scheduled time. Rescheduling within the last hour will be treated as a cancellation and re-booking, incurring the 50% late cancellation fee on the original booking.
+                        </p>
+</section>
+<!-- Dispute Resolution -->
+<section class="flex flex-col gap-6 pt-6 border-t border-slate-200 dark:border-slate-800" id="disputes">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-lg bg-background-light dark:bg-slate-800">
+<span class="material-symbols-outlined text-primary">gavel</span>
+</div>
+<h2 class="text-2xl font-bold text-text-main-light dark:text-text-main-dark">Dispute Resolution</h2>
+</div>
+<p class="text-text-secondary-light dark:text-text-secondary-dark leading-relaxed mb-4">
+                            If you believe a refund was incorrectly denied, you can escalate the issue to our Trust &amp; Safety team. Please gather any relevant documentation, such as chat logs or photos, to support your claim.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<a class="inline-flex items-center justify-center gap-2 rounded-lg bg-background-light dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-6 py-3 text-sm font-bold text-text-main-light dark:text-text-main-dark hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" href="/">
+<span class="material-symbols-outlined text-lg">description</span>
+                                File a Dispute
+                            </a>
+<a class="inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-bold text-primary hover:bg-primary/10 transition-colors" href="/">
+                                Read Terms of Service
+                                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Footer Support Section -->
+<section class="mt-8 rounded-2xl bg-gradient-to-br from-primary to-blue-600 p-8 md:p-12 text-center text-white relative overflow-hidden">
+<!-- Abstract pattern background -->
+<div class="absolute top-0 right-0 -mr-16 -mt-16 h-64 w-64 rounded-full bg-white/10 blur-3xl" data-alt="Soft abstract circle pattern"></div>
+<div class="absolute bottom-0 left-0 -ml-16 -mb-16 h-48 w-48 rounded-full bg-black/10 blur-2xl" data-alt="Soft abstract circle pattern"></div>
+<div class="relative z-10 flex flex-col items-center gap-4">
+<div class="rounded-full bg-white/20 p-4 backdrop-blur-sm">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</div>
+<h2 class="text-2xl md:text-3xl font-bold">Still have questions?</h2>
+<p class="max-w-xl text-blue-100">Our support team is available to help you understand our policies and resolve any specific issues with your bookings.</p>
+<div class="mt-4 flex flex-wrap justify-center gap-4">
+<button class="rounded-lg bg-white px-8 py-3 text-sm font-bold text-primary hover:bg-blue-50 transition-colors shadow-lg">
+                                    Contact Support
+                                </button>
+<button class="rounded-lg border border-white/30 bg-transparent px-8 py-3 text-sm font-bold text-white hover:bg-white/10 transition-colors">
+                                    Visit Help Center
+                                </button>
+</div>
+</div>
+</section>
+</main>
+</div>
+</div>
+<!-- Simple Footer -->
+<footer class="bg-surface-light dark:bg-surface-dark border-t border-slate-200 dark:border-slate-800 py-8 text-center text-sm text-text-secondary-light dark:text-text-secondary-dark">
+<p>© 2023 Helpers Inc. All rights reserved.</p>
+</footer>
+</div>
+</body></html>

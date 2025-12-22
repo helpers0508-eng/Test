@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+</head>
+<body data-role="helper" class="font-display bg-background-light dark:bg-background-dark text-[#111418] dark:text-white">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="absolute top-0 z-10 flex w-full items-center justify-between whitespace-nowrap px-4 py-3 sm:px-10">
+<div class="flex items-center gap-2 text-[#111418] dark:text-white">
+<img src="/logo.jpeg" alt="Helpers Logo" class="h-6 w-auto object-contain">
+<h2 class="text-[#111418] dark:text-white text-lg font-bold">Helpers</h2>
+</div>
+<a class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded h-10 px-4 bg-transparent text-[#111418] dark:text-white text-sm font-bold hover:bg-primary/10 dark:hover:bg-white/10 transition-colors" href="/">
+<span class="truncate">Log In</span>
+</a>
+</header>
+<main class="flex h-full min-h-screen grow flex-col">
+<div class="grid flex-1 grid-cols-1 lg:grid-cols-2">
+<div class="flex flex-col justify-center bg-white dark:bg-background-dark px-6 py-20 sm:p-12 lg:p-16 border-b lg:border-b-0 lg:border-r border-border-purple/30 dark:border-white/5">
+<div class="mx-auto flex w-full max-w-md flex-col items-center gap-10 text-center lg:items-start lg:text-left">
+<div class="flex flex-col gap-4">
+<h1 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl">Work on your terms. Join the leading platform for home service professionals.</h1>
+<h2 class="text-[#617589] dark:text-gray-400 text-base font-normal leading-normal">"Helpers doubled my client base in just three months!" - Sarah J., Cleaning Professional</h2>
+</div>
+<div class="grid w-full grid-cols-1 gap-4 text-left">
+<div class="flex flex-1 gap-4 rounded-lg border border-border-purple dark:border-white/10 bg-background-light dark:bg-white/5 p-4 shadow-sm">
+<span class="material-symbols-outlined text-primary text-2xl">schedule</span>
+<div class="flex flex-col gap-1">
+<h3 class="text-[#111418] dark:text-white text-base font-bold leading-tight">Flexible Hours</h3>
+<p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">You decide when and where you work.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-lg border border-border-purple dark:border-white/10 bg-background-light dark:bg-white/5 p-4 shadow-sm">
+<span class="material-symbols-outlined text-primary text-2xl">payments</span>
+<div class="flex flex-col gap-1">
+<h3 class="text-[#111418] dark:text-white text-base font-bold leading-tight">Higher Earnings</h3>
+<p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">Access thousands of new customers and maximize your income.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-lg border border-border-purple dark:border-white/10 bg-background-light dark:bg-white/5 p-4 shadow-sm">
+<span class="material-symbols-outlined text-primary text-2xl">shield</span>
+<div class="flex flex-col gap-1">
+<h3 class="text-[#111418] dark:text-white text-base font-bold leading-tight">We've Got Your Back</h3>
+<p class="text-[#617589] dark:text-gray-400 text-sm font-normal leading-normal">Secure payments, support, and tools to help you succeed.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center bg-background-light/50 dark:bg-background-dark px-6 py-20 sm:p-12 lg:p-16">
+<div class="w-full max-w-md p-0 sm:p-8 sm:bg-white sm:dark:bg-white/5 sm:rounded-2xl sm:shadow-lg sm:shadow-shadow-plum/5 sm:border sm:border-border-purple/50 sm:dark:border-white/10">
+<div class="mb-8 flex flex-col gap-3">
+<p class="text-[#111418] dark:text-white text-3xl font-black leading-tight tracking-[-0.033em]">Create your Helper profile</p>
+<p class="text-[#617589] dark:text-gray-400 text-base font-normal leading-normal">Step 1: Basic Information</p>
+</div>
+<form class="flex flex-col gap-6">
+<div class="flex flex-col gap-4">
+<label class="flex flex-col">
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal pb-2">Full Name</p>
+<input class="form-input flex w-full resize-none overflow-hidden rounded text-[#111418] dark:text-white focus:outline-none focus:ring-2 focus:ring-primary/50 border border-border-purple dark:border-white/10 bg-input-bg dark:bg-white/5 focus:border-primary dark:focus:border-primary h-12 placeholder:text-[#617589]/80 dark:placeholder:text-gray-500 p-3 text-base font-normal leading-normal" placeholder="Enter your full name" value=""/>
+</label>
+<label class="flex flex-col">
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal pb-2">Email Address</p>
+<input class="form-input flex w-full resize-none overflow-hidden rounded text-[#111418] dark:text-white focus:outline-none focus:ring-2 focus:ring-primary/50 border border-border-purple dark:border-white/10 bg-input-bg dark:bg-white/5 focus:border-primary dark:focus:border-primary h-12 placeholder:text-[#617589]/80 dark:placeholder:text-gray-500 p-3 text-base font-normal leading-normal" placeholder="you@example.com" type="email" value=""/>
+</label>
+<label class="flex flex-col">
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal pb-2">Phone Number</p>
+<input class="form-input flex w-full resize-none overflow-hidden rounded text-[#111418] dark:text-white focus:outline-none focus:ring-2 focus:ring-primary/50 border border-border-purple dark:border-white/10 bg-input-bg dark:bg-white/5 focus:border-primary dark:focus:border-primary h-12 placeholder:text-[#617589]/80 dark:placeholder:text-gray-500 p-3 text-base font-normal leading-normal" placeholder="Enter your phone number" type="tel" value=""/>
+</label>
+<label class="flex flex-col">
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal pb-2">Password</p>
+<div class="relative w-full">
+<input class="form-input flex w-full resize-none overflow-hidden rounded text-[#111418] dark:text-white focus:outline-none focus:ring-2 focus:ring-primary/50 border border-border-purple dark:border-white/10 bg-input-bg dark:bg-white/5 focus:border-primary dark:focus:border-primary h-12 placeholder:text-[#617589]/80 dark:placeholder:text-gray-500 p-3 pr-10 text-base font-normal" placeholder="Enter a strong password" type="password"/>
+<button class="absolute inset-y-0 right-0 flex items-center pr-3 text-[#617589] dark:text-gray-400 hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</label>
+<label class="flex flex-col">
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal pb-2">Primary Service</p>
+<select class="form-select flex w-full resize-none overflow-hidden rounded text-[#111418] dark:text-white focus:outline-none focus:ring-2 focus:ring-primary/50 border border-border-purple dark:border-white/10 bg-input-bg dark:bg-white/5 focus:border-primary dark:focus:border-primary h-12 placeholder:text-[#617589]/80 dark:placeholder:text-gray-500 p-3 text-base font-normal leading-normal">
+<option disabled="" selected="" value="">Select a category</option>
+<option value="cleaning">Cleaning</option>
+<option value="plumbing">Plumbing</option>
+<option value="electrical">Electrical</option>
+<option value="beauty">Beauty</option>
+<option value="moving">Moving</option>
+</select>
+</label>
+</div>
+<div class="flex items-start gap-2">
+<input class="form-checkbox mt-0.5 h-4 w-4 rounded border-border-purple dark:border-white/20 bg-input-bg dark:bg-white/5 text-primary focus:ring-primary/50" id="terms-checkbox" type="checkbox"/>
+<label class="text-sm text-[#617589] dark:text-gray-400" for="terms-checkbox">
+                                    I agree to the <a class="text-primary hover:text-primary-dark underline decoration-primary/30 underline-offset-2" href="/terms">Terms of Service</a> and <a class="text-primary hover:text-primary-dark underline decoration-primary/30 underline-offset-2" href="/privacy">Privacy Policy</a>.
+                                </label>
+</div>
+<div class="flex flex-col gap-4">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded h-12 px-5 bg-purple-gradient shadow-md shadow-primary/30 text-white text-base font-bold leading-normal tracking-[0.015em] hover:shadow-lg hover:shadow-primary/40 transition-all duration-200 transform hover:-translate-y-0.5">
+<span class="truncate">Create Account &amp; Continue</span>
+</button>
+<div class="relative flex items-center">
+<div class="flex-grow border-t border-border-purple dark:border-white/10"></div>
+<span class="mx-4 flex-shrink text-sm text-[#617589] dark:text-gray-400">OR</span>
+<div class="flex-grow border-t border-border-purple dark:border-white/10"></div>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded h-12 px-5 bg-white dark:bg-white/5 text-[#111418] dark:text-white text-base font-bold leading-normal tracking-[0.015em] border border-border-purple dark:border-white/10 hover:bg-input-bg dark:hover:bg-white/10 transition-colors">
+<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.5777 12.2715C22.5777 11.4723 22.5125 10.7023 22.3833 9.96155H12V14.2885H18.1678C17.893 15.6888 17.0938 16.8917 15.8953 17.6909V20.47H19.7238C21.5792 18.7859 22.5777 15.8523 22.5777 12.2715Z" fill="#4285F4"></path>
+<path d="M12 23C15.2445 23 17.9545 21.9219 19.7238 20.47L15.8953 17.6909C14.793 18.4219 13.4913 18.8373 12 18.8373C9.07321 18.8373 6.5709 16.8732 5.62321 14.2885H1.6665V17.1619C3.50454 20.8409 7.42909 23 12 23Z" fill="#34A853"></path>
+<path d="M5.62324 14.2885C5.37864 13.5574 5.23909 12.7874 5.23909 12C5.23909 11.2126 5.37864 10.4426 5.62324 9.71155V6.83814H1.66655C0.842727 8.52545 0.363636 10.2027 0.363636 12C0.363636 13.7973 0.842727 15.4745 1.66655 17.1619L5.62324 14.2885Z" fill="#FBBC05"></path>
+<path d="M12 5.16273C13.6364 5.16273 15.0136 5.72227 16.0318 6.69955L19.8055 2.92591C17.9455 1.23864 15.2445 0 12 0C7.42909 0 3.50454 2.15909 1.6665 5.83814L5.62318 8.71155C6.5709 6.12682 9.07318 4.16273 12 4.16273V5.16273Z" fill="#EA4335"></path>
+</svg>
+<span class="truncate">Sign up with Google</span>
+</button>
+</div>
+</form>
+<p class="mt-8 text-center text-sm text-[#617589] dark:text-gray-400">
+                            Already have an account? <a class="font-bold text-primary hover:text-primary-dark transition-colors" href="/">Log In</a>
+</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

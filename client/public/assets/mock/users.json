@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "user@example.com",
+      "password": "password123",
+      "name": "John Doe",
+      "role": "user",
+      "phone": "+1234567890",
+      "address": "123 Main St, City, State",
+      "createdAt": "2024-01-15T10:00:00Z",
+      "isVerified": true
+    },
+    {
+      "id": 2,
+      "email": "helper@example.com",
+      "password": "password123",
+      "name": "Jane Smith",
+      "role": "helper",
+      "phone": "+1234567891",
+      "address": "456 Helper Ave, City, State",
+      "skills": ["cleaning", "plumbing"],
+      "rating": 4.8,
+      "completedJobs": 45,
+      "createdAt": "2024-02-01T10:00:00Z",
+      "isVerified": true
+    },
+    {
+      "id": 3,
+      "email": "admin@example.com",
+      "password": "admin123",
+      "name": "Admin User",
+      "role": "admin",
+      "phone": "+1234567892",
+      "createdAt": "2024-01-01T10:00:00Z",
+      "isVerified": true
+    }
+  ],
+  "sessions": [
+    {
+      "userId": 1,
+      "token": "mock-jwt-token-user",
+      "expiresAt": "2024-12-31T23:59:59Z"
+    },
+    {
+      "userId": 2,
+      "token": "mock-jwt-token-helper",
+      "expiresAt": "2024-12-31T23:59:59Z"
+    },
+    {
+      "userId": 3,
+      "token": "mock-jwt-token-admin",
+      "expiresAt": "2024-12-31T23:59:59Z"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "bookings": [
+    {
+      "id": "BK001",
+      "userId": 1,
+      "helperId": 2,
+      "serviceId": 1,
+      "date": "2024-12-20",
+      "time": "10:00 AM",
+      "status": "confirmed",
+      "price": 50,
+      "duration": "2 hours",
+      "address": "123 Main St, City, State",
+      "notes": "Please bring cleaning supplies",
+      "createdAt": "2024-12-15T14:30:00Z",
+      "updatedAt": "2024-12-15T14:30:00Z"
+    },
+    {
+      "id": "BK002",
+      "userId": 1,
+      "helperId": 2,
+      "serviceId": 2,
+      "date": "2024-12-22",
+      "time": "02:00 PM",
+      "status": "pending",
+      "price": 75,
+      "duration": "1 hour",
+      "address": "123 Main St, City, State",
+      "notes": "Kitchen sink is leaking",
+      "createdAt": "2024-12-16T09:15:00Z",
+      "updatedAt": "2024-12-16T09:15:00Z"
+    },
+    {
+      "id": "BK003",
+      "userId": 1,
+      "serviceId": 3,
+      "date": "2024-12-18",
+      "time": "11:00 AM",
+      "status": "completed",
+      "price": 60,
+      "duration": "1.5 hours",
+      "address": "123 Main St, City, State",
+      "rating": 5,
+      "review": "Excellent service!",
+      "createdAt": "2024-12-10T16:45:00Z",
+      "updatedAt": "2024-12-18T12:30:00Z"
+    }
+  ],
+  "availableSlots": {
+    "2024-12-20": [
+      { "id": "slot1", "time": "09:00 AM", "available": true },
+      { "id": "slot2", "time": "10:00 AM", "available": false },
+      { "id": "slot3", "time": "11:00 AM", "available": true },
+      { "id": "slot4", "time": "02:00 PM", "available": true },
+      { "id": "slot5", "time": "03:00 PM", "available": true }
+    ],
+    "2024-12-21": [
+      { "id": "slot6", "time": "09:00 AM", "available": true },
+      { "id": "slot7", "time": "10:00 AM", "available": true },
+      { "id": "slot8", "time": "11:00 AM", "available": false },
+      { "id": "slot9", "time": "02:00 PM", "available": true },
+      { "id": "slot10", "time": "03:00 PM", "available": true }
+    ],
+    "2024-12-22": [
+      { "id": "slot11", "time": "09:00 AM", "available": false },
+      { "id": "slot12", "time": "10:00 AM", "available": true },
+      { "id": "slot13", "time": "11:00 AM", "available": true },
+      { "id": "slot14", "time": "02:00 PM", "available": false },
+      { "id": "slot15", "time": "03:00 PM", "available": true }
+    ]
+  }
+}

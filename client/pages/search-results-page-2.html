@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+</head>
+<body data-role="user" class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-50 bg-white dark:bg-background-dark/80 backdrop-blur-sm border-b border-solid border-border-purple dark:border-gray-800">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between whitespace-nowrap h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-gray-800 dark:text-white">
+<div class="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-purple text-white shadow-md shadow-shadow-plum/20">
+<span class="material-symbols-outlined text-2xl">hub</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-primary-dark dark:text-white">Helpers</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="/">Explore</a>
+<a class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="/">Become a Helper</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4">
+<div class="hidden sm:flex flex-1 max-w-lg justify-end">
+<label class="flex flex-col w-full min-w-40 !h-10">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full border border-border-purple dark:border-gray-700 overflow-hidden">
+<div class="text-gray-500 dark:text-gray-400 flex bg-input-purple dark:bg-gray-800 items-center justify-center pl-4">
+<span class="material-symbols-outlined text-primary/70">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-gray-800 dark:text-gray-200 focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-input-purple dark:bg-gray-800 h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 pl-2 text-base font-normal leading-normal" placeholder="Search for 'Home Cleaning'" value="Home Cleaning"/>
+</div>
+</label>
+</div>
+<div class="hidden md:flex gap-2">
+<a class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gradient-purple text-white shadow-md shadow-shadow-plum/20 text-sm font-bold leading-normal tracking-[0.015em] transition-all hover:opacity-90 hover:shadow-lg" href="/signup"><span>Sign Up</span></a>
+<a class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white border border-border-purple dark:bg-gray-800 dark:border-gray-700 text-primary-dark dark:text-gray-200 text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-input-purple dark:hover:bg-gray-700" href="/login"><span>Log In</span></a>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-white shadow-sm ring-2 ring-border-purple dark:ring-gray-700" data-alt="User avatar placeholder" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDrZ-a3ntuGep7JtPfeqbZVOZjYeaCLkkYvrzQ82Lsk7YSQuJv_Tvkxgb6Yh2QgVwjmJkX5AI2supnHHii6QatKLLpFGNlpMdylKEN_alIbHUYTERrAjbTZQHFFwwnEDZ-_t-sRGE1oWC0U-FZ3wU4ByoXz0K32DuCwyXZSKSdZmz5bhO-3uQ4sb55EcmRyiqF91iLSAxbrubESdbR4LtBdB0Y2Nroi3T_OqQuQlzApGTIJ40bRai90zzV5WH_3g04VmsEdBVw0lyA');"></div>
+</div>
+</div>
+</div>
+</header>
+<main class="container mx-auto px-4 py-8">
+<div class="flex flex-wrap gap-2 mb-6">
+<a class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="/">Home</a>
+<span class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal">/</span>
+<a class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="/services">Services</a>
+<span class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal">/</span>
+<span class="text-primary-dark dark:text-secondary-lavender text-sm font-medium leading-normal">Home Cleaning</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+<aside class="lg:col-span-1">
+<div class="sticky top-24">
+<div class="bg-white dark:bg-gray-900 p-6 rounded-xl border border-border-purple dark:border-gray-800 shadow-sm">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-gray-900 dark:text-white text-lg font-bold">Filters</h2>
+<button class="text-primary text-sm font-medium hover:text-primary-dark hover:underline transition-colors">Reset</button>
+</div>
+<div class="flex flex-col">
+<details class="flex flex-col border-t border-border-purple dark:border-gray-700 py-2 group" open="">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none hover:bg-input-purple/30 dark:hover:bg-gray-800 px-2 -mx-2 rounded-lg transition-colors">
+<p class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">Category</p>
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400 group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="space-y-2 pt-2 px-2">
+<label class="flex items-center gap-x-3 cursor-pointer group/item">
+<input checked="" class="h-5 w-5 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-800 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-2 focus:ring-offset-0 focus:ring-primary/50 dark:focus:ring-offset-gray-900 transition-colors" type="checkbox"/>
+<p class="text-gray-700 dark:text-gray-300 text-sm font-normal group-hover/item:text-primary transition-colors">Home Cleaning</p>
+</label>
+<label class="flex items-center gap-x-3 cursor-pointer group/item">
+<input class="h-5 w-5 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-800 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-2 focus:ring-offset-0 focus:ring-primary/50 dark:focus:ring-offset-gray-900 transition-colors" type="checkbox"/>
+<p class="text-gray-700 dark:text-gray-300 text-sm font-normal group-hover/item:text-primary transition-colors">Plumbing</p>
+</label>
+<label class="flex items-center gap-x-3 cursor-pointer group/item">
+<input class="h-5 w-5 rounded border-gray-300 dark:border-gray-600 dark:bg-gray-800 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-2 focus:ring-offset-0 focus:ring-primary/50 dark:focus:ring-offset-gray-900 transition-colors" type="checkbox"/>
+<p class="text-gray-700 dark:text-gray-300 text-sm font-normal group-hover/item:text-primary transition-colors">Electrical</p>
+</label>
+</div>
+</details>
+<details class="flex flex-col border-t border-border-purple dark:border-gray-700 py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none hover:bg-input-purple/30 dark:hover:bg-gray-800 px-2 -mx-2 rounded-lg transition-colors">
+<p class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">Price Range</p>
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400 group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="pt-4 px-1">
+<input class="w-full h-2 bg-input-purple dark:bg-gray-700 rounded-lg appearance-none cursor-pointer [&amp;::-webkit-slider-thumb]:appearance-none [&amp;::-webkit-slider-thumb]:h-4 [&amp;::-webkit-slider-thumb]:w-4 [&amp;::-webkit-slider-thumb]:rounded-full [&amp;::-webkit-slider-thumb]:bg-primary [&amp;::-webkit-slider-thumb]:shadow-md" max="500" min="0" type="range" value="250"/>
+<div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-2">
+<span>$0</span>
+<span>$500+</span>
+</div>
+</div>
+</details>
+<details class="flex flex-col border-t border-border-purple dark:border-gray-700 py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none hover:bg-input-purple/30 dark:hover:bg-gray-800 px-2 -mx-2 rounded-lg transition-colors">
+<p class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">Rating</p>
+<span class="material-symbols-outlined text-gray-600 dark:text-gray-400 group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="space-y-2 pt-2 px-2">
+<label class="flex items-center gap-x-3 cursor-pointer">
+<input class="h-5 w-5 border-gray-300 dark:border-gray-600 dark:bg-gray-800 text-primary focus:ring-2 focus:ring-offset-0 focus:ring-primary/50 dark:focus:ring-offset-gray-900" name="rating" type="radio"/>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<p class="text-gray-700 dark:text-gray-300 text-sm ml-2">4 &amp; up</p>
+</div>
+</label>
+<label class="flex items-center gap-x-3 cursor-pointer">
+<input class="h-5 w-5 border-gray-300 dark:border-gray-600 dark:bg-gray-800 text-primary focus:ring-2 focus:ring-offset-0 focus:ring-primary/50 dark:focus:ring-offset-gray-900" name="rating" type="radio"/>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<p class="text-gray-700 dark:text-gray-300 text-sm ml-2">3 &amp; up</p>
+</div>
+</label>
+</div>
+</details>
+</div>
+<button class="mt-6 w-full flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gradient-purple text-white shadow-md shadow-shadow-plum/20 text-sm font-bold leading-normal tracking-[0.015em] transition-opacity hover:opacity-90">
+<span class="truncate">Apply Filters</span>
+</button>
+</div>
+</div>
+</aside>
+<div class="lg:col-span-3">
+<div class="flex flex-col sm:flex-row justify-between items-baseline mb-6 gap-4">
+<h1 class="text-2xl font-bold text-gray-900 dark:text-white">Showing 25 of 150 results for 'Home Cleaning'</h1>
+<div class="flex items-center gap-4">
+<label class="text-sm font-medium text-gray-600 dark:text-gray-400" for="sort">Sort by:</label>
+<select class="form-select rounded-lg border-border-purple dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 focus:border-primary focus:ring-primary/50 text-sm" id="sort">
+<option>Relevance</option>
+<option>Price (Low to High)</option>
+<option>Top Rated</option>
+</select>
+<button class="flex items-center gap-2 rounded-lg h-10 px-4 bg-white border border-border-purple dark:bg-gray-800 dark:border-gray-700 text-primary-dark dark:text-gray-200 text-sm font-medium hover:bg-input-purple dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-base">map</span>
+                Show Map
+              </button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-border-purple dark:border-gray-800 overflow-hidden flex flex-col group transition-all hover:shadow-lg hover:shadow-shadow-plum/10 hover:-translate-y-1">
+<div class="w-full h-40 bg-cover bg-center relative" data-alt="Professional cleaning a modern kitchen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBu9RA67SgSZHUMPiZNpmscLcLxKwkuClp-AiwO86WgJJTXr4t297QCIjsnqzeIHJbo_cIaVQ6S0F9DuzLGya5joojEQ2hDmtuaL-dHQh9d7QL4mp1YtBidlSbxfzE44OBdqc5zdhN8ZHaYoehKs7KWbTnalIb0t4DF4sd718HwkIfs824E53YNuDq89n9X_EEAoPQxA6iWbPAQEFEtzq3kUbUPwTikqaAepz6NU2hr5QKYOcPh6H_KRSx4SWc0xL-GkH5yDHyzQL0')">
+<div class="absolute top-3 right-3">
+<button class="p-2 rounded-full bg-white/80 backdrop-blur-sm text-gray-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-xl leading-none">favorite</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-bold text-lg text-gray-900 dark:text-white group-hover:text-primary transition-colors">Sparkle Clean Co.</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-2">by Jane Doe</p>
+<div class="flex items-center gap-1 mb-3">
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star_half</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(124 reviews)</span>
+</div>
+<p class="text-sm text-gray-600 dark:text-gray-300 flex-grow">Top-rated deep cleaning for homes and apartments. Eco-friendly products used.</p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+<p class="text-lg font-bold text-gray-800 dark:text-gray-200">from <span class="text-primary font-extrabold">$99</span></p>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-9 px-3 bg-primary/10 text-primary text-sm font-bold hover:bg-primary/20 transition-colors">View</button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-border-purple dark:border-gray-800 overflow-hidden flex flex-col group transition-all hover:shadow-lg hover:shadow-shadow-plum/10 hover:-translate-y-1">
+<div class="w-full h-40 bg-cover bg-center relative" data-alt="Plumber fixing a sink pipe" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBL91hAFe7qvvssP4NdUczNGWtQs5q9s2LcMHgiUTxq-gVy8uS6BPVj82HbSBfxnfJROvT5VGOctxFhUpSbT4_OcVZ0ucu8LE1GR4gtNd5ktcxNcxKwqW30fZ9TIV0T-UAGyFvHv2Le_hnIDB4Obv6lfocR4NmSDgO-bwdr53eFrjGmGWo9zA5yWrNZAVcnG4bKz-dYszn0CV3s0xjkFwwr_7x9-1QxOSxqjI-zW6EGIlDvxRFv7WO4FlmktlgT1um63utOR835ZoY')">
+<div class="absolute top-3 right-3">
+<button class="p-2 rounded-full bg-white/80 backdrop-blur-sm text-gray-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-xl leading-none">favorite</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-bold text-lg text-gray-900 dark:text-white group-hover:text-primary transition-colors">QuickFix Plumbers</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-2">by John Smith</p>
+<div class="flex items-center gap-1 mb-3">
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(88 reviews)</span>
+</div>
+<p class="text-sm text-gray-600 dark:text-gray-300 flex-grow">24/7 emergency plumbing services. Leaks, clogs, and installations.</p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+<p class="text-lg font-bold text-gray-800 dark:text-gray-200">from <span class="text-primary font-extrabold">$75</span></p>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-9 px-3 bg-primary/10 text-primary text-sm font-bold hover:bg-primary/20 transition-colors">View</button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-border-purple dark:border-gray-800 overflow-hidden flex flex-col group transition-all hover:shadow-lg hover:shadow-shadow-plum/10 hover:-translate-y-1">
+<div class="w-full h-40 bg-cover bg-center relative" data-alt="Person painting a living room wall white" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5i_PM26DfE5MvLsmFeyibA8zhNWPug4d--d9fqJz5rJn7w4YbJXMUD7CJ5XZ5FmGKwq0v15TasYgqBTkQZXAAqw8XKhkeK15a7YSKaoXppwC74_wKAKjsCpKdxsHdvdqM4g5yW7INy03jTE6wyF7RlFX_REXmJ1KECwNqV0BaBofjBlysArMCP-cgb5UooLkbcK2jENYFCqi1oz3_S4pyJ82m4BqIgc07hPGb1nP6UgExmnMx9VPWDANJNhYR0ZeV8YK5zLRZhLg')">
+<div class="absolute top-3 right-3">
+<button class="p-2 rounded-full bg-white/80 backdrop-blur-sm text-gray-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-xl leading-none">favorite</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-bold text-lg text-gray-900 dark:text-white group-hover:text-primary transition-colors">Perfect Painters</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-2">by Emily White</p>
+<div class="flex items-center gap-1 mb-3">
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star_half</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(150 reviews)</span>
+</div>
+<p class="text-sm text-gray-600 dark:text-gray-300 flex-grow">Interior and exterior painting with a professional finish. Free estimates.</p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+<p class="text-lg font-bold text-gray-800 dark:text-gray-200">from <span class="text-primary font-extrabold">$150</span></p>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-9 px-3 bg-primary/10 text-primary text-sm font-bold hover:bg-primary/20 transition-colors">View</button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-border-purple dark:border-gray-800 overflow-hidden flex flex-col group transition-all hover:shadow-lg hover:shadow-shadow-plum/10 hover:-translate-y-1">
+<div class="w-full h-40 bg-cover bg-center relative" data-alt="Gardener trimming hedges in a sunny yard" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBy-YWBHwOpyIwn9ddzNZT4fqS6NxEeLIzwg8XvCVp8qpRJbQpXMnitG8L2SjqFdIbRhWZAyeo5QhSh2b6K4VbIyLiv28B1sNzu_uwffUAQcd84Cw3xazSehpCoR9o1u76yBofc01PlDZ1Y2OqZThfLmnIm7nDzN5ZP7AQs1fyTjUacMcA75Yoi_m_wsAG-qTM8tRcz9n5q2sn7qNfDTuJKUrEp7XTLviYifVtVJVXcsDwcgu58jHHInwZEdBsM62shBPuZWStPYWs')">
+<div class="absolute top-3 right-3">
+<button class="p-2 rounded-full bg-white/80 backdrop-blur-sm text-gray-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-xl leading-none">favorite</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-bold text-lg text-gray-900 dark:text-white group-hover:text-primary transition-colors">Green Thumb Landscaping</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-2">by Mike Green</p>
+<div class="flex items-center gap-1 mb-3">
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(95 reviews)</span>
+</div>
+<p class="text-sm text-gray-600 dark:text-gray-300 flex-grow">Lawn care, gardening, and full landscaping design services for your home.</p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+<p class="text-lg font-bold text-gray-800 dark:text-gray-200">from <span class="text-primary font-extrabold">$120</span></p>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-9 px-3 bg-primary/10 text-primary text-sm font-bold hover:bg-primary/20 transition-colors">View</button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-border-purple dark:border-gray-800 overflow-hidden flex flex-col group transition-all hover:shadow-lg hover:shadow-shadow-plum/10 hover:-translate-y-1">
+<div class="w-full h-40 bg-cover bg-center relative" data-alt="Electrician working on a circuit breaker" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCypEQBdE3EgBGNtAyUbT0pq0ozYGIE6fIdDs9WySPc1vhyhFofpS8nWy9y9tK0Tz4Kj-CauunGd5u5kefgKv854VN0K7br6pI92tlxngHspdh3eur4YrHHqTB0E-lMNUKahfX5M3jeKPQ0-LTCyyFakZ5SaIDyVhx8WMePw95B8QT0klIpqR-kQecuAFffue18Dm5nSztNAgJkGTKyqlRMQnNmQJ3NxaQ0Ayk3vqAVbe4mvUIi96qUYNAN1xsNWwN15V0DDen9WUs')">
+<div class="absolute top-3 right-3">
+<button class="p-2 rounded-full bg-white/80 backdrop-blur-sm text-gray-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-xl leading-none">favorite</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-bold text-lg text-gray-900 dark:text-white group-hover:text-primary transition-colors">Volt Masters Electric</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-2">by Sarah Sparks</p>
+<div class="flex items-center gap-1 mb-3">
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(211 reviews)</span>
+</div>
+<p class="text-sm text-gray-600 dark:text-gray-300 flex-grow">Certified and insured electricians for repairs, installations, and safety checks.</p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+<p class="text-lg font-bold text-gray-800 dark:text-gray-200">from <span class="text-primary font-extrabold">$85</span></p>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-9 px-3 bg-primary/10 text-primary text-sm font-bold hover:bg-primary/20 transition-colors">View</button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-border-purple dark:border-gray-800 overflow-hidden flex flex-col group transition-all hover:shadow-lg hover:shadow-shadow-plum/10 hover:-translate-y-1">
+<div class="w-full h-40 bg-cover bg-center relative" data-alt="Home organizer tidying up a cluttered closet" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbfT14e1WXXv1JLzrIRDCzF9hAtldfuqv3M2OiTTgvdzCa2S6Jt3vNaJyhz9IS-pWEui1auGgIYZ2DNGj7WHx2lStzVpmbkiFWjBy5kBx4joaLyu3VvXRfCbC9XBWOutzu4sls0_qQTsU09o9Oj-4_ZYpArVaXqiheBLq9gmsAaOakuE0QLt8J-jp6XGv_OYYAM4-Eae9ZTIsLEAeFz27at-tpUrCrzhYxJytJfIiZdOXXOxjxp3rP9Ykyhz7ExMjGE2bdjXMcpGw')">
+<div class="absolute top-3 right-3">
+<button class="p-2 rounded-full bg-white/80 backdrop-blur-sm text-gray-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-xl leading-none">favorite</span>
+</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<h3 class="font-bold text-lg text-gray-900 dark:text-white group-hover:text-primary transition-colors">The Tidy Method</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-2">by Chloe Garcia</p>
+<div class="flex items-center gap-1 mb-3">
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-amber-400 text-base" style="font-variation-settings: 'FILL' 1;">star_half</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(76 reviews)</span>
+</div>
+<p class="text-sm text-gray-600 dark:text-gray-300 flex-grow">Professional home organization to declutter your space and your life.</p>
+<div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+<p class="text-lg font-bold text-gray-800 dark:text-gray-200">from <span class="text-primary font-extrabold">$110</span></p>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-9 px-3 bg-primary/10 text-primary text-sm font-bold hover:bg-primary/20 transition-colors">View</button>
+</div>
+</div>
+</div>
+</div>
+<nav aria-label="Pagination" class="flex items-center justify-center pt-12 pb-4">
+<a class="inline-flex items-center justify-center size-9 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-input-purple dark:hover:bg-gray-800 transition-colors" href="/">
+<span class="material-symbols-outlined text-xl">chevron_left</span>
+</a>
+<a aria-current="page" class="inline-flex items-center justify-center size-9 rounded-lg text-white bg-gradient-purple shadow-md shadow-shadow-plum/20 font-medium mx-1" href="/">1</a>
+<a class="inline-flex items-center justify-center size-9 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-input-purple dark:hover:bg-gray-800 font-medium mx-1 transition-colors" href="/">2</a>
+<a class="inline-flex items-center justify-center size-9 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-input-purple dark:hover:bg-gray-800 font-medium mx-1 transition-colors" href="/">3</a>
+<span class="inline-flex items-center justify-center size-9 text-gray-500 dark:text-gray-400 font-medium mx-1">...</span>
+<a class="inline-flex items-center justify-center size-9 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-input-purple dark:hover:bg-gray-800 font-medium mx-1 transition-colors" href="/">8</a>
+<a class="inline-flex items-center justify-center size-9 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-input-purple dark:hover:bg-gray-800 transition-colors" href="/">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</a>
+</nav>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

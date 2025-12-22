@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Bookings - Helpers</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f4] dark:border-gray-800 bg-white dark:bg-gray-900 px-4 md:px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4 md:gap-8">
+<div class="flex items-center gap-4 text-[#111418] dark:text-white">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Helpers</h2>
+</div>
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#617589] dark:text-gray-400 flex border-none bg-[#f0f2f4] dark:bg-gray-800 items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined" style="font-size: 24px;">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-0 border-none bg-[#f0f2f4] dark:bg-gray-800 focus:border-none h-full placeholder:text-[#617589] dark:placeholder:text-gray-400 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search services..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-4 md:gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-[#111418] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-[#111418] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Bookings</a>
+<a class="text-[#111418] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Profile</a>
+</div>
+<div class="flex gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-[#111418] dark:text-white" style="font-size: 20px;">notifications</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-[#111418] dark:text-white" style="font-size: 20px;">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5 md:py-10">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<!-- Page Heading -->
+<div class="flex flex-col md:flex-row justify-between gap-4 p-4 mb-2">
+<div class="flex min-w-72 flex-col gap-2">
+<h1 class="text-[#111418] dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em]">My Bookings</h1>
+<p class="text-[#617589] dark:text-gray-400 text-base font-normal leading-normal">Manage your upcoming appointments and history.</p>
+</div>
+<div class="flex items-center">
+<button class="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-lg font-bold text-sm hover:bg-blue-600 transition-colors shadow-sm">
+<span class="material-symbols-outlined" style="font-size: 20px;">add</span>
+                                Book New Service
+                            </button>
+</div>
+</div>
+<!-- Tabs & Filters -->
+<div class="sticky top-16 z-40 bg-background-light dark:bg-background-dark pb-4">
+<div class="flex flex-col md:flex-row md:items-center justify-between border-b border-[#dbe0e6] dark:border-gray-800 px-4">
+<div class="flex gap-8 overflow-x-auto no-scrollbar">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-[#111418] dark:text-white pb-[13px] pt-4 min-w-fit" href="#">
+<p class="text-[#111418] dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">Upcoming</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#617589] dark:text-gray-400 hover:text-primary dark:hover:text-primary pb-[13px] pt-4 min-w-fit transition-colors" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Completed</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#617589] dark:text-gray-400 hover:text-primary dark:hover:text-primary pb-[13px] pt-4 min-w-fit transition-colors" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Cancelled</p>
+</a>
+</div>
+<div class="flex gap-2 py-3 md:py-0 self-end md:self-auto">
+<button class="p-2 text-[#617589] dark:text-gray-400 hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all" title="Filter">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<button class="p-2 text-[#617589] dark:text-gray-400 hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-all" title="Sort">
+<span class="material-symbols-outlined">sort</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Booking List -->
+<div class="flex flex-col gap-4 p-4">
+<!-- Booking Card 1: Upcoming & Confirmed -->
+<div class="group flex flex-col md:flex-row items-stretch justify-between gap-4 rounded-lg bg-white dark:bg-gray-900 p-5 shadow-[0_1px_3px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)] transition-all border border-transparent hover:border-primary/20">
+<!-- Image -->
+<div class="w-full md:w-48 bg-center bg-no-repeat bg-cover rounded-lg aspect-video md:aspect-square shrink-0" data-alt="clean living room with sunlight" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAKbqFYaCLbMUwA0xYOLmAaM_c9hJDGu0yav9-EUogSsi17DubQk_IOwKIsf4c6Sg9Rfx63TAN98DJGPeP24HzY5cSU4M4g5xxQ4UXuODxgfahCgwUpBzy5Y1cB2SfMphX9CkwJ9UE1AmOlLZEJJL76SaRqo6rQnTSHngKmI7b7vsgRkOOIa-kfvVintjhJKTxTUfo4LoB44gmHvx8k8gFf--k_DfCXDhXJ8v5RMafTpnT1ns0xC9G6Y0q5UfiZlWFeIm_LX5EHr2w");'></div>
+<!-- Content -->
+<div class="flex flex-1 flex-col gap-3 justify-between">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<span class="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">Confirmed</span>
+<span class="text-[#617589] dark:text-gray-500 text-xs font-medium">#BK-8392</span>
+</div>
+<button class="text-[#617589] dark:text-gray-400 hover:text-red-500 transition-colors md:hidden">
+<span class="material-symbols-outlined text-lg">cancel</span>
+</button>
+</div>
+<h3 class="text-[#111418] dark:text-white text-lg font-bold leading-tight mt-1">Deep Home Cleaning</h3>
+<div class="flex flex-col gap-1.5 mt-1">
+<div class="flex items-center gap-2 text-[#617589] dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<p>Tomorrow, 10:00 AM - 01:00 PM</p>
+</div>
+<div class="flex items-center gap-2 text-[#617589] dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<p>123 Maple Street, Apt 4B</p>
+</div>
+</div>
+</div>
+<!-- Helper Info (Mobile Only hidden on desktop usually but keeping consistent for this layout) -->
+<div class="flex items-center gap-3 pt-2 border-t border-[#f0f2f4] dark:border-gray-800 mt-2">
+<div class="size-8 rounded-full bg-gray-200 overflow-hidden">
+<img alt="Helper" class="w-full h-full object-cover" data-alt="Portrait of smiling male helper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUy3LywXcwszPoaM0bvIhPkp0-3iPH3D4t3-9MeBv0d6G5E3SJlleLBXJlDqylrjtFhmi3pXc_vuerbfAPcQjTQ536bJjPdpR3hc-Xp8ab_ugwPOggpsryBNzWavGuRoO3V4WliC3It36iB53xKGeRhM_W4A3WshPF7QDUc9nmOjV5VW-VbqjeClXkV6fhkUi7ujcJ533sHT-4XNlrL_67_baKxZU_Iq36GAmMspCFlkSKX0PK8CZ0YhfpLCjYrBiTyEcPWRgQOrQ"/>
+</div>
+<div class="flex flex-col">
+<p class="text-sm font-semibold text-[#111418] dark:text-white">Alex Johnson</p>
+<p class="text-xs text-[#617589] dark:text-gray-500">Top Rated Helper (4.9 ★)</p>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-row md:flex-col gap-3 justify-end md:justify-center md:items-end border-t md:border-t-0 md:border-l border-[#f0f2f4] dark:border-gray-800 pt-4 md:pt-0 md:pl-4 mt-2 md:mt-0 min-w-[140px]">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 bg-primary text-white text-sm font-medium h-9 px-4 rounded-lg hover:bg-blue-600 transition-colors whitespace-nowrap">
+                                    Track Helper
+                                </button>
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 text-sm font-medium h-9 px-4 rounded-lg transition-colors whitespace-nowrap">
+                                    View Details
+                                </button>
+<button class="hidden md:flex items-center justify-center gap-1 text-[#617589] dark:text-gray-500 hover:text-red-500 text-xs font-medium mt-2 transition-colors">
+                                    Cancel Booking
+                                </button>
+</div>
+</div>
+<!-- Booking Card 2: Upcoming & Pending -->
+<div class="group flex flex-col md:flex-row items-stretch justify-between gap-4 rounded-lg bg-white dark:bg-gray-900 p-5 shadow-[0_1px_3px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)] transition-all border border-transparent hover:border-primary/20">
+<!-- Image -->
+<div class="w-full md:w-48 bg-center bg-no-repeat bg-cover rounded-lg aspect-video md:aspect-square shrink-0" data-alt="electrician fixing wires" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuByKEWlCflu_UoqayzPoawfLYNNFo26oYK9D8cLCL0HmhHQ1cWQW7TGtX02ftH_2cklBzz9x7Q_LX9wzMifDJb5jffigOwRV5xtf8HOxiY14TqE9LkqxyCP44PtuEfOPMSmWV7nUMzekDtvek-IWFhRc0FTPtdidJfk23uY5RUarcjs9Rjn4vp-K60MRw3iFNt9DW7bE5hJ8Q93EmjpnPHAeZGe-PSMNX-2IuUCd9YC6pYP92Q8txeEy0f2TntwPgaIHupjRpc6dN0");'></div>
+<!-- Content -->
+<div class="flex flex-1 flex-col gap-3 justify-between">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<span class="bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">Pending Approval</span>
+<span class="text-[#617589] dark:text-gray-500 text-xs font-medium">#BK-9120</span>
+</div>
+</div>
+<h3 class="text-[#111418] dark:text-white text-lg font-bold leading-tight mt-1">Electrical Repair</h3>
+<div class="flex flex-col gap-1.5 mt-1">
+<div class="flex items-center gap-2 text-[#617589] dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<p>Fri, Oct 24 • 02:00 PM</p>
+</div>
+<div class="flex items-center gap-2 text-[#617589] dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<p>123 Maple Street, Apt 4B</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2 mt-2">
+<p class="text-xs text-[#617589] dark:text-gray-500 italic">Assigning a helper...</p>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-row md:flex-col gap-3 justify-end md:justify-center md:items-end border-t md:border-t-0 md:border-l border-[#f0f2f4] dark:border-gray-800 pt-4 md:pt-0 md:pl-4 mt-2 md:mt-0 min-w-[140px]">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 text-sm font-medium h-9 px-4 rounded-lg transition-colors whitespace-nowrap">
+                                    Modify
+                                </button>
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 hover:bg-red-100 dark:hover:bg-red-900/40 text-sm font-medium h-9 px-4 rounded-lg transition-colors whitespace-nowrap">
+                                    Cancel
+                                </button>
+</div>
+</div>
+<!-- Booking Card 3: Today & In Progress -->
+<div class="group flex flex-col md:flex-row items-stretch justify-between gap-4 rounded-lg bg-white dark:bg-gray-900 p-5 shadow-[0_1px_3px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)] transition-all border-l-4 border-l-green-500 border-y border-r border-transparent">
+<!-- Image -->
+<div class="w-full md:w-48 bg-center bg-no-repeat bg-cover rounded-lg aspect-video md:aspect-square shrink-0" data-alt="plumber fixing sink" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGjS8slHTJU6vmL9DVpm9uHoHRyF_kCs6ETjSzGyCStD7Jq-cePscMpDdhN0spxQqG81ShqXbXgdLjOaUXPefizZuWxBoKdYD5eRSabr4H-B9zy2IPNZkmHFQ2RFCR7EjdrqPdih5hJ96_KMjhiBj0jx6shlbpy9I8L5iPjNsHsTmnmwqq_SSZ8-m6Aesn9lqMg_mHe1hbhd4LbkVsX9jmdn1qML_jx5NTqT52HB0JrOWxKiDsm_2olruLRy1MqSyWgRr14S2Pkiw");'></div>
+<!-- Content -->
+<div class="flex flex-1 flex-col gap-3 justify-between">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<span class="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wide flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                                                In Progress
+                                            </span>
+<span class="text-[#617589] dark:text-gray-500 text-xs font-medium">#BK-8841</span>
+</div>
+</div>
+<h3 class="text-[#111418] dark:text-white text-lg font-bold leading-tight mt-1">Plumbing Service</h3>
+<div class="flex flex-col gap-1.5 mt-1">
+<div class="flex items-center gap-2 text-[#617589] dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<p>Started at 09:30 AM (Today)</p>
+</div>
+<div class="flex items-center gap-2 text-[#617589] dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<p>123 Maple Street, Apt 4B</p>
+</div>
+</div>
+</div>
+<!-- Helper Info -->
+<div class="flex items-center gap-3 pt-2 border-t border-[#f0f2f4] dark:border-gray-800 mt-2">
+<div class="size-8 rounded-full bg-gray-200 overflow-hidden relative">
+<img alt="Helper" class="w-full h-full object-cover" data-alt="Portrait of male helper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD8B49uotyvekRpuUET56rbvl25lYerUgCourKKBm6pbS8H3SiLTbHBSd4WSIhodH9aUDoeu8TosOJ7OjcioAxq2ag04_DADq5Mw5qUaBgZ1O2CEnhUvkRgNxbMZLnOeYba_KlXHDMISNg25NJJ1DuQdV8LIvqk_KkYe95REYVdg8LrhmbrXvDpC2zUokKQdeFqBGe2iKFVCizyGUHqr0Q2E_YBd3BUSmysRQVg43Xj8wiEXtFrNcEA7tKzi0G27zplL1wPO24Tbs"/>
+<div class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-white dark:border-gray-900 rounded-full"></div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<p class="text-sm font-semibold text-[#111418] dark:text-white">Mike Ross</p>
+<a class="text-primary text-xs hover:underline flex items-center" href="#">
+<span class="material-symbols-outlined text-[14px] mr-0.5">chat</span>
+                                                Chat
+                                            </a>
+</div>
+<p class="text-xs text-[#617589] dark:text-gray-500">Arrived 15 mins ago</p>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-row md:flex-col gap-3 justify-end md:justify-center md:items-end border-t md:border-t-0 md:border-l border-[#f0f2f4] dark:border-gray-800 pt-4 md:pt-0 md:pl-4 mt-2 md:mt-0 min-w-[140px]">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 bg-primary text-white text-sm font-medium h-9 px-4 rounded-lg hover:bg-blue-600 transition-colors whitespace-nowrap">
+                                    Contact Helper
+                                </button>
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 text-sm font-medium h-9 px-4 rounded-lg transition-colors whitespace-nowrap">
+                                    Support
+                                </button>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="flex justify-center p-4 mt-4">
+<button class="flex items-center gap-2 text-[#617589] dark:text-gray-400 hover:text-primary dark:hover:text-primary font-medium transition-colors">
+<span>Show more bookings</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+<!-- Empty State (Hidden by default, just for structure completeness) -->
+<!-- 
+                    <div class="flex flex-col items-center justify-center py-20 px-4 text-center">
+                        <div class="w-32 h-32 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-gray-400 text-6xl">calendar_today</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2">No upcoming bookings</h3>
+                        <p class="text-[#617589] dark:text-gray-400 max-w-md mb-8">You don't have any scheduled services at the moment. Need a hand with something?</p>
+                        <button class="bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-600 transition-colors">
+                            Book a Service
+                        </button>
+                    </div> 
+                    -->
+</div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - FAQ</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+              "card-dark": "#1a222c",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        /* Custom scrollbar for sidebar if needed */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display overflow-x-hidden transition-colors duration-200">
+<div class="relative flex flex-col min-h-screen w-full group/design-root">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-solid border-[#f0f2f4] dark:border-gray-800 px-4 md:px-10 py-3">
+<div class="layout-content-container flex items-center justify-between max-w-[1200px] mx-auto w-full">
+<div class="flex items-center gap-4 text-[#111418] dark:text-white">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Helpers</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-6">
+<a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Become a Helper</a>
+<a class="text-[#111418] dark:text-gray-200 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Login</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Sign Up</span>
+</button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-[#111418] dark:text-white">menu</span>
+</div>
+</div>
+</header>
+<!-- Breadcrumbs -->
+<div class="w-full bg-white dark:bg-background-dark border-b border-[#f0f2f4] dark:border-gray-800">
+<div class="flex justify-center">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="flex flex-wrap gap-2 px-4 py-3">
+<a class="text-[#617589] dark:text-gray-400 text-sm font-medium leading-normal hover:text-primary" href="#">Home</a>
+<span class="text-[#617589] dark:text-gray-400 text-sm font-medium leading-normal">/</span>
+<a class="text-[#617589] dark:text-gray-400 text-sm font-medium leading-normal hover:text-primary" href="#">Support</a>
+<span class="text-[#617589] dark:text-gray-400 text-sm font-medium leading-normal">/</span>
+<span class="text-[#111418] dark:text-white text-sm font-medium leading-normal">FAQ</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Hero Section -->
+<div class="w-full bg-white dark:bg-background-dark">
+<div class="flex justify-center">
+<div class="layout-content-container flex flex-col w-full max-w-[1200px]">
+<div class="p-4 md:px-10 md:py-8">
+<div class="flex min-h-[300px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-8 relative overflow-hidden" data-alt="Abstract soft blue gradient background pattern symbolizing calmness and support" style='background-image: linear-gradient(135deg, rgba(19, 127, 236, 0.9) 0%, rgba(16, 25, 34, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBqnW6FQUDm4GWO_WRIi57sdK5L-H4qXMw_pdB9rxDnan0yMbNbrZ0PAoqOlxwTn9esMZ3c_Q-uaSZUZTpYSpIR6CUUmuCfHj5S8SiUJYajr6-lRXPnIarpDLGFKVg5_u1VydcwZhscghJjYD3EcoY3epn_VxibBl7adn0IFZSfAMkcULNzOutP7hwjkDr5E5i5AbnejyIuamESss6hOaK8Joe0pd4RVYaC5N6E_Swamow7n3qwitcd-irOpEYY-J7LBS7huyczMYU");'>
+<div class="relative z-10 flex flex-col gap-3 text-center max-w-[600px]">
+<h1 class="text-white text-3xl md:text-5xl font-black leading-tight tracking-tight">
+                                    How can we help?
+                                </h1>
+<p class="text-white/90 text-sm md:text-lg font-medium leading-normal">
+                                    Find answers to common questions about bookings, payments, and our services.
+                                </p>
+</div>
+<label class="relative z-10 flex flex-col w-full max-w-[560px] h-14 md:h-16 mt-4">
+<div class="flex w-full flex-1 items-stretch rounded-lg shadow-lg">
+<div class="text-[#617589] flex bg-white items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="flex w-full min-w-0 flex-1 resize-none overflow-hidden text-[#111418] focus:outline-0 focus:ring-0 border-0 bg-white h-full placeholder:text-[#617589] px-4 text-base font-normal leading-normal" placeholder="Search for help topics (e.g., 'refunds', 'booking')..." value=""/>
+<div class="flex items-center justify-center rounded-r-lg bg-white pr-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-6 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Search</span>
+</button>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="flex flex-1 justify-center px-4 md:px-10 py-8">
+<div class="layout-content-container flex flex-col md:flex-row gap-8 max-w-[1200px] w-full">
+<!-- Left Sidebar Navigation -->
+<aside class="w-full md:w-64 flex-shrink-0">
+<div class="sticky top-24">
+<h3 class="text-[#617589] dark:text-gray-400 text-xs font-bold uppercase tracking-wider mb-4 px-4">Categories</h3>
+<nav class="flex flex-col space-y-1">
+<a class="bg-primary/10 text-primary dark:text-primary-400 font-bold px-4 py-3 rounded-lg flex items-center gap-3 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+                                Getting Started
+                            </a>
+<a class="text-[#617589] dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-card-dark hover:text-[#111418] dark:hover:text-white font-medium px-4 py-3 rounded-lg flex items-center gap-3 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+                                Bookings &amp; Scheduling
+                            </a>
+<a class="text-[#617589] dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-card-dark hover:text-[#111418] dark:hover:text-white font-medium px-4 py-3 rounded-lg flex items-center gap-3 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+                                Payments &amp; Refunds
+                            </a>
+<a class="text-[#617589] dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-card-dark hover:text-[#111418] dark:hover:text-white font-medium px-4 py-3 rounded-lg flex items-center gap-3 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">security</span>
+                                Safety &amp; Trust
+                            </a>
+<div class="h-px bg-[#f0f2f4] dark:bg-gray-800 my-2 mx-4"></div>
+<a class="text-[#617589] dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-card-dark hover:text-[#111418] dark:hover:text-white font-medium px-4 py-3 rounded-lg flex items-center gap-3 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">handshake</span>
+                                For Helpers
+                            </a>
+<a class="text-[#617589] dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-card-dark hover:text-[#111418] dark:hover:text-white font-medium px-4 py-3 rounded-lg flex items-center gap-3 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">manage_accounts</span>
+                                Account Settings
+                            </a>
+</nav>
+</div>
+</aside>
+<!-- Right Content Area -->
+<main class="flex-1 min-w-0">
+<!-- Role Switcher -->
+<div class="flex justify-end mb-8">
+<div class="bg-gray-100 dark:bg-card-dark p-1 rounded-lg inline-flex">
+<button class="bg-white dark:bg-[#2a3441] shadow-sm text-[#111418] dark:text-white font-semibold text-sm px-4 py-1.5 rounded-md transition-all">
+                                Customer
+                            </button>
+<button class="text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white font-medium text-sm px-4 py-1.5 rounded-md transition-all">
+                                Helper
+                            </button>
+</div>
+</div>
+<!-- Category Title -->
+<div class="mb-6">
+<h2 class="text-2xl font-bold text-[#111418] dark:text-white mb-2">Getting Started</h2>
+<p class="text-[#617589] dark:text-gray-400">Everything you need to know about setting up your account and making your first booking.</p>
+</div>
+<!-- Accordion List -->
+<div class="flex flex-col gap-4">
+<!-- FAQ Item 1 (Expanded) -->
+<div class="border border-[#dbe0e6] dark:border-gray-700 rounded-lg bg-white dark:bg-card-dark overflow-hidden">
+<details class="group" open="">
+<summary class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-[#111418] dark:text-white select-none">
+<span class="text-lg">How do I create an account?</span>
+<span class="transition-transform duration-300 group-open:rotate-180 text-[#617589]">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<div class="text-[#4e5d6c] dark:text-gray-300 px-5 pb-5 pt-0 leading-relaxed border-t border-transparent group-open:border-[#f0f2f4] dark:group-open:border-gray-700">
+<div class="pt-4">
+                                        To create an account, click the "Sign Up" button in the top right corner of the page. You can register using your email address, phone number, or by connecting your Google or Apple account. Once registered, you'll need to verify your email to start booking services.
+                                    </div>
+</div>
+</details>
+</div>
+<!-- FAQ Item 2 -->
+<div class="border border-[#dbe0e6] dark:border-gray-700 rounded-lg bg-white dark:bg-card-dark overflow-hidden">
+<details class="group">
+<summary class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-[#111418] dark:text-white select-none">
+<span class="text-lg">Is there a fee to join Helpers?</span>
+<span class="transition-transform duration-300 group-open:rotate-180 text-[#617589]">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<div class="text-[#4e5d6c] dark:text-gray-300 px-5 pb-5 pt-0 leading-relaxed border-t border-transparent group-open:border-[#f0f2f4] dark:group-open:border-gray-700">
+<div class="pt-4">
+                                        Signing up for Helpers as a customer is completely free. You only pay when you book a service. For service providers (Helpers), there are no upfront joining fees, but a small commission is deducted from completed jobs to cover platform maintenance and support.
+                                    </div>
+</div>
+</details>
+</div>
+<!-- FAQ Item 3 -->
+<div class="border border-[#dbe0e6] dark:border-gray-700 rounded-lg bg-white dark:bg-card-dark overflow-hidden">
+<details class="group">
+<summary class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-[#111418] dark:text-white select-none">
+<span class="text-lg">How do I verify my identity?</span>
+<span class="transition-transform duration-300 group-open:rotate-180 text-[#617589]">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<div class="text-[#4e5d6c] dark:text-gray-300 px-5 pb-5 pt-0 leading-relaxed border-t border-transparent group-open:border-[#f0f2f4] dark:group-open:border-gray-700">
+<div class="pt-4">
+                                        Identity verification helps keep our community safe. Go to Account Settings &gt; Trust &amp; Safety to upload a government-issued ID. Verification typically takes less than 24 hours.
+                                    </div>
+</div>
+</details>
+</div>
+<!-- FAQ Item 4 -->
+<div class="border border-[#dbe0e6] dark:border-gray-700 rounded-lg bg-white dark:bg-card-dark overflow-hidden">
+<details class="group">
+<summary class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-[#111418] dark:text-white select-none">
+<span class="text-lg">What areas do you service?</span>
+<span class="transition-transform duration-300 group-open:rotate-180 text-[#617589]">
+<span class="material-symbols-outlined">expand_more</span>
+</span>
+</summary>
+<div class="text-[#4e5d6c] dark:text-gray-300 px-5 pb-5 pt-0 leading-relaxed border-t border-transparent group-open:border-[#f0f2f4] dark:group-open:border-gray-700">
+<div class="pt-4">
+                                        We are currently operating in major metropolitan areas. You can check if we service your specific neighborhood by entering your zip code on the homepage or during the booking process.
+                                    </div>
+</div>
+</details>
+</div>
+</div>
+<!-- Contact Support CTA -->
+<div class="mt-12 bg-primary/5 dark:bg-primary/10 border border-primary/20 rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex flex-col gap-2 text-center md:text-left">
+<h3 class="text-xl font-bold text-[#111418] dark:text-white">Still need help?</h3>
+<p class="text-[#617589] dark:text-gray-300">If you can't find the answer you're looking for, our support team is here to help.</p>
+</div>
+<div class="flex gap-4">
+<button class="bg-white dark:bg-card-dark border border-[#dbe0e6] dark:border-gray-600 text-[#111418] dark:text-white font-bold py-2.5 px-6 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                Email Us
+                            </button>
+<button class="bg-primary text-white font-bold py-2.5 px-6 rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+                                Live Chat
+                            </button>
+</div>
+</div>
+</main>
+</div>
+</div>
+<!-- Simple Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-[#f0f2f4] dark:border-gray-800 py-8 px-4 md:px-10 mt-auto">
+<div class="layout-content-container max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#617589] dark:text-gray-500">
+<div>
+                    © 2023 Helpers Inc. All rights reserved.
+                </div>
+<div class="flex gap-6">
+<a class="hover:text-[#111418] dark:hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-[#111418] dark:hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-[#111418] dark:hover:text-white transition-colors" href="#">Cookie Policy</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

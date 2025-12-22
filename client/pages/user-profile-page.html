@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Helpers - Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/config.js"></script>
+<script src="/assets/js/ui.js"></script>
+</head>
+<body data-role="user" class="bg-background-light dark:bg-background-dark font-display text-text-main antialiased min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-surface-light dark:bg-surface-dark border-b border-border-light dark:border-border-dark px-4 lg:px-10 py-3 shadow-sm transition-colors duration-200">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<!-- Logo -->
+<div class="flex items-center gap-3">
+<img src="/logo.jpeg" alt="Helpers Logo" class="h-8 w-auto object-contain">
+<h2 class="text-text-main dark:text-white text-xl font-bold tracking-tight">Helpers</h2>
+</div>
+<!-- Navigation -->
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-text-main dark:text-white text-sm font-medium hover:text-primary transition-colors" href="/">Home</a>
+<a class="text-text-main dark:text-white text-sm font-medium hover:text-primary transition-colors" href="/bookings">Bookings</a>
+<a class="text-text-main dark:text-white text-sm font-medium hover:text-primary transition-colors" href="/help">Help</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center size-10 rounded-full bg-background-light dark:bg-gray-800 text-text-main dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full bg-background-light dark:bg-gray-800 text-text-main dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-[20px]">account_circle</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Layout -->
+<div class="flex-1 w-full max-w-7xl mx-auto px-4 lg:px-10 py-8">
+<!-- Page Title Mobile Only -->
+<div class="mb-6 md:hidden">
+<h1 class="text-2xl font-bold text-text-main dark:text-white">Account Settings</h1>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<!-- Sidebar Navigation -->
+<aside class="w-full md:w-[280px] shrink-0 sticky top-24">
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-border-light dark:border-border-dark overflow-hidden">
+<!-- Profile Summary Widget -->
+<div class="p-6 flex flex-col items-center border-b border-border-light dark:border-border-dark bg-white dark:bg-surface-dark relative">
+<div class="relative group cursor-pointer">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-24 border-4 border-background-light dark:border-gray-700 shadow-inner" data-alt="Portrait of Sarah Jenkins smiling professionally" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAMNUukL_frpCmP8ILqdriF5g7c6pD5mI1vgGN5naYGKqfi0ZJLAn2a1eRAz-0qvbXKIyEArGzc4xUNYf2-34zOlSKmYXT3HeL4xiP4BEfGgxDHZ7gIYlgm0yz550_ciiOaNVF3svGXq_BFzN__GWevE0u14GIcihVkK377rxx-H09fg7iw9YK-5Qw4vYF5OY_I--iaYIvZoDR4cHDnNA2e_icVVoKwQWfPcnPlmCDEFmkFF17GvNKS-cOxk3QoJwUNVWH48JuzKj8");'>
+</div>
+<div class="absolute inset-0 bg-black/40 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">edit</span>
+</div>
+</div>
+<h2 class="mt-4 text-text-main dark:text-white text-lg font-bold">Sarah Jenkins</h2>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-amber-500 text-sm filled">star</span>
+<p class="text-text-secondary dark:text-gray-400 text-sm font-medium">Gold Member</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="p-2 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/10 text-primary font-medium transition-colors" href="/">
+<span class="material-symbols-outlined filled">person</span>
+<span class="text-sm">Personal Info</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-main dark:text-white hover:bg-background-light dark:hover:bg-gray-800 font-medium transition-colors group" href="/">
+<span class="material-symbols-outlined text-gray-400 group-hover:text-text-main dark:group-hover:text-white">lock</span>
+<span class="text-sm">Login &amp; Security</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-main dark:text-white hover:bg-background-light dark:hover:bg-gray-800 font-medium transition-colors group" href="/">
+<span class="material-symbols-outlined text-gray-400 group-hover:text-text-main dark:group-hover:text-white">location_on</span>
+<span class="text-sm">Addresses</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-main dark:text-white hover:bg-background-light dark:hover:bg-gray-800 font-medium transition-colors group" href="/">
+<span class="material-symbols-outlined text-gray-400 group-hover:text-text-main dark:group-hover:text-white">credit_card</span>
+<span class="text-sm">Payment Methods</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-main dark:text-white hover:bg-background-light dark:hover:bg-gray-800 font-medium transition-colors group" href="/">
+<span class="material-symbols-outlined text-gray-400 group-hover:text-text-main dark:group-hover:text-white">tune</span>
+<span class="text-sm">Preferences</span>
+</a>
+</nav>
+<div class="p-2 mt-2 border-t border-border-light dark:border-border-dark">
+<button class="flex w-full items-center gap-3 px-4 py-3 rounded-lg text-red-600 hover:bg-red-50 dark:hover:bg-red-900/10 font-medium transition-colors">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm">Sign Out</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 min-w-0 flex flex-col gap-8">
+<!-- Section: Personal Information -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-border-light dark:border-border-dark">
+<div class="px-6 py-5 border-b border-border-light dark:border-border-dark flex justify-between items-center">
+<div>
+<h2 class="text-xl font-bold text-text-main dark:text-white">Personal Information</h2>
+<p class="text-sm text-text-secondary dark:text-gray-400 mt-1">Manage your personal details and contact info.</p>
+</div>
+</div>
+<div class="p-6">
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- First Name -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-text-main dark:text-white">First Name</label>
+<input class="w-full h-11 rounded-lg border border-gray-200 dark:border-gray-700 bg-transparent px-4 text-base text-text-main dark:text-white placeholder:text-gray-400 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" type="text" value="Sarah"/>
+</div>
+<!-- Last Name -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-text-main dark:text-white">Last Name</label>
+<input class="w-full h-11 rounded-lg border border-gray-200 dark:border-gray-700 bg-transparent px-4 text-base text-text-main dark:text-white placeholder:text-gray-400 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" type="text" value="Jenkins"/>
+</div>
+<!-- Email -->
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="text-sm font-medium text-text-main dark:text-white">Email Address</label>
+<div class="relative">
+<input class="w-full h-11 rounded-lg border border-gray-200 dark:border-gray-700 bg-transparent pl-11 pr-4 text-base text-text-main dark:text-white placeholder:text-gray-400 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" type="email" value="sarah.jenkins@example.com"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-[20px]">mail</span>
+</div>
+</div>
+<!-- Phone -->
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="text-sm font-medium text-text-main dark:text-white">Phone Number</label>
+<div class="relative">
+<input class="w-full h-11 rounded-lg border border-gray-200 dark:border-gray-700 bg-transparent pl-11 pr-4 text-base text-text-main dark:text-white placeholder:text-gray-400 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" type="tel" value="+1 (555) 123-4567"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-[20px]">call</span>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-2 py-0.5 rounded text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                                        Verified
+                                    </div>
+</div>
+</div>
+</form>
+</div>
+<div class="px-6 py-4 bg-gray-50 dark:bg-surface-dark/50 border-t border-border-light dark:border-border-dark flex justify-end gap-3 rounded-b-xl">
+<button class="px-5 py-2 rounded-lg border border-gray-200 dark:border-gray-700 text-text-main dark:text-white font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-sm">Cancel</button>
+<button class="px-5 py-2 rounded-lg bg-primary text-white font-semibold hover:bg-blue-600 transition-colors shadow-sm text-sm">Save Changes</button>
+</div>
+</div>
+<!-- Section: Saved Addresses (Example of another section style) -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-border-light dark:border-border-dark">
+<div class="px-6 py-5 border-b border-border-light dark:border-border-dark flex justify-between items-center">
+<div>
+<h2 class="text-xl font-bold text-text-main dark:text-white">Saved Addresses</h2>
+<p class="text-sm text-text-secondary dark:text-gray-400 mt-1">Manage your locations for service delivery.</p>
+</div>
+<button class="flex items-center gap-2 text-primary hover:text-blue-700 font-semibold text-sm transition-colors">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+                            Add New
+                        </button>
+</div>
+<div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Address Card 1 -->
+<div class="group relative rounded-xl border border-border-light dark:border-border-dark p-4 hover:border-primary transition-colors cursor-pointer bg-white dark:bg-[#1a2632]">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3 mb-3">
+<div class="size-10 rounded-full bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined filled">home</span>
+</div>
+<div>
+<p class="font-bold text-text-main dark:text-white text-sm">Home</p>
+<p class="text-xs text-text-secondary dark:text-gray-400">Default</p>
+</div>
+</div>
+<div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-gray-400 hover:text-primary"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+<button class="text-gray-400 hover:text-red-500"><span class="material-symbols-outlined text-[20px]">delete</span></button>
+</div>
+</div>
+<p class="text-sm text-text-secondary dark:text-gray-300 leading-relaxed">
+                                123 Maple Avenue, Apt 4B<br/>
+                                Springfield, IL 62704<br/>
+                                United States
+                            </p>
+</div>
+<!-- Address Card 2 -->
+<div class="group relative rounded-xl border border-border-light dark:border-border-dark p-4 hover:border-primary transition-colors cursor-pointer bg-white dark:bg-[#1a2632]">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3 mb-3">
+<div class="size-10 rounded-full bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center text-purple-600">
+<span class="material-symbols-outlined filled">work</span>
+</div>
+<div>
+<p class="font-bold text-text-main dark:text-white text-sm">Office</p>
+</div>
+</div>
+<div class="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-gray-400 hover:text-primary"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+<button class="text-gray-400 hover:text-red-500"><span class="material-symbols-outlined text-[20px]">delete</span></button>
+</div>
+</div>
+<p class="text-sm text-text-secondary dark:text-gray-300 leading-relaxed">
+                                450 Tech Park Blvd, Suite 200<br/>
+                                Springfield, IL 62704<br/>
+                                United States
+                            </p>
+</div>
+</div>
+</div>
+<!-- Section: Preferences Snippet -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-border-light dark:border-border-dark">
+<div class="px-6 py-5 border-b border-border-light dark:border-border-dark">
+<h2 class="text-xl font-bold text-text-main dark:text-white">Notifications</h2>
+</div>
+<div class="p-6 flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div>
+<p class="font-medium text-text-main dark:text-white">Order Updates</p>
+<p class="text-sm text-text-secondary dark:text-gray-400">Receive text messages when your helper is on the way.</p>
+</div>
+<!-- Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<p class="font-medium text-text-main dark:text-white">Promotional Emails</p>
+<p class="text-sm text-text-secondary dark:text-gray-400">Be the first to know about new services and discounts.</p>
+</div>
+<!-- Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>
