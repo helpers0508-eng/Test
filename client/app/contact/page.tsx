@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import process from "node:process";
 import Link from 'next/link'
 import { ArrowLeft, Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
 
