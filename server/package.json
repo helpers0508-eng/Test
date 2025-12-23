@@ -4,6 +4,7 @@
   "description": "Backend API server for Helpers service platform",
   "main": "server.js",
   "scripts": {
+    "build": "echo 'No build required'",
     "dev": "nodemon server.js",
     "start": "NODE_ENV=production node server.js",
     "migrate": "node scripts/migrate.js",
