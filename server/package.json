@@ -2,6 +2,7 @@
   "name": "helpers-server",
   "version": "1.0.0",
   "description": "Backend API server for Helpers service platform",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "build": "echo 'No build required'",

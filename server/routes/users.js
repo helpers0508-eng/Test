@@ -1,7 +1,7 @@
-const express = require('express');
-const bcrypt = require('bcryptjs');
-const { body, validationResult } = require('express-validator');
-const { authenticateToken, requireOwnershipOrAdmin } = require('../middleware/auth');
+import express from 'express';
+import bcrypt from 'bcryptjs';
+import { body, validationResult } from 'express-validator';
+import { authenticateToken, requireOwnershipOrAdmin } from '../middleware/auth.js';
 
 const router = express.Router();
 
@@ -151,4 +151,4 @@ router.post('/:userId/change-password', authenticateToken, requireOwnershipOrAdm
   }
 });
 
-module.exports = router;
+export default router;

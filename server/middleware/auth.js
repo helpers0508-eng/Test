@@ -1,7 +1,11 @@
-const jwt = require('jsonwebtoken');
-const fs = require('fs').promises;
-const path = require('path');
+import jwt from 'jsonwebtoken';
+import fs from 'fs/promises';
+import path from 'path';
+import { fileURLToPath } from "url";
 import process from "node:process";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Audit logging for auth events
 class AuthAuditLogger {
@@ -334,7 +338,7 @@ const validateRequest = (schema) => {
   };
 };
 
-module.exports = {
+export {
   authenticateToken,
   requireRole,
   requireRoleLevel,

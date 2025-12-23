@@ -1,6 +1,6 @@
-const express = require('express');
-const { body, validationResult } = require('express-validator');
-const { authenticateToken, _requireRole, _requireOwnershipOrAdmin } = require('../middleware/auth');
+import express from 'express';
+import { body, validationResult } from 'express-validator';
+import { authenticateToken, requireRole, requireOwnershipOrAdmin } from '../middleware/auth.js';
 
 const router = express.Router();
 
@@ -504,4 +504,4 @@ router.get('/slots/:serviceId/:date', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

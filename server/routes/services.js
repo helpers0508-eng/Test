@@ -1,5 +1,5 @@
-const express = require('express');
-const { authenticateToken, requireRole } = require('../middleware/auth');
+import express from 'express';
+import { authenticateToken, requireRole } from '../middleware/auth.js';
 
 const router = express.Router();
 
@@ -256,4 +256,4 @@ router.delete('/:id', authenticateToken, requireRole('admin'), async (req, res) 
   }
 });
 
-module.exports = router;
+export default router;

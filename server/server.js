@@ -1,13 +1,17 @@
-const express = require('express');
-const cors = require('cors');
-const helmet = require('helmet');
-const compression = require('compression');
-const rateLimit = require('express-rate-limit');
-const dotenv = require('dotenv');
-const fs = require('fs').promises;
-const path = require('path');
-const { Pool } = require('pg');
+import express from 'express';
+import cors from 'cors';
+import helmet from 'helmet';
+import compression from 'compression';
+import rateLimit from 'express-rate-limit';
+import dotenv from 'dotenv';
+import fs from 'fs/promises';
+import path from 'path';
+import { Pool } from 'pg';
 import process from "node:process";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Load environment variables
 dotenv.config();
@@ -31,14 +35,14 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Import routes
-const authRoutes = require('./routes/auth');
-const userRoutes = require('./routes/users');
-const serviceRoutes = require('./routes/services');
-const bookingRoutes = require('./routes/bookings');
-const adminRoutes = require('./routes/admin');
+import authRoutes from './routes/auth.js';
+import userRoutes from './routes/users.js';
+import serviceRoutes from './routes/services.js';
+import bookingRoutes from './routes/bookings.js';
+import adminRoutes from './routes/admin.js';
 
 // Import middleware
-const { _authenticateToken, _requireRole, _requireOwnershipOrAdmin } = require('./middleware/auth');
+import { _authenticateToken, _requireRole, _requireOwnershipOrAdmin } from './middleware/auth.js';
 
 // Initialize Express app
 const app = express();
@@ -420,4 +424,4 @@ app.listen(PORT, () => {
   });
 });
 
-module.exports = app;
+export default app;
