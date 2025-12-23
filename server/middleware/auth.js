@@ -52,7 +52,7 @@ const ROLE_HIERARCHY = {
 };
 
 // Middleware to verify JWT token with enhanced security
-const authenticateToken = (req, res, next) => {
+export function _authenticateToken(req, res, next) {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1]; // Bearer TOKEN
 
@@ -125,7 +125,7 @@ const authenticateToken = (req, res, next) => {
 };
 
 // Middleware to check if user has required role(s)
-const requireRole = (...requiredRoles) => {
+export function _requireRole(...requiredRoles) {
   return (req, res, next) => {
     if (!req.user) {
       authAuditLogger.log('ROLE_CHECK_NO_USER', 'anonymous', {
@@ -207,7 +207,7 @@ const requireRoleLevel = (minRole) => {
 };
 
 // Middleware to check if user owns the resource or has sufficient permissions
-const requireOwnershipOrAdmin = (resourceType = 'user') => {
+export function _requireOwnershipOrAdmin(resourceType = 'user') {
   return (req, res, next) => {
     if (!req.user) {
       return res.status(401).json({
@@ -339,10 +339,10 @@ const validateRequest = (schema) => {
 };
 
 export {
-  authenticateToken,
-  requireRole,
+  _authenticateToken as authenticateToken,
+  _requireRole as requireRole,
   requireRoleLevel,
-  requireOwnershipOrAdmin,
+  _requireOwnershipOrAdmin as requireOwnershipOrAdmin,
   logAdminAction,
   validateRequest,
   authAuditLogger
