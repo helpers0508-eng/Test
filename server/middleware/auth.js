@@ -337,13 +337,3 @@ const validateRequest = (schema) => {
     next();
   };
 };
-
-export {
-  _authenticateToken as authenticateToken,
-  _requireRole as requireRole,
-  requireRoleLevel,
-  _requireOwnershipOrAdmin as requireOwnershipOrAdmin,
-  logAdminAction,
-  validateRequest,
-  authAuditLogger
-};

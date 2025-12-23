@@ -1,5 +1,5 @@
 import express from 'express';
-import { authenticateToken, requireRole } from '../middleware/auth.js';
+import { _authenticateToken as authenticateToken, _requireRole as requireRole } from '../middleware/auth.js';
 
 const router = express.Router();
 

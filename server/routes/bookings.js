@@ -1,6 +1,6 @@
 import express from 'express';
 import { body, validationResult } from 'express-validator';
-import { authenticateToken, requireRole, requireOwnershipOrAdmin } from '../middleware/auth.js';
+import { _authenticateToken as authenticateToken, _requireRole as requireRole, _requireOwnershipOrAdmin as requireOwnershipOrAdmin } from '../middleware/auth.js';
 
 const router = express.Router();
 

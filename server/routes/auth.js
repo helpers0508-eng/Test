@@ -3,7 +3,7 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { body, validationResult } from 'express-validator';
 import nodemailer from 'nodemailer';
-import { authenticateToken } from '../middleware/auth.js';
+import { _authenticateToken as authenticateToken } from '../middleware/auth.js';
 import process from "node:process";
 
 const router = express.Router();

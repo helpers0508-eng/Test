@@ -1,7 +1,7 @@
 import express from 'express';
 import bcrypt from 'bcryptjs';
 import { body, validationResult } from 'express-validator';
-import { authenticateToken, requireOwnershipOrAdmin } from '../middleware/auth.js';
+import { _authenticateToken as authenticateToken, _requireOwnershipOrAdmin as requireOwnershipOrAdmin } from '../middleware/auth.js';
 
 const router = express.Router();
 
