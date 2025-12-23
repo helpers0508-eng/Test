@@ -36,8 +36,6 @@ const userRoutes = require('./routes/users');
 const serviceRoutes = require('./routes/services');
 const bookingRoutes = require('./routes/bookings');
 const adminRoutes = require('./routes/admin');
-const reviewRoutes = require('./routes/reviews');
-const availabilityRoutes = require('./routes/availability');
 
 // Import middleware
 const { _authenticateToken, _requireRole, _requireOwnershipOrAdmin } = require('./middleware/auth');
@@ -271,8 +269,6 @@ app.use('/api/auth', (req, _res, next) => {
 app.use('/api/users', userRoutes);
 app.use('/api/services', serviceRoutes);
 app.use('/api/bookings', bookingRoutes);
-app.use('/api/reviews', reviewRoutes);
-app.use('/api/availability', availabilityRoutes);
 
 // Admin routes with enhanced logging
 app.use('/api/admin', (req, _res, next) => {

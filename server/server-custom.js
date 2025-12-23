@@ -2,7 +2,7 @@ const { createServer } = require('http');
 const { parse } = require('url');
 const next = require('next');
 const { readFile, stat } = require('fs').promises;
-const { join, extname } = require('path');
+const path = require('path');`nconst { join, extname } = require('path');
 const { _promisify } = require('util');
 import process from "node:process";
 
@@ -10,9 +10,7 @@ const dev = process.env.NODE_ENV !== 'production';
 const hostname = 'localhost';
 const port = parseInt(process.env.PORT || '3000', 10);
 
-// Next.js app is in client directory
-const nextDir = path.join(__dirname, '..', 'client');
-const app = next({ dev, hostname, port, dir: nextDir });
+// Next.js app is in client directory`nconst nextDir = path.join(__dirname, '..', 'client');`nconst app = next({ dev, hostname, port, dir: nextDir });
 const handle = app.getRequestHandler();
 
 // MIME types for static files
