@@ -1,7 +1,9 @@
-require('dotenv').config();
-const { Pool } = require('pg');
-const bcrypt = require('bcryptjs');
+import dotenv from 'dotenv';
+import { Pool } from 'pg';
+import bcrypt from 'bcryptjs';
 import process from "node:process";
+
+dotenv.config();
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,

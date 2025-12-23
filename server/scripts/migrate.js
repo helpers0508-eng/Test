@@ -1,8 +1,10 @@
-require('dotenv').config();
-const { Pool } = require('pg');
-const _fs = require('fs');
-const _path = require('path');
+import dotenv from 'dotenv';
+import { Pool } from 'pg';
+import fs from 'fs';
+import path from 'path';
 import process from "node:process";
+
+dotenv.config();
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
